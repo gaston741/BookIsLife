@@ -1,3 +1,33 @@
+## Integrantes:
+
+***
+
+**Adriel Coria:**
+- 18 años, Ingeniero Agronomo; Pogramador FullStack con Digital House y Fundacion Formar.
+**Gaston Rodriguez:**
+- 20 años, Analista de Sistemas y Tecnico Móvil;Pogramador FullStack con Digital House y Fundacion Formar.
+**Juan Manuel Roldán:**
+- 24 años, Tecnico en electrotecnia con orientacion en Telecomunicaciones; Pogramador FullStack con Digital House y Fundacion Formar.
+**Luisa Morales:**
+- 27 años, tecnica en electronica, estudiante en ciencias veterinarias, Pogramador FullStack con Digital House y Fundacion Formar.
+
+***
+
+**Descripción:**
+
+"Book Is Life" esta adaptada para todo publico ,de todas las edades.
+Nuestra meta es incentivar en la lectura tanto a niños como adolescentes
+y demostrar que el leer un libro no es aburrido.
+
+**¿Cómo ajustaremos nuestra oferta a ese público?**
+
+segun genero literario y/o edad del lector. 
+
+***_ El que ama la lectura, tiene todo a su alcance. -William Godwin._***
+
+
+***
+
 # Book is Life 
 
 ...**_a book, a new experience_**
@@ -61,3 +91,4 @@ Elegido por su apariencia.
   https://codepen.io/linux/pen/LLVaqx/
 
 Elegido por ser acorde a la gama de colores que maneja el proyecto y tambien por su atractivo
+
