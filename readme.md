@@ -4,10 +4,13 @@
 
 **Adriel Coria:**
 - 18 años, Ingeniero Agronomo; Pogramador FullStack con Digital House y Fundacion Formar.
+
 **Gaston Rodriguez:**
 - 20 años, Analista de Sistemas y Tecnico Móvil;Pogramador FullStack con Digital House y Fundacion Formar.
+
 **Juan Manuel Roldán:**
 - 24 años, Tecnico en electrotecnia con orientacion en Telecomunicaciones; Pogramador FullStack con Digital House y Fundacion Formar.
+
 **Luisa Morales:**
 - 27 años, tecnica en electronica, estudiante en ciencias veterinarias, Pogramador FullStack con Digital House y Fundacion Formar.
 
