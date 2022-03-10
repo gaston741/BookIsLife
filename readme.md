@@ -34,7 +34,7 @@ segun genero literario y/o edad del lector.
 
 ...**_a book, a new experience_**
 
-![logo](https://github.com/gaston741/Grupo_8_Books.Is.Life/blob/master/design/logo/logo%20proyect%20oficial.png)
+![logo](https://github.com/lizzytag12/lizzytag12/blob/main/logo1.png)
 
 
 
