@@ -30,7 +30,7 @@ segun genero literario y/o edad del lector.
 
 ***
 
-# Book is Life 
+# Book Is Life 
 
 ...**_a book, a new experience_**
 
