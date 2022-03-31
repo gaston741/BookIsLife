@@ -96,3 +96,6 @@ Elegido por su apariencia.
 
 Elegido por ser acorde a la gama de colores que maneja el proyecto y tambien por su atractivo
 
+**Tablero de Trabajo:**
+
+ Link: https://trello.com/b/qjgesFnK/c14-grupo8-bookislife
