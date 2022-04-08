@@ -1,0 +1,14 @@
+.header__volver {
+    font-size: 30px;
+}
+
+.header__logo a img {
+    width: 100%;
+    border-radius: 300px;
+    background-color: blue;
+}
+.header__logo2 a img {
+    width: 250px;
+    border-radius: 300px;
+    
+}
