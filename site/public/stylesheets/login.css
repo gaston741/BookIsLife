@@ -1,3 +1,50 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 body{
-    background-color: white;
+    align-items: center;
+    background-color: #54BAB9;
+    display: grid;
+    height: 100%;
+    justify-content: center;
+}
+
+/* ----------------------------------------------Diseño de Botones----------------------------------------------*/
+.btn-ghost{
+    background-color: grey;
+    border: 2px solid transparent;
+    border-radius: 15%;
+    color: white;
+    display: inline-block;
+    padding: 5px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.5s, background 0.5s;
+}
+.btn-ghost.languajes{
+    background-color: transparent;
+    border-color: white;
+    color: black;
+}.btn-ghost.login{
+    background-color: transparent;
+    border-color: #ED2F51;
+    color: #ED2F51;
+}
+.btn-ghost:hover{
+    background-color: transparent;
+    border-color: grey;
+    color: gray;
+}
+.btn-ghost.languajes:hover{
+    background-color: transparent;
+    border-color: white;
+    color: white;
+}
+.btn-ghost.login:hover{
+    background-color: #ED2F51;
+    border-color: transparent;
+    color: white;
 }
