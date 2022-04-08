@@ -4,10 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/style.css">
     <title>Book Is Life | Login</title>
+    <link rel="stylesheet" href="/stylesheets/login.css">
 </head>
-<body>
-    <h1>Login</h1>
+<body class="login">
+    <header>
+        <div class="return">
+            <button type="/return"> Volver</button>
+        </div>
+        <div class="languajes">
+            <button type="options">Idiomas</button>
+        </div>
+        <img src="imagen logo" alt="">
+    </header>
+    <main>
+        <section>
+            <h1>Ingresá</h1>
+                <hr>
+            <form action="">
+                <article>
+                    <div class="login__form-box">
+                        <label for="email">E-Mail</label>
+                        <input class="login__form-input" type="email"name ="email" id="email" placeholder="Escribí tu Email">
+                        <span class="login__text-error">Obligatorio</span>
+                    </div>
+                    <div class="login__form-box">
+                        <label for="password">Contraseña</label>
+                        <input class="login__form-input" type="password"name ="password" id="password" placeholder="Escribí tu Contraseña">
+                        <span class="login__text-error">Obligatorio</span>
+                    </div>
+                    <div class="login__form-box login__center">
+                        <input class="login__form-input" type="checkbox" name="remember" id="remember">
+                        <label for="remember">Recordame</label>
+                    </div>
+                    <a href="link_de_recuperacion">"He olvidado mi Contraseña"</a>
+                    <div class="social-media">
+                        <button>Google</button>
+                        <button>Facebook</button>
+                        <button>Mac</button>
+                    </div>
+                    <div class="login__form-box login__center">
+                        <button type="submit">Ingresar</button>
+                    </div>
+                </article>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <a class="new-here" href="/register.html">Nuevo Aquí? Registrate !</a>
+    </footer>
 </body>
 </html>
