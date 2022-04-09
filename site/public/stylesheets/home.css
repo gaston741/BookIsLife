@@ -9,12 +9,16 @@
 
 
 
-/*Header nav*/
+
 
 .home__header{
 
  background-image: url("/images/lindo-fondo.webp");
 }
+
+
+/*Header nav*/
+
 
 .header_nav{
 
@@ -94,7 +98,7 @@ header.home__header div.header_buscador{
 }
 
 
- div.header_buscador button.header_burguer{
+.header_buscador button.header_burguer{
 
     margin: 10px 40px 15px 69px; 
     border: none;
@@ -113,13 +117,14 @@ header.home__header div.header_buscador button.header_burguer i {
 
 header.home__header div.header_buscador input{
   
-    height: 25px ;
+    height: 26px ;
     font-family: "cinzel";
     border-radius: 5px;
     border: solid 1px #cfcecc ;
     background-color: #FBF8F1;
     padding: 5px;
     align-self: center;
+    font-size: 15px;
   
   }
 
@@ -139,17 +144,18 @@ header.home__header div.header_buscador button.lupa {
 
 /*Header Banner*/
 
+
 .home__header div.header_banner{
 
-   /*  display: flex; */
-   display :none;
- 
+  display: flex;  
+   /* display :none; 
+  */
 
 }
 
 .home__header div.header_banner img{
 
-    width: 425px;
+    width: 100%;
     height: 150px;
 
 }
@@ -161,55 +167,95 @@ header.home__header div.header_buscador button.lupa {
 main.home{
 
     background-color: var(--colorMainHome);
-  
-}
-main.home h2{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    font-size: 20px;
-    text-align: center;
-    font-weight: 600;
 }
 
+
+main.home h2{
+    padding-top: 20px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 520;
+    text-shadow: 4px 4px 2px rgba(130, 138, 138, 0.8)
+}
+
+
 main.home section.home__box_products{
-    margin :30px 0;
+    margin :25px 0;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
-/* 
-.home__product{
-   
-}
- */
 
 .home__product-box-image{
 
     display: flex;
     flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  
+    justify-content: center;
+    text-align: center;
+
+  /* image enlarge properties*/
+    width: 250px;
+    margin: 0 10px;
 }
-.home__product_image{
+
+
+img.home__product_image{
     width: 30vh;
     height: 40vh;
+ 
+    /* image enlarge properties*/
+    
+    display:block;
+    border-radius: 3px;
+    box-shadow:  rgba(94, 96, 96, 0.92) 0px 2px 16px 0px;
+    
+    
+    
+
+
     
 
 }
+
+ 
+/* image enlarge properties*/
+
+.home__producto-box-image:hover{
+ 
+    transform: scale(1.4);
+    transition: 0.5s; 
+    z-index: 1s;
+} 
+
+
 /*Descripciones*/
 
 
 span{
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: outset 0px 0px 0px 0px  rgb(242, 229, 202);
     display: block;
     font-family: "Cinzel";
-    font-size: 1.3vh;
+    font-size: 1.5vh; 
     font-weight: 600;
-    margin: 5px 0px 10px 0px;
+    padding-left: 5px;
+    padding-top: 5px;
+    margin-top: 10px;
+    
+    text-align: center;
+    width: 100%;
+    height: 25px;
+    
 
   
+ }
+ span.autor{
+     margin-bottom: 30px;
+     margin-top: 0px;
  }
 
 
