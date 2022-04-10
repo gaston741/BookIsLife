@@ -78,7 +78,7 @@ img.logo1{
  img.logo2{
    
     padding-bottom: 5px;
-    padding-left: 6px;
+    padding-left: px;
     width:20vh ;
     height:4vh; 
 } 
@@ -291,5 +291,48 @@ div.home__main__up{
 .home__footer{
 
     background-color: var(--colorFooterHome);
+    width: 100%;
 }
+.home__footer ul {
+    display: flex;
+    flex-direction: column; 
+   
+  
+
+}
+
+.home__footer li{
+    
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: solid 2px var(--colorMainHome);
+}
+
+.home__footer li img{
+    display: none;
+}
+
+
+.home__footer li, a {
+
+    text-decoration: none;
+   font-weight:bolder;
+   color: black;
+    
+}
+
+.home__footer li  i{
+
+    font-size: 30px;
+}
+/* .home__footer ul li img {
+
+    width: 5vh ;
+    height: 5vh;
+
+
+
+}
+   */
+
 
