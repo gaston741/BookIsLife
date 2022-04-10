@@ -78,8 +78,9 @@ img.logo1{
  img.logo2{
    
     padding-bottom: 5px;
-    padding-left: 10px;
-    height: 25px;
+    padding-left: 6px;
+    width:20vh ;
+    height:4vh; 
 } 
 
 
@@ -253,6 +254,8 @@ span{
 
   
  }
+
+
  span.autor{
      margin-bottom: 30px;
      margin-top: 0px;
@@ -268,6 +271,19 @@ span{
 
  }
 
+
+ /* scroll UP*/
+div.home__main__up{
+
+    text-align: right;
+   
+}
+
+ div.home__main__up i {
+ color :var(--colorHeaderHome);
+ font-size: 50px;
+ padding: 10px;
+ }
 
 
 /*FOOTER*/
