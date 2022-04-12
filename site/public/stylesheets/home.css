@@ -679,17 +679,21 @@ span.footer__link:hover {
     
 
     header.home__header div.header_buscador input {
-        width: 65vh;
+        width: 30vh;
         height: 47px;
         font-size: 30px;
-        margin-left: 85px;
+        margin-left: 10px;
         padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
     }
 
     header.home__header div.header_buscador button.lupa {
         width: 7vh;
         height: 47px;
         font-size: 25px;
+        
     }
 
     /* BANNER*/
@@ -713,6 +717,12 @@ span.footer__link:hover {
 
     }
 
+    div.categorias{
+
+
+        width: 10vh;
+
+}
    
     
 
