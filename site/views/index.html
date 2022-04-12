@@ -23,12 +23,44 @@
             <img class="logo2" src="/images/logos/log2-mobile.png" alt="Logo2">
         </div>
         <div class="header_buscador">
-            <button class="header_burguer"><i class="fa-solid fa-bars"></i></button>
+
+            <span class="header_nav-bar" id="btnMenu"><i class="fa-solid fa-bars"></i></span>
+            <nav class="main-nav">
+                <ul class="menu" id="menu">
+        
+                    <li class="menu-item container-submenu"><a class="menu-link submenu-btn" href="">categorias <i class="fa-solid fa-angle-down"></i></a>
+                        <ul class="submenu">
+                            <li class="menu-item"><a class="menu-link" href="#">Arte</a></li>
+                            <li class="menu-item"><a class="menu-link" href="#">Autoayuda</a></li>
+                            <li class="menu-item"><a class="menu-link" href="">Ciencias de la Salud</a></li>
+                            <li class="menu-item"><a class="menu-link" href="">Computacion y Sistemas</a></li>
+                            <li class="menu-item"><a class="menu-link" href="">Derecho y C. Sociales</a></li>
+                            <li class="menu-item"><a class="menu-link" href="">Enciclopedias</a></li>
+                            <li class="menu-item"><a class="menu-link" href="">Esoterismo</a></li>
+                            <li class="menu-item"><a class="menu-link" href="">Ficcion y Literatura</a></li>
+                            <li class="menu-item"><a class="menu-link" href="">Gastronomia y Hoteleria</a></li>
+                            <li class="menu-item"><a class="menu-link" href="">Humanidades</a></li>
+                            <li class="menu-item"><a class="menu-link" href="">Infantil y Juvenil</a></li>
+                            <li class="menu-item"><a class="menu-link" href="">Mapas y Guias de Turismo</a></li>
+        
+                        </ul>
+                    </li>
+        
+                </ul>
+            </nav>
+        
+        
+          
+            
             <input type="text" placeholder="Encuentra tu libro ideal" />
             <button class="lupa"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
         <div class="header_banner">
-            <img src="/images/banner/banner2.jpg" alt="banner">
+            
+            <img  src="/images/banner/banner2.jpg" alt="banner">
+        </div>
+        <div class="header_banner-desktop">
+            <img  src="/images/banner/banner3.jpg"  alt="">
         </div>
 
     </header>
@@ -141,6 +173,46 @@
                 <span class="autor">Autor: Julio Cortázar</span>
             </article>
         </section>
+
+        <h2>Top elegidos del mes: </h2>
+
+        <section class="home__box_products">
+            <article class="home__product">
+                <h4>Top #1</h4>
+                <span class="titulo">CUENTOS DE EVA LUNA</span>
+                <span class="autor">Autor: Isabel Allende</span>
+                <div class="home__producto-box-image">
+                    <a href="/product-detail">
+                        <img class="home__product_image" src="/images/portadas/cuentosDeEvaLuna.png" alt="libro">
+                    </a>
+                </div>
+                
+            </article>
+
+            <article class="home__product">
+                <h4>Top #2</h4>
+                <span class="titulo">LOS AÑOS PERDIDOS </span>
+                <span class="autor">Autor: Mary Higgins Clark</span>
+                <div class="home__producto-box-image">
+                    <a href="/product-detail">
+                        <img class="home__product_image" src="/images/portadas/losAñosPerdidos.png" alt="libro">
+                    </a>
+                </div>
+                
+            </article>
+
+            <article class="home__product">
+                <h4>Top #3</h4>
+                <span class="titulo">MUERTE EN EL NILO</span>
+                <span class="autor">Autor: Agatha Christie</span>
+                <div class="home__producto-box-image">
+                    <a href="/product-detail">
+                        <img class="home__product_image" src="/images/portadas/muerteEnElNilo.png" alt="libro">
+                    </a>
+                </div>
+                
+            </article>
+        </section>
         <aside>
             <section class="home__aside_advertising">
                 <h3>TE PUEDE INTERESAR:</h3>
@@ -149,6 +221,12 @@
                     <a href=""><img  src="/images/banner/advertising2.jpg" alt=""></a>
 
                 </article>
+                <article id="hidden" class="home__advertising">
+                    <a href=""><img  src="/images/banner/banner1.jpg" alt=""></a>
+
+                </article>
+
+                    
              
             </section>
 
@@ -172,7 +250,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/"><span class="footer__link">Quienes Somos</span>
+                    <a href="/"><span class="footer__link">Quiénes Somos</span>
                         <img src="/images/footer-img/icn-14.png" alt="Quienes Somos">
                     </a>
                 </li>
@@ -182,12 +260,12 @@
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/"> <span class="footer__link">Trabaja con Nosotros</span>
+                    <a href="https://www.linkedin.com/"> <span class="footer__link">Trabajá con Nosotros</span>
                         <img src="/images/footer-img/LinkedIN.png" alt="LinkedIN"></a>
                 </li>
                 <li>
-                    <span > Medios de Pago</span>
-                    <img  src="/images/pagos-img/mercadoPago.png" alt="mercado-pago">
+                    <span >Medios de Pago</span>
+                    <img src="/images/pagos-img/mercadoPago.png" alt="mercado-pago">
                     <img src="/images/pagos-img/visa.png" alt="visa">
                     <img src="/images/pagos-img/mastercard.png" alt="mastercard">
                     <img src="/images/pagos-img/amex.png" alt="amex">
