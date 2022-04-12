@@ -1,25 +1,74 @@
 *{
     box-sizing: border-box;
     font-family: "Cinzel";
+    color: #ED2F51;
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 body{
     align-items: center;
     background-color: #54BAB9;
-    display: grid;
-    height: 100%;
-    justify-content: center;
+    background-image: url("/images/Fondo-Desktop.png");
+    display: block;
+    padding: 10px 20px;
+    width: 100%;
+}
+.btn-item{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-between;
+    
+}
+.logos{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    justify-content: unset;
+    margin: auto;
+    padding: 40px;
+    width: 250px;
+}
+.login__logo{
+    width: 250px;
+    border-radius: 50%;
+    border: 1px solid #ed2f51;
+    background-image: url("/images/logo-proyect.png");
+    background-position: center;
+    background-size: 80%;
+    height: 250px;
+    background-repeat: no-repeat;
+    margin: auto;
+    background-color: white;
+
+}
+.login__logo-letra{
+    width: 250px;
+    border-radius: 50px;
+    border: 1px solid red;
+    height: 50px;
+    overflow: hidden;
+    background-image: url("/images/logo-proyect2.png");
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+    
+}
+header{
+    display: block;
+    text-align: center;
 }
 .login section{
     background-color: white;
     border-radius: 15px;
-    margin-top: 60px;
-    padding: 10px;
+    display:contents;
     width: 100%;
 }
 .login h1{
     text-transform: uppercase;
+    margin-top: 25px;
 }
 .login form{
     margin-top: 30px;
@@ -29,6 +78,9 @@ body{
     width: 100%;
 }
 .login__form-input{
+    border-color: #ED2F51;
+    border-radius: 15px;
+    border-style: solid;
     margin: 10px 0 0;
     padding: 10px 10px;
     width: 100%;
@@ -37,15 +89,27 @@ body{
     margin: 0 0 20px;
     text-align: end;
 }
-
-
-/* Botones */
+.social-media{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 15px 0 20px;
+    padding: 15px;
+}
+.button__login{
+    display: flex;
+    flex-direction: row-reverse ;
+}
+div.new-here{
+    display: flex;
+    margin: 65px 0;
+}
+/*----------------------------------------------- Botones --------------------------------------------- */
 .btn-ghost{
     background-color: grey;
     border: 2px solid transparent;
     border-radius: 15%;
     color: white;
-    display: inline-block;
+    display: flex;
     font-size: 20px;
     margin: 15px;
     padding: 5px;
@@ -54,16 +118,32 @@ body{
     text-transform: uppercase;
     transition: color 0.5s, background 0.5s;
 }
-.btn-ghost.languajes{
+.languajes{
     background-color: transparent;
     border-color: white;
     color: black;
+    display: flex;
     text-align: end;
 }
-.btn-ghost.login{
+.btn-login{
     background-color: transparent;
     border-color: #ED2F51;
     color: #ED2F51;
+    text-align: right;
+}
+.fa-brands.fa.google{
+    background-color: transparent;
+    margin: 5px 5px 5px 5px;
+}
+.fa-brands.fa.facebook{
+    background-color: transparent;
+    color: blue;
+    margin: 5px 5px 5px 5px;
+}
+.fa-brands.fa.apple{
+    background-color: transparent;
+    color: black;
+    margin: 5px 5px 5px 5px;
 }
 /* ----------------------------------------------Diseño de Botones----------------------------------------------*/
 /* Rounded Borders */
@@ -78,7 +158,7 @@ body{
 .btn-ghost.languajes:active{
     box-shadow: inset 0 0 20px white;
 }
-.btn-ghost.login:active{
+.btn-ghost.btn-login:active{
     box-shadow: inset 0 0 20px white;
 }
 /* Transparent Effect Apply */
@@ -92,19 +172,43 @@ body{
     border-color: white;
     color: white;
 }
-.btn-ghost.login:hover{
+.btn-ghost.btn-login:hover{
     background-color: #ED2F51;
     border-color: transparent;
     color: white;
 }
-@media (min-width:375px) {
+
+/* -----------------------------------------------VISTAS----------------------------------------------- */
+
+
+@media (min-width:425px) {
     
 }
 @media(min-width:768px){
+    body{
+        background-color: #54BAB9;
+        background-image: url(/images/Fondo-Desktop.png);
+        display: flex;
+        padding: 10px 20px;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
     .login article{
         justify-content: center;
     }
-}
+}   
 @media(min-width:1024px){
-
+    body{
+        background-color: #54BAB9;
+        background-image: url(/images/Fondo-Desktop.png);
+        display: flex;
+        padding: 10px 20px;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .login article{
+        justify-content: center;
+    }
 }

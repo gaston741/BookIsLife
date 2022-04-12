@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Is Life | Login</title>
+    <script src="https://kit.fontawesome.com/c435cf0167.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/stylesheets/login.css">
     <link rel="stylesheet" href="/wireframes/LogIn/">
 
@@ -12,11 +13,12 @@
 <body class="login">
     <header>
         <div class="btn-item">
-            <a href="#" class="btn-ghost round"> Volver </a>
-            <a href="#" class="btn-ghost languajes round"> Idiomas </a>
+            <button href="#" class="btn-ghost round"> Volver </button>
+            <button href="#" class="btn-ghost languajes round"> Idiomas </button>
         </div>
-
-        <img src="" alt="El Supuesto Logo">
+        <div class="login__logo" ></div>
+        <br>
+        <div class= "login__logo-letra"></div>
     </header>
     <main>
         <section>
@@ -26,11 +28,11 @@
                 <article>
                     <div class="login__form-box">
                         <label for="email">E-Mail :</label>
-                        <input class="login__form-input" type="email"name ="email" id="email" placeholder="Escribí tu Email">
+                        <input class="login__form-input" type="email"name ="email" id="email" placeholder="Escribe tu Email">
                     </div>
                     <div class="login__form-box">
                         <label for="password">Contraseña : </label>
-                        <input class="login__form-input" type="password"name ="password" id="password" placeholder="Escribí tu Contraseña">
+                        <input class="login__form-input" type="password"name ="password" id="password" placeholder="Escribe tu Contraseña">
                     </div>
                     <div class="login__form-box-remember">
                         <input class="" type="checkbox" name="remember" id="remember">
@@ -38,17 +40,19 @@
                     </div>
                     <a href="link_de_recuperacion">"He olvidado mi Contraseña"</a>
                     <div class="social-media">
-                        <button>Google</button>
-                        <button>Facebook</button>
-                        <button>Mac</button>
+                        <a href="" class="fa-brands.fa-google"><img src="/images/G-Google.jpg" height="25px" width="25px"></img></a>
+                        <a href="" class="fa-brands.fa-facebook"><img src="/images/F-Facebook.png" height="25px" width="25px"></a>
+                        <a href="" class="fa-brands.fa-apple"><img src="/images/A-Apple.png" height="25px" width="25px"></a>
                     </div>
-                    <a href="#" class="btn-ghost login"> Ingresar </a>
+                    <div class="button__login">
+                        <button class="btn-ghost btn-login"> Ingresar </button>
+                    </div>
+                    <div class="new-here">
+                        <a href="/register.html">Nuevo Aquí? Regístrate!</a>
+                    </div>
                 </article>
             </form>
         </section>
     </main>
-    <footer>
-        <a class="new-here" href="/register.html">Nuevo Aquí? Registrate !</a>
-    </footer>
 </body>
 </html>
