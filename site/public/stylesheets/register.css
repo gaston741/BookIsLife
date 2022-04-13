@@ -1,0 +1,267 @@
+*{
+    box-sizing: border-box;
+    color: #ed2f51;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url("/images/Fondo-Desktop.png");
+    display: block;
+    font-family: "Cinzel";
+    padding: 10px 20px;
+    width: 110%;
+}
+
+.register_header {
+    display: block;
+    text-align: center;
+}
+.header__volver-ingles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.volver {
+    background-color: #308F89;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    font-size: 20px;
+    margin: 15px;
+    padding: 5px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.5s, background 0.5s;
+
+}
+.ingles {
+    background-color: transparent;
+    border-color: white;
+    color: black;
+    display: flex;
+    text-align: end;
+}
+
+/* Logos */
+.header__logo {
+    background-image: url("/images/logo-proyect.png");
+    background-color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    border: 1px solid #ed2f51;
+    border-radius: 50%;
+    height: 250px;
+    margin: auto;
+    width: 250px;
+
+}
+.header__logo2 {
+    background-image: url("/images/logo-proyect2.png");
+    background-position: center;
+    background-size: cover;
+    border: 1px solid red;
+    border-radius: 50px;
+    height: 50px;
+    overflow: hidden;
+    margin: auto;
+    width: 250px;
+    
+}
+
+/* Cuerpo del Register */
+.register main{
+    padding: 0 20px;
+}
+.register section{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #308F89;
+    margin: 30px auto;
+    padding: 20px;
+    width: 100%;
+}
+.register h1{
+    text-align: center;
+    text-transform: uppercase;
+}
+.register form{
+    margin-top: 30px;
+}
+
+.register__form-box{
+    margin-bottom: 20px;
+    width: 100%;
+}
+.register__label {
+    font-weight: 600;
+}
+.register__form-input{
+    border-color: #ed2f51;
+    border-radius: 15px;
+    border-style: solid;
+    margin: 10px 0 0;
+    padding: 10px 10px;
+    width: 100%;
+}
+
+.register h4{
+    margin-bottom: 10px;
+}
+
+.register__form-input, .register__form-select{
+    margin: 10px 0 0;
+    padding: 10px 5px;
+    width: 100%;
+    font-family: "Cinzel";
+}
+
+.register__text-error{
+    color: red;
+    font-size: 0.8rem;
+    margin-left: 5px;
+}
+
+.register__radio-box{
+    margin: 0 0 10px 5px;
+}
+
+.register__center{
+   text-align: center;
+}
+
+.register main section form .sitios-web {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+/* Sitios Web */
+.social_media {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+.login-btn-google:before {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAMAAADW3miqAAABNVBMVEUAAAD/PgBJsUT/OwANdNRHsEtHsEpHsEoNddT/PABKsEp1tSr/YwD/OwD/wwD/OwD/wgD/PAD/OwBPsUj/wQAMdNX/PAD/PQBWskNIr0r/wgD/PABKsEj/OgBIr0j/PwD/OgAPddb/QQD/wwD/QABHr0tJr0r/wgAMdNX/wgAMdNb/OwALddU5oW9Hr0z/PAD/OwBnsz9HsEr/OwAOdNP/PABIsUv/iAALdNX/OwD/PQBMsEhIsEoMddVIsEr/OwD/PQD/OgDRuxL/vQAMdNVJr0n/QAALddT/wwD/vwAWd89Nskj/PwBMrEX/vwBAr0j/xQD/RwAQcM//TAAMdNX/OwBHsEv/wgBAqFwSecgTfMMagbYljJ1PsUdnsz6StyyvuiDdvw7/sQD/kQD/dwD/WAD/RgBL4Ss6AAAAVHRSTlMAEBLf+e/ix8W2gggH+PfvyMSal5eNfWNhYF9fRkY+OiMZFQgE+vbv7Obl49/Y2NbLv769uLe0tLKsqKebl5WThYOAgG5paEhIRDo1NSUkIB8ZEAp/9d8/AAABMklEQVQ4y8XQ13LCMBBA0cWEDkmAhBI6pPfee+8VrUjv+f9PiNkRjCzZfuU8WTt3ZmVBB0ULidkYY7H4TsEp8aR6WNtEymPXpM1E5k3rTYJp9tRmnenWBq3Nrk2zpDTHTFjIlR+i5VzI/AwpN696GZkpgVDyqg0c/FATl+Z3agNj/PvP/OcquDjjnH/9sktw08ebVsBVL0UDINRlXUEx7aboWo+oElNOonpELFHNKZLX3bqu0y8uC8pP8DkHikWKtsTp1Gw+XrFobc7r5EQcayP8HRGnDbmpTFIzCi37b9gUkKr7YJ30Q4vhQ+K/AKE49UjNeAXaMigsZ68ikZvsPGLjqRkdgiSJmsYzLZNtoO5lFRRhPUqC5shvTXwZsGGE/VISNsBBfjswhDgc2MxHoHP+AVnAlPxGJFfYAAAAAElFTkSuQmCC);
+}
+.login-btn-facebook:before {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAARVBMVEUAAAAYd/IYdvMYd/ITc+8Yd+8XdvMYd/IYd/IYd/IYd/IYdvMYdvIYd/MZd/EXdvEYePIYd/MXdvMYdvEYde8VdfQYd/IJb26AAAAAFnRSTlMA3z/vECDPb7+fj3+vX5CPYL+vf2AwOzKJBAAAAQlJREFUOMuNlO1uwyAMRS+Yj1CSdms3v/+jLhXRTGLi5vyKrBMu2Ajs8fnpiJnSs3qcEl7EHa7EsXZnxUjNxAPccvTufMJtH/vNp6QAIbHBZOa6FZX+pdbwLc5zIzcvuoO3YCNyg9p/5eBliNiHR7V3LXIYLLiMxArguMOwTSp152aSk0lp2AmPemzgeAQZ80jUG5qRbFHKdE0ksCkK0K0Wci+SId76aGeI3XVOmA0x9e3JhshC7UeY/Jvm/K5f/RjXMtntkWq9IhYA4YoYpVumWPAm0CfRRZmUKS4yKlN84J/JEhOEkM7FKaiLokXJFX7cSKQMRSxafLRYrbpepJdoCl+3x7Bkjx1/kzFOUX2NHDUAAAAASUVORK5CYII=);
+}
+.login-btn-apple:before {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAcCAMAAABMOI/cAAAANlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC3dmhyAAAAEXRSTlMA79+/ECA/gG+fXzCPcM+vT5pWFbQAAACXSURBVCjPlZHhDsMgCIRFBauu2+79X3aNdDEruKTfD2PuROUIv+QSt+DAEXh7xqGDHX0HUBcF0SvIQOKrxvlYNgm5S56yJADPxnlskOTUC66UoTcYiLUpo/dFgaaSjB7DgIzxUMO56Z4xc3R+q6G8sHh9g6Vo2A5JO1wYAkv7H0o3xnfAu/MppWpjkc7OJ4VoTFoqkZ7/AI4hGRToOffeAAAAAElFTkSuQmCC);
+}
+.login-btn:before {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    border: 1px solid rgba(82,82,128,0.09);
+    border-radius: 16px;
+    content: "";
+    display: block;
+    display: flex;
+    flex-direction: row;
+    height: 48px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 48px;
+    -webkit-background-size: 20px 20px;
+}
+
+.register_accede {
+    margin-bottom: 20px;
+}
+
+/* Boton de Registro */
+.button_register {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.volver-register {
+    background-color: transparent;
+    border-color: #ED2F51;
+    color: #ED2F51;
+    text-align: right;
+    font-family: "Cinzel";
+    font-weight: 600;
+
+}
+/* Rounded Borders */
+.volver.round{
+    border-radius: 30px;
+    font-size: 12px;
+}
+/* Shadows Apply */
+.volver:active{
+    box-shadow: inset 0 0 20px #308F89;
+}
+.volver-ingles:active{
+    box-shadow: inset 0 0 20px white;
+}
+.volver-register:active{
+    box-shadow: inset 0 0 20px white;
+}
+/* Transparent Effect Apply */
+.volver:hover{
+    background-color: transparent;
+    border-color: #308F89;
+    color: #308F89;
+}
+.volver-ingles:hover{
+    background-color: transparent;
+    border-color: white;
+    color: white;
+}
+.volver-register:hover{
+    background-color: #ED2F51;
+    border-color: transparent;
+    color: white;
+}
+
+
+
+/* Vistas */
+
+/* Tablets */
+@media(min-width:768px){
+    body {
+        align-items: center;
+        background-color: #54BAB9;
+        background-image: url(/images/Fondo-Desktop.png);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 10px 20px;
+        width: 100%;
+    }
+    .registro{
+        justify-content: center;
+    }
+    .header__volver-ingles {
+        width: 70vh;
+    }
+}
+
+/* Destops */
+@media(min-width:1024px){
+    body {
+        align-items: center;
+        background-color: #54BAB9;
+        background-image: url(/images/Fondo-Desktop.png);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 10px 20px;
+        width: 100%;
+    }
+    .registro{
+        justify-content: center;
+    }
+
+    .header__volver-ingles {
+        width: 60vh;
+    }
+}
