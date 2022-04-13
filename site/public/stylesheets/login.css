@@ -6,10 +6,10 @@
     padding: 0;
     text-decoration: none;
 }
-body{
+body.login{
     align-items: center;
     background-image: url("/images/fondos/Fondo-Desktop.png");
-    display: block;
+    display: flex;
     padding: 10px 20px;
     width: 100%;
 }
