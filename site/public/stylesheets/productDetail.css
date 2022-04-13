@@ -1,0 +1,47 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main.product-detail__main{
+
+    background-color: var(--colorMainHome);
+}
+
+div.container-button-product-detail{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+div.container-button-product-detail a{
+
+    padding: 15px 25px 45px ;
+}
+
+.product-detail-product{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.product-detail-product img{
+
+    padding: 30px;
+    
+}
+
+span.precio{
+
+    display: block;
+    font-size: 25px;
+    font-weight: 800;
+    color: green;
+    text-align: right;
+    margin-right: 32px;
+    /* font-family: ; */ /* buscar fuente kameron */
+}
