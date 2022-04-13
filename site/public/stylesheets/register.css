@@ -5,7 +5,7 @@
     padding: 0;
 }
 .register_body {
-    background-image: url("/images/Fondo-Desktop.png");
+    background-image: url("/images/fondos/Fondo-Desktop.png");
     display: block;
     font-family: "Cinzel";
     padding: 10px 20px;
@@ -237,7 +237,7 @@
     .register_body {
         align-items: center;
         background-color: #54BAB9;
-        background-image: url(/images/Fondo-Desktop.png);
+        background-image: url('/images/fondos/Fondo-Desktop.png');
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -257,7 +257,7 @@
     .register_body {
         align-items: center;
         background-color: #54BAB9;
-        background-image: url(/images/Fondo-Desktop.png);
+        background-image: url(/images/fondos/Fondo-Desktop.png);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
