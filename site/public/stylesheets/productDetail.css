@@ -4,6 +4,9 @@ body{
     box-sizing: border-box;
 }
 
+
+/*                       MAIN            */
+
 main.product-detail__main{
 
     background-color: var(--colorMainHome);
@@ -18,10 +21,10 @@ div.container-button-product-detail{
 
 div.container-button-product-detail a{
 
-    padding: 15px 25px 45px ;
+    padding: 10px 15px 0px ;
 }
 
-.product-detail-product{
+.product-detail-product{ /* contenedor imagen */
 
     display: flex;
     flex-direction: column;
@@ -29,30 +32,98 @@ div.container-button-product-detail a{
 
 }
 
-.product-detail-product img{
+.product-detail-product img{  /* imagen de portada */
 
-    padding: 30px;
+    margin: 40px;
+    
     
 }
 
-span.precio{
+img.product-detail-portada{
+
+    box-shadow: rgba(0, 0, 0, 0.9) 0px 25px 20px -20px;
+    
+}
+
+.product-detail-product:hover .product-detail-portada{
+
+
+    transform: scale(1.1);
+    transition: 2s;
+    z-index: 10;
+}
+ 
+ 
+span.precio {     /* precio */
 
     display: block;
     font-size: 25px;
     font-weight: 800;
     color: green;
     text-align: right;
-    margin-right: 32px;
+    margin-right: 42px;
+
     /* font-family: ; */ /* buscar fuente kameron */
 }
 
+ .product-detail-añadir{  /* texto añadir */
+    display: block;
+    text-align: right;
+    padding:20px 0px;
+    margin-right: 42px;
+    font-size: 18px;
+    
+   
+} 
 
+.product-detail-añadir i{  /* icono carrito */
+    
+    text-align: right;
+    padding-left: 5px;
+    font-size: 25px;
+    color: rgb(224, 155, 6);
+    
+   
+} 
+
+.product-detail-description h1{ /*  titulo */
+    color: black;
+    text-align: center;
+    padding-bottom: 20px;
+    
+
+
+}
+
+.product-detail-description h3 {  /* sinopsis */
+    color: black;
+    text-align: left;
+    padding-bottom: 16px;
+    padding-left: 45px;
+    font-size: 15px;
+    
+}
+
+.product-detail-description p{ /* descripcion */
+    color: black;
+    text-align: left;
+    padding: 0px 45px 25px 45px;
+    font-size: 15px;
+    font-style:italic;
+    line-height: 1.9em;
+    
+    
+}
+
+
+
+    
 
 
 
 
 /*                 Footer        */
-.home__main__up{
+.home__main__up{ /*  botton de scroll up */
 
     position: fixed;
     bottom: 20px;
