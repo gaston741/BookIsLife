@@ -8,8 +8,7 @@
 }
 body{
     align-items: center;
-    background-color: #54BAB9;
-    background-image: url("/images/Fondo-Desktop.png");
+    background-image: url("/images/fondos/Fondo-Desktop.png");
     display: block;
     padding: 10px 20px;
     width: 100%;
@@ -35,7 +34,7 @@ body{
     width: 250px;
     border-radius: 50%;
     border: 1px solid #ed2f51;
-    background-image: url("/images/logo-proyect.png");
+    background-image: url("/images/logos/logo-proyect.png");
     background-position: center;
     background-size: 80%;
     height: 250px;
@@ -50,7 +49,7 @@ body{
     border: 1px solid #ed2f51;
     height: 50px;
     overflow: hidden;
-    background-image: url("/images/logo-proyect2.png");
+    background-image: url("/images/logos/logo-proyect2.png");
     background-position: center;
     background-size: cover;
     margin: auto;
@@ -188,7 +187,7 @@ div.new-here{
 @media(min-width:768px){
     body{
         background-color: #54BAB9;
-        background-image: url(/images/Fondo-Desktop.png);
+        background-image: url(/images/fondos/Fondo-Desktop.png);
         display: flex;
         padding: 10px 20px;
         width: 100%;
@@ -202,7 +201,7 @@ div.new-here{
 @media(min-width:1024px){
     body{
         background-color: #54BAB9;
-        background-image: url(/images/Fondo-Desktop.png);
+        background-image: url(/images/fondos/Fondo-Desktop.png);
         display: flex;
         padding: 10px 20px;
         width: 100%;
