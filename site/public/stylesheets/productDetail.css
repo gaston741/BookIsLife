@@ -45,3 +45,17 @@ span.precio{
     margin-right: 32px;
     /* font-family: ; */ /* buscar fuente kameron */
 }
+
+
+
+
+
+
+/*                 Footer        */
+.home__main__up{
+
+    position: fixed;
+    bottom: 20px;
+    right: 5px;
+    font-size: 4rem;
+}
