@@ -62,6 +62,7 @@ span.precio {     /* precio */
     color: green;
     text-align: right;
     margin-right: 42px;
+    font-family: "Kameron";
 
     /* font-family: ; */ /* buscar fuente kameron */
 }
