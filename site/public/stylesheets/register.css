@@ -4,8 +4,8 @@
     margin: 0;
     padding: 0;
 }
-body {
-    background-image: url("/images/Fondo-Desktop.png");
+.register_body {
+    background-image: url("/images/fondos/Fondo-Desktop.png");
     display: block;
     font-family: "Cinzel";
     padding: 10px 20px;
@@ -42,11 +42,12 @@ body {
     color: black;
     display: flex;
     text-align: end;
+    font-weight: 600;
 }
 
 /* Logos */
 .header__logo {
-    background-image: url("/images/logo-proyect.png");
+    background-image: url("/images/logos/logo-proyect.png");
     background-color: white;
     background-position: center;
     background-repeat: no-repeat;
@@ -59,10 +60,10 @@ body {
 
 }
 .header__logo2 {
-    background-image: url("/images/logo-proyect2.png");
+    background-image: url("/images/logos/logo-proyect2.png");
     background-position: center;
     background-size: cover;
-    border: 1px solid red;
+    border: 1px solid #ed2f51;
     border-radius: 50px;
     height: 50px;
     overflow: hidden;
@@ -75,7 +76,7 @@ body {
 .register main{
     padding: 0 20px;
 }
-.register section{
+.register_body section{
     background-color: white;
     border-radius: 10px;
     box-shadow: 5px 5px 10px #308F89;
@@ -83,11 +84,11 @@ body {
     padding: 20px;
     width: 100%;
 }
-.register h1{
+.register_body h1{
     text-align: center;
     text-transform: uppercase;
 }
-.register form{
+.register_body form{
     margin-top: 30px;
 }
 
@@ -107,7 +108,7 @@ body {
     width: 100%;
 }
 
-.register h4{
+.register_body h4{
     margin-bottom: 10px;
 }
 
@@ -132,7 +133,7 @@ body {
    text-align: center;
 }
 
-.register main section form .sitios-web {
+.register_body main section form .sitios-web {
     display: flex;
     flex-direction: row;
     
@@ -171,8 +172,14 @@ body {
     -webkit-background-size: 20px 20px;
 }
 
+.register_box_accede {
+    margin-bottom: 10px;
+    
+}
 .register_accede {
-    margin-bottom: 20px;
+    color: #ed2f51;
+    font-weight: 500;
+    font-size: 21px;
 }
 
 /* Boton de Registro */
@@ -227,10 +234,10 @@ body {
 
 /* Tablets */
 @media(min-width:768px){
-    body {
+    .register_body {
         align-items: center;
         background-color: #54BAB9;
-        background-image: url(/images/Fondo-Desktop.png);
+        background-image: url('/images/fondos/Fondo-Desktop.png');
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -247,10 +254,10 @@ body {
 
 /* Destops */
 @media(min-width:1024px){
-    body {
+    .register_body {
         align-items: center;
         background-color: #54BAB9;
-        background-image: url(/images/Fondo-Desktop.png);
+        background-image: url(/images/fondos/Fondo-Desktop.png);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
