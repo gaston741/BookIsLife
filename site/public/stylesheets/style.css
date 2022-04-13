@@ -1,8 +1,10 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00B7FF;
-}
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&display=swap');
+@import "./variables.css";
+@import "./general.css";
+@import "./header.css";
+@import "./footer.css";
+@import "./home.css";
+@import "./productDetail.css";
+@import "./productCart.css";
+@import "./login.css";
+@import "./register.css";

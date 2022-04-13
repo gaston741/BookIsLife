@@ -1,14 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://kit.fontawesome.com/92928bcf15.js" crossorigin="anonymous"></script>
     <title>Book Is Life | Home</title>
 </head>
-<body>
-    <h1>Home</h1>
-    
+
+<body class="home">
+    <header class="home__header">
+        <nav class="header_nav">
+            <li><a href="/login"><i class="fa-solid fa-user"></i></a></li>
+            <li><a href="/product-cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <li><a href="/register"><i class="fa-solid fa-envelope"></i></a></li>
+            <li class="idioma"><a href=""><i class="fa-solid fa-globe"></i> English</a></li>
+        </nav>
+        <div class="header_logo">
+            <img class="logo1" src="/images/logos/logo-proyect.png" alt="Logo1">
+            <img class="logo2" src="/images/logos/log2-mobile.png" alt="Logo2">
+        </div>
+
+
+        <div class="header_buscador">
+
+            <input type="text" placeholder="Encuentra tu libro ideal" />
+            <button class="lupa"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="categorias"><span><i class="fa-solid fa-bars"></i></span>
+            <nav class="header_nav_cate">
+
+                <ul>
+
+                    <li class="container-submenu"><a class="titulo" href="">Categorias <i
+                                class="fa-solid fa-angle-down"></i></a>
+                        <ul class="submenu">
+                            <li class="menu-item"><a class="menu-link" href="#">Arte</a></li>
+                            <li class="menu-item"><a class="menu-link" href="#">Autoayuda</a></li>
+                            <li class="menu-item"><a class="menu-link" href="#">Ciencias de la Salud</a></li>
+                            <li class="menu-item"><a class="menu-link" href="#">Computacion y Sistemas</a></li>
+                            <li class="menu-item"><a class="menu-link" href="#">Derecho y C. Sociales</a></li>
+                            <li class="menu-item"><a class="menu-link" href="#">Enciclopedias</a></li>
+                            <li class="menu-item"><a class="menu-link" href="#">Esoterismo</a></li>
+                            <li class="menu-item"><a class="menu-link" href="#">Ficcion y Literatura</a></li>
+                            <li class="menu-item"><a class="menu-link" href="#">Gastronomia y Hoteleria</a></li>
+                            <li class="menu-item"><a class="menu-link" href="#">Humanidades</a></li>
+                            <li class="menu-item"><a class="menu-link" href="#">Infantil y Juvenil</a></li>
+                            <li class="menu-item"><a class="menu-link" href="#">Mapas y Guias de Turismo</a></li>
+
+                        </ul>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header_banner">
+
+            <img src="/images/banner/banner2.jpg" alt="banner">
+        </div>
+        <div class="header_banner-desktop">
+            <img src="/images/banner/banner3.jpg" alt="">
+        </div>
+
+    </header>
+
+
+    <main class="home">
+
+        <h2>Los más vendidos de la semana</h2>
+
+        <section class="home__box_products">
+            <article class="home__product">
+                <div class="home__producto-box-image">
+                    <a href="/product-detail">
+                        <img class="home__product_image" src="/images/portadas/elDiarioDeAnaFrank.png" alt="libro">
+                    </a>
+                </div>
+                <span class="titulo">EL DIARIO DE ANA FRANK </span>
+                <span class="autor">Autor: Ana Frank</span>
+            </article>
+
+            <article class="home__product">
+                <div class="home__producto-box-image">
+                    <a href="/product-detail">
+                        <img class="home__product_image" src="/images/portadas/elPsicoanalista.png" alt="libro">
+                    </a>
+                </div>
+                <span class="titulo">EL PSICOANALISTA </span>
+                <span class="autor">Autor: John Katzenbach</span>
+            </article>
+
+            <article class="home__product">
+                <div class="home__producto-box-image">
+                    <a href="/product-detail">
+                        <img class="home__product_image" src="/images/portadas/losCuatroAcuerdos.png" alt="libro">
+                    </a>
+                    <span class="titulo">LOS CUATRO ACUERDOS </span>
+                    <span class="autor">Autor: Dr. Miguel Ruiz</span>
+                </div>
+            </article>
+
+            <article class="home__product">
+                <div class="home__producto-box-image">
+                    <a href="/product-detail">
+                        <img class="home__product_image" src="/images/portadas/elMonjeQueVendioSuFerrari.png"
+                            alt="libro">
+                    </a>
+                </div>
+                <span class="titulo">EL MONJE QUE VENDIÓ SU FERRARI </span>
+                <span class="autor">Autor: Robin Sharma</span>
+            </article>
+
+            <article class="home__product">
+                <div class="home__producto-box-image">
+                    <a href="/product-detail">
+                        <img class="home__product_image" src="/images/portadas/cienAñosDeSoledad.jpg" alt="libro">
+                    </a>
+                </div>
+                <span class="titulo">CIEN AÑOS DE SOLEDAD </span>
+                <span class="autor">Autor: Gabriel García Marquéz</span>
+            </article>
+
+            <article class="home__product">
+                <div class="home__producto-box-image">
+                    <a href="/product-detail">
+                        <img class="home__product_image" src="/images/portadas/elHombreEnBuscaDelSentido.png"
+                            alt="libro">
+                    </a>
+                </div>
+                <span class="titulo">EL HOMBRE EN BUSCA DEL SENTIDO </span>
+                <span class="autor">Autor: Viktor Frankl</span>
+            </article>
+
+            <article class="home__product">
+                <div class="home__producto-box-image">
+                    <a href="/product-detail">
+                        <img class="home__product_image" src="/images/portadas/padreRicoPadrePobre.png" alt="libro">
+                    </a>
+                </div>
+                <span class="titulo">PADRE RICO, PADRE POBRE </span>
+                <span class="autor">Autor: Robert T. Kiyosaki</span>
+            </article>
+
+            <article class="home__product">
+                <div class="home__producto-box-image">
+                    <a href="/product-detail">
+                        <img class="home__product_image" src="/images/portadas/elPoderDelAhora.png" alt="libro">
+                    </a>
+                </div>
+                <span class="titulo">EL PODER DEL AHORA </span>
+                <span class="autor">Autor: Eckhart Tolle</span>
+
+            </article>
+
+            <article class="home__product">
+                <div class="home__producto-box-image">
+                    <a href="/product-detail">
+                        <img class="home__product_image" src="/images/portadas/teEsperareTodaMiVida.png" alt="libro">
+                    </a>
+                </div>
+                <span class="titulo">TE ESPERARÉ TODA MI VIDA </span>
+                <span class="autor">Autor: Megan Maxwell</span>
+            </article>
+            <article class="home__product">
+                <div class="home__producto-box-image">
+                    <a href="/product-detail">
+                        <img class="home__product_image" src="/images/portadas/rayuela.png" alt="libro">
+                    </a>
+                </div>
+                <span class="titulo">RAYUELA </span>
+                <span class="autor">Autor: Julio Cortázar</span>
+            </article>
+        </section>
+
+        <h2>Top elegidos del mes: </h2>
+
+        <section class="home__box_products">
+            <article class="home__product">
+                <h4>Top #1</h4>
+                <span class="titulo">CUENTOS DE EVA LUNA</span>
+                <span class="autor">Autor: Isabel Allende</span>
+                <div class="home__producto-box-image">
+                    <a href="/product-detail">
+                        <img class="home__product_image" src="/images/portadas/cuentosDeEvaLuna.png" alt="libro">
+                    </a>
+                </div>
+
+            </article>
+
+            <article class="home__product">
+                <h4>Top #2</h4>
+                <span class="titulo">LOS AÑOS PERDIDOS </span>
+                <span class="autor">Autor: Mary Higgins Clark</span>
+                <div class="home__producto-box-image">
+                    <a href="/product-detail">
+                        <img class="home__product_image" src="/images/portadas/losAñosPerdidos.png" alt="libro">
+                    </a>
+                </div>
+
+            </article>
+
+            <article class="home__product">
+                <h4>Top #3</h4>
+                <span class="titulo">MUERTE EN EL NILO</span>
+                <span class="autor">Autor: Agatha Christie</span>
+                <div class="home__producto-box-image">
+                    <a href="/product-detail">
+                        <img class="home__product_image" src="/images/portadas/muerteEnElNilo.png" alt="libro">
+                    </a>
+                </div>
+
+            </article>
+        </section>
+        <aside>
+            <section class="home__aside_advertising">
+                <h3>TE PUEDE INTERESAR:</h3>
+
+                <article class="home__advertising">
+                    <a href=""><img src="/images/banner/advertising2.jpg" alt=""></a>
+
+                </article>
+                <article id="hidden" class="home__advertising">
+                    <a href=""><img src="/images/banner/banner1.jpg" alt=""></a>
+
+                </article>
+
+
+
+            </section>
+
+            <div class="home__main__up">
+                <a href="/"><i class="fa-solid fa-circle-up"></i></a>
+            </div>
+    </main>
+
+    <footer class="home__footer">
+        <nav class="home__nav">
+            <ul class="home__menu">
+                <li>
+                    <a href="https://www.facebook.com"> <span class="footer__link">Seguínos en </span>
+                        <img src="/images/redes-img/Facebook.png" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com/">
+                        <img src="/images/redes-img/instagram.png" alt="instagram">
+                    </a>
+                    <a href="https://twitter.com">
+                        <img src="/images/redes-img/twitter.png" alt="twitter">
+                    </a>
+                </li>
+                <li>
+                    <a href="/"><span class="footer__link">Quiénes Somos</span>
+                        <img src="/images/footer-img/icn-14.png" alt="Quienes Somos">
+                    </a>
+                </li>
+                <li>
+                    <a href=""><span class="footer__link">Atención al cliente</span>
+                        <img src="/images/footer-img/WhatsApp.png" alt="WhatsApp">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/"> <span class="footer__link">Trabajá con Nosotros</span>
+                        <img src="/images/footer-img/LinkedIN.png" alt="LinkedIN"></a>
+                </li>
+                <li>
+                    <span>Medios de Pago</span>
+                    <img src="/images/pagos-img/mercadoPago.png" alt="mercado-pago">
+                    <img src="/images/pagos-img/visa.png" alt="visa">
+                    <img src="/images/pagos-img/mastercard.png" alt="mastercard">
+                    <img src="/images/pagos-img/amex.png" alt="amex">
+                </li>
+            </ul>
+        </nav>
+
+    </footer>
 </body>
+
 </html>
