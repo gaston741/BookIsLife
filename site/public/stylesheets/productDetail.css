@@ -80,7 +80,7 @@ span.precio {     /* precio */
 .product-detail-añadir i{  /* icono carrito */
     
     text-align: right;
-    padding-left: 5px;
+    padding-left: 2px;
     font-size: 25px;
     color: rgb(224, 155, 6);
     
@@ -89,8 +89,14 @@ span.precio {     /* precio */
 
 .product-detail-description h1{ /*  titulo */
     color: black;
+    font-size: 20px;
     text-align: center;
-    padding-bottom: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 4px;
+    text-shadow:0 5px 1px #747474, 
+    -1px 3px 1px #8f8d8d, 
+    -2px 5px 1px #8d8b8b,
+    -3px 7px 1px #7a7a7a; 
     
 
 
