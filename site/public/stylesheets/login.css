@@ -1,0 +1,214 @@
+*{
+    box-sizing: border-box;
+    font-family: "Cinzel";
+    color: #ED2F51;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+body{
+    align-items: center;
+    background-image: url("/images/fondos/Fondo-Desktop.png");
+    display: block;
+    padding: 10px 20px;
+    width: 100%;
+}
+.btn-item{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-between;
+    
+}
+.logos{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    justify-content: unset;
+    margin: auto;
+    padding: 40px;
+    width: 250px;
+}
+.login__logo{
+    width: 250px;
+    border-radius: 50%;
+    border: 1px solid #ed2f51;
+    background-image: url("/images/logos/logo-proyect.png");
+    background-position: center;
+    background-size: 80%;
+    height: 250px;
+    background-repeat: no-repeat;
+    margin: auto;
+    background-color: white;
+
+}
+.login__logo-letra{
+    width: 250px;
+    border-radius: 50px;
+    border: 1px solid #ed2f51;
+    height: 50px;
+    overflow: hidden;
+    background-image: url("/images/logos/logo-proyect2.png");
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+    
+}
+header{
+    display: block;
+    text-align: center;
+}
+.login section{
+    background-color: white;
+    border-radius: 15px;
+    display:contents;
+    width: 100%;
+}
+.login h1{
+    text-transform: uppercase;
+    margin-top: 25px;
+}
+.login form{
+    margin-top: 30px;
+}
+.login__form-box{
+    margin-bottom: 20px;
+    width: 100%;
+}
+.login__form-input{
+    border-color: #ED2F51;
+    border-radius: 15px;
+    border-style: solid;
+    margin: 10px 0 0;
+    padding: 10px 10px;
+    width: 100%;
+}
+.login__form-box-remember{
+    margin: 0 0 20px;
+    text-align: end;
+}
+.social-media{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 15px 0 20px;
+    padding: 15px;
+}
+.button__login{
+    display: flex;
+    flex-direction: row-reverse ;
+}
+div.new-here{
+    display: flex;
+    margin: 65px 0;
+}
+/*----------------------------------------------- Botones --------------------------------------------- */
+.btn-ghost{
+    background-color: grey;
+    border: 2px solid transparent;
+    border-radius: 15%;
+    color: white;
+    display: flex;
+    font-size: 20px;
+    margin: 15px;
+    padding: 5px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.5s, background 0.5s;
+}
+.languajes{
+    background-color: transparent;
+    border-color: white;
+    color: black;
+    display: flex;
+    text-align: end;
+}
+.btn-login{
+    background-color: transparent;
+    border-color: #ED2F51;
+    border-radius: 10px;
+    color: #ED2F51;
+    text-align: right;
+}
+.fa-brands.fa.google{
+    background-color: transparent;
+    margin: 5px 5px 5px 5px;
+}
+.fa-brands.fa.facebook{
+    background-color: transparent;
+    color: blue;
+    margin: 5px 5px 5px 5px;
+}
+.fa-brands.fa.apple{
+    background-color: transparent;
+    color: black;
+    margin: 5px 5px 5px 5px;
+}
+/* ----------------------------------------------Diseño de Botones----------------------------------------------*/
+/* Rounded Borders */
+.btn-ghost.round{
+    border-radius: 30px;
+    font-size: 12px;
+}
+/* Shadows Apply */
+.btn-ghost:active{
+    box-shadow: inset 0 0 20px grey;
+}
+.btn-ghost.languajes:active{
+    box-shadow: inset 0 0 20px white;
+}
+.btn-ghost.btn-login:active{
+    box-shadow: inset 0 0 20px white;
+}
+/* Transparent Effect Apply */
+.btn-ghost:hover{
+    background-color: transparent;
+    border-color: grey;
+    color: gray;
+}
+.btn-ghost.languajes:hover{
+    background-color: transparent;
+    border-color: white;
+    color: white;
+}
+.btn-ghost.btn-login:hover{
+    background-color: #ED2F51;
+    border-color: transparent;
+    color: white;
+}
+
+/* -----------------------------------------------VISTAS----------------------------------------------- */
+
+
+@media (min-width:425px) {
+    
+}
+@media(min-width:768px){
+    body{
+        background-color: #54BAB9;
+        background-image: url(/images/fondos/Fondo-Desktop.png);
+        display: flex;
+        padding: 10px 20px;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .login article{
+        justify-content: center;
+    }
+}   
+@media(min-width:1024px){
+    body{
+        background-color: #54BAB9;
+        background-image: url(/images/fondos/Fondo-Desktop.png);
+        display: flex;
+        padding: 10px 20px;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .login article{
+        justify-content: center;
+    }
+}

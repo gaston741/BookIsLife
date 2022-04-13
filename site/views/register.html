@@ -5,9 +5,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/style.css">
-    <title>Book Is Life | register</title>
+    <title>Book Is Life | Register</title>
+    <script src="https://kit.fontawesome.com/313524d194.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <h1>Registro</h1>
+
+<body class="register">
+
+    <header class="register_header">
+        <div class="header__volver-ingles">
+
+            <button class="volver round"> Volver </button> 
+
+            <button class="volver ingles round"><i class="fa-solid fa-globe"></i> English </button> 
+
+        </div>
+        <div class="header__logo">
+            <!-- <a href="/"><img src="/images/logo-proyect.png" width="100%" alt=""></a> -->
+        </div>
+        <br>
+        <div class="header__logo2">
+            <!-- <a href="/"><img src="/images/logo-proyect2.png" alt=""></a> -->
+        </div>
+    </header>
+
+    <main>
+
+        <section>
+            <h1>Registrate</h1>
+            <hr>
+
+            <form>
+                <article class="registro">
+                    <div class="register__form-box">
+                        <label class="register__label" for="nombre">Nombre Completo: </label>
+                        <input class="register__form-input" type="text" id="nombre" name="nombre" placeholder="Escribí tu Nombre Completo">
+                        <span class="register__text-error">*Obligatorio</span>
+                    </div>
+                    <div class="register__form-box">
+                        <label class="register__label" for="email">Email: </label>
+                        <input class="register__form-input" type="email" id="email" name="email" placeholder="Escribí tu email">
+                        <span class="register__text-error">*Obligatorio</span>
+                    </div>
+                    <div class="register__form-box">
+                        <label class="register__label" for="password">Contraseña: </label>
+                        <input class="register__form-input" type="password" id="password" name="password" placeholder="Escribí tu contraseña">
+                        <span class="register__text-error">*Obligatorio</span>
+                    </div>
+                </article>
+                <article >
+                    <div class="social_media">
+                                <a class="col-sm-3 col-xs-6 login-btn login-btn-google" href="/google_oauth_signin" role="button" aria-label="Sign in with Google"></a>
+                                <a class="col-sm-3 col-xs-6 login-btn login-btn-facebook" href="/facebook_oauth_signin" role="button" aria-label="Sign in with Facebook"></a>
+                                <a class="col-sm-3 col-xs-6 login-btn login-btn-apple" href="/apple_oauth_signin" role="button" aria-label="Sign in with Apple"></a>
+                    </div>
+                    <div class="button_register">
+                            <button class="volver volver-register">Registrarme</button>
+                    </div>
+                </article>
+
+                <div class="register_accede">
+                    <a href="">¿Ya eres miembro? <b>Accedé</b></a>
+                </div>
+            </form>
+        </section>
+    </main>
+
 </body>
 </html>
