@@ -205,9 +205,9 @@ div.home__main__up i {
 
 
 
-   /*      INPUT   */
+    /*      INPUT   */
 
-  
+
     header.home__header div.header_buscador input {
         width: 45vh;
         height: 37px;
@@ -223,22 +223,25 @@ div.home__main__up i {
 
     /* menu deplegable */
 
-   
-    .categorias span i { /* hamburguesa icon */
+
+    .categorias span i {
+        /* hamburguesa icon */
 
         font-size: 35px;
         padding: 10px;
-        text-align: center; 
+        text-align: center;
         padding-left: 0px;
-        
-        
+
+
     }
-    .categorias a { /* link dentro de las listas */
-        
+
+    .categorias a {
+        /* link dentro de las listas */
+
         font-size: 1.3em;
-        
-       
-        
+
+
+
     }
 
     /*Banner*/
@@ -251,10 +254,10 @@ div.home__main__up i {
 
     .home__header div.header_banner-desktop {
 
-        display:flex;
-    
+        display: flex;
+
     }
-    
+
     .home__header div.header_banner img {
 
         width: 100%;
@@ -262,7 +265,7 @@ div.home__main__up i {
 
     }
 
-   
+
 
     /*MAIN*/
 
@@ -336,9 +339,10 @@ div.home__main__up i {
 
     /*      HEADER    */
     .header_nav li a i {
-    font-size: 55px;
-    
-   }
+        font-size: 55px;
+
+    }
+
     /*      LOGOS     */
 
     img.logo1 {
@@ -356,24 +360,25 @@ div.home__main__up i {
     }
 
     /*          HAMBURGUESA      */
-   
-    .categorias span i { /* hamburguesa icon */
+
+    .categorias span i {
+        /* hamburguesa icon */
 
         font-size: 55px;
         padding: 10px;
-        text-align: center; 
+        text-align: center;
         padding-left: 0px;
-        
-        
+
+
     }
 
-          /*          INPUT           */
+    /*          INPUT           */
 
     header.home__header div.header_buscador input {
         width: 70vh;
         height: 47px;
         font-size: 30px;
-        margin-left: 180px; 
+        margin-left: 180px;
         padding: 10px;
         display: flex;
         flex-direction: row;
@@ -384,7 +389,7 @@ div.home__main__up i {
         width: 7vh;
         height: 47px;
         font-size: 25px;
-        
+
     }
 
     /* BANNER*/
@@ -397,19 +402,19 @@ div.home__main__up i {
 
     .home__header div.header_banner-desktop {
 
-        display:flex;
-    
+        display: flex;
+
     }
-    
+
 
     div.header_banner-desktop img {
 
-        height:80vh;
+        height: 80vh;
 
     }
 
- 
-    
+
+
 
 
 
