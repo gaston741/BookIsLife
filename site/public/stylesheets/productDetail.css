@@ -11,6 +11,7 @@ main.product-detail__main{
 
     background-color: var(--colorMainHome);
     padding-bottom: 40px;
+    font-family: "Cinzel";
 }
 
 div.container-button-product-detail{
