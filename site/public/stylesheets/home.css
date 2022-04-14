@@ -351,24 +351,20 @@ div.home__main__up i {
 
     .header__logo_home {
         
-        height: 25vh;
-        width: 25vh;
+        height: 30vh;
+        width:30vh;
+        margin:0px 20px 35px 30px
     
     }
-
+    
     .header__logo2_home {
-        background-image: url(/images/logos/logo-proyect2.png);
-        background-position: center;
-        background-size: cover;
-        border-radius: 50px;
-        height: 4vh;
-        width: 18vh;
-        align-self: flex-end;
-        margin-bottom: 15px;
+       
+        height: 6vh;
+        width: 35vh;
+        margin-bottom: 40px;
         
     }
-    
-    
+
 
     /*          HAMBURGUESA      */
 
