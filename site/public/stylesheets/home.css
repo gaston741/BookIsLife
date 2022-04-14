@@ -181,22 +181,21 @@ div.home__main__up i {
         font-size: 15px;
 
     }
-
-
-    img.logo1 {
-
-
-
-        height: 200px;
-        width: 200px;
-        margin: 0px 0px 2px 50px;
-    }
-
-
-    img.logo2 {
-
+    /*   logos   */
+    .header__logo_home {
+        
+        height: 25vh;
         width: 25vh;
-        height: 5vh;
+        margin-bottom: 20px;
+    
+    }
+    
+    .header__logo2_home {
+       
+        height: 6vh;
+        width: 24vh;
+        margin-bottom: 20px;
+        
     }
 
     /*   Buscador   */
@@ -350,19 +349,26 @@ div.home__main__up i {
 
     /*      LOGOS     */
 
-    img.logo1 {
-        height: 300px;
-        width: 300px;
-        margin: 0px 0px 30px 50px;
+    .header__logo_home {
+        
+        height: 25vh;
+        width: 25vh;
+    
     }
 
-
-    img.logo2 {
-
-        width: 30vh;
-        height: 6vh;
-        margin-bottom: 30px;
+    .header__logo2_home {
+        background-image: url(/images/logos/logo-proyect2.png);
+        background-position: center;
+        background-size: cover;
+        border-radius: 50px;
+        height: 4vh;
+        width: 18vh;
+        align-self: flex-end;
+        margin-bottom: 15px;
+        
     }
+    
+    
 
     /*          HAMBURGUESA      */
 
