@@ -1,11 +1,11 @@
 *{
     box-sizing: border-box;
-    color: #ed2f51;
     margin: 0;
     padding: 0;
 }
 .register_body {
     background-image: url("/images/fondos/Fondo-Desktop.png");
+    color: #ed2f51;
     display: block;
     font-family: "Cinzel";
     padding: 10px 20px;
