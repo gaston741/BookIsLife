@@ -354,5 +354,113 @@ span.precio {     /* precio */
 
 @media(min-width:1024px){
 
+
+    /*      HEADER    */
+    .header_nav li a i {
+        font-size: 55px;
+
+    }
+
+    /*      LOGOS     */
+
+    img.logo1 {
+        height: 300px;
+        width: 300px;
+        margin: 0px 0px 30px 50px;
+    }
+
+
+    img.logo2 {
+
+        width: 30vh;
+        height: 6vh;
+        margin-bottom: 30px;
+    }
+
+    /*          HAMBURGUESA      */
+
+    .categorias span i {
+        /* hamburguesa icon */
+
+        font-size: 55px;
+        padding: 10px;
+        text-align: center;
+        padding-left: 0px;
+
+
+    }
+
+    /*          INPUT           */
+
+    header.home__header div.header_buscador input {
+        width: 70vh;
+        height: 47px;
+        font-size: 30px;
+        margin-left: 180px;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+    }
+
+    header.home__header div.header_buscador button.lupa {
+        width: 7vh;
+        height: 47px;
+        font-size: 25px;
+
+    }
+
+    /* BANNER*/
+
+    .home__header div.header_banner {
+
+        display: none;
+
+    }
+
+    .home__header div.header_banner-desktop {
+
+        display: flex;
+
+    }
+
+
+    div.header_banner-desktop img {
+
+        height: 80vh;
+
+    }
+    /* MAIN */
+
+    .product-detail-product img{  /* imagen de portada */
+        width: 60vh;
+      align-self: center;
+    }
+
+    span.precio {     /* precio */
+        font-size: 35px;
+        margin-right: 7.5em;
+    }
     
+        
+    .product-detail-añadir{  /* texto añadir */
+        margin-right: 10.5em; 
+       
+    } 
+    
+
+    .product-detail-description h3 {  /* sinopsis */
+        padding-left: 5em;
+        font-size: 25px;
+    }
+    
+    .product-detail-description p{ /* descripcion */
+        padding: 0px 130px 25px 130px;
+        font-size: 20px;
+        line-height: 2.5em;
+        
+        
+    }
+    
+
 }
