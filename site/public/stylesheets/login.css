@@ -203,7 +203,7 @@ div.new-here{
     
 }
 @media(min-width:768px){
-    body{
+    body.login{
         background-color: #54BAB9;
         background-image: url(/images/fondos/Fondo-Desktop.png);
         display: flex;
@@ -217,7 +217,7 @@ div.new-here{
     }
 }   
 @media(min-width:1024px){
-    body{
+    body.login{
         background-color: #54BAB9;
         background-image: url(/images/fondos/Fondo-Desktop.png);
         display: flex;
