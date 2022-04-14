@@ -1,6 +1,5 @@
 *{
     box-sizing: border-box;
-    color: #ed2f51;
     margin: 0;
     padding: 0;
 }
@@ -10,6 +9,7 @@
     font-family: "Cinzel";
     padding: 10px 20px;
     width: 110%;
+    color: #ed2f51; 
 }
 
 .register_header {
