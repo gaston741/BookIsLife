@@ -1,0 +1,143 @@
+body.product-cart{
+
+    font-family: "Cinzel";
+
+
+
+}
+main.cart-product-main{
+
+    background-color: var(--colorMainHome);
+}
+
+.cart__container{
+    display: flex; 
+   
+}
+
+.cart__description{
+    display: flex;
+    flex-direction: column;
+    color: black;
+    margin-left: 1vh;
+    justify-content: space-evenly;
+    width: 10vh;
+
+}
+.cart__description span{
+
+    font-size: 10px;
+    font-weight: bolder;
+}
+.cart-product-main h1{
+
+    font-size: 18px;
+    margin-left: 10px;
+    padding-top: 20px;
+}
+.cart_product_img{
+    width: 12vh;
+    height: 22vh;
+    margin: 2vh 0 2vh 1vh;
+}
+
+.cart_product-select{
+    display: flex;
+    flex-direction: column;
+    margin: 2vh 2vh;
+}
+
+
+.cart__select{
+    border: 2px solid black;
+  
+}
+.container__cart_product-select{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 24vh;
+}
+
+.cart_product-price{
+    font-size: 12px;
+    padding-bottom: 60px;
+    padding-left: 5px;
+    font-weight: 800;
+  
+    
+
+}
+
+.delete-option{
+
+    width: 8vh;
+    height: 3vh;
+    margin: 2vh;
+    background-color: rgb(243, 33, 6);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    padding: 1px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 10px;
+}
+
+.cart_container_button{
+
+    display: flex;
+    text-align: center;
+    justify-content: right;
+  
+   
+}
+
+.cart_container_button button{
+
+    width: 12vh;
+   height: 6vh;
+   margin: 2vh;
+   background-color:#4CAF50;
+   border: none;
+   border-radius: 6px;
+   color: white;
+   padding: 2px;
+   text-transform: uppercase;
+   font-weight: 700;
+}
+.cart_container_button button.button-finish{
+
+   
+   background-color: #f44336;
+   
+
+
+}
+
+
+
+
+
+
+
+
+
+/*           TABLET         RESPONSIVE          */
+
+@media(min-width:768px) {
+
+
+
+}
+
+
+
+/*                 DESKTOP    RESPONSIVE          */
+
+@media(min-width:1024px) {
+
+ 
+
+
+}

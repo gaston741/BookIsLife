@@ -1,13 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/style.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="https://kit.fontawesome.com/92928bcf15.js" crossorigin="anonymous"></script>
     <title>Book Is Life | Carrito</title>
 </head>
+
 <body class="product-cart">
-    <h1>Carrito</h1>
+    <header class="home__header">
+        <nav class="header_nav">
+            <li>
+                <a href="/login"><i class="fa-solid fa-user"></i></a>
+            </li>
+            <li>
+                <a href="/product-cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            </li>
+            <li>
+                <a href="/register"><i class="fa-solid fa-envelope"></i></a>
+            </li>
+            <li class="idioma">
+                <a href=""><i class="fa-solid fa-globe"></i> English</a>
+            </li>
+        </nav>
+        <div class="container_home_header_logo">
+            <div class="header__logo_home"></div>
+            <div class="header__logo2_home"></div>
+        </div>
+        <div class="header_buscador">
+            <input type="text" placeholder="Encuentra tu libro ideal" />
+            <button class="lupa">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+        <div class="categorias">
+            <span><i class="fa-solid fa-bars"></i></span>
+            <nav class="header_nav_cate">
+                <ul>
+                    <li class="container-submenu">
+                        <a class="titulo" href="">Categorias <i class="fa-solid fa-angle-down"></i></a>
+                        <ul class="submenu">
+                            <li class="menu-item">
+                                <a class="menu-link" href="#">Arte</a>
+                            </li>
+                            <li class="menu-item">
+                                <a class="menu-link" href="#">Autoayuda</a>
+                            </li>
+                            <li class="menu-item">
+                                <a class="menu-link" href="#">Ciencias de la Salud</a>
+                            </li>
+                            <li class="menu-item">
+                                <a class="menu-link" href="#">Computacion y Sistemas</a>
+                            </li>
+                            <li class="menu-item">
+                                <a class="menu-link" href="#">Derecho y C. Sociales</a>
+                            </li>
+                            <li class="menu-item">
+                                <a class="menu-link" href="#">Enciclopedias</a>
+                            </li>
+                            <li class="menu-item">
+                                <a class="menu-link" href="#">Esoterismo</a>
+                            </li>
+                            <li class="menu-item">
+                                <a class="menu-link" href="#">Ficcion y Literatura</a>
+                            </li>
+                            <li class="menu-item">
+                                <a class="menu-link" href="#">Gastronomia y Hoteleria</a>
+                            </li>
+                            <li class="menu-item">
+                                <a class="menu-link" href="#">Humanidades</a>
+                            </li>
+                            <li class="menu-item">
+                                <a class="menu-link" href="#">Infantil y Juvenil</a>
+                            </li>
+                            <li class="menu-item">
+                                <a class="menu-link" href="#">Mapas y Guias de Turismo</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header_banner">
+            <img src="/images/banner/banner2.jpg" alt="banner" />
+        </div>
+        <div class="header_banner-desktop">
+            <img src="/images/banner/banner3.jpg" alt="" />
+        </div>
+    </header>
+    <main class="cart-product-main">
+        <h1>MI CARRITO</h1>
+        <section class="cart__container">
+            <img src="/images/portadas/padreRicoPadrePobre.png" class="cart_product_img" alt="" />
+            <div class="cart__description">
+                <span>PADRE RICO PADRE POBRE</span>
+                <span>Robert T. Kiyosaki</span>
+            </div>
+
+            <div class="container__cart_product-select">
+                <div class="cart_product-select">
+                    <select name="select" class="cart__select" name="" id="">
+                        <option value="value1">1</option>
+                        <option value="value2">2</option>
+                        <option value="value3">3</option>
+                    </select>
+                    <button class="delete-option">Eliminar</button>
+                </div>
+                <span class="cart_product-price">AR$ 1.000</span>
+            </div>
+        </section>
+        <section class="cart__container">
+            <img src="/images/portadas/elPsicoanalista.png" class="cart_product_img" alt="" />
+            <div class="cart__description">
+                <span>EL PSICOANALISTA</span>
+                <span>john Katzenbach</span>
+            </div>
+
+            <div class="container__cart_product-select">
+                <div class="cart_product-select">
+                    <select name="select" class="cart__select" name="" id="">
+                        <option value="value1">1</option>
+                        <option value="value2">2</option>
+                        <option value="value3">3</option>
+                    </select>
+                    <button class="delete-option">Eliminar</button>
+                </div>
+                <span class="cart_product-price">AR$ 1.000</span>
+            </div>
+        </section>
+        <section class="cart__container">
+            <img src="/images/portadas/losAñosPerdidos.png" class="cart_product_img" alt="" />
+            <div class="cart__description">
+                <span>LOS AÑOS PERDIDOS</span>
+                <span>Mary Higgins Clark</span>
+            </div>
+
+            <div class="container__cart_product-select">
+                <div class="cart_product-select">
+                    <select name="select" class="cart__select" name="" id="">
+                        <option value="value1">1</option>
+                        <option value="value2">2</option>
+                        <option value="value3">3</option>
+                    </select>
+                    <button class="delete-option">Eliminar</button>
+                </div>
+                <span class="cart_product-price">AR$ 1.000</span>
+            </div>
+        </section>
+        <section class="cart_container-options">
+            <div class="cart_container_button">
+                <button class="button-continue">Seguir Comprando</button>
+                <button class="button-finish">Finalizar Compra</button>
+            </div>
+        </section>
+    </main>
+    <footer class="home__footer">
+        <nav class="home__nav">
+            <ul class="home__menu">
+                <li>
+                    <a href="https://www.facebook.com">
+                        <span class="footer__link">Seguínos en </span>
+                        <img src="/images/redes-img/Facebook.png" alt="Facebook" />
+                    </a>
+                    <a href="https://www.instagram.com/">
+                        <img src="/images/redes-img/instagram.png" alt="instagram" />
+                    </a>
+                    <a href="https://twitter.com">
+                        <img src="/images/redes-img/twitter.png" alt="twitter" />
+                    </a>
+                </li>
+                <li>
+                    <a href="/"><span class="footer__link">Quiénes Somos</span>
+                        <img src="/images/footer-img/icn-14.png" alt="Quienes Somos" />
+                    </a>
+                </li>
+                <li>
+                    <a href=""><span class="footer__link">Atención al cliente</span>
+                        <img src="/images/footer-img/WhatsApp.png" alt="WhatsApp" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/">
+                        <span class="footer__link">Trabajá con Nosotros</span>
+                        <img src="/images/footer-img/LinkedIN.png" alt="LinkedIN" /></a>
+                </li>
+                <li>
+                    <span>Medios de Pago</span>
+                    <img src="/images/pagos-img/mercadoPago.png" alt="mercado-pago" />
+                    <img src="/images/pagos-img/visa.png" alt="visa" />
+                    <img src="/images/pagos-img/mastercard.png" alt="mastercard" />
+                    <img src="/images/pagos-img/amex.png" alt="amex" />
+                </li>
+            </ul>
+        </nav>
+    </footer>
 </body>
+
 </html>
