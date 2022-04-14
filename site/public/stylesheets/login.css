@@ -7,7 +7,6 @@ body.login{
     align-items: center;
     background-image: url("/images/fondos/Fondo-Desktop.png");
     color: #ed2f51;
-    display: flex;
     font-family: "Cinzel";
     padding: 10px 20px;
     width: 100%;
