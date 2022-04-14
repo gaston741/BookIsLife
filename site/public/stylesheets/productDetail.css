@@ -11,6 +11,7 @@ main.product-detail__main{
 
     background-color: var(--colorMainHome);
     padding-bottom: 40px;
+    font-family: "Cinzel";
 }
 
 div.container-button-product-detail{
@@ -146,7 +147,10 @@ span.precio {     /* precio */
     
 }
 
+.home__main__up a i{
 
+    font-size: 40px;
+}
 
 
 
@@ -158,4 +162,305 @@ span.precio {     /* precio */
     bottom: 20px;
     right: 5px;
     font-size: 4rem;
+}
+
+
+
+
+
+
+/* TABLET */
+
+@media(min-width:768px) {
+    .header_nav li a i {
+        /*iconos del nav header*/
+
+        font-size: 45px;
+        color: rgb(242, 225, 197);
+    }
+
+
+
+    .header_nav li.idioma a {
+        /*boton ingles*/
+
+
+
+        font-size: 15px;
+
+    }
+
+    .header_nav li.idioma a i {
+        /* mundo de idioma*/
+
+
+        font-size: 15px;
+
+    }
+
+
+    img.logo1 {
+
+
+
+        height: 200px;
+        width: 200px;
+        margin: 0px 0px 2px 50px;
+    }
+
+
+    img.logo2 {
+
+        width: 25vh;
+        height: 5vh;
+    }
+
+    /*   Buscador   */
+
+    header.home__header div.header_buscador {
+
+        width: 100%;
+        height: 80px;
+
+    }
+
+
+
+    /*      INPUT   */
+
+
+    header.home__header div.header_buscador input {
+        width: 45vh;
+        height: 37px;
+        font-size: 25px;
+        margin-left: 40px;
+    }
+
+    header.home__header div.header_buscador button.lupa {
+        width: 5vh;
+        height: 37px;
+        font-size: 20px;
+    }
+
+    /* menu deplegable */
+
+
+    .categorias span i {
+        /* hamburguesa icon */
+
+        font-size: 35px;
+        padding: 10px;
+        text-align: center;
+        padding-left: 0px;
+
+
+    }
+
+    .categorias a {
+        /* link dentro de las listas */
+
+        font-size: 1.3em;
+
+
+
+    }
+
+    /*Banner*/
+
+    .home__header div.header_banner {
+
+        display: none;
+
+    }
+
+    .home__header div.header_banner-desktop {
+
+        display: flex;
+
+    }
+
+    .home__header div.header_banner img {
+
+        width: 100%;
+        height: 350px;
+
+    }
+
+
+
+   /*  MAIN */
+
+   .product-detail-product img{  /* imagen de portada */
+
+    margin: 30px 70px 50px; 
+}
+
+   span.precio {     /* precio */
+    font-size: 45px;
+    margin-right: 70px;
+}
+
+    
+.product-detail-añadir{  /* texto añadir */
+    padding-top: 10px;
+    margin-right: 70px; 
+    width: 20vh;
+    height: 50px;
+} 
+
+   
+
+.product-detail-añadir i{  /* icono carrito */
+    font-size: 30px;
+} 
+.product-detail-description h1{ /*  titulo */
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.product-detail-description h3 {  /* sinopsis */
+    padding-left: 70px;
+    font-size: 25px;
+}
+
+.product-detail-description p{ /* descripcion */
+    padding: 0px 70px 25px 70px;
+    font-size: 20px;
+    line-height: 2em;
+    
+    
+}
+
+    /*FOOTER*/
+    .home__footer li,
+    a {
+        font-size: 25px;
+    }
+
+    .home__footer li img {
+        width: 5vh;
+        height: 7.5vh;
+        margin: 0px 15px 0px 15px;
+
+
+
+    }
+
+
+
+
+}
+
+@media(min-width:1024px){
+
+
+    /*      HEADER    */
+    .header_nav li a i {
+        font-size: 55px;
+
+    }
+
+    /*      LOGOS     */
+
+    img.logo1 {
+        height: 300px;
+        width: 300px;
+        margin: 0px 0px 30px 50px;
+    }
+
+
+    img.logo2 {
+
+        width: 30vh;
+        height: 6vh;
+        margin-bottom: 30px;
+    }
+
+    /*          HAMBURGUESA      */
+
+    .categorias span i {
+        /* hamburguesa icon */
+
+        font-size: 55px;
+        padding: 10px;
+        text-align: center;
+        padding-left: 0px;
+
+
+    }
+
+    /*          INPUT           */
+
+    header.home__header div.header_buscador input {
+        width: 70vh;
+        height: 47px;
+        font-size: 30px;
+        margin-left: 180px;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+    }
+
+    header.home__header div.header_buscador button.lupa {
+        width: 7vh;
+        height: 47px;
+        font-size: 25px;
+
+    }
+
+    /* BANNER*/
+
+    .home__header div.header_banner {
+
+        display: none;
+
+    }
+
+    .home__header div.header_banner-desktop {
+
+        display: flex;
+
+    }
+
+
+    div.header_banner-desktop img {
+
+        height: 80vh;
+
+    }
+    /* MAIN */
+
+    .product-detail-product img{  /* imagen de portada */
+        width: 60vh;
+      align-self: center;
+    }
+
+    span.precio {     /* precio */
+        font-size: 35px;
+        margin-right: 7.5em;
+    }
+    
+        
+    .product-detail-añadir{  /* texto añadir */
+        margin-right: 10.5em; 
+       
+    } 
+    
+
+    .product-detail-description h3 {  /* sinopsis */
+        padding-left: 5em;
+        font-size: 25px;
+    }
+    
+    .product-detail-description p{ /* descripcion */
+        padding: 0px 130px 25px 130px;
+        font-size: 20px;
+        line-height: 2.5em;
+        
+        
+    }
+    
+
 }

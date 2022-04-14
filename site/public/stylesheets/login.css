@@ -1,15 +1,14 @@
 *{
     box-sizing: border-box;
-    font-family: "Cinzel";
-    color: #ED2F51;
     margin: 0;
     padding: 0;
-    text-decoration: none;
 }
 body.login{
     align-items: center;
     background-image: url("/images/fondos/Fondo-Desktop.png");
+    color: #ed2f51;
     display: flex;
+    font-family: "Cinzel";
     padding: 10px 20px;
     width: 100%;
 }
@@ -55,7 +54,7 @@ body.login{
     margin: auto;
     
 }
-header{
+.login__header{
     display: block;
     text-align: center;
 }
@@ -66,8 +65,16 @@ header{
     width: 100%;
 }
 .login h1{
+    color: #ed2f51;
+    font-family: "Cinzel";
+    text-decoration: none;
     text-transform: uppercase;
     margin-top: 25px;
+}
+.login a{
+    color: #ed2f51;
+    font-family: "Cinzel";
+    text-decoration: none;
 }
 .login form{
     margin-top: 30px;
@@ -80,8 +87,10 @@ header{
     border-color: #ED2F51;
     border-radius: 15px;
     border-style: solid;
+    font-family: "Cinzel";
     margin: 10px 0 0;
     padding: 10px 10px;
+    text-decoration: none;
     width: 100%;
 }
 .login__form-box-remember{
@@ -109,6 +118,7 @@ div.new-here{
     border-radius: 15%;
     color: white;
     display: flex;
+    font-family: "Cinzel";
     font-size: 20px;
     margin: 15px;
     padding: 5px;
@@ -116,6 +126,9 @@ div.new-here{
     text-decoration: none;
     text-transform: uppercase;
     transition: color 0.5s, background 0.5s;
+}
+#volver{
+    color: white
 }
 .languajes{
     background-color: transparent;
@@ -167,6 +180,11 @@ div.new-here{
     border-color: grey;
     color: gray;
 }
+#volver:hover{
+    background-color: transparent;
+    border-color: grey;
+    color:grey
+}
 .btn-ghost.languajes:hover{
     background-color: transparent;
     border-color: white;
@@ -185,7 +203,7 @@ div.new-here{
     
 }
 @media(min-width:768px){
-    body{
+    body.login{
         background-color: #54BAB9;
         background-image: url(/images/fondos/Fondo-Desktop.png);
         display: flex;
@@ -199,7 +217,7 @@ div.new-here{
     }
 }   
 @media(min-width:1024px){
-    body{
+    body.login{
         background-color: #54BAB9;
         background-image: url(/images/fondos/Fondo-Desktop.png);
         display: flex;
