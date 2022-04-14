@@ -61,25 +61,28 @@
 
 
 /*Logos*/
-
-
-
-img.logo1 {
-
+.header__logo_home {
+    background-image: url(/images/logos/logo-proyect.png);
+    background-color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 61%;
     border-radius: 50%;
-    border: solid 1px var(--colorGrisClaro);
-    height: 100px;
-    width: 100px;
-    margin: 0px 0px 2px 30px;
+    height: 18vh;
+    width: 18vh;
+    margin:0px 5px 10px 15px;
+
 }
-
-
-img.logo2 {
-
-    padding-bottom: 5px;
-    padding-left: px;
-    width: 20vh;
+.header__logo2_home {
+    background-image: url(/images/logos/logo-proyect2.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 50px;
     height: 4vh;
+    width: 18vh;
+    align-self: flex-end;
+    margin-bottom: 15px;
+    
 }
 
 
