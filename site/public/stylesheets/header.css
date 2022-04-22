@@ -108,6 +108,8 @@ header.home__header div.header_buscador {
     justify-content: space-between;
     align-items: center;
     background-color: #ffffff;
+    position: relative;
+    
 }
 
 
@@ -127,9 +129,10 @@ header.home__header div.header_buscador {
     position: absolute;
     width: 80%;
     height: 0vh;
-    top: 38vh;
+    top: 6.5vh;
     text-align: left;
     transition: all .5s;
+   
 
 }
 
@@ -141,7 +144,7 @@ header.home__header div.header_buscador {
     width: 60%;
     border-bottom: solid 1px grey;
     background-color: #EFFEFA;
-  
+    
 
 
 }
@@ -299,7 +302,7 @@ div.header_banner-desktop img {
     /* menu deplegable */
     .home_nav-menu {
         width: 50%;
-        top: 41vh;
+        top: 6vh;
     }
     /* icono hamburguesa */
     .bar-btn{
@@ -370,7 +373,7 @@ div.header_banner-desktop img {
         
     }
     .home_nav-menu {
-        top: 42.5vh;
+        top: 6vh;
     }
 
     
