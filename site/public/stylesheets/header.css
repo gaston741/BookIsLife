@@ -283,6 +283,7 @@ div.header_banner-desktop img {
 
         width: 100%;
         height: 55px;
+        justify-content: center;
 
     }
     /*      INPUT   */
@@ -345,6 +346,7 @@ div.header_banner-desktop img {
 
     }
 
+
     /*      LOGOS     */
 
     .header__logo_home {
@@ -361,6 +363,13 @@ div.header_banner-desktop img {
         width: 25vh;
         margin-bottom: 15px;
         
+    }
+   /*  BUSCADOR */
+    header.home__header div.header_buscador {
+        margin-top: 0px;
+        width: 100%;
+        height: 40px;
+        justify-content: center;
     }
 
  /* MENU DESPLEGABLE */
