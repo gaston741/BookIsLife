@@ -1,12 +1,10 @@
 /*HEADER*/
 
-
-
-
-
 .home__header {
 
     background-image: url("/images/fondos/lindo-fondo.webp");
+    text-decoration: none;
+    list-style: none;
 }
 
 
@@ -86,7 +84,7 @@
 }
 
 
-/*Header buscador y hamburguesa*/
+/*      HEADER BUSCADOR */
 
 
 header.home__header div.header_buscador {
@@ -100,86 +98,85 @@ header.home__header div.header_buscador {
 
 }
 
-/* MENU DESPLEGABLE */
+/*   MENU DESPLEGABLE */
 
-.categorias {
+.home_header_nav_categorias{
+
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+
+
+.bar-btn{
+
+    font-size: 25px;
+    color: rgb(3, 3, 3);
+    margin-left: 20px;
+    cursor: pointer;
+
+
+}
+
+.home_nav-menu{
+
+    position: absolute;
+    width: 80%;
+    height: 0vh;
+    top: 32vh;
+    text-align: left;
+    transition: all .5s;
+
+}
+
+.home_nav-menu li {
+    display: none;
+    line-height: 30px;
+    padding: 10px 25px;
+    transition: all .5s;
+    width: 60%;
+    border-bottom: solid 1px grey;
+    background-color: #EFFEFA;
+  
+
+
+}
+.home_nav-menu li:last-child {
+  
+    border-bottom: none;
+
+}
+
+.home_nav-menu li a{
+    color: black;
+    font-size: 16px;
+    font-weight: 700;
     font-family: "Cinzel";
-    background-color: white;
-    padding-bottom: 2px;
-    /* display:none; *//* para ocultar el menu desplegable */
-  }
+
+}
+
+
+.home_nav-menu li:hover{
   
-  .categorias a { /* link dentro de las listas */
-      display: block;
-      font-size: 0.7em;
-      text-decoration: none;
-      padding:  5px 10px;
-      color: black;
-     
-      
-  }
-  
-  .categorias span i { /* hamburguesa icon */
-  
-      font-size: 25px;
-      color:rgb(53, 51, 51);
-      padding:5px;
-      background-color: white;
-      width: 20%;
-      text-align: center;
-      
-  }
-  
-  .header_nav_cate ul {
-  
-      margin-left: 35px ;
-      list-style: none;
-      display: none;
-   
-  }
-  
-  .header_nav_cate ul li.container-submenu a.titulo {/*  categorias titulo */
-      
-  padding-bottom: 5px;
-  color: black;
-      
-  }
-  
-  li.container-submenu{
-      width: 33vh;
-  }
-  
-  ul.submenu li{
-  
-      width: 29vh;
-     border-bottom: solid 1px grey;
-          
-  }
-  
-  a.titulo{
-          background-color: #FFE7E7;
-  }
-  
-  a.menu-link{
-          background-color:#EFFEFA;
-          transition: all 0.2s;
-  }
-  
-  /* efectos al pasar el mouse encima */
-  
-  a.menu-link:hover{ /* al hacer hover en cda categoria */
-  
-      background-color: rgb(100, 231, 231);
-  }
-  .categorias:hover  .header_nav_cate ul {
-      
-      display: block;
-      transition: all 0.5s;
-  
-   
-  
-      
-  }
+    transition: .3s;
+    background-color: rgb(100, 231, 231);
+
+}
+
+#check {
+    display :none
+}
+
+#check:checked ~ .home_nav-menu li {
+    display: block;
+}
+
+
+
 
 /*  BUSCADOR INPUT */
 
@@ -229,12 +226,173 @@ header.home__header div.header_buscador button.lupa {
 
 }
 
-
-
 .home__header div.header_banner img,
 div.header_banner-desktop img {
 
     width: 100%;
     height: 250px;
 
+} 
+
+/* TABLET */
+@media (min-width:768px){
+
+    .header_nav li a i {
+        /*iconos del nav header*/
+
+        font-size: 45px;
+        color: rgb(242, 225, 197);
+    }
+
+
+    .header_nav li.idioma a {
+        /*boton ingles*/
+        font-size: 15px;
+
+    }
+
+    .header_nav li.idioma a i {
+        /* mundo de idioma*/
+
+
+        font-size: 15px;
+
+    }
+    /*   logos   */
+    .header__logo_home {
+        
+        height: 25vh;
+        width: 25vh;
+        margin-bottom: 20px;
+    
+    }
+    
+    .header__logo2_home {
+       
+        height: 6vh;
+        width: 24vh;
+        margin-bottom: 20px;
+        
+    }
+    /*   Buscador   */
+
+    header.home__header div.header_buscador {
+
+        width: 100%;
+        height: 80px;
+
+    }
+    /*      INPUT   */
+    header.home__header div.header_buscador input {
+        width: 45vh;
+        height: 37px;
+        font-size: 25px;
+        margin-left: 40px;
+    }
+
+    header.home__header div.header_buscador button.lupa {
+        width: 5vh;
+        height: 37px;
+        font-size: 20px;
+    }
+
+    /* menu deplegable */
+    .home_nav-menu {
+        
+        top: 44.5vh;
+    }
+    /* icono hamburguesa */
+    .bar-btn{
+
+        font-size: 30px;
+    }
+    
+    /*Banner*/
+
+    .home__header div.header_banner {
+
+        display: none;
+
+    }
+
+    .home__header div.header_banner-desktop {
+
+        display: flex;
+
+    }
+
+    .home__header div.header_banner img {
+
+        width: 100%;
+        height: 350px;
+
+    }
+
+}
+
+/* DESKTOP*/
+
+@media(min-width:1024px) {
+
+
+    /*      HEADER    */
+    .header_nav li a i {
+        font-size: 35px;
+
+    }
+
+    /*      LOGOS     */
+
+    .header__logo_home {
+        
+        height: 15Vh;
+        width:15vh;
+        margin:0px 15px 10px 20px
+    
+    }
+    
+    .header__logo2_home {
+       
+        height: 4vh;
+        width: 25vh;
+        margin-bottom: 15px;
+        
+    }
+
+ /* MENU DESPLEGABLE */
+    .home_nav-menu li {
+        
+        width: 50%;
+    }
+    .home_nav-menu li a {
+        
+        font-size: 20px;
+        
+    }
+    .home_nav-menu {
+        top: 42vh;
+    }
+
+    
+
+    /* BANNER*/
+
+    .home__header div.header_banner {
+
+        display: none;
+
+    }
+
+    .home__header div.header_banner-desktop {
+
+        display: flex;
+
+    }
+
+
+    div.header_banner-desktop img {
+
+        height: 25vh;
+
+    }
 }
