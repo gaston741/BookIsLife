@@ -13,77 +13,63 @@
 <body class="home">
     <header class="home__header">
         <nav class="header_nav">
+            <!--    NAV BAR HEADER  -->
             <li><a href="/login"><i class="fa-solid fa-user"></i></a></li>
             <li><a href="/product-cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
             <li><a href="/register"><i class="fa-solid fa-envelope"></i></a></li>
             <li class="idioma"><a href=""><i class="fa-solid fa-globe"></i> English</a></li>
         </nav>
-        <!-- <div class="home_header_logo">
-            <img class="logo1" src="/images/logos/logo-home.png" alt="Logo1">
-            <img class="logo2" src="/images/logos/log2-mobile.png" alt="Logo2">
+        <!--   LOGOS HEADER -->
+        <div class="container_home_header_logo">
+            <a class="deRegreso" href="/"></a>
+            <div class="header__logo_home"></div></a>
+            <br>
+            <div class="header__logo2_home"></div>
         </div>
- -->
- <div class="container_home_header_logo">
 
-    <div class="header__logo_home">
-        <!-- <a href="/"><img src="/images/logo-proyect.png" width="100%" alt=""></a> -->
-    </div>
-    <br>
-    <div class="header__logo2_home">
-        <!-- <a href="/"><img src="/images/logo-proyect2.png" alt=""></a> -->
-    </div>
- </div>
-       
-
+        <!--   BUSCADOR -->
         <div class="header_buscador">
-
             <input type="text" placeholder="Encuentra tu libro ideal" />
             <button class="lupa"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
-        <div class="categorias"><span><i class="fa-solid fa-bars"></i></span>
-            <nav class="header_nav_cate">
 
-                <ul>
+        <!--      MENU HAMBURGUESA -->
+        <nav class="home_header_nav_categorias">
 
-                    <li class="container-submenu"><a class="titulo" href="">Categorias <i
-                                class="fa-solid fa-angle-down"></i></a>
-                        <ul class="submenu">
-                            <li class="menu-item"><a class="menu-link" href="#">Arte</a></li>
-                            <li class="menu-item"><a class="menu-link" href="#">Autoayuda</a></li>
-                            <li class="menu-item"><a class="menu-link" href="#">Ciencias de la Salud</a></li>
-                            <li class="menu-item"><a class="menu-link" href="#">Computacion y Sistemas</a></li>
-                            <li class="menu-item"><a class="menu-link" href="#">Derecho y C. Sociales</a></li>
-                            <li class="menu-item"><a class="menu-link" href="#">Enciclopedias</a></li>
-                            <li class="menu-item"><a class="menu-link" href="#">Esoterismo</a></li>
-                            <li class="menu-item"><a class="menu-link" href="#">Ficcion y Literatura</a></li>
-                            <li class="menu-item"><a class="menu-link" href="#">Gastronomia y Hoteleria</a></li>
-                            <li class="menu-item"><a class="menu-link" href="#">Humanidades</a></li>
-                            <li class="menu-item"><a class="menu-link" href="#">Infantil y Juvenil</a></li>
-                            <li class="menu-item"><a class="menu-link" href="#">Mapas y Guias de Turismo</a></li>
+            <input type="checkbox" id="check">
+            <label for="check" class="bar-btn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <ul class="home_nav-menu">
+                <li><a href="#">Ciencia Ficción</a></li>
+                <li><a href="#">Clásicos</a></li>
+                <li><a href="#">Cómics y Mangas</a></li>
+                <li><a href="#">Humor</a></li>
+                <li><a href="#">Narrativa</a></li>
+                <li><a href="#">Narrativa Romantica</a></li>
+                <li><a href="#">Obras de Teatro</a></li>
+                <li><a href="#">Poesía</a></li>
+                <li><a href="#">Policiales</a></li>
+                <li><a href="#">Terror</a></li>
+            </ul>
+        </nav>
 
-                        </ul>
-                    </li>
-
-                </ul>
-            </nav>
-        </div>
-
+        <!-- BANNERS O CARRUSEL -->
         <div class="header_banner">
-
             <img src="/images/banner/banner2.jpg" alt="banner">
         </div>
         <div class="header_banner-desktop">
             <img src="/images/banner/banner3.jpg" alt="">
         </div>
-
     </header>
-
-
+    <!--  CUERPO  -->
     <main class="home">
-
         <h2>Los más vendidos de la semana</h2>
-
+        <!-- SECCION PRODUCTOS -->
         <section class="home__box_products">
+
+            <!--    PRODUCTO -->
+
             <article class="home__product">
                 <div class="home__producto-box-image">
                     <a href="/product-detail">
@@ -93,7 +79,7 @@
                 <span class="titulo">EL DIARIO DE ANA FRANK </span>
                 <span class="autor">Autor: Ana Frank</span>
             </article>
-
+            <!--    PRODUCTO -->
             <article class="home__product">
                 <div class="home__producto-box-image">
                     <a href="/product-detail">
@@ -103,7 +89,7 @@
                 <span class="titulo">EL PSICOANALISTA </span>
                 <span class="autor">Autor: John Katzenbach</span>
             </article>
-
+            <!--    PRODUCTO -->
             <article class="home__product">
                 <div class="home__producto-box-image">
                     <a href="/product-detail">
@@ -113,7 +99,7 @@
                     <span class="autor">Autor: Dr. Miguel Ruiz</span>
                 </div>
             </article>
-
+            <!--    PRODUCTO -->
             <article class="home__product">
                 <div class="home__producto-box-image">
                     <a href="/product-detail">
@@ -124,7 +110,7 @@
                 <span class="titulo">EL MONJE QUE VENDIÓ SU FERRARI </span>
                 <span class="autor">Autor: Robin Sharma</span>
             </article>
-
+            <!--    PRODUCTO -->
             <article class="home__product">
                 <div class="home__producto-box-image">
                     <a href="/product-detail">
@@ -134,7 +120,7 @@
                 <span class="titulo">CIEN AÑOS DE SOLEDAD </span>
                 <span class="autor">Autor: Gabriel García Marquéz</span>
             </article>
-
+            <!--    PRODUCTO -->
             <article class="home__product">
                 <div class="home__producto-box-image">
                     <a href="/product-detail">
@@ -145,7 +131,7 @@
                 <span class="titulo">EL HOMBRE EN BUSCA DEL SENTIDO </span>
                 <span class="autor">Autor: Viktor Frankl</span>
             </article>
-
+            <!--    PRODUCTO -->
             <article class="home__product">
                 <div class="home__producto-box-image">
                     <a href="/product-detail">
@@ -155,7 +141,7 @@
                 <span class="titulo">PADRE RICO, PADRE POBRE </span>
                 <span class="autor">Autor: Robert T. Kiyosaki</span>
             </article>
-
+            <!--    PRODUCTO -->
             <article class="home__product">
                 <div class="home__producto-box-image">
                     <a href="/product-detail">
@@ -164,9 +150,8 @@
                 </div>
                 <span class="titulo">EL PODER DEL AHORA </span>
                 <span class="autor">Autor: Eckhart Tolle</span>
-
             </article>
-
+            <!--    PRODUCTO -->
             <article class="home__product">
                 <div class="home__producto-box-image">
                     <a href="/product-detail">
@@ -176,6 +161,7 @@
                 <span class="titulo">TE ESPERARÉ TODA MI VIDA </span>
                 <span class="autor">Autor: Megan Maxwell</span>
             </article>
+            <!--    PRODUCTO -->
             <article class="home__product">
                 <div class="home__producto-box-image">
                     <a href="/product-detail">
@@ -189,7 +175,10 @@
 
         <h2>Top elegidos del mes: </h2>
 
+        <!-- SECCION DESTACADOS -->
+
         <section class="home__box_products">
+            <!--    PRODUCTO -->
             <article class="home__product">
                 <h4>Top #1</h4>
                 <span class="titulo">CUENTOS DE EVA LUNA</span>
@@ -199,9 +188,8 @@
                         <img class="home__product_image" src="/images/portadas/cuentosDeEvaLuna.png" alt="libro">
                     </a>
                 </div>
-
             </article>
-
+            <!--    PRODUCTO -->
             <article class="home__product">
                 <h4>Top #2</h4>
                 <span class="titulo">LOS AÑOS PERDIDOS </span>
@@ -211,9 +199,8 @@
                         <img class="home__product_image" src="/images/portadas/losAñosPerdidos.png" alt="libro">
                     </a>
                 </div>
-
             </article>
-
+            <!--    PRODUCTO -->
             <article class="home__product">
                 <h4>Top #3</h4>
                 <span class="titulo">MUERTE EN EL NILO</span>
@@ -223,9 +210,9 @@
                         <img class="home__product_image" src="/images/portadas/muerteEnElNilo.png" alt="libro">
                     </a>
                 </div>
-
             </article>
         </section>
+        <!--  CONTENIDOS EXTRAS -->
         <aside>
             <section class="home__aside_advertising">
                 <h3>TE PUEDE INTERESAR:</h3>
@@ -238,9 +225,6 @@
                     <a href=""><img src="/images/banner/banner1.jpg" alt=""></a>
 
                 </article>
-
-
-
             </section>
 
             <div class="home__main__up">
