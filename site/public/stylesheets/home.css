@@ -23,19 +23,19 @@ main.home {
 
 
 main.home h2 {
-    padding-top: 30px;
-    padding-bottom: 20px;
-    font-size: 30px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    font-size: 16px;
     text-align: center;
-    font-weight: 700;
-    text-shadow: 4px 4px 2px rgba(130, 138, 138, 0.8)
+    text-shadow: 4px 4px 2px rgba(130, 138, 138, 0.8);
+    text-transform: uppercase;
 }
 
 
 main.home section.home__box_products {
-    padding: 25px 0;
+    width: 100%;
+    padding: 20px 0;
     display: flex;
-    flex-direction: colum;
     flex-wrap: wrap;
     justify-content: center;
 
