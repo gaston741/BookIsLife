@@ -218,22 +218,7 @@ span.precio {     /* precio */
     
 }
 
-    /*FOOTER*/
-    .home__footer li,
-    a {
-        font-size: 25px;
-    }
-
-    .home__footer li img {
-        width: 5vh;
-        height: 7.5vh;
-        margin: 0px 15px 0px 15px;
-
-
-
-    }
-
-
+ 
 
 
 }
