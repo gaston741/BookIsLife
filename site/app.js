@@ -35,7 +35,10 @@ app.get("/register", (req,res)=>res.sendFile(path.resolve(__dirname , "views", "
 
 app.get("/login", (req,res)=>res.sendFile(path.resolve(__dirname , "views", "login.html")))
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f1c144b8966746d17247414c428159df54429c97
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
