@@ -130,7 +130,7 @@ span.autor {
 .home__advertising img {
     width: 100%;
     height: 45vh;
-    margin-bottom: 5px;
+    padding-bottom: 5px;
 
 
 }
@@ -198,24 +198,9 @@ div.home__main__up i {
     }
 
 
-    /*FOOTER*/
 
 
-    .home__footer li,
-    a {
-        font-size: 25px;
-    }
-
-    .home__footer li img {
-        width: 5vh;
-        height: 7.5vh;
-        margin: 0px 15px 0px 15px;
-
-
-
-    }
-
-
+  
 
 }
 
