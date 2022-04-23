@@ -89,10 +89,12 @@ span.precio {     /* precio */
     width: 18vh;
     height: 40px;
     border-radius: 5px;
-    border: solid 1px var(--colorFooterHome) ;
+    border: solid 2px var(--colorFooterHome) ;
     background-color:#EFFEFA ;
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-family: 'Orelega One';
+    font-size: 20px;
     
 } 
 
