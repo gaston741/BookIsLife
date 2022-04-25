@@ -26,7 +26,7 @@ div.container-button-product-detail{
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 2.5px;
-    font-weight: 500;
+    font-weight: 700;
     color: #000;
     background-color: #fff;
     border: none;
@@ -72,13 +72,14 @@ div.container-button-product-detail{
     background: #FBCA1F;
     font-family: inherit;
     padding: 0.4em 0.2em;
-    font-weight: 700;
-    font-size: 18px;
+    font-weight: 600;
+    font-size: 12px;
     border: 3px solid black;
     border-radius: 0.4em;
     box-shadow: 0.1em 0.1em;
     text-decoration: none;
-    color:black
+    color:black;
+    
 }
 .cart_vaciar:hover{
     transform: translate(-0.05em, -0.05em);
