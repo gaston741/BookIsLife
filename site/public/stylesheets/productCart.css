@@ -56,6 +56,7 @@ div.container-button-product-detail{
 
     font-size: 20px;
     margin: 5px 0px 10px 35px;
+    text-shadow: 3px 3px 2px rgb(130 138 138 / 70%);
 }
 
 /* vaciar carrito */
@@ -315,10 +316,79 @@ div.container-button-product-detail{
 /*           TABLET         RESPONSIVE          */
 
 @media(min-width:768px) {
-
     
+    .cart__container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .cart_product_img {
+        margin: 20px 10px 15px 35px;
+        width: 180px;
+        height: 300px;
+    }
+    .cart__description {
+        padding: 5px;
+        width: 20vh;
+        margin: 5px;
+    }
+    .container_total span {
+    
+        margin-right: 30px;
+    }
+    .cart__description span.titulo {
+        font-size: 13px;
+        font-weight: 100;
+        height: 40px;
+        
+    }
+    .cart_product-price {
+        font-size: 20px;
+        color: green;
+        font-weight: 700;
+        padding-left: 22px;
+    }
+    .cart__select {
+        border: 2px solid black;     
+        padding: 2px 5px;
+        width: 15vh;
+        font-weight: 600;
+        font-size: 18px;
+    }
 
+    .cart_button_delete button {
+        width: 14vh;
+        height: 49px;
+        display: flex;
+        border: none;
+        box-shadow: 1px 1px 3px rgb(0 0 0 / 15%);
+        margin-right: 20px;
+        margin-top: 33px;
+        margin-left: 20px;
+        
+    }
+    
+    .cart_button_delete button .text {
+        transform: translateX(35px);
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+    }
+    .cart_button_delete button .icon {
+        transform: none;
+
+
+    }
+    .cart_container_button button {
+        
+        padding: 0.9em 1.2em;
+        font-size: 20px;
+        box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+        width: 202px;
+        margin: 25px 60px 40px 0px;
+    }
 }
+
 
 
 
