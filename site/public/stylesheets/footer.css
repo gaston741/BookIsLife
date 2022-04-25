@@ -2,7 +2,6 @@
 /*FOOTER*/
 
 .home__footer {
-
     background-color: var(--colorFooterHome);
     width: 100%;
 }
@@ -10,13 +9,9 @@
 .home__footer ul {
     display: flex;
     flex-direction: column;
-
-
-
 }
 
 .home__footer li {
-
     text-align: center;
     padding: 15px 0;
     border-bottom: solid 2px var(--colorMainHome);
