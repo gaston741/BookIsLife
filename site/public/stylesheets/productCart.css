@@ -1,0 +1,13 @@
+h1{
+    margin: 20px;
+}
+.product-cart__product{
+    display: flex;
+    font-family: "Cinzel";
+    margin: 20px 10px 30px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.product-cart__detail{
+    margin: 15px;
+}
