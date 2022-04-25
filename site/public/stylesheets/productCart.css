@@ -396,6 +396,56 @@ div.container-button-product-detail{
 /*                 DESKTOP    RESPONSIVE           */ 
 
 @media(min-width:1024px) {
+    .a_button {
+       
+        margin-right: 7em;
+        
+    }
+    .cart_titulo_miCarrito {
+        
+        margin: 1em 1em 0em 8em;
+    }
+    .cart_miCarrito {
+
+        margin: 2em 8.5em;
+    }
+    .cart_vaciar {
+       
+        font-family: 'Cinzel';
+        padding: 0.5em 0.3em;
+    }
+
+
+    .cart_product_img {
+        margin: 5em 1em 0em 10em;
+        width: 20vh;
+        height: 30vh;
+    
+    }
+    .cart__description {
+        width: 27vh;
+        height: 13vh;
+        justify-content: center;
+        margin-top: 7em;
+        border-radius: 5px;
+    }
+    .container__cart_product-select {
+     
+        margin-top: 7em;
+    }
+    .cart_button_delete button {
+
+        margin-top: 136px;
+    }
+    .cart_container_button {
+        
+        margin-top: 5em;
+
+    }
+    .cart_container_button button {
+       
+        font-family: 'Orelegon one';
+    }
 
     
 
