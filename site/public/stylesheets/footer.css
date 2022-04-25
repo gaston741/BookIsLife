@@ -1,53 +1,53 @@
-
-/*FOOTER*/
-
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 .home__footer {
-
     background-color: var(--colorFooterHome);
     width: 100%;
 }
 
-.home__footer ul {
-    display: flex;
-    flex-direction: column;
-
-
-
-}
 
 .home__footer li {
 
-    text-align: center;
-    padding: 15px 0;
-    border-bottom: solid 2px var(--colorMainHome);
+   align-items:flex-start;
+   padding: 10px 100px;  
+   border-bottom: solid 2px var(--colorMainHome);
+  
 }
-
 
 
 .home__footer li:last-child {
 
-    padding-bottom: 40px;
+    padding-bottom: 30px;
+    border:none; 
+} 
 
 
-}
-
-
-.home__footer li,
-a {
+.home__footer li, a {
 
     text-decoration: none;
-    font-weight: bolder;
     color: black;
+    text-transform: uppercase;
+    text-align: center;
 
 }
+.footer_container_images{
 
+display: flex ;
+justify-content: center; 
+padding-top: 15px;
+
+}
+.radius{
+    border-radius: 5px;
+}
 
 .home__footer li img {
-    width: 3vh;
-    height: 5.5vh;
-    margin: 0px 10px 0px 10px;
-
-
+    width: 5vh;
+    height: 5vh;
+    margin: 0px 5px 0px 5px; 
 
 }
 
@@ -55,8 +55,62 @@ a {
 .home__footer li img:hover,
 span.footer__link:hover {
 
-
     color: #10fffb;
     box-shadow: 0 0 5px #10fffb;
     text-shadow: 0 0 5px #ffee10;
+}
+
+/* TABLET */
+
+@media(min-width:768px){
+
+    .home__footer li img {
+        width: 5vh;
+        height: 5vh;
+        margin: 0px 10px 0px 10px; 
+    
+    }
+    
+
+}
+
+/* DESKTOP */
+
+@media(min-width:1024px){
+
+    .home__footer__menu{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        text-decoration: none;
+        list-style: none;
+        height: 20vh;
+        padding-top: 15px;
+        padding-bottom: 30px;
+    }
+    .home__footer li img {
+        width: 4vh;
+        height: 4vh;
+        margin: 0px 5px 0px 5px; 
+
+    }
+
+
+
+    .home__footer li, a {
+        text-decoration: none;
+        color: black;
+        text-transform: uppercase;
+    }
+    .home__footer li {
+        align-items: flex-start;
+        padding: 10px 5px;
+        border-bottom: none;
+    }
+    .footer__no_link, .footer__link{
+
+        font-size: 15px;
+    }
+   
+    
 }

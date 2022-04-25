@@ -36,7 +36,6 @@ app.get("/register", (req,res)=>res.sendFile(path.resolve(__dirname , "views", "
 app.get("/login", (req,res)=>res.sendFile(path.resolve(__dirname , "views", "login.html")))
 
 
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

@@ -1,0 +1,260 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/*                       MAIN            */
+
+main.product-detail__main{
+
+    background-color: var(--colorMainHome);
+    padding-bottom: 40px;
+    font-family: "Cinzel";
+}
+
+div.container-button-product-detail{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    
+}
+
+
+.product-detail-product{ /* contenedor imagen */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.product-detail-product img{  /* imagen de portada */
+
+    margin: 40px;
+    
+    
+}
+
+img.product-detail-portada{
+
+    box-shadow: rgba(0, 0, 0, 0.9) 0px 25px 20px -20px;
+    
+}
+
+.product-detail-product:hover .product-detail-portada{  /* efectos de portada */
+
+
+    transform: scale(1.1);
+    transition: 2s;
+    z-index: 10;
+}
+ 
+ 
+span.precio {     /* precio */
+
+    display: block;
+    font-size: 25px;
+    font-weight: 800;
+    color: green;
+    text-align: right;
+    margin-right: 42px;
+    font-family: "Kameron";
+
+    /* font-family: ; */ /* buscar fuente kameron */
+}
+
+.añadir {  /* contenedor de añadir */
+ 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    
+   
+   
+}
+    
+ .product-detail-añadir{  /* texto añadir */
+     
+    text-align: center;
+    margin-top: 10px; 
+    margin-bottom: 30px;
+    padding-top: 8px;
+    margin-right: 42px; 
+    width: 14vh;
+    height: 40px;
+    border-radius: 5px;
+    border: solid 2px var(--colorFooterHome) ;
+    background-color:#EFFEFA ;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-family: 'Orelega One';
+    font-size: 20px;
+    
+} 
+
+
+    
+
+.product-detail-añadir i{  /* icono carrito */
+    
+    font-size: 20px;
+    color: rgb(224, 155, 6);
+    
+   
+} 
+
+.product-detail-description h1{ /*  titulo */
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 4px;
+    text-shadow:0 5px 1px #747474, 
+    -1px 3px 1px #8f8d8d, 
+    -2px 5px 1px #8d8b8b,
+    -3px 7px 1px #7a7a7a; 
+    
+
+
+}
+
+.product-detail-description h3 {  /* sinopsis */
+    color: black;
+    text-align: left;
+    padding-bottom: 16px;
+    padding-left: 45px;
+    font-size: 15px;
+    
+}
+
+.product-detail-description p{ /* descripcion */
+    color: black;
+    text-align: left;
+    padding: 0px 45px 25px 45px;
+    font-size: 15px;
+    font-style:italic;
+    line-height: 1.9em;
+    
+    
+}
+
+ p.parrafo-ver-mas{ /* descripcion */
+ display: none;
+    
+}
+
+.home__main__up a i{
+
+    font-size: 40px;
+}
+
+
+
+
+/*                 Footer        */
+.home__main__up{ /*  botton de scroll up */
+
+    position: fixed;
+    bottom: 20px;
+    right: 5px;
+    font-size: 4rem;
+}
+
+
+
+
+
+
+/* TABLET */
+
+@media(min-width:768px) {
+    
+
+   /*  MAIN */
+
+   .product-detail-product img{  /* imagen de portada */
+
+    margin: 30px 70px 50px; 
+}
+
+   span.precio {     /* precio */
+    font-size: 45px;
+    margin-right: 70px;
+}
+
+    
+.product-detail-añadir{  /* texto añadir */
+    padding-top: 10px;
+    margin-right: 70px; 
+    width: 20vh;
+    height: 50px;
+} 
+
+   
+
+.product-detail-añadir i{  /* icono carrito */
+    font-size: 30px;
+} 
+.product-detail-description h1{ /*  titulo */
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.product-detail-description h3 {  /* sinopsis */
+    padding-left: 70px;
+    font-size: 25px;
+}
+
+.product-detail-description p{ /* descripcion */
+    padding: 0px 70px 25px 70px;
+    font-size: 20px;
+    line-height: 2em;
+    
+    
+}
+
+ 
+
+
+}
+
+@media(min-width:1024px){
+
+    /* MAIN */
+
+    .product-detail-product img{  /* imagen de portada */
+        width: 60vh;
+      align-self: center;
+    }
+
+    span.precio {     /* precio */
+        font-size: 35px;
+        margin-right: 7.5em;
+    }
+    
+        
+    .product-detail-añadir{  /* texto añadir */
+        margin-right: 10.5em; 
+       
+    } 
+    
+
+    .product-detail-description h3 {  /* sinopsis */
+        padding-left: 5em;
+        font-size: 25px;
+    }
+    
+    .product-detail-description p{ /* descripcion */
+        padding: 0px 130px 25px 130px;
+        font-size: 20px;
+        line-height: 2.5em;
+        
+        
+    }
+    
+
+}
