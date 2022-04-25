@@ -63,73 +63,122 @@
         </div>
     </header>
     <main class="cart-product-main">
-        <div class="container-button-product-detail">
-            <a href="/"><i class="fa-solid fa-angle-left"></i> VOLVER </a>
+          <!--  BOTON VOLVER -->
+          <div class="container-button-product-detail">
+            <a class="a_button" href="/"><i class="fa-solid fa-angle-left"></i> VOLVER </a>
         </div>
-        <h1>MI CARRITO</h1>
-        <section class="cart__container">
-            <img src="/images/portadas/padreRicoPadrePobre.png" class="cart_product_img" alt="" />
+
+        <!--  TITULO -->
+        <h1 class="cart_titulo_miCarrito">MI CARRITO </h1>
+
+        <div class="cart_miCarrito">
+
+            <a class="cart_vaciar" href="">Vaciar Carrito</a>
+        </div>
+
+        <!--  SECCION PRODUCTOS -->
+        <section class="cart__container ">
+            <img src="/images/portadas/padreRicoPadrePobre.png" class="cart_product_img  shadow_cart" alt="" />
             <div class="cart__description">
-                <span>PADRE RICO PADRE POBRE</span>
-                <span>Robert T. Kiyosaki</span>
+                <span class="titulo">PADRE RICO PADRE POBRE</span>
+                <span class="autor">Robert T. Kiyosaki</span>
             </div>
 
             <div class="container__cart_product-select">
+                <span class="cart_product-price">AR$ 1.000</span>
                 <div class="cart_product-select">
                     <select name="select" class="cart__select" name="" id="">
                         <option value="value1">1</option>
                         <option value="value2">2</option>
                         <option value="value3">3</option>
                     </select>
-                    <button class="delete-option">Eliminar</button>
                 </div>
-                <span class="cart_product-price">AR$ 1.000</span>
+            </div>
+            <div class="cart_button_delete">
+                <button class="noselect"><span class="text">Eliminar</span><span class="icon"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path
+                                d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z">
+                            </path>
+                        </svg></span>
+                </button>
             </div>
         </section>
+        <!--  SECCION PRODUCTOS -->
         <section class="cart__container">
-            <img src="/images/portadas/elPsicoanalista.png" class="cart_product_img" alt="" />
+            <img src="/images/portadas/elPsicoanalista.png" class="cart_product_img shadow_cart" alt="" />
             <div class="cart__description">
-                <span>EL PSICOANALISTA</span>
-                <span>john Katzenbach</span>
+                <span class="titulo">EL PSICOANALISTA</span>
+                <span class="autor">John Katzenbach</span>
             </div>
 
             <div class="container__cart_product-select">
+                <span class="cart_product-price">AR$ 1.000</span>
                 <div class="cart_product-select">
                     <select name="select" class="cart__select" name="" id="">
                         <option value="value1">1</option>
                         <option value="value2">2</option>
                         <option value="value3">3</option>
                     </select>
-                    <button class="delete-option">Eliminar</button>
                 </div>
-                <span class="cart_product-price">AR$ 1.000</span>
+            </div>
+            <div class="cart_button_delete">
+                <button class="noselect"><span class="text">Eliminar</span><span class="icon"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path
+                                d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z">
+                            </path>
+                        </svg></span>
+                </button>
             </div>
         </section>
+        <!--  SECCION PRODUCTOS -->
         <section class="cart__container">
-            <img src="/images/portadas/losAñosPerdidos.png" class="cart_product_img" alt="" />
+            <img src="/images/portadas/losAñosPerdidos.png" class="cart_product_img shadow_cart" alt="" />
             <div class="cart__description">
-                <span>LOS AÑOS PERDIDOS</span>
-                <span>Mary Higgins Clark</span>
+                <span class="titulo">LOS AÑOS PERDIDOS</span>
+                <span class="autor">Mary Higgins Clark</span>
             </div>
 
             <div class="container__cart_product-select">
+                <span class="cart_product-price">AR$ 1.000</span>
                 <div class="cart_product-select">
                     <select name="select" class="cart__select" name="" id="">
                         <option value="value1">1</option>
                         <option value="value2">2</option>
                         <option value="value3">3</option>
                     </select>
-                    <button class="delete-option">Eliminar</button>
                 </div>
-                <span class="cart_product-price">AR$ 1.000</span>
+            </div>
+            <div class="cart_button_delete">
+                <button class="noselect"><span class="text">Eliminar</span><span class="icon"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path
+                                d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z">
+                            </path>
+                        </svg></span>
+                </button>
             </div>
         </section>
+        <section class="container_total">
+            <span>TOTAL:</span>
+            <span class="total_price"> AR$10.000</span>
+
+            </div>
+
+
+        </section>
+        <!--  BOTONES FINALES -->
         <section class="cart_container-options">
             <div class="cart_container_button">
                 <button class="button-continue">Seguir Comprando</button>
                 <button class="button-finish">Finalizar Compra</button>
             </div>
         </section>
+        <div class="home__main__up">
+            <a href="/"><i class="fa-solid fa-circle-chevron-up"></i></a>
+        </div>
+      
     </main>
     <footer class="home__footer">
         <nav class="home__nav">
