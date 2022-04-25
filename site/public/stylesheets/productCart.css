@@ -376,6 +376,7 @@ div.container-button-product-detail{
     }
     .cart_button_delete button .icon {
         transform: none;
+        padding-right: 10px;
 
 
     }
