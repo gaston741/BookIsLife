@@ -5,6 +5,7 @@
     font-family: "Cinzel";
     padding: 10px 20px;
     width: 110%;
+    color: #ed2f51; 
 }
 
 .register_header {
@@ -29,7 +30,6 @@
     text-decoration: none;
     text-transform: uppercase;
     transition: color 0.5s, background 0.5s;
-
 }
 .ingles {
     background-color: transparent;

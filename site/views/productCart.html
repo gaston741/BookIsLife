@@ -1,13 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/style.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="https://kit.fontawesome.com/92928bcf15.js" crossorigin="anonymous"></script>
     <title>Book Is Life | Carrito</title>
 </head>
-<body>
-    <h1>Carrito</h1>
+
+<body class="product-cart">
+    <header class="home__header">
+        <nav class="header_nav">
+            <!--    NAV BAR HEADER  -->
+            <li><a href="/login"><i class="fa-solid fa-user"></i></a></li>
+            <li><a href="/product-cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <li><a href="/register"><i class="fa-solid fa-envelope"></i></a></li>
+            <li class="idioma"><a href=""><i class="fa-solid fa-globe"></i> English</a></li>
+        </nav>
+        <!--   LOGOS HEADER -->
+        <div class="container_home_header_logo">
+            <a class="deRegreso" href="/">
+            <div class="header__logo_home"></div></a>
+            <br>
+            <div class="header__logo2_home"></div>
+        </div>
+
+        <!--   BUSCADOR -->
+        <div class="header_buscador">
+            <input type="text" placeholder="Encuentra tu libro ideal" />
+            <button class="lupa"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+
+        <!--      MENU HAMBURGUESA -->
+        <nav class="home_header_nav_categorias">
+
+            <input type="checkbox" id="check">
+            <label for="check" class="bar-btn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <ul class="home_nav-menu">
+                <li><a href="#">Ciencia Ficción</a></li>
+                <li><a href="#">Clásicos</a></li>
+                <li><a href="#">Cómics y Mangas</a></li>
+                <li><a href="#">Humor</a></li>
+                <li><a href="#">Narrativa</a></li>
+                <li><a href="#">Narrativa Romantica</a></li>
+                <li><a href="#">Obras de Teatro</a></li>
+                <li><a href="#">Poesía</a></li>
+                <li><a href="#">Policiales</a></li>
+                <li><a href="#">Terror</a></li>
+            </ul>
+        </nav>
+
+        <!-- BANNERS O CARRUSEL -->
+        <div class="header_banner">
+            <img src="/images/banner/banner2.jpg" alt="banner">
+        </div>
+        <div class="header_banner-desktop">
+            <img src="/images/banner/banner3.jpg" alt="">
+        </div>
+    </header>
+    <main class="cart-product-main">
+          <!--  BOTON VOLVER -->
+          <div class="container-button-product-detail">
+            <a class="a_button" href="/"><i class="fa-solid fa-angle-left"></i> VOLVER </a>
+        </div>
+
+        <!--  TITULO -->
+        <h1 class="cart_titulo_miCarrito">MI CARRITO </h1>
+
+        <div class="cart_miCarrito">
+
+            <a class="cart_vaciar" href="">Vaciar Carrito</a>
+        </div>
+
+        <!--  SECCION PRODUCTOS -->
+        <section class="cart__container ">
+            <img src="/images/portadas/padreRicoPadrePobre.png" class="cart_product_img  shadow_cart" alt="" />
+            <div class="cart__description">
+                <span class="titulo">PADRE RICO PADRE POBRE</span>
+                <span class="autor">Robert T. Kiyosaki</span>
+            </div>
+
+            <div class="container__cart_product-select">
+                <span class="cart_product-price">AR$ 1.000</span>
+                <div class="cart_product-select">
+                    <select name="select" class="cart__select" name="" id="">
+                        <option value="value1">1</option>
+                        <option value="value2">2</option>
+                        <option value="value3">3</option>
+                    </select>
+                </div>
+            </div>
+            <div class="cart_button_delete">
+                <button class="noselect"><span class="text">Eliminar</span><span class="icon"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path
+                                d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z">
+                            </path>
+                        </svg></span>
+                </button>
+            </div>
+        </section>
+        <!--  SECCION PRODUCTOS -->
+        <section class="cart__container">
+            <img src="/images/portadas/elPsicoanalista.png" class="cart_product_img shadow_cart" alt="" />
+            <div class="cart__description">
+                <span class="titulo">EL PSICOANALISTA</span>
+                <span class="autor">John Katzenbach</span>
+            </div>
+
+            <div class="container__cart_product-select">
+                <span class="cart_product-price">AR$ 1.000</span>
+                <div class="cart_product-select">
+                    <select name="select" class="cart__select" name="" id="">
+                        <option value="value1">1</option>
+                        <option value="value2">2</option>
+                        <option value="value3">3</option>
+                    </select>
+                </div>
+            </div>
+            <div class="cart_button_delete">
+                <button class="noselect"><span class="text">Eliminar</span><span class="icon"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path
+                                d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z">
+                            </path>
+                        </svg></span>
+                </button>
+            </div>
+        </section>
+        <!--  SECCION PRODUCTOS -->
+        <section class="cart__container">
+            <img src="/images/portadas/losAñosPerdidos.png" class="cart_product_img shadow_cart" alt="" />
+            <div class="cart__description">
+                <span class="titulo">LOS AÑOS PERDIDOS</span>
+                <span class="autor">Mary Higgins Clark</span>
+            </div>
+
+            <div class="container__cart_product-select">
+                <span class="cart_product-price">AR$ 1.000</span>
+                <div class="cart_product-select">
+                    <select name="select" class="cart__select" name="" id="">
+                        <option value="value1">1</option>
+                        <option value="value2">2</option>
+                        <option value="value3">3</option>
+                    </select>
+                </div>
+            </div>
+            <div class="cart_button_delete">
+                <button class="noselect"><span class="text">Eliminar</span><span class="icon"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path
+                                d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z">
+                            </path>
+                        </svg></span>
+                </button>
+            </div>
+        </section>
+        <section class="container_total">
+            <span>TOTAL:</span>
+            <span class="total_price"> AR$10.000</span>
+
+            </div>
+
+
+        </section>
+        <!--  BOTONES FINALES -->
+        <section class="cart_container-options">
+            <div class="cart_container_button">
+                <button class="button-continue">Seguir Comprando</button>
+                <button class="button-finish">Finalizar Compra</button>
+            </div>
+        </section>
+        <div class="home__main__up">
+            <a href="#"><i class="fa-solid fa-circle-chevron-up"></i></a>
+        </div>
+      
+    </main>
+    <footer class="home__footer">
+        <nav class="home__nav">
+            <ul class="home__footer__menu">
+                <li>
+                    <a href="https://www.facebook.com"> <span class="footer__link">Seguínos en: </span>
+                        <div class="footer_container_images">
+                            <img  src="/images/redes-img/Facebook.png" alt="Facebook">
+
+                    </a>
+                    <a href="https://www.instagram.com/">
+                        <img  src="/images/redes-img/instagram.png" alt="instagram">
+                    </a>
+                    <a href="https://twitter.com">
+                        <img src="/images/redes-img/twitter.png" alt="twitter">
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="/"><span class="footer__link">Quiénes Somos: </span>
+                        <div class="footer_container_images">
+                            <img class="radius" src="/images/footer-img/icn-14.png" alt="Quienes Somos">
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:elcorreoquequieres@correo.com"><span class="footer__link">Atención al cliente: </span>
+                        <div class="footer_container_images"> <img src="/images/footer-img/WhatsApp.png" alt="WhatsApp">
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/"> <span class="footer__link">Trabajá con Nosotros: </span>
+                        <div class="footer_container_images"><img src="/images/footer-img/LinkedIN.png" alt="LinkedIN">
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <span class="footer__no_link">Medios de Pago: </span>
+                    <div class="footer_container_images">
+                        <img src="/images/pagos-img/mercadoPago.png" alt="mercado-pago">
+                        <img src="/images/pagos-img/visa.png" alt="visa">
+                        <img src="/images/pagos-img/mastercard.png" alt="mastercard">
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+    </footer>
 </body>
+
 </html>
