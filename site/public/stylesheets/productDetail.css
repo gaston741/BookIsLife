@@ -3,7 +3,9 @@ body{
     margin: 0;
     box-sizing: border-box;
 }
-
+body.product-detail{
+    background-color: #FFE7E7;
+}
 
 /*                       MAIN            */
 
@@ -159,8 +161,6 @@ span.precio {
 
     letter-spacing: 4px;
     text-shadow: -11px -11px 3px rgba(148, 146, 150, 0.36);
-
-
 }
 /*   sinopsis */
 .product-detail-description h3 {  
@@ -177,8 +177,6 @@ span.precio {
     padding: 0px 45px 25px 45px;
     font-size: 12px;
     line-height: 1.8em;
-    
-    
 }
 .leer_mas{
     text-decoration: none;
@@ -190,14 +188,10 @@ span.precio {
  display: none;
     
 }
-
 .home__main__up a i{
 
     font-size: 40px;
 }
-
-
-
 
 .home__main__up{ /*  botton de scroll up */
 
@@ -207,23 +201,100 @@ span.precio {
     font-size: 4rem;
 }
 
-
-
-
-
-
 /* TABLET */
 
 @media(min-width:768px) {
     
+    body.product-detail{
+        background-color: var(--colorMainHome);
+    }
+   .container-product-detail-portada{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   }
+   .product-detail-portada {
+    width: 25vh;
+    height: 40vh;
+    margin-left: 25px;
+    
+   }
+   .cart_precios{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2em;
 
-
+   }
+   .precio_anterior {
+    margin-right: 2em;
+    font-family: "Kameron";
+   }
+   span.precio {
+    margin-right: 1.5em;
+   
+   }
+   .product-detail-añadir {
+    padding: 15px 15px;
+    font-family: 'Orelega one';
+    margin: 0em 0em;
+    
+   }
+   .product-detail-description h1 {
+    font-size: 25px;
+    
+    }
+   .product-detail-description h3 {
+    padding-left: 5em;
+    font-size: 18px;
+   }
+   .product-detail-description p {
+    font-size: 18px;
+    padding: 2em 5em 1em 5em;
+    
+   }
 
 }
 
 @media(min-width:1024px){
-
     
-    
+    .container-product-detail-portada {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .product-detail-portada {
+        width: 30vh;
+        height: 47vh;
+        margin-left: 25px;
+    }
+    .cart_precios {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-left: 3em;
+    }
+    span.precio {
+        font-size: 35px;
 
+    }
+    .precio_anterior {
+        font-size: 25px;
+    }
+    .product-detail-añadir {
+        padding: 16px 24px;
+    }
+
+    .product-detail-añadir {
+        font-size: 25px;
+        
+    }
+    .product-detail-description h3 {
+        padding-left: 9em;
+    }
+    .product-detail-description p {
+        
+        padding: 2em 9em 1em 9em;
+    }
+    .leer_mas {
+        margin-left: 10em;
+    }
 }
