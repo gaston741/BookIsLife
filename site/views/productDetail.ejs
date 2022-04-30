@@ -1,13 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/style.css">
-    <script src="https://kit.fontawesome.com/92928bcf15.js" crossorigin="anonymous"></script>
-    <title>Book Is Life | Producto Detalle</title>
-</head>
+    
+    <%- include('./partials/head') %> 
 
 <body class="product-detail">
     <header class="home__header">
@@ -109,54 +103,7 @@
        </div>
 
    </main>
-    <footer class="home__footer">
-        <nav class="home__nav">
-            <ul class="home__footer__menu">
-                <li>
-                    <a href="https://www.facebook.com"> <span class="footer__link">Seguínos en: </span>
-                        <div class="footer_container_images">
-                            <img  src="/images/redes-img/Facebook.png" alt="Facebook">
-
-                    </a>
-                    <a href="https://www.instagram.com/">
-                        <img  src="/images/redes-img/instagram.png" alt="instagram">
-                    </a>
-                    <a href="https://twitter.com">
-                        <img src="/images/redes-img/twitter.png" alt="twitter">
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="/"><span class="footer__link">Quiénes Somos: </span>
-                        <div class="footer_container_images">
-                            <img class="radius" src="/images/footer-img/icn-14.png" alt="Quienes Somos">
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="mailto:elcorreoquequieres@correo.com"><span class="footer__link">Atención al cliente: </span>
-                        <div class="footer_container_images"> <img src="/images/footer-img/WhatsApp.png" alt="WhatsApp">
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/"> <span class="footer__link">Trabajá con Nosotros: </span>
-                        <div class="footer_container_images"><img src="/images/footer-img/LinkedIN.png" alt="LinkedIN">
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <span class="footer__no_link">Medios de Pago: </span>
-                    <div class="footer_container_images">
-                        <img src="/images/pagos-img/mercadoPago.png" alt="mercado-pago">
-                        <img src="/images/pagos-img/visa.png" alt="visa">
-                        <img src="/images/pagos-img/mastercard.png" alt="mastercard">
-                    </div>
-                </li>
-            </ul>
-        </nav>
-
-    </footer>
+   <%- include('./partials/footer') %> 
 </body>
 
 </html>
