@@ -357,7 +357,7 @@ div.container-button-product-detail{
     }
 
     .cart_button_delete button {
-        width: 14vh;
+        width: 22vh;
         height: 49px;
         display: flex;
         border: none;
@@ -406,8 +406,7 @@ div.container-button-product-detail{
         margin: 1em 1em 0em 8em;
     }
     .cart_miCarrito {
-
-        margin: 2em 8.5em;
+        margin: 0em 8.5em 0em;
     }
     .cart_vaciar {
        
@@ -434,7 +433,7 @@ div.container-button-product-detail{
         margin-top: 7em;
     }
     .cart_button_delete button {
-
+        width: 23vh;
         margin-top: 136px;
     }
     .cart_container_button {
@@ -446,8 +445,11 @@ div.container-button-product-detail{
        
         font-family: 'Orelegon one';
     }
-
-    
+    div.container-button-product-detail {
+        
+        padding-bottom: 0px;
+    }
+  
 
 }
 
