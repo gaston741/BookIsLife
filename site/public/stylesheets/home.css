@@ -67,6 +67,9 @@ main.home h2 {
  
 
 /*Descripciones*/
+.home_main_container_span{
+    width: 25vh;
+}
 
 
 span.autor,
