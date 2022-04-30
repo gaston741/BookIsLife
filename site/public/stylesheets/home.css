@@ -189,14 +189,14 @@ div.home__main__up i {
 @media(min-width:1024px) {
     main.home {
      
-        padding: 0vh 10vh;
+        padding: 0vh 25vh;
     }
 
     .home__box_products {
             flex-wrap: wrap;
             flex-direction: row;
-            justify-content: space-around;
-            margin: 0px 45px ;
+            justify-content: space-around; 
+            margin: 0px 50px ;
             padding-bottom: 30px;
     }
     .home__product {
