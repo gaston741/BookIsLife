@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <%- include('./partials/head') %> 
+
+<body class="product-detail">
+    <header class="home__header">
+        <nav class="header_nav">
+            <!--    NAV BAR HEADER  -->
+            <li><a href="/login"><i class="fa-solid fa-user"></i></a></li>
+            <li><a href="/product-cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <li><a href="/register"><i class="fa-solid fa-envelope"></i></a></li>
+            <li class="idioma"><a href=""><i class="fa-solid fa-globe"></i> English</a></li>
+        </nav>
+        <!--   LOGOS HEADER -->
+        <div class="container_home_header_logo">
+            <a class="deRegreso" href="/">
+            <div class="header__logo_home"></div></a>
+            <br>
+            <div class="header__logo2_home"></div>
+        </div>
+
+        <!--   BUSCADOR -->
+        <div class="header_buscador">
+            <input type="text" placeholder="Encuentra tu libro ideal" />
+            <button class="lupa"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+
+        <!--      MENU HAMBURGUESA -->
+        <nav class="home_header_nav_categorias">
+
+            <input type="checkbox" id="check">
+            <label for="check" class="bar-btn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <ul class="home_nav-menu">
+                <li><a href="#">Ciencia Ficción</a></li>
+                <li><a href="#">Clásicos</a></li>
+                <li><a href="#">Cómics y Mangas</a></li>
+                <li><a href="#">Humor</a></li>
+                <li><a href="#">Narrativa</a></li>
+                <li><a href="#">Narrativa Romantica</a></li>
+                <li><a href="#">Obras de Teatro</a></li>
+                <li><a href="#">Poesía</a></li>
+                <li><a href="#">Policiales</a></li>
+                <li><a href="#">Terror</a></li>
+            </ul>
+        </nav>
+
+        <!-- BANNERS O CARRUSEL -->
+        <div class="header_banner">
+            <img src="/images/banner/banner2.jpg" alt="banner">
+        </div>
+        <div class="header_banner-desktop">
+            <img src="/images/banner/banner3.jpg" alt="">
+        </div>
+    </header>
+
+    <main class="product-detail__main">
+        <!--  BOTON VOLVER -->
+      <div class="container-button-product-detail">
+       <a class="a_button" href="/"><i class="fa-solid fa-angle-left"></i> VOLVER </a>
+   </div>
+       <!--       SECCION PRODUCTO -->
+       <section class="container-product-detail-portada">
+           <!-- IMAGEN PRODUCTO -->
+           <div class="product-detail-product ">
+               <img class="product-detail-portada shadow_detail " src="/images/portadas/elPsicoanalista.png" alt="">
+           </div>
+           <!-- PRECIO ANTERIOR -->
+           <div class="cart_precios">
+           <span class="precio_anterior"> $3.699,99</span>
+          <!--  PRECIO PRODUCTO -->
+           <span class="precio"> $2.699,99</span>
+           </div>
+        <!--    AÑADIR PRODUCTO -->
+           <div class="añadir">
+               <a class="product-detail-añadir" href="/product-cart">AÑADIR <i class="fa-solid fa-cart-arrow-down"></i></a>
+           </div>
+       </section>
+
+      <!--  DESCRIPCION PRODUCTO -->
+       <section class="container-product-detail-descripcion">
+           <article class="product-detail-description">
+               <h1>EL PSICOANALISTA</h1>
+               <h3>SINOPSIS</h3>
+               <p> Felíz aniversario, doctor. Bienvenido al primer día de su muerte. Así comienza el anónimo que recibe
+                   el psicoanalista Frederick Starks, y que le obliga a emplear toda su astucia y rapidez para, en
+                   quince días, averiguar quién es el autor de esa amenazadora misiva que promete hacerle la vida
+                   imposible. De no conseguir su objetivo, deberá elegir entre suicidarse o ser testigo de cómo, uno
+                   tras otro, sus familiares y conocidos mueren por obra de un psicópata decidido a llevar hasta el
+                   final su sed de venganza. Dando un inesperado giro a la relación entre médico y paciente, John
+                   Katzenbach nos ofrece una novela emblemática del mejor suspense psicológico.</p>
+                   <a class="leer_mas" href="#parrafo-ver-mas"> ...leer más</a>
+               <p id="parrafo-ver-mas" class="parrafo-ver-mas"> La edición publicada en 2012 para conmemorar el décimo aniversario de la primera edición original de
+                   El psicoanalista, incluye un epílogo que John Katzenbach ha escrito especialmente para los lectores
+                   en lengua española.</p>
+           </article>
+       </section>
+       <!-- BOTON SCROLL UP -->
+       <div class="home__main__up">
+           <a href="/"><i class="fa-solid fa-circle-chevron-up"></i></a>
+       </div>
+
+   </main>
+   <%- include('./partials/footer') %> 
+</body>
+
+</html>

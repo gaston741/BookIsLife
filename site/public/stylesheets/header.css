@@ -16,6 +16,7 @@
     display: flex;
     flex-direction: row;
     justify-content: end;
+    padding: 0vh 2vh;
 
 
 
@@ -120,6 +121,7 @@ header.home__header div.header_buscador {
     color: rgb(3, 3, 3);
     margin-left: 20px;
     cursor: pointer;
+    padding-left: 4vh;
 
 
 }
@@ -239,6 +241,10 @@ div.header_banner-desktop img {
 
 /* TABLET */
 @media (min-width:768px){
+    .header_nav {
+       
+        padding: 1vh 5vh;
+    }
 
     .header_nav li a i {
         /*iconos del nav header*/
@@ -266,7 +272,7 @@ div.header_banner-desktop img {
         
         height: 15vh;
         width: 15vh;
-        margin-bottom: 10px;
+        margin:0px 5px 10px 45px;
     
     }
     
@@ -290,7 +296,7 @@ div.header_banner-desktop img {
     header.home__header div.header_buscador input {
         width: 46vh;
         height: 27px;
-        font-size: 24px;
+        font-size: 16px;
         margin-left: 40px;
     }
 
@@ -310,6 +316,7 @@ div.header_banner-desktop img {
     .bar-btn{
 
         font-size: 30px;
+        padding-left: 8vh;
     }
     
     /*Banner*/
@@ -341,6 +348,13 @@ div.header_banner-desktop img {
 
 
     /*      HEADER    */
+
+    .header_nav {
+
+    
+        padding: 1vh 10vh;
+    }
+
     .header_nav li a i {
         font-size: 35px;
 
@@ -353,7 +367,7 @@ div.header_banner-desktop img {
         
         height: 15Vh;
         width:15vh;
-        margin:0px 15px 10px 20px
+        margin-left: 10vh;
     
     }
     
@@ -364,6 +378,14 @@ div.header_banner-desktop img {
         margin-bottom: 15px;
         
     }
+
+      /*      INPUT   */
+      header.home__header div.header_buscador input {
+      
+        font-size: 16px;
+       
+    }
+
    /*  BUSCADOR */
     header.home__header div.header_buscador {
         margin-top: 0px;
@@ -373,19 +395,40 @@ div.header_banner-desktop img {
     }
 
  /* MENU DESPLEGABLE */
+
+    .home_header_nav_categorias{
+
+        height: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ffffff;
+        position: relative;
+        padding-left: 11vh;
+        
+        
+    }
+
     .home_nav-menu li {
         
         width: 50%;
     }
     .home_nav-menu li a {
         
-        font-size: 16px;
+        font-size: 14px;
         
     }
     .home_nav-menu {
         top: 5.8vh;
     }
 
+    /* icono hamburguesa */
+    .bar-btn{
+
+        
+        padding-left: 0vh;
+    }
     
 
     /* BANNER*/

@@ -67,6 +67,9 @@ main.home h2 {
  
 
 /*Descripciones*/
+.home_main_container_span{
+    width: 25vh;
+}
 
 
 span.autor,
@@ -135,6 +138,10 @@ div.home__main__up i {
 /*           TABLET         RESPONSIVE          */
 
 @media(min-width:768px) {
+    main.home {
+    
+        padding: 0vh 5vh;
+    }
 
     .home_main_container_span{
         display: flex;
@@ -183,12 +190,16 @@ div.home__main__up i {
 /*                 DESKTOP    RESPONSIVE          */
 
 @media(min-width:1024px) {
+    main.home {
+     
+        padding: 0vh 30vh;
+    }
 
     .home__box_products {
             flex-wrap: wrap;
             flex-direction: row;
-            justify-content: space-around;
-            margin: 0px 45px ;
+            justify-content: space-around; 
+            margin: 0px 50px ;
             padding-bottom: 30px;
     }
     .home__product {
