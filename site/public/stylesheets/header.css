@@ -296,7 +296,7 @@ div.header_banner-desktop img {
     header.home__header div.header_buscador input {
         width: 46vh;
         height: 27px;
-        font-size: 18px;
+        font-size: 16px;
         margin-left: 40px;
     }
 
@@ -382,7 +382,7 @@ div.header_banner-desktop img {
       /*      INPUT   */
       header.home__header div.header_buscador input {
       
-        font-size: 18px;
+        font-size: 16px;
        
     }
 
@@ -405,7 +405,7 @@ div.header_banner-desktop img {
         align-items: center;
         background-color: #ffffff;
         position: relative;
-        padding-left: 13vh;
+        padding-left: 11vh;
         
         
     }
