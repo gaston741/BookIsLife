@@ -135,6 +135,10 @@ div.home__main__up i {
 /*           TABLET         RESPONSIVE          */
 
 @media(min-width:768px) {
+    main.home {
+    
+        padding: 0vh 5vh;
+    }
 
     .home_main_container_span{
         display: flex;
@@ -183,6 +187,10 @@ div.home__main__up i {
 /*                 DESKTOP    RESPONSIVE          */
 
 @media(min-width:1024px) {
+    main.home {
+     
+        padding: 0vh 10vh;
+    }
 
     .home__box_products {
             flex-wrap: wrap;
