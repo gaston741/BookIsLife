@@ -122,7 +122,7 @@ div.container-button-product-detail{
     text-align: center;
     background-color: white;
     padding: 5px;
-    width: 25vh;
+    width: 36vh;
     margin: 5px;
 }
 
@@ -145,7 +145,7 @@ div.container-button-product-detail{
     color:green;
     letter-spacing: 2px;
     font-weight: 900;
-    padding-left: 13vh;
+    padding-left:4vh;
   
     
 
@@ -163,7 +163,8 @@ div.container-button-product-detail{
 .cart_product-select{
     display: flex;
     flex-direction: column-reverse;
-     margin: 1.5vh 2vh; 
+    margin: 1.5vh 0vh 1vh 1vh;
+    
 }
 
 
