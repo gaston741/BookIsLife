@@ -128,15 +128,35 @@ div.new-here{
     text-transform: uppercase;
     transition: color 0.5s, background 0.5s;
 }
+.btn-ghost.volver{
+background-color: white;
+border: none;
+border-radius: 5%;
+box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+color: black;
+cursor: pointer;
+font-family: "Cinzel";
+font-size: 12px;
+font-weight: 700;
+letter-spacing: 2.5px;
+margin-right: 30px;
+margin-top: 15px;
+outline: none;
+padding: 1.2em 1.5em;
+text-decoration: none;
+text-transform: uppercase;
+transition: all 0.3s ease 0s;
+}
 #volver{
     color: white
 }
 .languajes{
+    align-items: center;
     background-color: transparent;
     border-color: white;
     color: black;
     display: flex;
-    text-align: end;
+    text-align: center;
 }
 .btn-login{
     background-color: transparent;
@@ -160,6 +180,15 @@ div.new-here{
     margin: 5px 5px 5px 5px;
 }
 /* ----------------------------------------------Diseño de Botones----------------------------------------------*/
+.btn-ghost.volver:hover{
+    background-color:#EFFEFA ;
+    box-shadow: 0px 15px 20px #54BAB9;
+    color: rgb(7, 7, 7);
+    transform: translateY(-7px);
+}
+.btn-ghost.volver:active {
+   transform: translateY(-1px);
+}
 /* Rounded Borders */
 .btn-ghost.round{
     border-radius: 30px;
