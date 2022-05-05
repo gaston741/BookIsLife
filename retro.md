@@ -45,3 +45,6 @@
 - No comprometerse con una tarea o realizarla a ultimo momento.
 
 - Olvidarse del Proyecto al finalizar el Sprint.
+
+***
+![Image text](/wireframes/retro-2.jpeg)
