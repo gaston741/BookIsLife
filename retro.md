@@ -1,31 +1,47 @@
-## Retrospectiva del Sprint 1
+## Retrospectiva del Sprint 2
 ***
 **Seguir Haciendo:**
 - Comunicarnos entre si y ayudarnos Mutuamente.
-- Trabajar de manera responsable con respecto al proyecto.
+
+- Seguir implementando nuevas ideas para el Proyecto.
+
 - Acompañarnos entre todos con cada punto del Sprint.
-- Cumplir con el tiempo establecido para la entrega de cada tema del Sprint
+
+- Aceptar errores.
 ***
 **Hacer Más:**
 - Reuniones para hablar sobre el proyecto.
-- Hacer mejoras en el proyecto (hacerlo mas adaptable a nivel usuario).
+
+- Estar pendiente al tablero de Trello.
+
 - Contar con el grupo completo en las reuniones programadas.
+
+- Conectarse a las clases de apoyo para reforzar lo visto en clases.
+
 ***
 **Empezar a hacer**
-- Usar mas medios de Comunicaciones.
+- Comprometerse con el Proyecto, buscando mas herramientas para implementar y facilitar dicho elemento.
 
-- Cumplir con las Daily.
+- Repaso grupal, conectarse p/ completar el sprint.
 
-- Ser constante con Nuestras Respectivas Actividades.
+- Ponerse al dia con las tareas, clases.
+
+- Seguir trabajando aun ya entregado el sprint.
+
 ***
 **Hacer Menos**
-- Posponer la fecha de entrega indicada.
+- Proponer y no cumplir.
 
 - Realizar un punto del Sprint a ultimo momento.
 
-- No dejar de lado Trello.
+- Ignora mensajes.
+
 ***
 **Dejar de Hacer**
 - Entregar en Fecha Limite.
 
 - No avisar cuando nos demora un punto del Sprint, ni pedir ayuda por la misma.
+
+- No comprometerse con una tarea o realizarla a ultimo momento.
+
+- Olvidarse del Proyecto al finalizar el Sprint.
