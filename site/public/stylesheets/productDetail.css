@@ -1,3 +1,16 @@
+
+   
+   .editar-btn:hover {
+    background-color: #2EE59D;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+   }
+   
+   .editar:active {
+    transform: translateY(-1px);
+   }
+
 body{
     padding: 0;
     margin: 0;
@@ -106,7 +119,7 @@ span.precio {
 }
 
 .añadir {  /* contenedor de añadir */
- 
+    margin: 0 5px;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -134,6 +147,24 @@ span.precio {
    
     
 } 
+.color-btn-editar{
+    position: relative;
+    padding: 7px 10px;
+    font-family:  'Orelega one';
+    margin: 1em 4em;
+    float: left;
+    border-radius: 3px;
+    font-size: 20px;
+    color: #FFF;
+    text-decoration: none;
+    background-color: #2e92cc;
+    border: none;
+    border-bottom: 5px solid hsl(219, 61%, 51%);
+    text-shadow: 0px -2px hsl(219, 53%, 51%);
+    -webkit-transition: all 0.1s;
+    transition: all 0.1s;
+   
+}
 
 .product-detail-añadir:hover , .product-detail-añadir:active{
     -webkit-transform: translate(0px,5px);

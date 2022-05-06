@@ -1,55 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('./partials/head',{ title :'Editar Producto'})%> 
-    <%- include('./partials/header')%> 
-<body>
-
-    <main>
-        <h2>Editar Productos</h2>
-        <div class="contenedor">
-
-            <form action="" method="post">
-                <article>
-
-                    <div class="nombre">
-                        <label for="nombre">Editar Producto:Nombre Producto</label>
-                        <input type="text" name = "nombre">
-                        <span class="error"></span>
-                    </div>
-                    <div class="descripcion">
-                        <label for="descipcion">Editar Descripcion</label>
-                        <input type="text" class="descripcion" name = "descripcion" >
-                        <span class ="error"></span>
-                    </div>
-                    <div class="categoria">
-                        <label for="categoria">Editar Categoria</label>
-                    <select class = ""  name="categoria" id="categoria">
-
-                        <option value="1">Ciencia Ficción </option>
-                        <option value="2"> Cómics y Mangas</option>
-                        <option value="3"> Humor</option>
-                        <option value="4">Narrativa</option>
-                        <option value="5">Narrativa Romantica</option>
-                        <option value="6">Obras de Teatro </option>
-                        <option value="7"> Poesía</option>
-                        <option value="8"> Policiales</option>
-                        <option value="9"> Terror</option>
-                        <option value="10"> Clásicos</option>
+    <%- include('./partials/head',{title:"Edicion de Producto"}) %> 
+<body class="administrador">
+    <%- include('./partials/header') %> 
+    <main class="admi_main">
+      <!--   Empieza el formulario -->
+            <form class="form_admi" action="" method="">
+               <!--  Titulos -->
+               <h2 class="titulo_admi"> Formulario del Administrador</h2>
+               <h3 class="titulo_dos_admi">Edicion de Libros</h3>
+              <!--  seccion contenedora -->
+               <article>
+                   <!-- Titulo del libro-->
+                <div class="admi__form-box">
+                    <input class="admi_form-input" type="text" placeholder="Título del libro" name="titulo" id="titulo">
+                    <span class="admi__text-error">Título</span>
+                </div>
+                <!-- Autor del libro-->
+                <div class="admi__form-box">
+                    <input class="admi_form-input" type="text" placeholder="Autor del libro" name="autor" id="autor">
+                    <span class="admi__text-error">Autor</span>
+                </div>
+                <!-- Descripcion del libro-->
+                <div class="admi__form-box">
+                   <textarea class="admi_form-input" name="sinopsis" id="sinopsis" cols="5" rows="5" placeholder="Agregue la sinopsis"></textarea>
+                    <span class="admi__text-error">Sinopsis</span>
+                </div>
+                <!-- Portada del libro-->
+                <div class="admi__form-box">
+                    <label class="admi_portada" for="Portada">Portada del Libro</label>
+                    <input class="admi_file"  type="file" id="foto" name="foto"  >
+                </div>
+                <!-- Categoria del libro-->
+                <div class="admi__form-box">
+                    <select class="admi_select" name="categoria" id="categoria" >
+                        <option  >Seleccione Categoria Literaria</option>
+                        <option value="">Ciencia Ficción</option>
+                        <option value="">Clásicos</option>
+                        <option value="">Cómics y Mangas</option>
+                        <option value="">Humor</option>
+                        <option value="">Narrativa</option>
+                        <option value="">Narrativa Romantica</option>
+                        <option value="">Obras de Teatro</option>
+                        <option value="">Poesía</option>
+                        <option value="">Policiales</option>
+                        <option value="">Terror</option>
                     </select>
-   
-                    </div>
-                    <div class="precio">
-                        <label for="precio">Editar Precio</label>
-                        <input type="number" class = "precio" name="precio" id="">
-                        <span class="error"></span>
-                    </div>
-
-                </article>
-                <input type="submit" value="Limpiar" name = "resetear">
-                <input type="submit" value="Guardar" name = "guardar" >
+                    <span class="admi__text-error">Categoria </span>
+                </div>
+                <div class="admi__form-box">
+                    <input class="admi_form-input" type="number" placeholder="$$ Precio del Libro" name="precio" id="precio">
+                    <span class="admi__text-error"> Precio </span>
+                </div>
+               </article>
+               <div class="botones_admi">
+                <button type="reset" class="admi_adherir admi_delete">Resetear</button>
+                  <button type="submit" class="admi_adherir admi_submit">Editar</button>
+               </div>   
             </form>
-        </div>
+          
     </main>
-    <%- include('./partials/footer')%> 
+    <%- include('./partials/footer') %>
+    
 </body>
 </html>
