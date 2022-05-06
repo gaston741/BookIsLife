@@ -154,6 +154,7 @@ button.admi_delete:hover {
         border:none;
         border-radius: 5px;
         height: 40px;
+        font-family: "Cinzel";
         
 }
   
@@ -166,6 +167,7 @@ button.admi_delete:hover {
     cursor: pointer;
   }
 
+ /*  Tablet  */
   @media(min-width:768px){
 
     .form_admi{
@@ -173,6 +175,7 @@ button.admi_delete:hover {
     }
 
   }
+/*    Desktop   */
   @media(min-width:1024px){
       .form_admi{
           width: 50%;
