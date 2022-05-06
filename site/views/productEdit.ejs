@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head',{ title :'Editar Producto'})%> 
+    <%- include('./partials/header')%> 
+<body>
+
+    <main>
+        <h2>Editar Productos</h2>
+        <div class="contenedor">
+
+            <form action="" method="post">
+                <article>
+
+                    <div class="nombre">
+                        <label for="nombre">Editar Producto:Nombre Producto</label>
+                        <input type="text" name = "nombre">
+                        <span class="error"></span>
+                    </div>
+                    <div class="descripcion">
+                        <label for="descipcion">Editar Descripcion</label>
+                        <input type="text" class="descripcion" name = "descripcion" >
+                        <span class ="error"></span>
+                    </div>
+                    <div class="categoria">
+                        <label for="categoria">Editar Categoria</label>
+                    <select class = ""  name="categoria" id="categoria">
+
+                        <option value="1">Ciencia Ficción </option>
+                        <option value="2"> Cómics y Mangas</option>
+                        <option value="3"> Humor</option>
+                        <option value="4">Narrativa</option>
+                        <option value="5">Narrativa Romantica</option>
+                        <option value="6">Obras de Teatro </option>
+                        <option value="7"> Poesía</option>
+                        <option value="8"> Policiales</option>
+                        <option value="9"> Terror</option>
+                        <option value="10"> Clásicos</option>
+                    </select>
+   
+                    </div>
+                    <div class="precio">
+                        <label for="precio">Editar Precio</label>
+                        <input type="number" class = "precio" name="precio" id="">
+                        <span class="error"></span>
+                    </div>
+
+                </article>
+                <input type="submit" value="Limpiar" name = "resetear">
+                <input type="submit" value="Guardar" name = "guardar" >
+            </form>
+        </div>
+    </main>
+    <%- include('./partials/footer')%> 
+</body>
+</html>
