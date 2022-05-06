@@ -38,15 +38,15 @@
                       <select class="admi_select dropdown-select" name="categoria" id="categoria" >
                           <option  >Seleccione Categoria Literaria</option>
                           <option value="cf">Ciencia Ficción</option>
-                          <option value="cl">Clásicos</option>
-                          <option value="co">Cómics y Mangas</option>
+                          <option value="cla">Clásicos</option>
+                          <option value="com">Cómics y Mangas</option>
                           <option value="hu">Humor</option>
                           <option value="na">Narrativa</option>
                           <option value="naro">Narrativa Romantica</option>
-                          <option value="te">Obras de Teatro</option>
-                          <option value="po">Poesía</option>
+                          <option value="tea">Obras de Teatro</option>
+                          <option value="poe">Poesía</option>
                           <option value="poli">Policiales</option>
-                          <option value="terror">Terror</option>
+                          <option value="ter">Terror</option>
                       </select>
                       <span class="admi__text-error">Categoria Obligatoria</span>
                   </div>
@@ -56,7 +56,24 @@
                           <option value="i">Ingles</option>
                           <option value="e">Español</option>
                       </select>
-                      <span class="admi__text-error">Categoria Obligatoria</span>
+                      <span class="admi__text-error">Idioma Obligatorio</span>
+                  </div>
+                    <!--  stock -->
+                    <div class="admi__form-box">
+                      <select class="admi_select dropdown-select" id="selectNumber">
+                          <option>Cantidad Disponible en Stock</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                        </select>
+                      <span class="admi__text-error">Indique el stock</span>
                   </div>
   
                     <!-- Portada del libro-->
@@ -64,12 +81,11 @@
                       <label class="admi_portada" for="Portada">Adjuntar Portada del Libro</label>
                       <input class="admi_file "  type="file" id="foto" name="foto"/>
                   </div>
-                 
-  
                  </article>
+                <!--  envio y reset -->
                  <div class="botones_admi">
-                  <button type="reset" class="admi_adherir delete">Borrar</button>
-                  <button type="submit" class="admi_adherir">Adherir</button>
+                  <button type="reset" class="admi_adherir admi_delete">Borrar</button>
+                  <button type="submit" class="admi_adherir admi_submit">añadir</button>
                  </div>   
               </form>
             
