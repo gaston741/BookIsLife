@@ -1,0 +1,166 @@
+/* body */
+.administrador {
+    background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    opacity: .95;
+}
+
+/* main */
+
+.admi_main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+}
+
+/*Formulario */
+.form_admi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+    padding:20px;
+    background-image: linear-gradient(-225deg, #E3FDF5 50%, #FFE6FA 50%);
+    
+}
+
+
+/* titulos */
+.titulo_admi{
+    font-size: 1.1em;
+    font-family: 'Cinzel';
+    color: black;
+}
+.titulo_dos_admi{
+
+    margin: 15px 0px 5px 10px;
+    font-size: 0.9em;
+    font-family: 'Cinzel';
+}
+
+/* contenedor, inputs ,select , label*/
+.admi_select{
+
+     margin: 5px;
+    height: 30px;
+}
+
+.admi__form-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}   
+
+.admi_portada{
+    margin: 0px 0px 10px 5px;
+    color:rgb(105, 103, 103);
+}
+.admi_file{
+  
+    background-color: #ffccf7;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 auto 0;
+    overflow: hidden;
+    padding: 5px;
+    width: 40vh;
+}
+
+.admi__text-error{
+
+    margin: 0px 0px 15px 5px;
+    color :red;
+    font-size: 12px;
+    
+}
+
+
+.input-item {
+    background: #fff;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.admi_form-input{
+    width: 100%;
+    height: 40px;
+    margin:10px 0px 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+    font-family: "cinzel";
+    
+}
+
+/* contenedor botones */
+.botones_admi{
+
+    display: flex;
+    margin-left: 3em;
+    margin-top: 4em;
+}
+button.admi_delete{
+    background-color:#f44336 ;
+}
+
+/* buttons  */
+.admi_adherir {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #000000;
+    font-weight: bolder;
+    background-color: #04AA6D;
+    font-family: 'Cinzel';
+    width:14vh;
+    height: 40px;
+   justify-content: center;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    margin: 10px ;
+    letter-spacing: 0.2em;
+}
+
+/* buttons hover */
+button.admi_submit:hover {
+    transform: translatey(3px);
+    box-shadow: none;
+    background-color: #a8edea;
+}
+button.admi_delete:hover {
+    transform: translatey(3px);
+    box-shadow: none;
+    background-color: rgb(240, 6, 6);
+}
+/* Select*/
+.dropdown-select {
+    
+        width: 39vh;
+        padding: 5px 10px 5px 5px;
+        background: #f2f2f2;
+        background-color: #fff;
+        border:none;
+        border-radius: 5px;
+        height: 40px;
+        
+}
+  
+.dropdown-select > option {
+    margin: 3px;
+    padding: 6px 8px;
+    text-shadow: none;
+    background: rgb(250, 236, 236);
+    border-radius: 3px;
+    cursor: pointer;
+  }
