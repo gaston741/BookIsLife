@@ -2,6 +2,10 @@
 h1{
     margin: 20px;
 }
+
+.main-product-cart{
+    background-color: var(--colorMainHome);
+}
 .product-cart__product{
     display: flex;
     font-family: "Cinzel";
@@ -372,6 +376,12 @@ main.cart-product-main{
 /*                 DESKTOP    RESPONSIVE           */ 
 
 @media(min-width:1024px) {
+
+    .cart-product-main{
+        width: 80%;
+        margin:0 auto;
+    }
+    
     .a_button {
        
         margin-right: 7em;
