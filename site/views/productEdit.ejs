@@ -4,46 +4,40 @@
   
 <body class="administrador">
     <%- include('./partials/header')%> 
-
     <!--  BOTON VOLVER -->
     <div class="container-button-product-detail admini">
         <a class="a_button" href="/"><i class="fa-solid fa-angle-left"></i> VOLVER </a>
     </div>
         <main class="admi_main">
-        
-            <div class="contenedor">
-
-                <form class="form_admi" action="" method="post">
-
+   <!--   Empieza el formulario -->
+            <form class="form_admi" action="" method="post">
                 <!--   titulos -->
-
                     <h2 class="titulo_dos_admi">Edición del Libro:</h2>
                     <!--  seccion contenedora -->
-                    
                     <article>
                         <!-- Titulo del libro-->
                         <div  class="admi__form-box">
-                            <label class="admi_portada"  for="nombre">Editar Titulo</label>
+                            <label class="admi_label_edit"  for="nombre">Editar Titulo</label>
                             <input class="admi_form-input" type="text" name = "titulo">
                         </div>
                         <!-- Autor del libro-->
                         <div class="admi_form-box">
-                            <label class="admi_portada"  for="nombre">Editar Autor</label>
+                            <label class="admi_label_edit"  for="nombre">Editar Autor</label>
                             <input class="admi_form-input" type="text" name = "autor">
                         </div>
                         <!-- Precio del libro -->
                         <div  class="admi__form-box">
-                            <label class="admi_portada"  for="precio">Editar Precio</label>
+                            <label class="admi_label_edit"  for="precio">Editar Precio</label>
                             <input type="number" class="admi_form-input" name="precio" id="">
                         </div>
                         <!-- Descripcion del libro-->
                         <div  class="admi__form-box">
-                            <label class="admi_portada"  for="descripcion">Editar Sinopsis</label>
+                            <label class="admi_label_edit"  for="descripcion">Editar Sinopsis</label>
                             <textarea class="admi_form-input" name="sinopsis" id="sinopsis" cols="5" rows="5" ></textarea>
                         </div>
                         <!-- Categoria del libro-->
                         <div  class="admi__form-box">
-                            <label class="admi_portada"  for="categoria">Editar Categoria</label>
+                            <label class="admi_label_edit"  for="categoria">Editar Categoria</label>
                             <select  class="admi_select dropdown-select"  name="categoria" id="categoria">
                                 <option value="1">Ciencia Ficción </option>
                                 <option value="2"> Cómics y Mangas</option>
@@ -59,7 +53,7 @@
                         </div>
                         <!--  Idioma de Edicion -->
                      <div class="admi__form-box">
-                        <label class="admi_portada"  for="categoria">Editar Idioma de Edición</label>
+                        <label class="admi_label_edit"  for="categoria">Editar Idioma de Edición</label>
                         <select class="admi_select dropdown-select" name="idioma" id="idioma" >
                             <option>Seleccione Idioma de Edición</option>
                             <option value="ingles">Ingles</option>
@@ -68,7 +62,7 @@
                      </div>
                      <!--  stock -->
                      <div class="admi__form-box">
-                        <label class="admi_portada"  for="categoria">Editar Cantidad de Stock</label>
+                        <label class="admi_label_edit"  for="categoria">Editar Cantidad de Stock</label>
                         <select class="admi_select dropdown-select" id="selectNumber">
                             <option>Cantidad Disponible para la Venta</option>
                             <option value="1">1</option>
@@ -85,7 +79,7 @@
                      </div>
                      <!-- Portada del libro-->
                         <div class="admi__form-box">
-                            <label class="admi_portada" for="Portada">Editar Portada del Libro</label>
+                            <label class="admi_label_edit" for="Portada">Editar Portada del Libro</label>
                             <input class="admi_file "  type="file" id="foto" name="foto"/>
                         </div>
                     </article>
@@ -94,8 +88,7 @@
                         <button type="submit" class="admi_adherir admi_submit">Guardar</button>
                     </div>
                    
-                </form>
-            </div>
+            </form>
         </main>
     <%- include('./partials/footer')%> 
 </body>
