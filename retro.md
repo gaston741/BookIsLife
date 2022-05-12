@@ -8,6 +8,7 @@
 - Acompañarnos entre todos con cada punto del Sprint.
 
 - Aceptar errores.
+
 ***
 **Hacer Más:**
 - Reuniones para hablar sobre el proyecto.
