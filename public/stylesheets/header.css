@@ -119,7 +119,7 @@ header.home__header div.header_buscador {
 
     font-size: 25px;
     color: rgb(3, 3, 3);
-    margin-left: 20px;
+    margin-left: 35px;
     cursor: pointer;
     padding-left: 4vh;
 
@@ -187,7 +187,7 @@ header.home__header div.header_buscador {
 
 
 header.home__header div.header_buscador input {
-    width: 35vh;
+    width: 25vh;
     height: 26px;
     font-family: "cinzel";
     border-radius: 5px;
@@ -416,7 +416,7 @@ div.header_banner-desktop img {
     }
     .home_nav-menu li a {
         
-        font-size: 14px;
+        font-size: 12px;
         
     }
     .home_nav-menu {

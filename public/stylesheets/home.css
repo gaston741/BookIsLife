@@ -82,7 +82,7 @@ span.titulo {
     padding-top: 5px;
     margin-top: 10px;
     text-align: center;
-    height: 20px;
+    height: 25px;
 
 }
 
@@ -155,11 +155,10 @@ div.home__main__up i {
     span.titulo,span.autor {
         background-color: #ffffff;
         font-family: "orelega one";
-        font-size: 1.3vh;
+        font-size: 1.4vh;
         padding-left: 5px;
-        padding-top: 5px;
-        
-          
+        padding-top: 10px;
+        height: 40px; 
     }
     
     main.home h2 {
@@ -192,7 +191,7 @@ div.home__main__up i {
 @media(min-width:1024px) {
     main.home {
      
-        padding: 0vh 30vh;
+        padding: 0vh 15vh;
     }
 
     .home__box_products {
@@ -215,7 +214,7 @@ div.home__main__up i {
     }
     span.titulo,span.autor {
         
-        font-size: 1.3vh;
+        font-size: 1.5vh;
         height: 40px;
     
         
