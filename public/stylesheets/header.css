@@ -197,6 +197,7 @@ header.home__header div.header_buscador input {
     align-self: center;
     font-size: 15px;
     margin-left: 20px;
+    margin-top: 14px;
     
 
 }
@@ -211,6 +212,8 @@ header.home__header div.header_buscador button.lupa {
     padding: 5px;
     align-self: center;
     color: rgb(97, 91, 91);
+    margin-top: 14px;
+   
 
 }
 
@@ -298,12 +301,14 @@ div.header_banner-desktop img {
         height: 27px;
         font-size: 16px;
         margin-left: 40px;
+        margin-top: 14px;
     }
 
     header.home__header div.header_buscador button.lupa {
         width: 5vh;
         height: 27px;
         font-size: 16px;
+        margin-top:14px;
     }
     
 
