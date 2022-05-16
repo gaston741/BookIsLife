@@ -16,7 +16,7 @@
     display: flex;
     flex-direction: row;
     justify-content: end;
-    padding: 0vh 2vh;
+    padding: 1vh 2vh;
 
 
 
@@ -34,7 +34,7 @@
 .header_nav li a i {
     /*iconos del nav header*/
 
-    font-size: 30px;
+    font-size: 28px;
     color: rgb(242, 225, 197);
 }
 
@@ -249,7 +249,7 @@ div.header_banner-desktop img {
     .header_nav li a i {
         /*iconos del nav header*/
 
-        font-size: 25px;
+        font-size: 27px;
         color: rgb(242, 225, 197);
     }
 
