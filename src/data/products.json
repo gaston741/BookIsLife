@@ -370,16 +370,16 @@
     },
     {
         "id": 27,
-        "name": "MUERTE EN EL NILO",
-        "autor": "Agatha Christie",
-        "price" : 1670,
-        "description": "Durante unas placenteras vacaciones en Egipto, el detective Hercules Poirot coincide con Linnet y Simon, unos conocidos suyos que estan de luna de miel en el país de los faraones. El encanto de tan maravillosos dias se rompe cuando una mañana, en el transcurso de un crucero por el Nilo, la bella Linnet aparece muerta de un disparo en la cabeza. Será capaz Poirot de encontrar al asesino de la joven esposa?. Será capaz de discernir entre imaginación y realidad, aún estando a bordo la ex pareja de Simon, una mujer empeñada desde el mismo día de la boda en arruinar su matrimonio con la desafortunada Linnet? El misterio esta servido.",
-        "publisher" : "Booket",
-        "category": "Policial",
+        "name": "ANTOLOGÍA POÉTICA",
+        "autor": "Alfonsina Storni",
+        "price" : 670,
+        "description": "En esta antología poética, compuesta por ella misma, encontramos, en síntesis subjetiva, desde los poemas románticos de su primera época hasta la última producción animada por una inquietud de renovación. La más exquisita gracia, profundidad, ironía y pasión se revelan a lo largo de sus 180 mejores poesías.",
+        "publisher" : "Terramar",
+        "category": "Poesía",
         "language": "Español",
         "stock" : 26,
-        "image" : "muerteEnElNilo.png",
-        "ISBN" : 9789878435527
+        "image" : "antologia.png",
+        "ISBN" : 9789876172103
 
     }
 ]
