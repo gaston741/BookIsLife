@@ -12,7 +12,15 @@ module.exports={
       return   res.render('index',{
         products
       })
-    } 
+    },
+    search: (req,res)=>{
+
+      const {keywords} = req.query;
+
+      let result = products.filter(product => product.name.toLowerCase().includes(keywords.toLowerCase() || product.autor.toLowerCase().includes(keywords.toLowerCase()) ))
+
+      return res.send(result)
+    }
 
 
 }
