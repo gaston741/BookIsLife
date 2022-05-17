@@ -11,7 +11,7 @@ router.get('/create', create);
 router.post('/create', store);
 
 /* Mostrar un producto especifico*/
-router.get('/:id', detail);
+router.get('/detail/:id', detail);
 
 /* Editar un producto */
 router.get('/edit', edit);
