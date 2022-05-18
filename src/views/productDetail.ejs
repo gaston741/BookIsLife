@@ -13,19 +13,19 @@
    </div>
      <!--  BOTON EDITAR PRODUCTO-->
      <div class="añadir">
-        <a class="product-detail-añadir admi_editar" href="/products/edit">EDITAR <i class="fa-solid fa-file-pen"></i></a>
+        <a class="product-detail-añadir admi_editar" href="/products/edit">EDITAR <i class="fa-solid fa-pen-to-square"></i></a>
     </div>
        <!--       SECCION PRODUCTO -->
        <section class="container-product-detail-portada">
            <!-- IMAGEN PRODUCTO -->
            <div class="product-detail-product ">
-               <img class="product-detail-portada shadow_detail " src="/images/portadas/elPsicoanalista.png" alt="">
+               <img class="product-detail-portada shadow_detail " src="/images/portadas/<%= product.image %>" alt="">
            </div>
            <!-- PRECIO ANTERIOR -->
            <div class="cart_precios">
-           <span class="precio_anterior"> $3.699,99</span>
+           <span class="precio_anterior"> $5.699</span>
           <!--  PRECIO PRODUCTO -->
-           <span class="precio"> $2.699,99</span>
+           <span class="precio"> $<%= toThousand(product.price) %></span>
            </div>
         <!--    AÑADIR PRODUCTO -->
            <div class="añadir">
@@ -38,19 +38,13 @@
       <!--  DESCRIPCION PRODUCTO -->
        <section class="container-product-detail-descripcion">
            <article class="product-detail-description">
-               <h1>EL PSICOANALISTA</h1>
+               <h1><%= product.name %></h1>
                <h3>SINOPSIS</h3>
-               <p> Felíz aniversario, doctor. Bienvenido al primer día de su muerte. Así comienza el anónimo que recibe
-                   el psicoanalista Frederick Starks, y que le obliga a emplear toda su astucia y rapidez para, en
-                   quince días, averiguar quién es el autor de esa amenazadora misiva que promete hacerle la vida
-                   imposible. De no conseguir su objetivo, deberá elegir entre suicidarse o ser testigo de cómo, uno
-                   tras otro, sus familiares y conocidos mueren por obra de un psicópata decidido a llevar hasta el
-                   final su sed de venganza. Dando un inesperado giro a la relación entre médico y paciente, John
-                   Katzenbach nos ofrece una novela emblemática del mejor suspense psicológico.</p>
-                   <a class="leer_mas" href="#parrafo-ver-mas"> ...leer más</a>
+               <p><%= product.description %></p>
+                  <!--  <a class="leer_mas" href="#parrafo-ver-mas"> ...leer más</a>
                <p id="parrafo-ver-mas" class="parrafo-ver-mas"> La edición publicada en 2012 para conmemorar el décimo aniversario de la primera edición original de
                    El psicoanalista, incluye un epílogo que John Katzenbach ha escrito especialmente para los lectores
-                   en lengua española.</p>
+                   en lengua española.</p> -->
            </article>
        </section>
        <!-- BOTON SCROLL UP -->
