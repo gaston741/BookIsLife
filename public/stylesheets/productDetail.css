@@ -256,6 +256,11 @@ span.precio {
 }
 
 @media(min-width:1024px){
+
+    .product-detail__main{
+
+        margin: 0em 5em;
+    }
     
     .container-product-detail-portada {
         display: flex;
