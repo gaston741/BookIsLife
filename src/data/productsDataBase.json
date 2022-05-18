@@ -381,5 +381,50 @@
         "image" : "antologia.png",
         "ISBN" : 9789876172103
 
+    },
+    {
+        "id": 28,
+        "name": "COMEDIAS DRAMÁTICAS",
+        "autor": "José Ignacio Serralunga",
+        "price" : 570,
+        "description": "Siete comedias dramáticas del dramaturgo argentino José Ignacio Serralunga. En ellas, protagonistas comunes, reconocibles, con sus alegrías y sus angustias cotidianas, pero envueltas, por obra de la imaginación, en algunas circunstancias que nos distancian, como espectadores, de esa realidad prosaica.Nada parecen prometer en principio el encuentro del sacerdote con la joven, la dueña de casa y su empleada doméstica, una madre con sus hijos, dos soldados en la víspera de una batalla, o unas inmigrantes francesas en un pueblito argentino en el siglo diecinueve. Salvo que, como sucede en algunas de estas piezas teatrales, aparezcan atisbos de situaciones mágicas, oníricas, incluso mitológicas que harán, por contraste, parecer aún más reales, más atrapantes, las historias.",
+        "publisher" : "Universidad Católica De Santa Fe",
+        "genero": "Obras de Teatro",
+        "language": "Español",
+        "stock" : 20,
+        "image" : "comediasDramaticas.png",
+        "ISBN" : 9789876172106
+
+    },
+    {
+        "id": 29,
+        "name": "ODISEA",
+        "autor": "Homero",
+        "price" : 4990,
+        "description": "Todos conocemos la historia de la «Odisea», aunque no la hayamos leído. Está en canciones, en novelas, en poemas, en cuadros, en chistes. Blackie Books arranca su colección «Clásicos Liberados» con la historia de todas las historias occidentales, dando voz tanto a Nick Cave como a Mary Beard u Ovidio. Tomando la adaptación favorita de Borges para incluir, además, una versión de la historia de Margaret Atwood en una edición cuidadísima, pero no cara, ilustrada a todo color por el gran Calpurnio. Liberar a los clásicos es acercarnos a ellos de nuevas forma",
+        "publisher" : "Blackie Books",
+        "genero": "clásicos",
+        "language": "Español",
+        "stock" : 10,
+        "image" : "laOdisea.png",
+        "ISBN" : 9789876172109
+
+    },
+    {
+        "id": 30,
+        "name": "LA BAILARINA DE AUSCHWITZ",
+        "autor": "Eger Edhit Eva",
+        "price" : 4990,
+        "description": "Una emocionante historia de superación sobre la capacidad del ser humano para sanar y vencer la adversidad. Eger tenía dieciséis años cuando los nazis invadieron su pueblo de Hungría y se la llevaron con el resto de su familia a Auschwitz. Al pisar el campo, sus padres fueron enviados a la cámara de gas y ella permaneció junto a su hermana, pendiente de una muerte segura. Pero bailar El Danubio azul para Mengele salvó su vida, y a partir de entonces empezó una nueva lucha por la supervivencia. Primero en los campos de exterminio, luego en la Checoslovaquia tomada por los comunistas y, finalmente, en Estados Unidos, donde acabaría convirtiéndose en discípula de Viktor Frankl. Fue en ese momento, tras décadas ocultando su pasado, cuando se dio cuenta de la necesidad de curar sus heridas, de hablar del horror que había vivido y de perdonar como camino a la sanación. Su mensaje es claro: tenemos la capacidad de escapar de las prisiones que construimos en nuestras mentes y podemos elegir ser libres, sean cuales sean las circunstancias de nuestra vida.",
+        "publisher" : "Planeta",
+        "genero": "Autobiografia",
+        "language": "Español",
+        "stock" : 18,
+        "image" : "laBailarinaDeAuschwitz.png",
+        "ISBN" : 9789504962137
+
     }
+    
+    
+
 ]

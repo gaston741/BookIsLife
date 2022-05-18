@@ -207,6 +207,11 @@ span.precio {
     
     body.product-detail{
         background-color: var(--colorMainHome);
+
+    }
+    .product-detail__main{
+
+        margin: 0em 5em;
     }
    .container-product-detail-portada{
    display: flex;
@@ -256,6 +261,11 @@ span.precio {
 }
 
 @media(min-width:1024px){
+
+    .product-detail__main{
+
+        margin: 0em 7em;
+    }
     
     .container-product-detail-portada {
         display: flex;
@@ -279,6 +289,9 @@ span.precio {
     .precio_anterior {
         font-size: 25px;
     }
+    .product-detail-description{
+        margin:0em 5em;
+    }
     .product-detail-añadir {
         padding: 16px 24px;
     }
@@ -288,11 +301,11 @@ span.precio {
         
     }
     .product-detail-description h3 {
-        padding-left: 9em;
+        padding-left: 13em;
     }
     .product-detail-description p {
         
-        padding: 2em 9em 1em 9em;
+        padding: 2em 4em 2em ;
     }
     .leer_mas {
         margin-left: 10em;
