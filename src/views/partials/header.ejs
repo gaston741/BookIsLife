@@ -17,8 +17,14 @@
 
     <!--   BUSCADOR -->
     <div class="header_buscador">
-        <input type="text" placeholder="Encuentra tu libro ideal" />
-        <button class="lupa"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <form action="/search" method="GET">
+
+            <input type="text" name="keywords" placeholder="Encuentra tu libro ideal" />
+            <button type="submit" class="lupa"><i class="fa-solid fa-magnifying-glass"></i></button>
+
+
+        </form>
+       
     </div>
 
     <!--      MENU HAMBURGUESA -->
@@ -26,15 +32,18 @@
 
         <input type="checkbox" id="check">
         <label for="check" class="bar-btn">
-            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-bars iconoHamburguesa"></i>
         </label>
         <ul class="home_nav-menu">
+            <li><a href="#">Autoayuda</a></li>
+            <li><a href="#">Autobiografia</a></li>
             <li><a href="#">Clásicos</a></li>
             <li><a href="#">Ciencia Ficción</a></li>
             <li><a href="#">Cómics y Mangas</a></li>
             <li><a href="#">Humor</a></li>
             <li><a href="#">Narrativa</a></li>
             <li><a href="#">Narrativa Romantica</a></li>
+            <li><a href="#">Management</a></li>
             <li><a href="#">Obras de Teatro</a></li>
             <li><a href="#">Poesía</a></li>
             <li><a href="#">Policiales</a></li>
