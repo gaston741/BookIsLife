@@ -207,6 +207,11 @@ span.precio {
     
     body.product-detail{
         background-color: var(--colorMainHome);
+
+    }
+    .product-detail__main{
+
+        margin: 0em 5em;
     }
    .container-product-detail-portada{
    display: flex;
@@ -259,7 +264,7 @@ span.precio {
 
     .product-detail__main{
 
-        margin: 0em 5em;
+        margin: 0em 7em;
     }
     
     .container-product-detail-portada {
@@ -300,7 +305,7 @@ span.precio {
     }
     .product-detail-description p {
         
-        padding: 2em 13em 2em ;
+        padding: 2em 4em 2em ;
     }
     .leer_mas {
         margin-left: 10em;
