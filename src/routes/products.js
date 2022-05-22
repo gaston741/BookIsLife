@@ -21,7 +21,7 @@ router.put('/update/:id', update);
 router.get('/cart', cart);
 
 /* Eliminar un producto */
-router.delete('/:id', destroy);
+router.delete('/delete/:id', destroy);
 
 
 
