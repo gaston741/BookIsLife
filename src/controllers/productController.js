@@ -36,10 +36,10 @@ module.exports={
 
         let products = readBooks()
 
-        const {name,autor,price,description,publisher,genre,language,category}=req.body;
-        
+        const {name,autor,price,description,publisher,genre,language, image,category}=req.body;
+        const ultimo = products[products.length - 1]
         let newBook = {
-            id: products[products.length - 1].id + 1, //obtengo el ultimo id y le sumo uno.
+            id: ultimo.id + 1, //obtengo el ultimo id y le sumo uno.
             name : name.trim(),
             autor: autor.trim(),
             price: +price,
@@ -69,10 +69,10 @@ module.exports={
     update: (req,res)=>{
 
         let products = readBooks();
-        const {name,autor,price,description,publisher,genre,language,image,category}=req.body;
-         let booksModified = products.map(product => {
+        const {name,autor,price,description,publisher,genre,language,image,category} = req.body;
+         const booksModified = products.map(product => {
             if(product.id === +req.params.id){
-               let bookModified ={
+               let bookModified = {
                    ...product,
                    name: name.trim(),
                    autor: autor.trim(),
@@ -81,7 +81,7 @@ module.exports={
                    publisher: publisher,
                    genre :genre,
                    language:language,
-                   image:"default.png",
+                   image : "default.png",
                    category:category
                }
                return bookModified
@@ -94,6 +94,11 @@ module.exports={
 
     destroy : (req,res)=>{
 
+        let products = readBooks();
+        const booksModified = products.filter(product => product.id !== +req.params.id)
+
+        saveBooks(booksModified);
+        return res.redirect('/');
 
     },
     
