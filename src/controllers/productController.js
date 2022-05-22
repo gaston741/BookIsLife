@@ -9,7 +9,7 @@ const readBooks = () => {
     const products = JSON.parse(fs.readFileSync(productsFilePath,'utf-8'));
     return products
 }
-const saveBook = (products) => fs.writeFileSync(productsFilePath, JSON.stringify(products,null,3));
+const saveBooks = (products) => fs.writeFileSync(productsFilePath, JSON.stringify(products,null,3));
 
 const toThousand = n => n.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
@@ -19,9 +19,9 @@ module.exports={
 
 
     detail: (req,res)=>{
-        let products = readBooks()
+       
 
-        const product = products.find(product=> product.id === +req.params.id);
+        const product = readBooks().find(product=> product.id === +req.params.id);
         return res.render('productDetail',{
             product,
             toThousand
@@ -53,22 +53,43 @@ module.exports={
         }
 
         products.push(newBook); 
-        
-        saveBook(products);
-
-
+        saveBooks(products)
         return res.redirect('/')
-
-
     },
 
     edit: (req,res)=>{
-       return res.render('productEdit')
+        let products = readBooks();
+       let product = products.find(product => product.id === +req.params.id)
+       return res.render('productEdit',{
+         product
 
+       })
     },
 
     update: (req,res)=>{
 
+        let products = readBooks();
+        const {name,autor,price,description,publisher,genre,language,image,category}=req.body;
+         let booksModified = products.map(product => {
+            if(product.id === +req.params.id){
+               let bookModified ={
+                   ...product,
+                   name: name.trim(),
+                   autor: autor.trim(),
+                   price : +price,
+                   description :description.trim(),
+                   publisher: publisher,
+                   genre :genre,
+                   language:language,
+                   image:"default.png",
+                   category:category
+               }
+               return bookModified
+            }
+            return product
+        })
+        saveBooks(booksModified)
+        return res.redirect('/')
     },
 
     destroy : (req,res)=>{

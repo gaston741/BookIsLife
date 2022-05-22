@@ -15,7 +15,7 @@ router.get('/detail/:id', detail);
 
 /* Editar un producto */
 router.get('/edit/:id', edit);
-router.put('/update', update);
+router.put('/update/:id', update);
 
 /* Carrito de compras */
 router.get('/cart', cart);
