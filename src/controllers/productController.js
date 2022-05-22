@@ -1,44 +1,83 @@
 const fs = require('fs');
 const path = require('path');
-
 /* Reading the productsDataBase.json file and storing it in the products variable. */
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath,'utf-8'))
+
+
+const readBooks = () => {
+   
+    const products = JSON.parse(fs.readFileSync(productsFilePath,'utf-8'));
+    return products
+}
+const saveBook = (products) => fs.writeFileSync(productsFilePath, JSON.stringify(products,null,3));
 
 const toThousand = n => n.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 
 module.exports={
+   
+
 
     detail: (req,res)=>{
+        let products = readBooks()
 
         const product = products.find(product=> product.id === +req.params.id);
         return res.render('productDetail',{
-
             product,
             toThousand
         })
     }, 
-    cart: (req,res)=>{
-        return res.render('productCart')
+    
+    create:(req,res)=>{
+        return  res.render('productCreate')
     },
+
+    store :(req,res)=>{
+
+        let products = readBooks()
+
+        const {name,autor,price,description,publisher,genre,language,category}=req.body;
+        
+        let newBook = {
+            id: products[products.length - 1].id + 1, //obtengo el ultimo id y le sumo uno.
+            name : name.trim(),
+            autor: autor.trim(),
+            price: +price,
+            description: description.trim(),
+            publisher: publisher.trim(),
+            genre: genre,
+            language: language,
+            image: "default.png",
+            category:category
+
+        }
+
+        products.push(newBook); 
+        
+        saveBook(products);
+
+
+        return res.redirect('/')
+
+
+    },
+
     edit: (req,res)=>{
        return res.render('productEdit')
 
     },
+
     update: (req,res)=>{
 
     },
-    create:(req,res)=>{
-        return  res.render('productCreate')
-    },
-    store :(req,res)=>{
 
-
-    },
     destroy : (req,res)=>{
 
 
-    }
+    },
+    
+    cart: (req,res)=>{
+        return res.render('productCart')
+    },
 
 }

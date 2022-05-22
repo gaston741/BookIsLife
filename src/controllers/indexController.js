@@ -16,9 +16,11 @@ module.exports={
 
       return   res.render('index',{
         productsInSale,
-        productsRelevant
+        productsRelevant,
+        toThousand
       })
     },
+    
     search: (req,res)=>{
 
       const {keywords} = req.query;
