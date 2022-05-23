@@ -11,7 +11,8 @@ const toThousand = n => n.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g,
 module.exports={
     index: (req, res) =>{
       return   res.render('index',{
-        products
+        products,
+        toThousand
       })
     },
     search: (req,res)=>{

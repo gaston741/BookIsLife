@@ -13,8 +13,15 @@
    </div>
      <!--  BOTON EDITAR PRODUCTO-->
      <div class="añadir">
-        <a class="product-detail-añadir admi_editar" href="/products/edit">EDITAR <i class="fa-solid fa-pen-to-square"></i></a>
+        <a class="product-detail-añadir admi_editar" href="/products/edit/<%= product.id %>">EDITAR <i class="fa-solid fa-pen-to-square"></i></a>
     </div>
+         <!--  BOTON BORRAR PRODUCTO-->
+    <div class="eliminar">
+        <form action="/products/delete/<%= product.id %>?_method=delete" method="post" style="display: inline-flex">
+            <button type="submit" class="action-button delete" style="cursor: pointer;">ELIMINAR<i class="fa-solid fa-trash-can"></i></button>
+        </form>
+    </div>
+
        <!--       SECCION PRODUCTO -->
        <section class="container-product-detail-portada">
            <!-- IMAGEN PRODUCTO -->

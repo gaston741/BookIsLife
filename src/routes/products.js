@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const{index} = require('../controllers/indexController');
-const {detail,cart,edit,create,store,remove,update} =require('../controllers/productController')
+const {detail,cart,edit,create,store,update,destroy} =require('../controllers/productController')
  
 /* Mostrar todos los productos */
 router.get('/',index);
@@ -15,13 +15,13 @@ router.get('/detail/:id', detail);
 
 /* Editar un producto */
 router.get('/edit/:id', edit);
-router.put('/update', update);
+router.put('/update/:id', update);
 
 /* Carrito de compras */
 router.get('/cart', cart);
 
 /* Eliminar un producto */
-router.delete('/remove/:id', remove);
+router.delete('/delete/:id', destroy);
 
 
 
