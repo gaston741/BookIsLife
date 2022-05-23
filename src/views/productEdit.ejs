@@ -10,7 +10,7 @@
     </div>
         <main class="admi_main">
    <!--   Empieza el formulario -->
-            <form class="form_admi" action="/products/update/<%= product.id %>?_method=PUT" method="POST">
+            <form class="form_admi" action="/products/update/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data" >
                 <!--   titulos -->
                     <h2 class="titulo_dos_admi">Edición del Libro: <%= product.name %> </h2>
                     <!--  seccion contenedora -->
@@ -72,7 +72,7 @@
                      <!-- Portada del libro-->
                         <div class="admi__form-box">
                             <label class="admi_label_edit" for="image">Editar Portada del Libro</label>
-                            <input class="admi_file"  type="file" id="image" name="image"/>
+                            <input class="admi_file"  type="file" id="image" name="image" accept="image/*"/>
                         </div>
                     <!--  categoria de Edicion -->
                         <div class="admi__form-box">
