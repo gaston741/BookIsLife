@@ -1,9 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const{index} = require('../controllers/indexController');
-const {detail,cart,edit,create,store,destroy,update} =require('../controllers/productController')
+const {index,detail,cart,edit,create,store,destroy,update} =require('../controllers/productController')
  
-/* Mostrar todos los productos */
+/* Mostrar  todos los productos*/
 router.get('/',index);
 
 /* Crear un producto  */

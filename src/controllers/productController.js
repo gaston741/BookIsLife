@@ -15,8 +15,17 @@ const toThousand = n => n.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g,
 
 
 module.exports={
-   
 
+    index: (req, res) => {
+
+		let products = readBooks()
+
+	    return res.render('products',{
+		 products,
+		 toThousand
+
+	    })
+	},
 
     detail: (req,res)=>{
        
@@ -54,7 +63,7 @@ module.exports={
 
         products.push(newBook); 
         saveBooks(products)
-        return res.redirect('/')
+        return res.redirect('/products')
     },
 
     edit: (req,res)=>{
@@ -89,7 +98,7 @@ module.exports={
             return product
         })
         saveBooks(booksModified)
-        return res.redirect('/')
+        return res.redirect('/products')
     },
 
     destroy : (req,res)=>{
@@ -98,7 +107,7 @@ module.exports={
         const booksModified = products.filter(product => product.id !== +req.params.id)
 
         saveBooks(booksModified);
-        return res.redirect('/');
+        return res.redirect('/products');
 
     },
     

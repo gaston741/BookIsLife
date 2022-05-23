@@ -14,7 +14,7 @@ module.exports={
       let productsInSale = products.filter(product => product.category === "in-sale");
       let productsRelevant = products.filter(product => product.category === "relevant");
 
-      return   res.render('index',{
+      return res.render('index',{
         productsInSale,
         productsRelevant,
         toThousand
