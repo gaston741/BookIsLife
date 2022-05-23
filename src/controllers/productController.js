@@ -90,7 +90,7 @@ module.exports={
                    publisher: publisher,
                    genre :genre,
                    language:language,
-                   image : "default.png",
+                   image: req.file ? req.file.filename : "default.png", // si recibo el achivo de req.file, guardo la propiedad filename, sino devolvemos la img por defecto.
                    category:category
                }
                return bookModified
