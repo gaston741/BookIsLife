@@ -197,11 +197,13 @@ main.cart-product-main{
     justify-content: center;
    }
    
-   .cart_button_delete button svg {
+   /* .cart_button_delete button svg {
     width: 15px;
     fill: #eee;
+   } */
+   .trash-delete{
+       color:white
    }
-   
    .cart_button_delete button:hover {
     background: #ff3636;
    }

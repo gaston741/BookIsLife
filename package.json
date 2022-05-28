@@ -13,7 +13,11 @@
     "http-errors": "~1.6.3",
     "method-override": "^3.0.0",
     "morgan": "~1.9.1",
+<<<<<<< HEAD
     "multer": "^1.4.4",
     "nodemon": "^2.0.16"
+=======
+    "multer": "^1.4.4"
+>>>>>>> 441d7fefb0bf83173fa8893ec8f72e78756f1f9f
   }
 }

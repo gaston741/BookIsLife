@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     
-    <%- include('./partials/head',{ title :'Detalle de Producto'} )%> 
+    <%- include('./partials/head', { title : product.name}) %> 
 
 <body class="product-detail">
     <%- include('./partials/header') %> 
@@ -11,6 +11,7 @@
       <div class="container-button-product-detail">
        <a class="a_button" href="/"><i class="fa-solid fa-angle-left"></i> VOLVER </a>
    </div>
+<<<<<<< HEAD
      <!--  BOTON EDITAR PRODUCTO-->
      <div class="añadir">
         <a class="product-detail-añadir admi_editar" href="/products/edit/<%= product.id %>">EDITAR <i class="fa-solid fa-pen-to-square"></i></a>
@@ -22,6 +23,9 @@
         </form>
     </div>
 
+=======
+    
+>>>>>>> 441d7fefb0bf83173fa8893ec8f72e78756f1f9f
        <!--       SECCION PRODUCTO -->
        <section class="container-product-detail-portada">
            <!-- IMAGEN PRODUCTO -->
@@ -39,7 +43,17 @@
                <a class="product-detail-añadir" href="/product-cart">AÑADIR <i class="fa-solid fa-cart-arrow-down"></i></a>
            </div>
        </section>
+
        
+        <!--  BOTON editar PRODUCTO-->
+            <div class="botones_admi">
+                <button class="admi_adherir admi_submit"><a  href="/products/edit/<%= product.id %>" >Editar<i class="fa-solid fa-pen-to-square"></i></a></button>
+        <!--  BOTON borrar PRODUCTO-->
+         <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
+                <button type="submit" class="admi_adherir admi_delete">Eliminar <i class="fa-solid fa-trash-can trash-delete"></i></button>
+               </div> 
+         </form>
+          
     
 
       <!--  DESCRIPCION PRODUCTO -->
