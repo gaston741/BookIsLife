@@ -45,7 +45,7 @@
 - No priorizar el curso, perder de vista el OBJETIVO por el cual estamos AQUÍ.
 
 ***
-![Image text](/wireframes/retro-2.jpeg)
+![Image text](/wireframes/Retro_Sprint_5.png)
 
 
 
