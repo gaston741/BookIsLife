@@ -1,6 +1,7 @@
 <header class="home__header">
     <nav class="header_nav">
         <!--    NAV BAR HEADER  -->
+        <li><a href="/products/create"><i class="fa-solid fa-screwdriver-wrench"></i></a></li>
         <li><a href="/users/login"><i class="fa-solid fa-user"></i></a></li>
         <li><a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
         <li><a href="/users/register"><i class="fa-solid fa-envelope"></i></a></li>
@@ -16,8 +17,14 @@
 
     <!--   BUSCADOR -->
     <div class="header_buscador">
-        <input type="text" placeholder="Encuentra tu libro ideal" />
-        <button class="lupa"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <form action="/search" method="GET">
+
+            <input type="text" name="keywords" placeholder="Encuentra tu libro ideal" />
+            <button type="submit" class="lupa"><i class="fa-solid fa-magnifying-glass"></i></button>
+
+
+        </form>
+       
     </div>
 
     <!--      MENU HAMBURGUESA -->
@@ -25,15 +32,17 @@
 
         <input type="checkbox" id="check">
         <label for="check" class="bar-btn">
-            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-bars iconoHamburguesa"></i>
         </label>
         <ul class="home_nav-menu">
+            <li><a href="#">Autoayuda</a></li>
+            <li><a href="#">Autobiografía</a></li>
             <li><a href="#">Clásicos</a></li>
             <li><a href="#">Ciencia Ficción</a></li>
             <li><a href="#">Cómics y Mangas</a></li>
-            <li><a href="#">Humor</a></li>
             <li><a href="#">Narrativa</a></li>
             <li><a href="#">Narrativa Romantica</a></li>
+            <li><a href="#">Management</a></li>
             <li><a href="#">Obras de Teatro</a></li>
             <li><a href="#">Poesía</a></li>
             <li><a href="#">Policiales</a></li>

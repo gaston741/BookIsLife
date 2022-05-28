@@ -16,7 +16,7 @@
     display: flex;
     flex-direction: row;
     justify-content: end;
-    padding: 0vh 2vh;
+    padding: 1vh 2vh;
 
 
 
@@ -34,7 +34,7 @@
 .header_nav li a i {
     /*iconos del nav header*/
 
-    font-size: 30px;
+    font-size: 28px;
     color: rgb(242, 225, 197);
 }
 
@@ -101,6 +101,7 @@ header.home__header div.header_buscador {
 
 /*   MENU DESPLEGABLE */
 
+
 .home_header_nav_categorias{
 
     height: 50px;
@@ -121,7 +122,7 @@ header.home__header div.header_buscador {
     color: rgb(3, 3, 3);
     margin-left: 35px;
     cursor: pointer;
-    padding-left: 4vh;
+    padding-left: 3vh;
 
 
 }
@@ -188,7 +189,7 @@ header.home__header div.header_buscador {
 
 header.home__header div.header_buscador input {
     width: 25vh;
-    height: 26px;
+    height: 25px;
     font-family: "cinzel";
     border-radius: 5px;
     border: solid 1px #cfcecc;
@@ -197,6 +198,7 @@ header.home__header div.header_buscador input {
     align-self: center;
     font-size: 15px;
     margin-left: 20px;
+    margin-top: 14px;
     
 
 }
@@ -211,6 +213,8 @@ header.home__header div.header_buscador button.lupa {
     padding: 5px;
     align-self: center;
     color: rgb(97, 91, 91);
+    margin-top: 14px;
+   
 
 }
 
@@ -249,7 +253,7 @@ div.header_banner-desktop img {
     .header_nav li a i {
         /*iconos del nav header*/
 
-        font-size: 25px;
+        font-size: 27px;
         color: rgb(242, 225, 197);
     }
 
@@ -298,12 +302,14 @@ div.header_banner-desktop img {
         height: 27px;
         font-size: 16px;
         margin-left: 40px;
+        margin-top: 12px;
     }
 
     header.home__header div.header_buscador button.lupa {
         width: 5vh;
         height: 27px;
         font-size: 16px;
+        margin-top:12px;
     }
     
 
@@ -313,10 +319,14 @@ div.header_banner-desktop img {
         top: 5.8vh;
     }
     /* icono hamburguesa */
+    .iconoHamburguesa{
+
+        font-size: 40px;
+    }
     .bar-btn{
 
         font-size: 30px;
-        padding-left: 8vh;
+        padding-left: 7vh;
     }
     
     /*Banner*/

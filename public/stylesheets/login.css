@@ -6,6 +6,7 @@
 body.login{
     align-items: center;
     background-image: url("/images/fondos/Fondo-Desktop.png");
+    background-size: cover;
     color: #ed2f51;
     font-family: "Cinzel";
     padding: 10px 20px;

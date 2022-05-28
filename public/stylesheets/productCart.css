@@ -2,6 +2,10 @@
 h1{
     margin: 20px;
 }
+
+.main-product-cart{
+    background-color: var(--colorMainHome);
+}
 .product-cart__product{
     display: flex;
     font-family: "Cinzel";
@@ -25,47 +29,7 @@ main.cart-product-main{
     background-color: var(--colorMainHome);
 }
 
-/* contenedor boton volver */
-div.container-button-product-detail{
-    display: flex;
-    justify-content: right;
-   padding-top: 10px;
-   padding-bottom: 15px;
-
-}
-
-/* Boton volver */
-.a_button{
-
-    padding: 1.2em 1.5em; /*  */
-    font-size: 12px;/*  */
-    text-transform: uppercase;/*  */
-    letter-spacing: 2.5px;/*  */
-    font-weight: 700;/*  */
-    color: #000;/*  */
-    background-color: #fff;/*  */
-    border: none;/*  */
-    border-radius: 5px;/*  */
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);/*  */
-    transition: all 0.3s ease 0s;/*  */
-    cursor: pointer;/*  */
-    outline: none;/*  */
-    margin-right: 30px;/*  */
-    margin-top: 15px;/*  */
-    text-decoration: none;/*  */
    
-}
-.a_button:hover{
-        background-color:#EFFEFA ;
-        box-shadow: 0px 15px 20px #54BAB9;
-        color: rgb(7, 7, 7);
-        transform: translateY(-7px);
-}
-.a_button:active {
-       transform: translateY(-1px);
-}
-   
-
 /*  titulo */
 .cart_titulo_miCarrito{
 
@@ -85,16 +49,16 @@ div.container-button-product-detail{
 
 .cart_vaciar{
 
-    background: #FBCA1F;
+    background: #008CBA;
     font-family: inherit;
-    padding: 0.4em 0.2em;
+    padding: 0.8em 0.3em;
     font-weight: 600;
     font-size: 12px;
     border: 3px solid black;
     border-radius: 0.4em;
     box-shadow: 0.1em 0.1em;
     text-decoration: none;
-    color:black;
+    color: white;
     
 }
 .cart_vaciar:hover{
@@ -233,11 +197,13 @@ div.container-button-product-detail{
     justify-content: center;
    }
    
-   .cart_button_delete button svg {
+   /* .cart_button_delete button svg {
     width: 15px;
     fill: #eee;
+   } */
+   .trash-delete{
+       color:white
    }
-   
    .cart_button_delete button:hover {
     background: #ff3636;
    }
@@ -412,6 +378,12 @@ div.container-button-product-detail{
 /*                 DESKTOP    RESPONSIVE           */ 
 
 @media(min-width:1024px) {
+
+    .cart-product-main{
+        width: 80%;
+        margin:0 auto;
+    }
+    
     .a_button {
        
         margin-right: 7em;
@@ -427,7 +399,7 @@ div.container-button-product-detail{
     .cart_vaciar {
        
         font-family: 'Cinzel';
-        padding: 0.5em 0.3em;
+        padding: 0.8em 0.7em;
     }
 
 

@@ -1,5 +1,6 @@
 .register_body {
     background-image: url("/images/fondos/Fondo-Desktop.png");
+    background-size: cover;
     color: #ed2f51;
     display: block;
     font-family: "Cinzel";

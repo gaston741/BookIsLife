@@ -1,0 +1,18 @@
+.admi_editar{
+
+   background-color: #0b7dda;
+   border-bottom: none;
+   text-shadow: none;
+   margin: 1em 1.4em;
+}
+   
+.botones_admi {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+label.admi_label_edit{
+
+  margin:15px 0px 5px 5px;
+}
