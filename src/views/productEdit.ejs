@@ -1,112 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('./partials/head', { title : 'Editando: ' + product.name}) %>
-  
+
 <body class="administrador">
     <%- include('./partials/header')%> 
-    <!--  BOTON VOLVER -->
+<!--  BOTON VOLVER -->
     <div class="container-button-product-detail admini">
         <a class="a_button" href="/"><i class="fa-solid fa-angle-left"></i> VOLVER </a>
     </div>
         <main class="admi_main">
-   <!--   Empieza el formulario -->
-<<<<<<< HEAD
-            <form method="post" class="form_admi" action="/products/update/<%= product.id %>?_method=put">
-=======
+<!--   Empieza el formulario -->
             <form class="form_admi" action="/products/update/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data" >
->>>>>>> 441d7fefb0bf83173fa8893ec8f72e78756f1f9f
                 <!--   titulos -->
                     <h2 class="titulo_dos_admi">Edición del Libro: <%= product.name %> </h2>
-                    <!--  seccion contenedora -->
+<!--  seccion contenedora -->
                     <article>
 
-                     <!-- Titulo del libro-->
+<!-- Titulo del libro-->
                         <div  class="admi__form-box">
                             <label class="admi_label_edit"  for="name">Editar Titulo</label>
-<<<<<<< HEAD
-                            <input class="admi_form-input" type="text" name = "name value="<%= product.name %>">
-=======
                             <input class="admi_form-input" type="text" name="name" id="name" value="<%= product.name %>">
->>>>>>> 441d7fefb0bf83173fa8893ec8f72e78756f1f9f
                         </div>
 
-                    <!-- Autor del libro-->
+<!-- Autor del libro-->
                         <div class="admi_form-box">
-<<<<<<< HEAD
-                            <label class="admi_label_edit"  for="nombre">Editar Autor</label>
-                            <input class="admi_form-input" type="text" name = "autor" value="<%= product.autor %>">
-=======
                             <label class="admi_label_edit"  for="autor">Editar Autor</label>
                             <input class="admi_form-input" type="text" name ="autor" id="autor" value="<%= product.autor %>">
->>>>>>> 441d7fefb0bf83173fa8893ec8f72e78756f1f9f
                         </div>
 
-                    <!-- Precio del libro -->
+<!-- Precio del libro -->
                         <div  class="admi__form-box">
                             <label class="admi_label_edit"  for="price">Editar Precio</label>
-<<<<<<< HEAD
-                            <input type="number" class="admi_form-input" name="price" id="" value="<%= product.price %>">
-=======
                             <input type="number" class="admi_form-input" name="price" id="price" value="<%= product.price %>">
->>>>>>> 441d7fefb0bf83173fa8893ec8f72e78756f1f9f
                         </div>
 
-                     <!-- Descripcion del libro-->
+<!-- Descripcion del libro-->
                         <div  class="admi__form-box">
                             <label class="admi_label_edit"  for="description">Editar Sinopsis</label>
                             <textarea class="admi_form-input" name="description" id="description" cols="5" rows="5" ><%= product.description %> </textarea>
                         </div>
-<<<<<<< HEAD
-                        <!-- Genero del libro-->
-                        <div  class="admi__form-box">
-                            <label class="admi_label_edit"  for="genero">Editar genero</label>
-                            <select  class="admi_select dropdown-select"  name="genero" id="genero">
-                                <option value="<%= genero.id %>"<%= genero.id === product.genero ? 'selected' : null %>><%= genero.name %></option>
-                                <option value="1">Ciencia Ficción </option>
-                                <option value="2"> Cómics y Mangas</option>
-                                <option value="3"> Humor</option>
-                                <option value="4">Narrativa</option>
-                                <option value="5">Narrativa Romantica</option>
-                                <option value="6">Obras de Teatro </option>
-                                <option value="7"> Poesía</option>
-                                <option value="8"> Policiales</option>
-                                <option value="9"> Terror</option>
-                                <option value="10"> Clásicos</option>
-                            </select>
-                        </div>
-                        <!--  Idioma de Edicion -->
-                     <div class="admi__form-box">
-                        <label class="admi_label_edit"  for="genero">Editar Idioma de Edición</label>
-                        <select class="admi_select dropdown-select" name="idioma" id="idioma" >
-                            <option value=""hidden selected >Seleccione Idioma de Edición</option>
-                            <option value="ingles">Ingles</option>
-                            <option value="español">Español</option>
-                        </select>
-                     </div>
-                     <!--  stock -->
-                     <div class="admi__form-box">
-                        <label class="admi_label_edit"  for="genero">Editar Cantidad de Stock</label>
-                        <select class="admi_select dropdown-select" id="selectNumber">
-                            <option value=""hidden selected >Cantidad Disponible para la Venta</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
-                     </div>
-                     <!-- Portada del libro-->
-                        <div class="admi__form-box">
-                            <label class="admi_label_edit" for="Portada">Editar Portada del Libro</label>
-                            <input class="admi_file "  type="file" id="image" name="image" accept="image/*" value="<%= product.image %>"/>
-=======
 
-                    <!-- Categoria del libro-->
+<!-- Categoria del libro-->
                         <div  class="admi__form-box">
                             <label class="admi_label_edit"  for="genre">Editar Genero</label>
                             <select  class="admi_select dropdown-select"  name="genre" id="genre">
@@ -124,8 +58,7 @@
                                 <option value="Terror" <%= product.genre === "Terror" && 'selected' %>>Terror</option>
                             </select>
                         </div>
-
-                    <!--  Idioma de Edicion -->
+<!--  Idioma de Edicion -->
                         <div class="admi__form-box">
                             <label class="admi_label_edit"  for="language">Editar Idioma de Edición</label>
                             <select class="admi_select dropdown-select" name="language" id="language" >
@@ -134,29 +67,25 @@
                                 <option value="español" <%= product.language === "español" && 'selected' %>>Español</option>
                             </select>
                         </div>
-
-                     <!-- Portada del libro-->
+<!-- Portada del libro-->
                         <div class="admi__form-box">
                             <label class="admi_label_edit" for="image">Editar Portada del Libro</label>
                             <input class="admi_file"  type="file" id="image" name="image" accept="image/*"/>
->>>>>>> 441d7fefb0bf83173fa8893ec8f72e78756f1f9f
                         </div>
-                    <!--  categoria de Edicion -->
+<!--  categoria de Edicion -->
                         <div class="admi__form-box">
                             <label class="admi_label_edit"  for="category">Editar Categoria de Edición</label>
                             <select class="admi_select dropdown-select" name="category" id="category" >
                                 <option value="in-sale" <%= product.category === "in-sale" && 'selected' %> >In-sale</option>
                                 <option value="relevant" <%= product.category === "relevant" && 'selected' %>>Relevante</option>
                             </select>
-                         </div>
-
+                        </div>
                     </article>
-                    <!--  envio y reset -->
+<!--  envio y reset -->
                     <div class="botones_admi" >
                         <button type="reset" class="admi_adherir admi_delete">Limpiar</button>
                         <button type="submit" class="admi_adherir admi_submit">Guardar</button>
                     </div>
-                   
             </form>
         </main>
     <%- include('./partials/footer')%> 
