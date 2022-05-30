@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-<<<<<<< HEAD
 const multer = require('multer');
 
 const{index} = require('../controllers/indexController');
@@ -20,35 +19,6 @@ const {detail,cart,edit,create,store,update,destroy} =require('../controllers/pr
  })
 
 /* Mostrar todos los productos */
-=======
-const path = require ('path')
-//requerimos multer para manipular img files en el form//
-const multer =require('multer');
-
-//requerimos controlador//
-const {index,detail,cart,edit,create,store,destroy,update} =require('../controllers/productController')
- 
-//configuracion de multer//
-const storage =multer.diskStorage({
-
-    destination : function( req, file, callback){
-        callback( null, 'public/images/portadas')
-    },
-    filename : function (req,file,callback){
-        callback (null, `${Date.now()}_products_${path.extname(file.originalname)}`) // seteo como quiero guardar el nombre original del producto.
-
-    }
-})
-const upload = multer({
-    storage
-})
-
-
-
-
-//**************RUTAS********** */
-/* Mostrar  todos los productos*/
->>>>>>> 441d7fefb0bf83173fa8893ec8f72e78756f1f9f
 router.get('/',index);
 
 /* Crear un producto  */
