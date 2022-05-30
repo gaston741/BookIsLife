@@ -1,0 +1,42 @@
+[
+    {
+        "id" : 1,
+        "nombre" : "Gaston",
+        "apellido" : "Rodriguez",
+        "email" : "gastonrodriguez@gmail.com",
+        "contraseña" : "123456789",
+        "rol" : "usuario",
+        "imagen" : "no-image.png"
+
+    },
+    {
+        "id" : 2,
+        "nombre" : "Juanma",
+        "apellido" : "Roldan",
+        "email" : "juanmaroldan@gmail.com",
+        "contraseña" : "abcdefg",
+        "rol" : "admin",
+        "imagen" : "no-image.png"
+
+    },
+    {
+        "id" : 3,
+        "nombre" : "Luisa",
+        "apellido" : "Morales",
+        "email" : "luisamorales@gmail.com",
+        "contraseña" : "abcde1234",
+        "rol" : "usuario",
+        "imagen" : "no-image.png"
+
+    },
+    {
+        "id" : 4,
+        "nombre" : "Adriel",
+        "apellido" : "Coria",
+        "email" : "adrielcoria@gmail.com",
+        "contraseña" : "1a2b3c4d5",
+        "rol" : "admin",
+        "imagen" : "no-image.png"
+
+    }
+]
