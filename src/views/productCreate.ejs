@@ -21,62 +21,62 @@
                  <article>
                      <!-- Titulo del libro-->
                   <div class="admi__form-box">
-                      <input class="admi_form-input" type="text" placeholder="Título del libro" name="name" id="name">
-                      <span class="admi__text-error">Título Obligatorio</span>
+                      <input class="admi_form-input" type="text" placeholder="Título del libro" name="name" id="name" value="<%= locals.old && old.name ? old.name : null%>">
+                      <span class="admi__text-error"><%= locals.errors && errors.name ? errors.name.msg : null %></span>
                   </div>
 
                   <!-- Autor del libro-->
                   <div class="admi__form-box">
-                      <input class="admi_form-input" type="text" placeholder="Autor del libro" name="autor" id="autor">
-                      <span class="admi__text-error">Autor Obligatorio</span>
+                      <input class="admi_form-input" type="text" placeholder="Autor del libro" name="autor" id="autor" value="<%= locals.old && old.autor ? old.autor: null%>">
+                      <span class="admi__text-error"><%= locals.errors && errors.autor ? errors.autor.msg : null %></span>
                   </div>
 
                   <!-- Precio del libro -->
                   <div class="admi__form-box">
-                      <input class="admi_form-input" type="number" placeholder="$$ Precio del Libro" name="price" id="price">
-                      <span class="admi__text-error"> Precio Obligatorio</span>
+                      <input class="admi_form-input" type="number" placeholder="$$ Precio del Libro" name="price" id="price" value="<%= locals.old && old.price ? old.price : null%>">
+                      <span class="admi__text-error"><%= locals.errors && errors.price ? errors.price.msg : null %></span>
                   </div>
                  
                   <!-- Descripcion del libro-->
                   <div class="admi__form-box">
-                     <textarea class="admi_form-input" name="description" id="description" cols="5" rows="5" placeholder="Agregue la sinopsis"></textarea>
-                      <span class="admi__text-error">Sinopsis Obligatoria</span>
+                     <textarea class="admi_form-input"  name="description" id="description" cols="5" rows="5" placeholder="Agregue la sinopsis"><%= locals.old && old.description ? old.description : null%></textarea>
+                      <span class="admi__text-error"><%= locals.errors && errors.description ? errors.description.msg : null %></span>
                   </div>
 
                  <!--  Editorial del libro -->
                   <div class="admi__form-box">
-                    <input class="admi_form-input" type="text" placeholder="Editorial" name="publisher" id="publisher">
-                    <span class="admi__text-error">Editorial Obligatorio</span>
+                    <input class="admi_form-input" type="text" placeholder="Editorial" name="publisher" id="publisher" value="<%= locals.old && old.publisher ? old.publisher : null%>">
+                    <span class="admi__text-error"><%= locals.errors && errors.publisher ? errors.publisher.msg : null %></span>
                 </div>
                  
                   <!-- -Genero del libro-->
                   <div class="admi__form-box">
                       <select class="admi_select dropdown-select" name="genre" id="genre" >
-                          <option  hidden selected >Seleccione Genero Literario</option>
-                          <option value="autoayuda">Autoayuda</option>
-                          <option value="autobiografia">Autobiografía</option>
-                          <option value="clasicos">Clásicos</option>
-                          <option value="cienciaFiccion">Ciencia Ficción</option>
-                          <option value="comicsYmanga">Cómics y Mangas</option>
-                          <option value="narrativa">Narrativa</option>
-                          <option value="narrativaRomantica">Narrativa Romantica</option>
-                          <option value="management">Management</option>
-                          <option value="teatro">Obras de Teatro</option>
-                          <option value="poesia">Poesía</option>
-                          <option value="policiales">Policiales</option>
-                          <option value="terror">Terror</option>
+                          <option value=""  hidden selected >Seleccione Genero Literario</option>
+                          <option <%= locals.old && old.genre && old.genre === "autoayuda" ? 'selected' : null %> value="autoayuda">Autoayuda</option>
+                          <option <%= locals.old && old.genre && old.genre === "aubiografia" ? 'selected' : null %> value="autobiografia">Autobiografía</option>
+                          <option <%= locals.old && old.genre && old.genre === "clasicos" ? 'selected' : null %> value="clasicos">Clásicos</option>
+                          <option <%= locals.old && old.genre && old.genre === "cienciaFiccion" ? 'selected' : null %> value="cienciaFiccion">Ciencia Ficción</option>
+                          <option <%= locals.old && old.genre && old.genre === "comicsYmanga" ? 'selected' : null %> value="comicsYmanga">Cómics y Mangas</option>
+                          <option <%= locals.old && old.genre && old.genre === "narrativa" ? 'selected' : null %> value="narrativa">Narrativa</option>
+                          <option <%= locals.old && old.genre && old.genre === "narrativaRomantica" ? 'selected' : null %> value="narrativaRomantica">Narrativa Romantica</option>
+                          <option <%= locals.old && old.genre && old.genre === "management" ? 'selected' : null %> value="management">Management</option>
+                          <option <%= locals.old && old.genre && old.genre === "teatro" ? 'selected' : null %> value="teatro">Obras de Teatro</option>
+                          <option <%= locals.old && old.genre && old.genre === "poesia" ? 'selected' : null %> value="poesia">Poesía</option>
+                          <option <%= locals.old && old.genre && old.genre === "policiales" ? 'selected' : null %> value="policiales">Policiales</option>
+                          <option <%= locals.old && old.genre && old.genre === "terror" ? 'selected' : null %> value="terror">Terror</option>
                       </select>
-                      <span class="admi__text-error">Genero Obligatorio</span>
+                      <span class="admi__text-error"><%= locals.errors && errors.genre ? errors.genre.msg : null %></span>
                   </div>
 
                  <!--  Idioma de Edicion -->
                   <div class="admi__form-box">
                       <select class="admi_select dropdown-select" name="language" id="language" >
-                          <option>Seleccione Idioma de Edición</option>
-                          <option value="ingles">Ingles</option>
-                          <option value="español">Español</option>
+                          <option value="" hidden selected>Seleccione Idioma de Edición</option>
+                          <option <%= locals.old && old.language && old.language === "ingles" ? 'selected' : null %> value="ingles">Ingles</option>
+                          <option <%= locals.old && old.language && old.language === "español" ? 'selected' : null %> value="español">Español</option>
                       </select>
-                      <span class="admi__text-error">Idioma Obligatorio</span>
+                      <span class="admi__text-error"><%= locals.errors && errors.language ? errors.language.msg : null %></span>
                   </div>
                     <!-- Portada del libro-->
                     <div class="admi__form-box">
@@ -88,11 +88,11 @@
                    <!-- Categoria de Edicion -->
                    <div class="admi__form-box">
                     <select class="admi_select dropdown-select" name="category" id="category" >
-                        <option value="" hidden selected>Seleccione Categoria de Edición</option>
-                        <option value="in-sale">In-sale</option>
-                        <option value="relevant">Relevante</option>
+                        <option  value="" hidden selected>Seleccione Categoria de Edición</option>
+                        <option <%= locals.old && old.category && old.category === "in-sale" ? 'selected' : null %> value="in-sale">In-sale</option>
+                        <option <%= locals.old && old.category && old.category === "relevant" ? 'selected' : null %> value="relevant">Relevante</option>
                     </select>
-                    <span class="admi__text-error">Categoria Obligatoria</span>
+                    <span class="admi__text-error"><%= locals.errors && errors.category? errors.category.msg : null %></span>
                 </div>
                  
                 <!--  envio y reset -->
