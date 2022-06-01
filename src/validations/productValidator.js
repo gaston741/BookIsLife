@@ -6,16 +6,23 @@ module.exports = [
         .notEmpty()
         .withMessage("Debes ingresar un título")
         .bail()
-        .isLength({min : 2 , max : 10})
-        .withMessage(" Debe tener entre 6 y 10 caracteres"),
+        .isLength({min : 2 , max : 50})
+        .withMessage(" Debe tener entre 2 y 50 caracteres"),
 
     check("autor")
         .notEmpty()
-        .withMessage("Debes indicar el nombre del autor"),
+        .withMessage("Debes indicar el nombre del autor")
+        .bail()
+        .isLength({min : 2 , max : 50})
+        .withMessage(" Debe tener entre 2 y 50 caracteres"),
 
     check("price")
         .notEmpty()
-        .withMessage("Debes indicar el precio del libro"),
+        .withMessage("Debes indicar el precio del libro")
+        .bail()
+        .isInt({min : 1 , max : 100000 })
+        .withMessage("Ingrese un precio válido"),
+
     
     check("description")
         .notEmpty()
@@ -23,11 +30,19 @@ module.exports = [
 
     check("publisher")
         .notEmpty()
-        .withMessage("Debes indicar la editorial"),
+        .withMessage("Debes indicar la editorial")
+        .bail()
+        .isLength({min : 2 , max : 10})
+        .withMessage(" Debe tener entre 6 y 10 caracteres"),
+
 
     check("genre")
         .notEmpty()
-        .withMessage("Debes indicar el género"),
+        .withMessage("Debes indicar el género")
+        .bail()
+        .isLength({min : 2 , max : 10})
+        .withMessage(" Debe tener entre 6 y 10 caracteres"),
+
     
     check("language")
         .notEmpty()
@@ -37,13 +52,6 @@ module.exports = [
         .notEmpty()
         .withMessage("Debes indicar la categoria del libro"),
     
-    
-
-
-
-    
-
-
 
 
 ]
