@@ -4,6 +4,8 @@ var path = require('path');
 const methodOverride = require('method-override'); //requiero el metodo que me permite usar PUT y DELETE
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const session = require('express-session') // requiero express-session
+
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -21,7 +23,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use(methodOverride('_method')) // Asi pisamos el metodo "Post" en el Formulario
-
+app.use(session({   // configuro session
+  secret : "BookIsLife for ever",
+  resave: false,
+  saveUninitialized: true,
+}))
 
 /*   RUTAS   */
 

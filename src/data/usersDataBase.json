@@ -1,42 +1,38 @@
 [
-    {
-        "id" : 1,
-        "nombre" : "Gaston",
-        "apellido" : "Rodriguez",
-        "email" : "gastonrodriguez@gmail.com",
-        "contraseña" : "123456789",
-        "rol" : "usuario",
-        "imagen" : "no-image.png"
-
-    },
-    {
-        "id" : 2,
-        "nombre" : "Juanma",
-        "apellido" : "Roldan",
-        "email" : "juanmaroldan@gmail.com",
-        "contraseña" : "abcdefg",
-        "rol" : "admin",
-        "imagen" : "no-image.png"
-
-    },
-    {
-        "id" : 3,
-        "nombre" : "Luisa",
-        "apellido" : "Morales",
-        "email" : "luisamorales@gmail.com",
-        "contraseña" : "abcde1234",
-        "rol" : "usuario",
-        "imagen" : "no-image.png"
-
-    },
-    {
-        "id" : 4,
-        "nombre" : "Adriel",
-        "apellido" : "Coria",
-        "email" : "adrielcoria@gmail.com",
-        "contraseña" : "1a2b3c4d5",
-        "rol" : "admin",
-        "imagen" : "no-image.png"
-
-    }
+   {
+      "id": 1,
+      "name": "gaston",
+      "surname": "rodriguez",
+      "email": "gaston@gmail.com",
+      "password": "$2a$10$wpRSYU7ZTT8yJfhaSGys5.xm7wJCS3uarL1tyc4e74FKxLNrvy/x.",
+      "rol": "user",
+      "avatar": "userDefault.png"
+   },
+   {
+      "id": 2,
+      "name": "juan",
+      "surname": "Roldan",
+      "email": "juan@gmail.com",
+      "password": "$2a$10$LSkusqr79S2acxR.28dGAeb3WYLFN8VB/EW/GVX6rsiengEPNLT3W",
+      "rol": "user",
+      "avatar": "userDefault.png"
+   },
+   {
+      "id": 3,
+      "name": "adriel",
+      "surname": "coria",
+      "email": "adriel@gmail.com",
+      "password": "$2a$10$fUWU541qWamc1HB1ioZnx./tlMXvBf.hgcnv/8hkgBMSi1h7e0Qhm",
+      "rol": "user",
+      "avatar": "userDefault.png"
+   },
+   {
+      "id": 4,
+      "name": "Luisa",
+      "surname": "morales",
+      "email": "luisa@gmail.com",
+      "password": "$2a$10$MjqXRBCF8lSl1X8x6Mz8LOq6aA4YOLjpy6SYm.p.JiULsvWKW/zCa",
+      "rol": "user",
+      "avatar": "userDefault.png"
+   }
 ]
