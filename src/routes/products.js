@@ -3,6 +3,9 @@ const router = express.Router();
 const path = require ('path')
 //requerimos multer para manipular img files en el form//
 const multer =require('multer');
+//***Requerimos el validador*/
+
+const productValidator = require('../validations/productValidator')
 
 //requerimos controlador//
 const {index,detail,cart,edit,create,store,destroy,update} =require('../controllers/productController')
@@ -31,7 +34,7 @@ router.get('/',index);
 
 /* Crear un producto  */
 router.get('/create', create);
-router.post('/create',upload.single('image'), store);
+router.post('/create',upload.single('image'),productValidator, store);
 
 /* Mostrar un producto especifico*/
 router.get('/detail/:id', detail);
