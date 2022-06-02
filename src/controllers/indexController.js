@@ -10,6 +10,7 @@ const toThousand = n => n.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g,
 
 module.exports={
     index: (req, res) =>{
+      console.log (req.session.userLogin)
 
       let productsInSale = products.filter(product => product.category === "in-sale");
       let productsRelevant = products.filter(product => product.category === "relevant");
