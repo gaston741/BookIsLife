@@ -93,28 +93,37 @@ module.exports={
 
     update: (req,res)=>{
 
-        let products = readBooks();
-        const {name,autor,price,description,publisher,genre,language,image,category} = req.body;
-         const booksModified = products.map(product => {
-            if(product.id === +req.params.id){
-               let bookModified = {
-                   ...product,
-                   name: name.trim(),
-                   autor: autor.trim(),
-                   price : +price,
-                   description :description.trim(),
-                   publisher: publisher,
-                   genre :genre,
-                   language:language,
-                   image: req.file ? req.file.filename : "default.png", // si recibo el achivo de req.file, guardo la propiedad filename, sino devolvemos la img por defecto.
-                   category:category
-               }
-               return bookModified
-            }
-            return product
-        })
-        saveBooks(booksModified)
-        return res.redirect('/products')
+        const errors = validationResult(req);
+        if(errors.isEmpty()){
+            let products = readBooks();
+            const { id } = req.params;
+            const {name,autor,price,description,publisher,genre,language,image,category,} = req.body;
+            const booksModified = products.map((product) => {
+              if (product.id === +id) {
+                let bookModified = {
+                  ...product,
+                  name: name.trim(),
+                  autor: autor.trim(),
+                  price: +price,
+                  description: description.trim(),
+                  publisher: publisher.trim(),
+                  genre: genre,
+                  language: language,
+                  image: req.file ? req.file.filename : "default.png", // si recibo el achivo de req.file, guardo la propiedad filename, sino devolvemos la img por defecto.
+                  category: category,
+                };
+                return bookModified;
+              }
+              return product;
+            });
+            saveBooks(booksModified);
+            return res.redirect('/products');
+        }else {
+            return res.render('productEdit',{
+                product : req.body,
+                errors : errors.mapped(),
+            })
+        }
     },
 
     destroy : (req,res)=>{

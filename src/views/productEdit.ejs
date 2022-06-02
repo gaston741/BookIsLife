@@ -20,25 +20,36 @@
                         <div  class="admi__form-box">
                             <label class="admi_label_edit"  for="name">Editar Titulo</label>
                             <input class="admi_form-input" type="text" name="name" id="name" value="<%= product.name %>">
+                            <span class="admi__text-error"><%= locals.errors && errors.name ? errors.name.msg : null %></span>
                         </div>
 
                     <!-- Autor del libro-->
                         <div class="admi_form-box">
                             <label class="admi_label_edit"  for="autor">Editar Autor</label>
                             <input class="admi_form-input" type="text" name ="autor" id="autor" value="<%= product.autor %>">
+                            <span class="admi__text-error"><%= locals.errors && errors.autor ? errors.autor.msg : null %></span>
                         </div>
 
                     <!-- Precio del libro -->
                         <div  class="admi__form-box">
                             <label class="admi_label_edit"  for="price">Editar Precio</label>
                             <input type="number" class="admi_form-input" name="price" id="price" value="<%= product.price %>">
+                            <span class="admi__text-error"><%= locals.errors && errors.price ? errors.price.msg : null %></span>
                         </div>
 
                      <!-- Descripcion del libro-->
                         <div  class="admi__form-box">
                             <label class="admi_label_edit"  for="description">Editar Sinopsis</label>
                             <textarea class="admi_form-input" name="description" id="description" cols="5" rows="5" ><%= product.description %> </textarea>
+                            <span class="admi__text-error"><%= locals.errors && errors.description ? errors.description.msg : null %></span>
                         </div>
+
+                    <!-- Editorial del libro-->
+                    <div  class="admi__form-box">
+                        <label class="admi_label_edit"  for="publisher">Editar Sinopsis</label>
+                        <input class="admi_form-input" type="text" name="publisher" id="publisher" value="<%= product.publisher %>">
+                        <span class="admi__text-error"><%= locals.errors && errors.publisher ? errors.publisher.msg : null %></span>
+                    </div>
 
                     <!-- Categoria del libro-->
                         <div  class="admi__form-box">
@@ -57,6 +68,7 @@
                                 <option value="Policiales" <%= product.genre === "Policiales" && 'selected' %>>Policiales</option>
                                 <option value="Terror" <%= product.genre === "Terror" && 'selected' %>>Terror</option>
                             </select>
+                            <span class="admi__text-error"><%= locals.errors && errors.genre ? errors.genre.msg : null %></span>
                         </div>
 
                     <!--  Idioma de Edicion -->
@@ -67,6 +79,7 @@
                                 <option value="ingles" <%= product.language === "ingles" && 'selected' %>>Ingles</option>
                                 <option value="español" <%= product.language === "español" && 'selected' %>>Español</option>
                             </select>
+                            <span class="admi__text-error"><%= locals.errors && errors.language ? errors.language.msg : null %></span>
                         </div>
 
                      <!-- Portada del libro-->
@@ -81,6 +94,7 @@
                                 <option value="in-sale" <%= product.category === "in-sale" && 'selected' %> >In-sale</option>
                                 <option value="relevant" <%= product.category === "relevant" && 'selected' %>>Relevante</option>
                             </select>
+                            <span class="admi__text-error"><%= locals.errors && errors.category ? errors.category.msg : null %></span>
                          </div>
 
                     </article>
