@@ -23,10 +23,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use(methodOverride('_method')) // Asi pisamos el metodo "Post" en el Formulario
-app.use(session({   // configuro session
+app.use(session({   // configuro session, de acuerdo al rol que el usuario tenga, se le dara acceso o no a deteminadas acciones
   secret : "BookIsLife for ever",
   resave: false,
   saveUninitialized: true,
+  cookie :{}
 }))
 
 /*   RUTAS   */
