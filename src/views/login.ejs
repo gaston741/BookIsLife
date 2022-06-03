@@ -16,16 +16,19 @@
     <main>
         <section>
             <h1>Ingresá</h1>
+            
                 <hr>
             <form action="" method="POST">
                 <article>
                     <div class="login__form-box">
                         <label for="email">E-Mail :</label>
-                        <input class="login__form-input" type="email" name ="email" id="email" >
+                        <input class="login__form-input" type="email" name ="email" id="email" value="<%= locals.old && old.email ? old.email : null %>" >
+                        <span class="register__text-error"><%= locals.errors && errors.email ? errors.email.msg : null  %></span>
                     </div>
                     <div class="login__form-box">
                         <label for="password">Contraseña : </label>
                         <input class="login__form-input" type="password" name ="password" id="password" >
+                        <span class="register__text-error"><%= locals.errors && errors.password ? errors.password.msg : null  %></span>
                     </div>
                     <div class="login__form-box-remember">
                         <input class="" type="checkbox" name="remember" id="remember">

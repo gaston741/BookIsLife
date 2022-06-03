@@ -1,4 +1,4 @@
-const {check,body} = require ('express-validator');
+const {check} = require ('express-validator');
 
 module.exports = [
 
@@ -18,10 +18,7 @@ module.exports = [
 
     check("price")
         .notEmpty()
-        .withMessage("Debes indicar el precio del libro")
-        .bail()
-        .isInt({min : 1 , max : 100000 })
-        .withMessage("Ingrese un precio válido"),
+        .withMessage("Debes indicar el precio del libro"),
 
     
     check("description")
@@ -32,17 +29,13 @@ module.exports = [
         .notEmpty()
         .withMessage("Debes indicar la editorial")
         .bail()
-        .isLength({min : 2 , max : 10})
-        .withMessage(" Debe tener entre 6 y 10 caracteres"),
+        .isLength({min : 2 , max : 20})
+        .withMessage(" Debe tener entre 2 y 20 caracteres"),
 
 
     check("genre")
         .notEmpty()
-        .withMessage("Debes indicar el género")
-        .bail()
-        .isLength({min : 2 , max : 10})
-        .withMessage(" Debe tener entre 6 y 10 caracteres"),
-
+        .withMessage("Debes indicar el género"),
     
     check("language")
         .notEmpty()
@@ -50,7 +43,7 @@ module.exports = [
     
     check("category")
         .notEmpty()
-        .withMessage("Debes indicar la categoria del libro"),
+        .withMessage("Debes indicar la categoria del libro")
     
 
 

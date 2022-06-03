@@ -92,7 +92,7 @@
                         <option <%= locals.old && old.category && old.category === "in-sale" ? 'selected' : null %> value="in-sale">In-sale</option>
                         <option <%= locals.old && old.category && old.category === "relevant" ? 'selected' : null %> value="relevant">Relevante</option>
                     </select>
-                    <span class="admi__text-error"><%= locals.errors && errors.category? errors.category.msg : null %></span>
+                    <span class="admi__text-error"><%= locals.errors && errors.category ? errors.category.msg : null %></span>
                 </div>
                  
                 <!--  envio y reset -->

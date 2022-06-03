@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path')
 const {validationResult}=require('express-validator');
 const users = require ('../data/usersDataBase.json');
-const { findSourceMap } = require('module');
+
 
 module.exports={
 
@@ -41,7 +41,12 @@ module.exports={
             );
           
             //levanto session
-
+            const {id, rol} = user
+            req.session.userLogin = {
+              id,
+             name: name.trim(),
+              rol
+          }
             //redireccionamiento
 
             return res.redirect('login') // renderizo login para que inicie session
@@ -55,6 +60,37 @@ module.exports={
         }
        
 
+    },
+    processLogin : (req,res)=>{
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+            
+            //traigo el dato del usuario que existe
+
+            const {id,name,rol} =users.find(user=>user.email === req.body.email) 
+
+            
+            //levanto session  
+            req.session.userLogin = {
+
+               id,
+               name,
+               rol
+
+            }
+
+            return res.redirect("/");
+
+        }else {
+
+            return res.render("login",{
+
+                errors : errors.mapped(),
+                old :req.query
+            })
+        }
+
+        
     }
 
 }
