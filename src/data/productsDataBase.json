@@ -358,5 +358,17 @@
       "language": "Español",
       "image": "laBailarinaDeAuschwitz.png",
       "category": "in-sale"
+   },
+   {
+      "id": 31,
+      "name": "Estress, Sufrimiento y Felicidad",
+      "autor": "Lopez Rosetti Daniel",
+      "price": 30000,
+      "description": "La idea fuerza de este libro parte de una frase de Buda: 'El dolor es inevitable pero el sufrimiento es optativo'. Para transformar el sufrimiento en bienestar, Daniel Lopez Rosetti propone gestionar la realidad a través de la sociabilización, a la que llama 'modo sociable', en lugar de 'modo lucha'. De manera clara y precisa describe el sistema del estres, el impacto negativo del dolor emocional y fisícola influencia que tienen en la calidad de vida tanto la percepción subjetiva como la no aceptación de las circunstancias. Ofrece ademas recursos eficaces, fáciles de aprender: técnicas de respiración, de relajación psicofísica y de meditación mindfulness. También nos introduce de manera sencilla en una herramienta clave: la sabiduría de la filosofía estoica.",
+      "publisher": "Planeta",
+      "genre": "Autoayuda",
+      "language": "español",
+      "image": "1654279497622_products_.png",
+      "category": "relevant"
    }
 ]
