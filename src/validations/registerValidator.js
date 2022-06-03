@@ -21,7 +21,24 @@ module.exports =[
         .withMessage("ingresá tu email")
         .bail()
         .isEmail()
-        .withMessage("Email no válido"),
+        .withMessage("Email no válido").bail()
+        .custom((value)=>{
+            
+            const user = users.find(user=>user.email === req.body.email);
+            
+            if(user){ // si existe un usuario  registrado con ese mail 
+           
+                return false // no lo dejo registrarse
+        
+            }else{ // si no tengo un usuario con ese mail
+            
+            return true // lo dejo registrarse
+
+            }
+
+        })
+        .withMessage("El email ya se encuentra registrado"),
+        
        
     check("password") //validacion de contraseña
         .isLength({min: 6 ,max: 12})
