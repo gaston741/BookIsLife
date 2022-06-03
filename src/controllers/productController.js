@@ -36,7 +36,7 @@ module.exports={
         if(errors.isEmpty()){
             let products = readBooks()
 
-            const {name,autor,price,description,publisher,genre,language, image,category}=req.body;
+            const {name,autor,price,description,publisher,genre,language, image ,category}=req.body;
             const ultimo = products[products.length - 1]
             let newBook = {
                 id: ultimo.id + 1, //obtengo el ultimo id y le sumo uno.
@@ -47,7 +47,7 @@ module.exports={
                 publisher: publisher.trim(),
                 genre: genre,
                 language: language,
-                image: req.file ? req.file.filename : "default.png", // si recibo el achivo de req.file, guardo la propiedad filename, sino devolvemos la img por defecto.
+                image: req.filename ? req.file.filename : "default.png", // si recibo el achivo de req.file, guardo la propiedad filename, sino devolvemos la img por defecto.
                 category:category
     
             }
