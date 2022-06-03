@@ -10,7 +10,8 @@ const session = require('express-session') // requiero express-session
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products');
-const checkLocals = require('./middlewares/checkLocals') //requiero el middleware (De Aplicacion)
+const checkLocals = require('./middlewares/checkLocals'); //requiero el middleware (De Aplicacion)
+const checkCookie = require('./middlewares/checkCookie');
 
 var app = express();
 
@@ -30,8 +31,8 @@ app.use(session({   // configuro session, de acuerdo al rol que el usuario tenga
   saveUninitialized: true,
   cookie :{}
 }))
-
-app.use(checkLocals) //uso el middleware que me levanta session.
+app.use(checkCookie);
+app.use(checkLocals); //uso el middleware que me levanta session.
 
 /*   RUTAS   */
 

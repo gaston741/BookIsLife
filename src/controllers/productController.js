@@ -93,7 +93,7 @@ module.exports={
                   publisher: publisher.trim(),
                   genre: genre,
                   language: language,
-                  image: req.file ? req.file.filename : "default.png", // si recibo el achivo de req.file, guardo la propiedad filename, sino devolvemos la img por defecto.
+                  image: req.file ? req.file.filename : product.image, // si recibo el achivo de req.file, guardo la propiedad filename, sino devolvemos la img por defecto.
                   category: category,
                 };
                 return bookModified;
@@ -103,9 +103,16 @@ module.exports={
             saveBooks(booksModified);
             return res.redirect('/products');
         }else {
-            return res.render('productEdit',{
-                product : req.body,
-                errors : errors.mapped(),
+            
+            let products = readBooks(); //leemos el JSON de nuevo
+            const {id} = req.params // rescatamos el id de la ruta 
+            let product = products.find(product=> product.id === +id) // encontramos el producto con el id que nos viene en la ruta
+           
+            return res.render('productEdit',{ // caso de haber errores renderizo vista edicion
+
+                product, // mando el producto que estoy editando
+                /* old : req.body,  */// mando los valores anteriormente completados correctamente
+                errors : errors.mapped(), // mando los errores
             })
         }
     },

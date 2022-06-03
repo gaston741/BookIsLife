@@ -17,7 +17,7 @@ let storage = multer.diskStorage({
 const upload = multer({ storage});
 
 //***Controller Require */
-const {register, login, processRegister,processLogin} = require ('../controllers/userController');
+const {register, login, processRegister,processLogin,logout} = require ('../controllers/userController');
 
 //********Validator require */
 const registerValidator = require('../validations/registerValidator');
@@ -27,7 +27,8 @@ const loginValidator = require('../validations/loginValidator')
 router.get('/register', register);
 router.post('/register',registerValidator, upload.single('userImage'), processRegister);
 router.get('/login', login);
-router.post('/login', loginValidator, processLogin)
+router.post('/login', loginValidator, processLogin);
+router.get('/logout',logout)
 
 
 
