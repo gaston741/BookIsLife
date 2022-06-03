@@ -5,6 +5,7 @@ const {validationResult}=require('express-validator');
 const users = require ('../data/usersDataBase.json');
 
 
+
 module.exports={
 
     register: (req,res)=> res.render('register'),
@@ -62,6 +63,7 @@ module.exports={
 
     },
     processLogin : (req,res)=>{
+
         let errors = validationResult(req);
         if(errors.isEmpty()){
             
@@ -78,6 +80,11 @@ module.exports={
                rol
 
             }
+          /* Saving the user's preference in a cookie for a certain time. */
+            if(req.body.remember){ // si el usuario marca recordarme
+
+                res.cookie("userBookIsLife" , req.session.userLogin, { maxAge : 60000 } ) //guardo su preferencia en una cookie por un tiempo determinado
+            }
 
             return res.redirect("/");
 
@@ -93,7 +100,11 @@ module.exports={
         
     },
     logout :(req,res)=>{
+
         req.session.destroy();
+
+        res.cookie("userBookIsLife",null, {maxAge : -1}) //elimino la cookie 
+        
         return res.redirect('/')
     }
 
