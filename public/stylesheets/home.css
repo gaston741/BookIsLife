@@ -19,7 +19,7 @@
 main.home {
 
     background-image: url('/images/fondos/fondoRegister.jpg');
-    background-size: cover;
+    background-size: auto;
 }
 
 main.home h2 {
@@ -141,6 +141,11 @@ div.home__main__up i {
 
 @media(min-width:768px) {
     main.home {
+
+        background-image: url('/images/fondos/fondoRegister.jpg');
+        background-size:auto;
+    }
+    main.home {
     
         padding: 0vh 5vh;
     }
@@ -191,6 +196,11 @@ div.home__main__up i {
 /*                 DESKTOP    RESPONSIVE          */
 
 @media(min-width:1024px) {
+    main.home {
+
+        background-image: url('/images/fondos/fondoRegister.jpg');
+        background-size:auto;
+    }
     main.home {
      
         padding: 0vh 15vh;
