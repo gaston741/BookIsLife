@@ -18,7 +18,8 @@
 
 main.home {
 
-    background-color: #FFE7E7;
+    background-image: url('/images/fondos/fondoRegister.jpg');
+    background-size: cover;
 }
 
 main.home h2 {
@@ -28,6 +29,7 @@ main.home h2 {
     text-align: center;
     text-shadow: 3px 3px 2px rgb(130 138 138 / 70%);
     text-transform: uppercase;
+    color: #ffffff;
 }
 
 
