@@ -18,7 +18,7 @@
 
 main.home {
 
-    background-image: url('/images/fondos/fondoRegister.jpg');
+    background-color:#FFE7E7 ;
     background-size: auto;
 }
 
@@ -142,8 +142,8 @@ div.home__main__up i {
 @media(min-width:768px) {
     main.home {
 
-        background-image: url('/images/fondos/fondoRegister.jpg');
-        background-size:auto;
+        background-color: #FFE7E7;
+       
     }
     main.home {
     
@@ -198,8 +198,8 @@ div.home__main__up i {
 @media(min-width:1024px) {
     main.home {
 
-        background-image: url('/images/fondos/fondoRegister.jpg');
-        background-size:auto;
+        background-color: #FFE7E7;
+    
     }
     main.home {
      
