@@ -62,6 +62,11 @@
                     <div class="register__form-box">
                         <label class="admi_portada" for="userImage">Adjunte imagen de Perfil</label>
                         <input class="admi_file"  type="file" id="image" name="userImage" accept="image/*">
+                        <% if (locals.errors && errors.userImage) { %>
+                            <div class="text-danger">
+                                <%= errors.userImage.msg%>
+                    </div>
+                       <% } %> 
                     </div>
                   <!--   seccion terminos y condiciones -->
                     <div class="register__form-box">

@@ -1,20 +1,19 @@
 const express = require('express');
 const router = express.Router();
-const multer = require('multer');
 const { path } = require('express/lib/application');
-const controller = require('../controllers/userController');
+const multer = require('multer');
 
-let storage = multer.diskStorage({
+const storage = multer.diskStorage({
     destination: (req, file, callback) => {
         callback(null, path.join(__dirname, '../public/images/users'))
     },
     filename: (req, file, callback) => {
-        let newFilename = 'imgProfile-' + Date.now() + path.extname(file.originalName);
-        callback(null, newFilename)
+        let filename = '${Date.now()}_img${path.extname(file.originalName)}';
+        callback(null, filename)
     }
 })
 
-const upload = multer({ storage});
+const uploadFile = multer({ storage});
 
 //***Controller Require */
 const {register, login, processRegister,processLogin,logout} = require ('../controllers/userController');
@@ -22,10 +21,10 @@ const {register, login, processRegister,processLogin,logout} = require ('../cont
 //********Validator require */
 const registerValidator = require('../validations/registerValidator');
 const loginValidator = require('../validations/loginValidator')
-/* GET users listing.  /users */
 
+/* GET users listing.  /users */
 router.get('/register', register);
-router.post('/register',registerValidator, upload.single('userImage'), processRegister);
+router.post('/register', uploadFile.single('userImage'), registerValidator, processRegister);
 router.get('/login', login);
 router.post('/login', loginValidator, processLogin);
 router.get('/logout',logout)
