@@ -1,13 +1,19 @@
 const express = require('express');
 const router = express.Router();
 
-const {register, login, profile} = require ('../controllers/userController')
+//***Controller Require */
+const {register, login, processRegister, profile, profileEdit} = require ('../controllers/userController');
+
+//********Validator require */
+const registerValidator = require('../validations/registerValidator');
 
 /* GET users listing.  /users */
 
 router.get('/register', register);
+router.post('/register',registerValidator, processRegister);
 router.get('/login', login);
 router.get('/profile', profile);
+router.get('/profile/edit',profileEdit)
 
 
 

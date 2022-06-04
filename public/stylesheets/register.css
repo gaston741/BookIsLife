@@ -1,3 +1,6 @@
+.user{
+    background-color: rgb(255, 231, 231);
+}
 .register_body {
     background-image: url("/images/fondos/Fondo-Desktop.png");
     background-size: cover;
@@ -8,7 +11,11 @@
     width: 100%;
     color: #ed2f51; 
 }
-
+.terminos{
+    display: flex;
+    justify-content: center; 
+    font-weight: 800;
+}
 .register_header {
     display: block;
     text-align: center;
