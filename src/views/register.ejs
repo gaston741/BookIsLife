@@ -26,7 +26,7 @@
             <h1>Registrate</h1>
             <hr>
               <!--  empieza el fomulario -->
-            <form  action="/register" method="POST" enctype="multipart/form-data">
+            <form action="/users/register" method="POST" enctype="multipart/form-data">
                 <article class="registro">
                     <!-- seccion nombre -->
                     <div class="register__form-box">
@@ -60,11 +60,11 @@
                     </div>
                     <!-- seccion imagen de perfil -->
                     <div class="register__form-box">
-                        <label class="admi_portada" for="userImage">Adjunte imagen de Perfil</label>
-                        <input class="admi_file"  type="file" id="image" name="userImage" accept="image/*">
-                        <% if (locals.errors && errors.userImage) { %>
+                        <label class="admi_portada" for="avatar">Adjunte imagen de Perfil</label>
+                        <input class="admi_file"  type="file" id="image" name="avatar" accept="image/*">
+                        <% if (locals.errors && errors.avatar) { %>
                             <div class="text-danger">
-                                <%= errors.userImage.msg%>
+                                <%= errors.avatar.msg%>
                     </div>
                        <% } %> 
                     </div>
