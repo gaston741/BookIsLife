@@ -11,11 +11,11 @@
         <section>
             <h1>Mi usuario</h1>
             <hr>
-            <form method="POST" action="/users/update-profile?_method=PUT">
+            <form method="POST" action="">
                 <article>
                 <div class="register__form-box">
                     <label for="nombre">Nombre</label>
-                    <input class="register__form-input form-control " type="text" id="nombre" name="nombre" placeholder="" value="<%= users.name %>" disabled>
+                    <input class="register__form-input form-control " type="text" id="nombre" name="nombre" placeholder="" value="<%= user.name%>" disabled>
                      <span class="register__text-error"></span>
                 </div>
                 <div class="register__form-box">

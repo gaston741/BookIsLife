@@ -12,8 +12,8 @@ const registerValidator = require('../validations/registerValidator');
 router.get('/register', register);
 router.post('/register',registerValidator, processRegister);
 router.get('/login', login);
-router.get('/profile', profile);
-router.get('/profile/edit',profileEdit)
+router.post('/profile', profile);
+router.post('/profile/edit',profileEdit)
 
 
 

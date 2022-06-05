@@ -43,5 +43,14 @@
       "password": "$2a$10$MiTAsoBitNawq1g77UK.SO6/xmzgHY3EY9cD1JMdlwYCobt2qvk7W",
       "rol": "user",
       "avatar": "userDefault.png"
+   },
+   {
+      "id": 6,
+      "name": "rodriguez",
+      "surname": "gaston",
+      "email": "1234@gmail.com",
+      "password": "$2a$10$ze7mZb6KOUaXSVqk0SKuK.3u9gZC7oBH54wamq8MLftKDQUVTEUpe",
+      "rol": "user",
+      "avatar": "userDefault.png"
    }
 ]
