@@ -10,18 +10,7 @@ module.exports={
 
     login:(req,res)=> res.render('login'),
 
-    profile:(req,res)=> {
-        /* const {name,email,surname}=req.body;
-        let UserData = {name,email,surname}; */
-        let dataUsers = users();
-        let user = dataUsers.find(user => user.id === +req.id);
-        
-        return res.render('userProfile',{
-            user
-        })
-    },
-
-    profileEdit:(req,res)=> res.render('userProfileEdit'),
+    
 
     processRegister: (req,res)=>{
 

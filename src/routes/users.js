@@ -7,6 +7,7 @@ const {register, login, processRegister,processLogin,logout, profileEdit , updat
 
 //********Validator require */
 const registerValidator = require('../validations/registerValidator');
+const loginValidator = require('../validations/loginValidator')
 
 let storage = multer.diskStorage({
     destination: (req, file, callback) => {
