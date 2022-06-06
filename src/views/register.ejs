@@ -12,11 +12,11 @@
 
         </div>
         <div class="header__logo">
-        <!-- <a href="/"><img src="/images/logo-proyect.png" width="100%" alt=""></a> -->
+            <!-- <a href="/"><img src="/images/logo-proyect.png" width="100%" alt=""></a> -->
         </div>
         <br>
         <div class="header__logo2">
-        <!-- <a href="/"><img src="/images/logo-proyect2.png" alt=""></a> -->
+            <!-- <a href="/"><img src="/images/logo-proyect2.png" alt=""></a> -->
         </div>
     </header>
 
@@ -26,7 +26,7 @@
             <h1>Registrate</h1>
             <hr>
               <!--  empieza el fomulario -->
-            <form action="/users/register" method="POST" enctype="multipart/form-data">
+            <form  action="" method="POST">
                 <article class="registro">
                     <!-- seccion nombre -->
                     <div class="register__form-box">
@@ -60,13 +60,8 @@
                     </div>
                     <!-- seccion imagen de perfil -->
                     <div class="register__form-box">
-                        <label class="admi_portada" for="avatar">Adjunte imagen de Perfil</label>
-                        <input class="admi_file"  type="file" id="image" name="avatar" accept="image/*">
-                        <% if (locals.errors && errors.avatar) { %>
-                            <div class="text-danger">
-                                <%= errors.avatar.msg%>
-                    </div>
-                       <% } %> 
+                        <label class="admi_portada" for="userImage">Adjuntar Portada del Libro</label>
+                        <input class="admi_file"  type="file" id="image" name="userImage" accept="image/*">
                     </div>
                   <!--   seccion terminos y condiciones -->
                     <div class="register__form-box">
