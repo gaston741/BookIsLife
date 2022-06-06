@@ -1,10 +1,25 @@
 <header class="home__header">
     <nav class="header_nav">
         <!--    NAV BAR HEADER  -->
-        <li><a href="/products/create"><i class="fa-solid fa-screwdriver-wrench"></i></a></li>
-        <li><a href="/users/login"><i class="fa-solid fa-user"></i></a></li>
+        <% if (!locals.userLogin) { %>
+           <!--  //navBar - Login -->
+            <li><a href="/users/login"><i class="fa-solid fa-user"></i></a></li>
+            <!-- //navBar - registro -->
+            <li><a href="/users/register"><i class="fa-solid fa-envelope"></i></a></li>
+         
+        <% }else{  %>
+            <li><a href="/users/profile"  style="color: white  ; font-weight: 900; text-transform: uppercase;"><%= userLogin.name %></a> </li>
+            <li ><a style="color: white  ; font-weight: 900;" href="/users/logout">SALIR</a></li>
+        <% } %>
+       <!--  //navBar - carrito -->
         <li><a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
-        <li><a href="/users/register"><i class="fa-solid fa-envelope"></i></a></li>
+        <% if (locals.userLogin?.rol === "admin") { %>
+             <!--  //navBar - administrador, añadir libro -->
+            <li><a href="/products/create"><i class="fa-solid fa-screwdriver-wrench"></i></a></li>
+        <% } %>
+       
+      
+        
         <li class="idioma"><a href=""><i class="fa-solid fa-globe"></i> English</a></li>
     </nav>
     <!--   LOGOS HEADER -->

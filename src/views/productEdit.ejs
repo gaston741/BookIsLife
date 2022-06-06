@@ -1,44 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('./partials/head', { title : 'Editando: ' + product.name}) %>
-  
+
 <body class="administrador">
     <%- include('./partials/header')%> 
-    <!--  BOTON VOLVER -->
+<!--  BOTON VOLVER -->
     <div class="container-button-product-detail admini">
         <a class="a_button" href="/"><i class="fa-solid fa-angle-left"></i> VOLVER </a>
     </div>
         <main class="admi_main">
-   <!--   Empieza el formulario -->
+<!--   Empieza el formulario -->
             <form class="form_admi" action="/products/update/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data" >
                 <!--   titulos -->
                     <h2 class="titulo_dos_admi">Edición del Libro: <%= product.name %> </h2>
-                    <!--  seccion contenedora -->
+<!--  seccion contenedora -->
                     <article>
 
-                     <!-- Titulo del libro-->
+<!-- Titulo del libro-->
                         <div  class="admi__form-box">
                             <label class="admi_label_edit"  for="name">Editar Titulo</label>
                             <input class="admi_form-input" type="text" name="name" id="name" value="<%= product.name %>">
+                            <span class="admi__text-error"><%= locals.errors && errors.name ? errors.name.msg : null %></span>
                         </div>
 
-                    <!-- Autor del libro-->
+<!-- Autor del libro-->
                         <div class="admi_form-box">
                             <label class="admi_label_edit"  for="autor">Editar Autor</label>
                             <input class="admi_form-input" type="text" name ="autor" id="autor" value="<%= product.autor %>">
+                            <span class="admi__text-error"><%= locals.errors && errors.autor ? errors.autor.msg : null %></span>
                         </div>
 
-                    <!-- Precio del libro -->
+<!-- Precio del libro -->
                         <div  class="admi__form-box">
                             <label class="admi_label_edit"  for="price">Editar Precio</label>
                             <input type="number" class="admi_form-input" name="price" id="price" value="<%= product.price %>">
+                            <span class="admi__text-error"><%= locals.errors && errors.price ? errors.price.msg : null %></span>
                         </div>
 
-                     <!-- Descripcion del libro-->
+<!-- Descripcion del libro-->
                         <div  class="admi__form-box">
                             <label class="admi_label_edit"  for="description">Editar Sinopsis</label>
                             <textarea class="admi_form-input" name="description" id="description" cols="5" rows="5" ><%= product.description %> </textarea>
+                            <span class="admi__text-error"><%= locals.errors && errors.description ? errors.description.msg : null %></span>
                         </div>
+
+                    <!-- Editorial del libro-->
+                    <div  class="admi__form-box">
+                        <label class="admi_label_edit"  for="publisher">Editar Sinopsis</label>
+                        <input class="admi_form-input" type="text" name="publisher" id="publisher" value="<%= product.publisher %>">
+                        <span class="admi__text-error"><%= locals.errors && errors.publisher ? errors.publisher.msg : null %></span>
+                    </div>
 
                     <!-- Categoria del libro-->
                         <div  class="admi__form-box">
@@ -57,9 +68,9 @@
                                 <option value="Policiales" <%= product.genre === "Policiales" && 'selected' %>>Policiales</option>
                                 <option value="Terror" <%= product.genre === "Terror" && 'selected' %>>Terror</option>
                             </select>
+                            <span class="admi__text-error"><%= locals.errors && errors.genre ? errors.genre.msg : null %></span>
                         </div>
-
-                    <!--  Idioma de Edicion -->
+<!--  Idioma de Edicion -->
                         <div class="admi__form-box">
                             <label class="admi_label_edit"  for="language">Editar Idioma de Edición</label>
                             <select class="admi_select dropdown-select" name="language" id="language" >
@@ -67,29 +78,28 @@
                                 <option value="ingles" <%= product.language === "ingles" && 'selected' %>>Ingles</option>
                                 <option value="español" <%= product.language === "español" && 'selected' %>>Español</option>
                             </select>
+                            <span class="admi__text-error"><%= locals.errors && errors.language ? errors.language.msg : null %></span>
                         </div>
-
-                     <!-- Portada del libro-->
+<!-- Portada del libro-->
                         <div class="admi__form-box">
                             <label class="admi_label_edit" for="image">Editar Portada del Libro</label>
                             <input class="admi_file"  type="file" id="image" name="image" accept="image/*"/>
                         </div>
-                    <!--  categoria de Edicion -->
+<!--  categoria de Edicion -->
                         <div class="admi__form-box">
                             <label class="admi_label_edit"  for="category">Editar Categoria de Edición</label>
                             <select class="admi_select dropdown-select" name="category" id="category" >
                                 <option value="in-sale" <%= product.category === "in-sale" && 'selected' %> >In-sale</option>
                                 <option value="relevant" <%= product.category === "relevant" && 'selected' %>>Relevante</option>
                             </select>
-                         </div>
-
+                            <span class="admi__text-error"><%= locals.errors && errors.category ? errors.category.msg : null %></span>
+                        </div>
                     </article>
-                    <!--  envio y reset -->
+<!--  envio y reset -->
                     <div class="botones_admi" >
-                        <button type="reset" class="admi_adherir admi_delete">Limpiar</button>
+                        <button type="reset" value="reset" class="admi_adherir admi_delete">Descartar</button>
                         <button type="submit" class="admi_adherir admi_submit">Guardar</button>
                     </div>
-                   
             </form>
         </main>
     <%- include('./partials/footer')%> 

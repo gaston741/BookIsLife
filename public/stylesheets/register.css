@@ -8,7 +8,11 @@
     width: 100%;
     color: #ed2f51; 
 }
-
+.terminos{
+    display: flex;
+    justify-content: center; 
+    font-weight: 800;
+}
 .register_header {
     display: block;
     text-align: center;
@@ -35,7 +39,7 @@
 .ingles {
     background-color: transparent;
     border-color: white;
-    color: black;
+    color: white;
     display: flex;
     text-align: end;
     font-weight: 600;
@@ -48,23 +52,23 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: 80%;
-    border: 1px solid #ed2f51;
+    /* border: 1px solid #ed2f51; */
     border-radius: 50%;
-    height: 250px;
+    height: 180px;
     margin: auto;
-    width: 250px;
+    width: 180px;
 
 }
 .header__logo2 {
     background-image: url("/images/logos/logo-proyect2.png");
     background-position: center;
     background-size: cover;
-    border: 1px solid #ed2f51;
+    /* border: 1px solid #ed2f51; */
     border-radius: 50px;
-    height: 50px;
+    height: 38px;
     overflow: hidden;
     margin: auto;
-    width: 250px;
+    width: 200px;
     
 }
 
@@ -75,9 +79,9 @@
 .register_body section{
     background-color: white;
     border-radius: 10px;
-    box-shadow: 5px 5px 10px #308F89;
+    box-shadow: 5px 5px 10px #ffffff;
     margin: 30px auto;
-    padding: 20px;
+    padding: 15px;
     width: 100%;
 }
 .register_body h1{
@@ -233,7 +237,7 @@
     .register_body {
         align-items: center;
         background-color: #54BAB9;
-        background-image: url('/images/fondos/Fondo-Desktop.png');
+        background-image: url("/images/fondos/Fondo-Desktop.png");
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -253,11 +257,11 @@
     .register_body {
         align-items: center;
         background-color: #54BAB9;
-        background-image: url(/images/fondos/Fondo-Desktop.png);
+        background-image: url("/images/fondos/Fondo-Desktop.png");
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 10px 20px;
+        padding: 10px 100px;
         width: 100%;
     }
     .registro{
