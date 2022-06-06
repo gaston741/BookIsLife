@@ -52,14 +52,5 @@
       "password": "$2a$10$ze7mZb6KOUaXSVqk0SKuK.3u9gZC7oBH54wamq8MLftKDQUVTEUpe",
       "rol": "user",
       "avatar": "userDefault.png"
-   },
-   {
-      "id": 7,
-      "name": "Gaston",
-      "surname": "zz",
-      "email": "12345678@gmail.com",
-      "password": "$2a$10$qCTFLJnpNRkCfSRPb9amre7X2ctgl.BrD6Qoc/4bNflQ2VqLXAwXi",
-      "rol": "user",
-      "avatar": "userDefault.png"
    }
 ]
