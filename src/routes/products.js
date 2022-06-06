@@ -8,7 +8,8 @@ const multer =require('multer');
 const {index,detail,cart,edit,create,store,destroy,update} =require('../controllers/productController')
  
 //configuracion de multer//
-const storage =multer.diskStorage({
+
+/* const storage =multer.diskStorage({
 
     destination : function( req, file, callback){
         callback( null, 'public/images/portadas')
@@ -20,7 +21,7 @@ const storage =multer.diskStorage({
 })
 const upload = multer({
     storage
-})
+}) */
 
 
 
