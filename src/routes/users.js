@@ -1,15 +1,14 @@
 const express = require('express');
 const router = express.Router();
-const { path } = require('express/lib/application');
+const path = require('path');
 const multer = require('multer');
 
-const storage = multer.diskStorage({
+let storage = multer.diskStorage({
     destination: (req, file, callback) => {
-        callback(null, path.join(__dirname, '../public/images/users'))
+        callback(null, path.join(__dirname, '../../public/images/users'))
     },
     filename: (req, file, callback) => {
-        let filename = '${Date.now()}_img${path.extname(file.originalName)}';
-        callback(null, filename)
+        callback (null, file.fieldname + Date.now() + path.extname(file.originalname))
     }
 })
 

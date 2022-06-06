@@ -54,7 +54,7 @@ module.exports =[
     })
     .withMessage("Las constraseñas no coinciden"),
 
-    body('userImage').custom((value, {req}) => {
+    check('avatar').custom((value, {req}) => {
         let file = req.file;
         let extensionsAccepted = ['.jpg' , '.png' , '.gif' ]
 
