@@ -1,7 +1,13 @@
 const express = require('express');
 const router = express.Router();
-const path = require('path');
 const multer = require('multer');
+
+//***UserController Require */
+const {register, login, processRegister,processLogin,logout, profileEdit , updateProfile} = require ('../controllers/userController');
+
+//********Validator require */
+const registerValidator = require('../validations/registerValidator');
+const loginValidator = require('../validations/loginValidator')
 
 let storage = multer.diskStorage({
     destination: (req, file, callback) => {
@@ -13,14 +19,6 @@ let storage = multer.diskStorage({
 })
 
 const uploadFile = multer({ storage});
-
-//***UserController Require */
-const {register, login, processRegister,processLogin,logout, profileEdit , updateProfile} = require ('../controllers/userController');
-
-//********Validator require */
-const registerValidator = require('../validations/registerValidator');
-const loginValidator = require('../validations/loginValidator')
-
 // middleware require  
 
 const checkUser = require ('../middlewares/checkUser')
@@ -36,6 +34,7 @@ router.get('/logout',logout);
 //***to Profile Form */
 router.get('/profile',checkUser, profileEdit);
 router.put('/update-profile', updateProfile)
+
 
 
 
