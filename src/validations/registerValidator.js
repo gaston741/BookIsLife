@@ -22,9 +22,9 @@ module.exports =[
         .bail()
         .isEmail()
         .withMessage("Email no válido").bail()
-        .custom((value)=>{
+       .custom((value)=>{
             
-            const user = users.find(user=>user.email === req.body.email);
+            const user = users.find(user=>user.email === value);
             
             if(user){ // si existe un usuario  registrado con ese mail 
            
