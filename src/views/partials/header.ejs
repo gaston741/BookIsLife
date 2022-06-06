@@ -8,7 +8,7 @@
             <li><a href="/users/register"><i class="fa-solid fa-envelope"></i></a></li>
          
         <% }else{  %>
-            <li style="color: white  ; font-weight: 900; text-transform: uppercase;">Bienvenido <%= userLogin.name %> </li>
+            <li><a href="/users/profile"  style="color: white  ; font-weight: 900; text-transform: uppercase;"><%= userLogin.name %></a> </li>
             <li ><a style="color: white  ; font-weight: 900;" href="/users/logout">SALIR</a></li>
         <% } %>
        <!--  //navBar - carrito -->
