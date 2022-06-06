@@ -18,7 +18,12 @@
 
 main.home {
 
+<<<<<<< HEAD
     background-color: rgb(255, 231, 231);
+=======
+    background-color:#FFE7E7 ;
+    background-size: auto;
+>>>>>>> 7a91798db59ba0e741c7bfbeff629ffd55023e96
 }
 
 main.home h2 {
@@ -28,6 +33,7 @@ main.home h2 {
     text-align: center;
     text-shadow: 3px 3px 2px rgb(130 138 138 / 70%);
     text-transform: uppercase;
+    color: black;
 }
 
 
@@ -139,6 +145,11 @@ div.home__main__up i {
 
 @media(min-width:768px) {
     main.home {
+
+        background-color: #FFE7E7;
+       
+    }
+    main.home {
     
         padding: 0vh 5vh;
     }
@@ -189,6 +200,11 @@ div.home__main__up i {
 /*                 DESKTOP    RESPONSIVE          */
 
 @media(min-width:1024px) {
+    main.home {
+
+        background-color: #FFE7E7;
+    
+    }
     main.home {
      
         padding: 0vh 15vh;
