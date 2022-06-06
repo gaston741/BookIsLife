@@ -37,19 +37,10 @@
    },
    {
       "id": 5,
-      "name": "Gaston",
-      "surname": "Gadea",
-      "email": "gaston@gmail.com",
-      "password": "$2a$10$MiTAsoBitNawq1g77UK.SO6/xmzgHY3EY9cD1JMdlwYCobt2qvk7W",
-      "rol": "user",
-      "avatar": "userDefault.png"
-   },
-   {
-      "id": 6,
-      "name": "rodriguez",
-      "surname": "gaston",
-      "email": "1234@gmail.com",
-      "password": "$2a$10$ze7mZb6KOUaXSVqk0SKuK.3u9gZC7oBH54wamq8MLftKDQUVTEUpe",
+      "name": "hernan",
+      "surname": "mendoza",
+      "email": "hernan@reboredo.com",
+      "password": "$2a$10$.kz4xF500Eam29UajkYFwuGCQdJTMHW0Omr.mmP6OV3OZY.XReMRO",
       "rol": "user",
       "avatar": "userDefault.png"
    }

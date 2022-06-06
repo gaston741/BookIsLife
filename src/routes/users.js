@@ -7,6 +7,11 @@ const {register, login, processRegister,processLogin,logout, profileEdit , updat
 //********Validator require */
 const registerValidator = require('../validations/registerValidator');
 
+// middleware require  
+
+const checkUser = require ('../middlewares/checkUser')
+/* GET users listing.  /users */
+router.get('/register', register);
 router.post('/register', uploadFile.single('avatar'), registerValidator, processRegister);
 router.get('/login', login);
 router.post('/login', loginValidator, processLogin);
