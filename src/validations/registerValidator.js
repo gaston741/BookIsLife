@@ -54,9 +54,27 @@ module.exports =[
     })
     .withMessage("Las constraseñas no coinciden"),
 
+    check('avatar').custom((value, {req}) => {
+        let file = req.file;
+        let extensionsAccepted = ['.jpg' , '.png' , '.gif' ]
+
+        if (!file) {
+            throw new Error (' Tienes que subir una Imagen');
+
+        } else {
+
+            let fileExtension = path.extname(file.originalname);
+        if (!extensionsAccepted.includes(fileExtension)) {
+            throw new Error ('Las extensiones de archivos permitidas son ${extensionsAccepted.join(', ')}');
+        }
+    }
+
+        return true;
+    }),
+
     check("terms") // validacion de terminos
     .isString("on")
     .withMessage("Debes aceptar los términos y condiciones")
- 
+
 
 ]

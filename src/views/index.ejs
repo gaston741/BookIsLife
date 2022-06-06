@@ -5,7 +5,6 @@
 
 <body class="home">
     <%- include('./partials/header') %> 
-  
     <!--  CUERPO  -->
     <main class="home">
             <!-- SECCION LOS MAS VENDIDOS DE LA SEMANA-->
@@ -21,7 +20,7 @@
                             <div class="home__product-container-img">
                                 <img class="home__product_image" src="/images/portadas/<%= image %>" alt="libro">
                             </div>
-                         </a>   
+                        </a>   
                     </div>
                     <div class="home_main_container_span">
                         
@@ -29,24 +28,22 @@
                         <span class="autor"><%= autor %></span>
                     </div>
                 </article>
-         
                 <% }) %>
         </section>
 
-        <!-- SECCION TAMBIEN PODRIA INTERESARTE-->
+<!-- SECCION TAMBIEN PODRIA INTERESARTE-->
 
         <h2>Tambien Podria interesarte:</h2>
         <section class="home__box_products">
-            <!--    PRODUCTO -->
+<!--    PRODUCTO -->
             <% productsRelevant.forEach(({id,name,autor,image}) => { %>
-
                 <article class="home__product">
                     <div class="home__producto-box-image">
                         <a href="/products/detail/<%= id %>">
                             <div class="home__product-container-img">
                                 <img class="home__product_image" src="/images/portadas/<%= image %>" alt="libro">
                             </div>
-                         </a>   
+                        </a>   
                     </div>
                     <div class="home_main_container_span">
                         
@@ -54,11 +51,9 @@
                         <span class="autor"><%= autor %></span>
                     </div>
                 </article>
-         
                 <% }) %>
         </section>
-       
-        <!--  CONTENIDOS EXTRAS -->
+<!--  CONTENIDOS EXTRAS -->
         
             <section class="home__aside_advertising">
                 <h3 class="home_titulo3">No olvides Visitar</h3>
@@ -72,7 +67,6 @@
                 <a href="/"><i class="fa-solid fa-circle-chevron-up"></i></a>
             </div>
     </main>
-   
     <%- include('./partials/footer') %> 
 </body>
 
