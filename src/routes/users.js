@@ -21,6 +21,9 @@ const {register, login, processRegister,processLogin,logout, profileEdit , updat
 const registerValidator = require('../validations/registerValidator');
 const loginValidator = require('../validations/loginValidator')
 
+// middleware require  
+
+const checkUser = require ('../middlewares/checkUser')
 /* GET users listing.  /users */
 router.get('/register', register);
 router.post('/register', uploadFile.single('avatar'), registerValidator, processRegister);
