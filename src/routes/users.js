@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const multer = require('multer');
 
 //***UserController Require */
 const {register, login, processRegister,processLogin,logout, profileEdit , updateProfile} = require ('../controllers/userController');
@@ -7,6 +8,16 @@ const {register, login, processRegister,processLogin,logout, profileEdit , updat
 //********Validator require */
 const registerValidator = require('../validations/registerValidator');
 
+let storage = multer.diskStorage({
+    destination: (req, file, callback) => {
+        callback(null, path.join(__dirname, '../../public/images/users'))
+    },
+    filename: (req, file, callback) => {
+        callback (null, file.fieldname + Date.now() + path.extname(file.originalname))
+    }
+})
+
+const uploadFile = multer({ storage});
 // middleware require  
 
 const checkUser = require ('../middlewares/checkUser')
@@ -22,6 +33,7 @@ router.get('/logout',logout);
 //***to Profile Form */
 router.get('/profile',checkUser, profileEdit);
 router.put('/update-profile', updateProfile)
+
 
 
 
