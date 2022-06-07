@@ -42,7 +42,7 @@ module.exports={
             );
           
             //levanto session
-
+          
             //redireccionamiento
 
             return res.redirect('login') // renderizo login para que inicie session
