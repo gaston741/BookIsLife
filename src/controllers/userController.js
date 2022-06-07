@@ -174,7 +174,7 @@ module.exports={
         }else{
             console.log(errors);
             return res.render("userProfileEdit", {
-               user : req.body,
+                usuario : req.body,
                 errors : errors.mapped()
               });
         }
