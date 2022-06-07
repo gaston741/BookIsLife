@@ -1,4 +1,4 @@
-const path = require ('path')
+const path = require('path')
 //requerimos multer para manipular img files en el form//
 const multer =require('multer');
 
