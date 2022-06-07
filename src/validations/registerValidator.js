@@ -1,5 +1,6 @@
 const {check,body} = require ('express-validator');
-const users = require('../data/usersDataBase.json')
+const users = require('../data/usersDataBase.json');
+const path =require('path')
 
 module.exports =[
 
