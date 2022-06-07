@@ -46,7 +46,7 @@ module.exports =[
         .isLength({min: 6 ,max: 12})
         .withMessage("Debe tener un mínimo de 6  y 12 caracteres."),
     
-   check("password2")// validacion de igualdad de contraseñas, campos que estan dentro del formulario (body)
+   body("password2")// validacion de igualdad de contraseñas, campos que estan dentro del formulario (body)
         .custom((value,{req})=>{ // la validacion custom la usamos cuando ninguna de las validaciones personalizadas se ajusta a lo que queremos validar.
             if(value !== req.body.password){// si el valor de password es diferente al valor de password 2 = false
 
