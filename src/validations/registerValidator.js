@@ -54,18 +54,18 @@ module.exports =[
     })
     .withMessage("Las constraseñas no coinciden"),
 
-    check('avatar').custom((value, {req}) => {
+    check(`avatar`).custom((value, {req}) => { //Para validar imagenes subidas como avatar con formatos permitidos(.jpg , .png , .gif)
         let file = req.file;
-        let extensionsAccepted = ['.jpg' , '.png' , '.gif' ]
+        let extensionsAccepted = [`.jpg` , `.png` , `.gif` ]
 
         if (!file) {
-            throw new Error (' Tienes que subir una Imagen');
+            throw new Error (`Tienes que subir una Imagen`);
 
         } else {
 
             let fileExtension = path.extname(file.originalname);
         if (!extensionsAccepted.includes(fileExtension)) {
-            throw new Error ('Las extensiones de archivos permitidas son ${extensionsAccepted.join(', ')}');
+            throw new Error (`Las extensiones de archivos permitidas son ${extensionsAccepted.join(`, `)}`); 
         }
     }
 
