@@ -61,7 +61,7 @@ module.exports =[
         let extensionsAccepted = [`.jpg` , `.png` , `.gif` ]
 
         if (!file) {
-            throw new Error (`Tienes que subir una Imagen`);
+            throw new Error ('Tienes que subir una Imagen');
 
         } else {
 
