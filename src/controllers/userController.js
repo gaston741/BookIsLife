@@ -2,15 +2,15 @@ const bcryptjs = require ('bcryptjs');
 const fs = require('fs');
 const path = require('path')
 const {validationResult}=require('express-validator');
-const users = require ('../data/usersDataBase.json');
-
-
+const users = require ('../data/usersDataBase.json'); 
 
 module.exports={
 
     register: (req,res)=> res.render('register'),
 
     login:(req,res)=> res.render('login'),
+
+    
 
     processRegister: (req,res)=>{
 
@@ -42,12 +42,7 @@ module.exports={
             );
           
             //levanto session
-            const {id, rol} = user
-            req.session.userLogin = {
-              id,
-             name: name.trim(),
-              rol
-          }
+
             //redireccionamiento
 
             return res.redirect('login') // renderizo login para que inicie session
@@ -65,6 +60,7 @@ module.exports={
     processLogin : (req,res)=>{
 
         let errors = validationResult(req);
+        
         if(errors.isEmpty()){
             
             //traigo el dato del usuario que existe
@@ -106,6 +102,81 @@ module.exports={
         res.cookie("userBookIsLife",null, {maxAge : -1}) //elimino la cookie 
         
         return res.redirect('/')
-    }
+    },
+
+    profileEdit :(req,res)=>{
+        const users = JSON.parse(fs.readFileSync('./src/data/usersDataBase.json','utf-8' ));
+      
+       /* Finding the user object in the users array that has the same id as the user that is logged
+       in. */
+       const user = users.find(user => user.id === req.session.userLogin.id)
+
+      /* Rendering the userProfileEdit view with the user object. */
+       return res.render('userProfileEdit',{
+
+        user
+
+       })
+    
+    },
+
+    updateProfile : (req,res) => {
+
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
+          const {name,surname,email,date,address,tel} = req.body
+          const {id} = users.find(user => user.id === req.session.userLogin.id );
+    
+          const usersModified = users.map((user) => {
+            if (user.id === +id) {
+              let userModified = {
+                ...user,
+                name : name,
+                surname : surname,
+                date,
+                address : address,
+                tel: tel
+                //img: req.file ? req.file.filename : user.img,
+              };
+          
+             /*  if (req.file) {
+                if (
+                  fs.existsSync(
+                    path.resolve(__dirname, "..", "public", "images", product.img)
+                  ) &&
+                  product.img !== "noimage.jpeg"
+                ) {
+                  fs.unlinkSync(
+                    path.resolve(__dirname, "..", "public", "images", product.img)
+                  );
+                }
+              } */
+              return userModified;
+            }
+            return user;
+          });
+          fs.writeFileSync(
+            path.resolve(__dirname, "..", "data", "usersDataBase.json"),
+            JSON.stringify(usersModified, null, 3),
+            "utf-8"
+          );
+    
+          req.session.userLogin = {
+            ...req.session.userLogin,
+            name
+          }
+          res.locals.userLogin =req.session.userLogin
+    
+          return res.redirect("/");
+        }else{
+            console.log(errors);
+            return res.render("userProfileEdit", {
+                usuario : req.body,
+                errors : errors.mapped()
+              });
+        }
+    
+      }
+
 
 }

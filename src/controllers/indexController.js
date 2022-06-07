@@ -15,6 +15,7 @@ module.exports={
       let productsRelevant = products.filter(product => product.category === "relevant");
 
       return res.render('index',{
+        
         products, //mando al inicio los libros agregados tambien
         productsInSale,
         productsRelevant,
