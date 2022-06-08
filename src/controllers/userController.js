@@ -127,7 +127,7 @@ module.exports={
 
         let errors = validationResult(req);
         if (errors.isEmpty()) {
-          const {name,surname,email,date,address,tel} = req.body
+          const {name,surname,email,date,address,tel,avatar} = req.body
           const {id} = users.find(user => user.id === req.session.userLogin.id );
     
           const usersModified = users.map((user) => {
@@ -138,25 +138,16 @@ module.exports={
                 surname : surname,
                 date,
                 address : address,
-                tel: tel
-                //img: req.file ? req.file.filename : user.img,
+                tel: tel,
+               
               };
-          
-             /*  if (req.file) {
-                if (
-                  fs.existsSync(
-                    path.resolve(__dirname, "..", "public", "images", product.img)
-                  ) &&
-                  product.img !== "noimage.jpeg"
-                ) {
-                  fs.unlinkSync(
-                    path.resolve(__dirname, "..", "public", "images", product.img)
-                  );
-                }
-              } */
+           
+             
+
+ 
               return userModified;
             }
-            return user;
+            return user; 
           });
           fs.writeFileSync(
             path.resolve(__dirname, "..", "data", "usersDataBase.json"),
