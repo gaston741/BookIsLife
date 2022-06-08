@@ -55,7 +55,7 @@ module.exports =[
         return true
     })
     .withMessage("Las constraseñas no coinciden"),
-
+/* 
     check('avatar').custom((value, {req}) => {
         let file = req.file;
         let extensionsAccepted = ['.jpg' , '.png' , '.gif' ]
@@ -72,7 +72,7 @@ module.exports =[
     }
 
         return true;
-    }),
+    }), */
 
     check("terms") // validacion de terminos
     .isString("on")

@@ -139,12 +139,21 @@ module.exports={
                 date,
                 address : address,
                 tel: tel,
-               
+                avatar: req.file ? req.file.filename : user.avatar, //si me llega una imagen , la devuelvo, sino uso la que estaba antes
               };
-           
+              if (req.file) {
+                if (
+                  fs.existsSync(
+                    path.resolve(__dirname, "..", "public", "images", "user", user.avatar)
+                  ) &&
+                  user.avatar !== "userDefault.png"
+                ) {
+                  fs.unlinkSync(
+                    path.resolve(__dirname, "..", "public", "images", "user", user.avatar)
+                  );
+                }
+              }
              
-
- 
               return userModified;
             }
             return user; 
