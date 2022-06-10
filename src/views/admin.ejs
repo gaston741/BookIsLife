@@ -20,15 +20,17 @@
                       <tr>
                         <th scope="col">#</th>
                         <th scope="col">Titulo</th>
+                        <th scope="col">Autor</th>
                         <th scope="col">Precio</th>
                         <th scope="col">Acciones</th>
                       </tr>
                     </thead>
                     <tbody>
-                        <% products.forEach(({id,name,price},index) => { %>
+                        <% products.forEach(({id,name,autor,price},index) => { %>
                             <tr>
                                 <th scope="row"><%= index + 1 %> </th>
                                 <td><%= name.toUpperCase() %> </td>
+                                <td><%= autor.toUpperCase() %></td>
                                 <td>$<%= toThousand(price) %></td>
                                 <td>
                                     <!-- Detalle del producto -->
