@@ -5,15 +5,14 @@
 
 <body class="home">
     <%- include('./partials/header') %> 
-  
-    <!--  CUERPO  -->
+
+<!--  CUERPO  -->
     <main class="home">
         <h2>Resultado de La busqueda:<%= keywords %> </h2>
-        <!-- SECCION DE BUSQUEDA-->
-       
+<!-- SECCION DE BUSQUEDA-->
         <section class="home__box_products">
             
-            <!--    PRODUCTO-->
+<!--    PRODUCTO-->
             <% if (result.length > 0) { %>
                 <% result.forEach(({id,name,autor,image}) => { %>
 
@@ -23,7 +22,7 @@
                                 <div class="home__product-container-img">
                                     <img class="home__product_image" src="/images/portadas/<%= image %>" alt="libro">
                                 </div>
-                             </a>   
+                            </a>   
                         </div>
                         <div class="home_main_container_span">
                             
@@ -31,27 +30,20 @@
                             <span class="autor"><%= autor %></span>
                         </div>
                     </article>
-             
                     <% }) %>
 
-
-             
             <% }else{ %>
 
                 <h2 style="color: TOMATO;">LO SIENTO, NO HAY RESULTADOS PARA SU BUSQUEDA</h2>
 
                 <% } %>
 
-
-           
         </section>
-       
-        <!--  scroll up button -->
+<!--  scroll up button -->
             <div class="home__main__up">
                 <a href="/"><i class="fa-solid fa-circle-chevron-up"></i></a>
             </div>
     </main>
-   
     <%- include('./partials/footer') %> 
 </body>
 

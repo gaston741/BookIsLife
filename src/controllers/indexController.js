@@ -15,6 +15,8 @@ module.exports={
       let productsRelevant = products.filter(product => product.category === "relevant");
 
       return res.render('index',{
+        
+        products, //mando al inicio los libros agregados tambien
         productsInSale,
         productsRelevant,
         toThousand
@@ -33,6 +35,12 @@ module.exports={
         keywords
 
 
+      })
+    },
+    admin : (req,res)=>{
+      return res.render('admin',{
+        products,
+        toThousand
       })
     }
 

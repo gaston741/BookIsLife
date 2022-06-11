@@ -1,3 +1,59 @@
+## Retrospectiva del Sprint 5
+***
+**Seguir Haciendo:**
+- Asistir a clases.
+
+- Mantener la Comunicacion.
+
+- Ayudarnos con las tareas del Sprint.
+
+- Mejorar en base a nuestros Errores.
+***
+**Hacer Más:**
+- Reunisrnos para Organizarnos.
+
+- Preguntar y pedir ayuda a nuestros compañeros.
+
+- Quitarse todas las dudas en el Grupo.
+
+- Repasar las clases grabadas.
+
+***
+**Empezar a hacer**
+- Tomar las iniciativas en las tareas.
+
+- Tener más en cuenta el Playgrund.
+
+- Mas Reuniones.
+
+- Seguir mejorando aun ya entregado el sprint.
+
+***
+**Hacer Menos**
+- Quedarse dormidos en que hacer.
+
+- No avisar ante cualquier inconveniente.
+
+- Ignora mensajes del Grupo.
+
+***
+**Dejar de Hacer**
+- Desaparecer sin dar aviso al grupo.
+
+- No comunicarnos.
+
+- No priorizar el curso, perder de vista el OBJETIVO por el cual estamos AQUÍ.
+
+***
+![Image text](/wireframes/Retro_Sprint_5.png)
+
+
+
+
+
+
+
+<!-- Retro del Sprint 3 -->
 ## Retrospectiva del Sprint 3
 ***
 **Seguir Haciendo:**
@@ -8,6 +64,7 @@
 - Acompañarnos entre todos con cada punto del Sprint.
 
 - Aceptar errores.
+
 ***
 **Hacer Más:**
 - Preguntar en clase sobre temas que no entiendo o el procedimiento para aplicar ideas en el proyecto.

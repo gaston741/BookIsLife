@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('./partials/head' ,{ title : 'Administrador'}) %> 
+
+<body class="home">
+    <%- include('./partials/header') %> 
+
+<!--  CUERPO  -->
+    <main class="home">
+<!-- SECCION LOS MAS VENDIDOS DE LA SEMANA-->
+        <h2>Stock disponible</h2>
+
+<!--    Tabla -->
+        <section class="home__box_products">
+            
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Titulo</th>
+                        <th scope="col">Autor</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Acciones</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <% products.forEach(({id,name,autor,price},index) => { %>
+                            <tr>
+                                <th scope="row"><%= index + 1 %> </th>
+                                <td><%= name.toUpperCase() %> </td>
+                                <td><%= autor.toUpperCase() %></td>
+                                <td>$<%= toThousand(price) %></td>
+                                <td>
+                                    <!-- Detalle del producto -->
+                                    <a href="/products/detail/<%= id %>" class="btn btn-sm btn-primary"><i class="fas fa-eye"></i></a>
+                               <!--    Editar producto -->
+                                <a href="/products/edit/<%= id %>" class="btn btn-sm btn-success m-1"><i class="fas fa-edit"></i></a>
+                               <!--  Eliminar producto -->
+                                <form action="/products/delete/<%= id %>?_method=DELETE" method="POST">
+                                  <button type="submit" class="btn btn-sm btn-danger m-1"><i class="fas fa-trash-alt"></i></button>
+                              </form>
+                                </td>
+                            </tr>
+                        <% }) %>
+                    </tbody>
+                  </table>
+            </div>
+          
+        </section>
+   <!--  scroll up -->
+            <div class="home__main__up">
+                <a href="/"><i class="fa-solid fa-circle-chevron-up"></i></a>
+            </div>
+    </main>
+
+    <%- include('./partials/footer') %> 
+</body>
+
+</html>
