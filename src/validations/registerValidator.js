@@ -1,6 +1,6 @@
 const {check,body} = require ('express-validator');
 const users = require('../data/usersDataBase.json');
-const path = require('path');
+const path = require('path')
 
 module.exports =[
 
@@ -53,11 +53,10 @@ module.exports =[
              return false
             }
         return true
-        })
-        .withMessage("Las contraseñas no coinciden"),
-    
-    check('avatar')
-        .custom((value, {req}) => {
+    })
+    .withMessage("Las constraseñas no coinciden"),
+ 
+    check('avatar').custom((value, {req}) => {
         let file = req.file;
         let extensionsAccepted = [`.jpg` , `.png` , `.gif` ]
 
