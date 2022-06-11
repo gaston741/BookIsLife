@@ -1,4 +1,6 @@
 const {check,body} = require ('express-validator');
+const users = require ('../data/usersDataBase.json');
+const path = require ('path');
 
 module.exports =[
 
@@ -65,7 +67,7 @@ module.exports =[
 
             let fileExtension = path.extname(file.originalname);
         if (!extensionsAccepted.includes(fileExtension)) {
-            throw new Error ('Las extensiones de archivos permitidas son ${extensionsAccepted.join(', ')}');
+            throw new Error (`Las extensiones de archivos permitidas son ${extensionsAccepted.join(', ')}`);
         }
     }
 

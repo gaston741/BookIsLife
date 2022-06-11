@@ -28,7 +28,7 @@ module.exports={
                 email : email.trim(),//obtengo email
                 password : bcryptjs.hashSync( password , 10), // hasheo pasword
                 rol : "user",
-                avatar : "userDefault.png"
+                avatar : req.file ? req.file.orginalname : "userDefault.png"
                
             }
            /* Pushing the user object into the users array. */

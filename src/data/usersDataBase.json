@@ -1,12 +1,14 @@
 [
    {
       "id": 1,
-      "name": "gaston",
+      "name": "Gerardo",
       "surname": "rodriguez",
       "email": "gaston@gmail.com",
       "password": "$2a$10$wpRSYU7ZTT8yJfhaSGys5.xm7wJCS3uarL1tyc4e74FKxLNrvy/x.",
       "rol": "admin",
-      "avatar": "userDefault.png"
+      "avatar": "userDefault.png",
+      "date": "",
+      "tel": ""
    },
    {
       "id": 2,
@@ -43,5 +45,48 @@
       "password": "$2a$10$.kz4xF500Eam29UajkYFwuGCQdJTMHW0Omr.mmP6OV3OZY.XReMRO",
       "rol": "user",
       "avatar": "userDefault.png"
+   },
+   {
+      "id": 6,
+      "name": "nahuel",
+      "surname": "martinez",
+      "email": "martinez123@gmail.com",
+      "password": "$2a$10$3vLtlFxAfWosEe8wTCSJMOakbqa6Jt.5fSyNM0z9KhvsVeIcmUAGy",
+      "rol": "user",
+      "avatar": "userDefault.png"
+   },
+   {
+      "id": 7,
+      "name": "nahuel",
+      "surname": "martinez",
+      "email": "martinez12345@gmail.com",
+      "password": "$2a$10$nCBwbTd6iFu/exIIkqqdPOKVmclZwZKfYnigs//aHiQ0biWhBEYYq",
+      "rol": "user",
+      "avatar": "userDefault.png"
+   },
+   {
+      "id": 8,
+      "name": "nahuel",
+      "surname": "martinez",
+      "email": "martinez123456@gmail.com",
+      "password": "$2a$10$IoXsfU8PFGpSPCtfeWLP.e.rF3MfieLypTGu5AUv9k6s/u9Qz0C5i",
+      "rol": "user",
+      "avatar": "userDefault.png"
+   },
+   {
+      "id": 9,
+      "name": "nahuel",
+      "surname": "martinez",
+      "email": "martinez12345678@gmail.com",
+      "password": "$2a$10$3fpa8od8ohR1dABrXdejc.CnrC3DzbEBEFLtIpLBw6C5VyuDoM2ZW",
+      "rol": "user"
+   },
+   {
+      "id": 10,
+      "name": "nahuel",
+      "surname": "martinez",
+      "email": "gaston1212@gmail.com",
+      "password": "$2a$10$AWg9HWn/KzJz..ZelmYtc.zPeCcpVYfs4e9Ix4IR./QDphlz.oYpO",
+      "rol": "user"
    }
 ]
