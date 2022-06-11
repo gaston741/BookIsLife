@@ -25,8 +25,9 @@
         <section>
             <h1>Mi Perfil </h1>
             <hr>
+           
               <!--  empieza el fomulario -->
-            <form method="POST" action="/users/update-profile?_method=PUT" >
+            <form method="POST" action="/users/update-profile?_method=PUT" enctype="multipart/form-data" >
                 <article class="registro">
                     <!-- seccion nombre -->
                     <div class="register__form-box">
@@ -66,8 +67,11 @@
                     
                     <!-- seccion imagen de perfil -->
                     <div class="register__form-box">
-                        <label class="admi_label_edit" for="userImage">Adjuntar Portada del Libro</label>
-                        <input class="admi_file"  type="file" id="image" name="userImage" accept="image/*">
+                        <label class="admi_label_edit" for="avatar">Adjuntar Avatar: </label>
+                        <input class="admi_file"  type="file" id="image" name="avatar" accept="image/*">
+                    </div>
+                    <div>
+                        <img  src="/images/users/<%= user.avatar %>" alt="" id="imgPreview">
                     </div>
                 
                 </article>
