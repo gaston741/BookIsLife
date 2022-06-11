@@ -84,9 +84,21 @@
    {
       "id": 10,
       "name": "nahuel",
-      "surname": "martinez",
-      "email": "gaston1212@gmail.com",
-      "password": "$2a$10$AWg9HWn/KzJz..ZelmYtc.zPeCcpVYfs4e9Ix4IR./QDphlz.oYpO",
-      "rol": "user"
+      "surname": "martinnezz",
+      "email": "gaston1515@gmail.com",
+      "password": "$2a$10$pOkX9XuTx4AIMBm9XF1lbOozFqte3HPFRAKcZMIoIf.pYtKIfoXA2",
+      "rol": "user",
+      "avatar": "userDefault.png"
+   },
+   {
+      "id": 11,
+      "name": "adriel",
+      "surname": "manuel",
+      "email": "gaston18@gmail.com",
+      "password": "$2a$10$CQuYRQffDIfv2Qx6Gn9nU.1XGJsMUP7k8fj7.12MJYprj1PK2g6FC",
+      "rol": "user",
+      "avatar": "1654913131350_users_.png",
+      "date": "",
+      "tel": ""
    }
 ]
