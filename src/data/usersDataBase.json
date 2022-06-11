@@ -43,5 +43,14 @@
       "password": "$2a$10$.kz4xF500Eam29UajkYFwuGCQdJTMHW0Omr.mmP6OV3OZY.XReMRO",
       "rol": "user",
       "avatar": "userDefault.png"
+   },
+   {
+      "id": 6,
+      "name": "jose",
+      "surname": "Roberto",
+      "email": "jose@outlook.com",
+      "password": "$2a$10$MjuNmURoqt1QEzYOLup4T.wlmyHrdh6xjtoM3QsaVdqfljiNBao7K",
+      "rol": "user",
+      "avatar": "userDefault.png"
    }
 ]

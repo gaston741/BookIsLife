@@ -10,7 +10,7 @@
 - Mejorar en base a nuestros Errores.
 ***
 **Hacer Más:**
-- Reunisrnos para Organizarnos.
+- Reunirnos para Organizarnos.
 
 - Preguntar y pedir ayuda a nuestros compañeros.
 
@@ -64,7 +64,6 @@
 - Acompañarnos entre todos con cada punto del Sprint.
 
 - Aceptar errores.
-
 ***
 **Hacer Más:**
 - Preguntar en clase sobre temas que no entiendo o el procedimiento para aplicar ideas en el proyecto.

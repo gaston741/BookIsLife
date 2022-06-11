@@ -1,6 +1,6 @@
 const bcryptjs = require ('bcryptjs');
 const fs = require('fs');
-const path = require('path')
+const path = require('path');
 const {validationResult}=require('express-validator');
 const users = require ('../data/usersDataBase.json'); 
 
@@ -9,6 +9,8 @@ module.exports={
     register: (req,res)=> res.render('register'),
 
     login:(req,res)=> res.render('login'),
+
+    
 
     processRegister: (req,res)=>{
 
@@ -28,7 +30,8 @@ module.exports={
                 email : email.trim(),//obtengo email
                 password : bcryptjs.hashSync( password , 10), // hasheo pasword
                 rol : "user",
-                avatar : "userDefault.png"
+                avatar : req.file ? req.file.filename : "userDefault.png", // si recibo el achivo de req.file, guardo la propiedad filename, sino devolvemos la img por defecto.
+
                
             }
            /* Pushing the user object into the users array. */
@@ -40,12 +43,7 @@ module.exports={
             );
           
             //levanto session
-            const {id, rol} = user
-            req.session.userLogin = {
-              id,
-             name: name.trim(),
-              rol
-          }
+          
             //redireccionamiento
 
             return res.redirect('login') // renderizo login para que inicie session

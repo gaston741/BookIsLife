@@ -1,3 +1,6 @@
+.user{
+    background-color: rgb(255, 231, 231);
+}
 .register_body {
     background-image: url("/images/fondos/Fondo-Desktop.png");
     background-size: cover;
