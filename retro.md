@@ -1,28 +1,28 @@
-## Retrospectiva del Sprint 2
+## Retrospectiva del Sprint 3
 ***
 **Seguir Haciendo:**
-- Comunicarnos entre si y ayudarnos Mutuamente.
+- Asistir a clases
 
-- Seguir implementando nuevas ideas para el Proyecto.
+- Participar en clase
 
 - Acompañarnos entre todos con cada punto del Sprint.
 
 - Aceptar errores.
 ***
 **Hacer Más:**
-- Reuniones para hablar sobre el proyecto.
+- Preguntar en clase sobre temas que no entiendo o el procedimiento para aplicar ideas en el proyecto.
 
 - Estar pendiente al tablero de Trello.
 
-- Contar con el grupo completo en las reuniones programadas.
+- Comunicarnos por medio del grupo de whatsapp.
 
 - Conectarse a las clases de apoyo para reforzar lo visto en clases.
 
 ***
 **Empezar a hacer**
-- Comprometerse con el Proyecto, buscando mas herramientas para implementar y facilitar dicho elemento.
+- Comprometerse con la practica para mejorar y plasmar ideas en el Proyecto.
 
-- Repaso grupal, conectarse p/ completar el sprint.
+- Conectarse al grupo!.
 
 - Ponerse al dia con las tareas, clases.
 
@@ -42,9 +42,9 @@
 
 - No avisar cuando nos demora un punto del Sprint, ni pedir ayuda por la misma.
 
-- No comprometerse con una tarea o realizarla a ultimo momento.
+- Desaparecer del Grupo.
 
-- Olvidarse del Proyecto al finalizar el Sprint.
+- No responder alguna duda. No estar comunicados.
 
 ***
 ![Image text](/wireframes/retro-2.jpeg)
