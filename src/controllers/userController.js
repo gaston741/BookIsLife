@@ -32,7 +32,7 @@ module.exports={
                 rol : "user",
                 avatar : req.file ? req.file.filename : "userDefault.png", // si recibo el achivo de req.file, guardo la propiedad filename, sino devolvemos la img por defecto.
 
-               
+            
             }
            /* Pushing the user object into the users array. */
             users.push(user);

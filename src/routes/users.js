@@ -11,12 +11,13 @@ const loginValidator = require('../validations/loginValidator')
 
 
 // middleware require  
-const uploadFile = require('../middlewares/uploadUserAvatar')
+const uploadFile = require ('../middlewares/uploadUserAvatar')
 const checkUser = require ('../middlewares/checkUser')
-const uploadFileRegister = require ('../middlewares/uploadAvatarRegister')
+const uploadFileRegister = require('../middlewares/uploadAvatarRegister')
+
 /* GET users listing.  /users */
 router.get('/register', register);
-router.post('/register',uploadFile.single(`avatar`), registerValidator, processRegister);
+router.post('/register',uploadFileRegister.single('avatar'), registerValidator, processRegister);
 router.get('/login', login);
 router.post('/login', loginValidator, processLogin);
 
