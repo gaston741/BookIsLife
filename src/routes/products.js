@@ -1,27 +1,39 @@
 const express = require('express');
 const router = express.Router();
-const{index} = require('../controllers/indexController');
-const {detail,cart,edit,create,store,destroy,update} =require('../controllers/productController')
+const upload =require ('../middlewares/uploadProductsImage')
+
+
+//***Requerimos el validador*/
+
+const productValidator = require('../validations/productValidator')
+
+//requerimos controlador//
+const {index,detail,cart,edit,create,store,destroy,update} =require('../controllers/productController')
  
-/* Mostrar todos los productos */
+
+
+
+
+//**************RUTAS********** */
+/* Mostrar  todos los productos*/
 router.get('/',index);
 
 /* Crear un producto  */
 router.get('/create', create);
-router.post('/create', store);
+router.post('/create',upload.single('image'),productValidator, store);
 
 /* Mostrar un producto especifico*/
 router.get('/detail/:id', detail);
 
 /* Editar un producto */
-router.get('/edit', edit);
-router.put('/update', update);
+router.get('/edit/:id', edit);
+router.put('/update/:id',upload.single('image'),productValidator, update);
 
 /* Carrito de compras */
 router.get('/cart', cart);
 
 /* Eliminar un producto */
-router.delete('/:id', destroy);
+router.delete('/delete/:id', destroy);
 
 
 

@@ -6,6 +6,7 @@
 body.login{
     align-items: center;
     background-image: url("/images/fondos/Fondo-Desktop.png");
+    background-size: cover;
     color: #ed2f51;
     font-family: "Cinzel";
     padding: 10px 20px;
@@ -29,13 +30,13 @@ body.login{
     width: 250px;
 }
 .login__logo{
-    width: 250px;
+    width: 180px;
     border-radius: 50%;
-    border: 1px solid #ed2f51;
+    /* border: 1px solid #ed2f51; */
     background-image: url("/images/logos/logo-proyect.png");
     background-position: center;
     background-size: 80%;
-    height: 250px;
+    height: 180px;
     background-repeat: no-repeat;
     margin: auto;
     background-color: white;
@@ -44,8 +45,8 @@ body.login{
 .login__logo-letra{
     width: 250px;
     border-radius: 50px;
-    border: 1px solid #ed2f51;
-    height: 50px;
+    /* border: 1px solid #ed2f51; */
+    height: 38px;
     overflow: hidden;
     background-image: url("/images/logos/logo-proyect2.png");
     background-position: center;
@@ -225,7 +226,9 @@ transition: all 0.3s ease 0s;
     border-color: transparent;
     color: white;
 }
-
+.remember{
+    font-weight: 800;
+}
 /* -----------------------------------------------VISTAS----------------------------------------------- */
 
 

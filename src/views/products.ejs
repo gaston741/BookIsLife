@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('./partials/head' ,{ title : 'Todos los Libros'}) %> 
+
+<body class="home">
+    <%- include('./partials/header') %> 
+
+<!--  CUERPO  -->
+    <main class="home">
+<!-- SECCION LOS MAS VENDIDOS DE LA SEMANA-->
+        <h2>Todos Nuestros Libros</h2>
+
+<!--    PRODUCTO -->
+        <section class="home__box_products">
+            <% products.forEach(({id,name,autor,image}) => { %>
+
+                <article class="home__product">
+                    <div class="home__producto-box-image">
+                        <a href="/products/detail/<%= id %>">
+                            <div class="home__product-container-img">
+                                <img class="home__product_image" src="/images/portadas/<%= image %>" alt="libro">
+                            </div>
+                        </a>   
+                    </div>
+                    <div class="home_main_container_span">
+                        
+                        <span class="titulo"><%= name %></span>
+                        <span class="autor"><%= autor %></span>
+                    </div>
+                </article>
+                <% }) %>
+        </section>
+        
+<!--  CONTENIDOS EXTRAS -->
+        
+            <section class="home__aside_advertising">
+                <h3 class="home_titulo3">No olvides Visitar</h3>
+    
+                <article id="hidden" class="home__advertising">
+                    <a href=""><img src="/images/banner/banner1.jpg" alt=""></a>
+                </article>
+            </section>
+    
+            <div class="home__main__up">
+                <a href="/"><i class="fa-solid fa-circle-chevron-up"></i></a>
+            </div>
+    </main>
+
+    <%- include('./partials/footer') %> 
+</body>
+
+</html>

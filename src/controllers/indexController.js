@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
+/* Reading the json file and storing it in a variable. */
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath,'utf-8'))
 
@@ -9,10 +10,19 @@ const toThousand = n => n.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g,
 
 module.exports={
     index: (req, res) =>{
-      return   res.render('index',{
-        products
+
+      let productsInSale = products.filter(product => product.category === "in-sale");
+      let productsRelevant = products.filter(product => product.category === "relevant");
+
+      return res.render('index',{
+        
+        products, //mando al inicio los libros agregados tambien
+        productsInSale,
+        productsRelevant,
+        toThousand
       })
     },
+    
     search: (req,res)=>{
 
       const {keywords} = req.query;
@@ -25,6 +35,12 @@ module.exports={
         keywords
 
 
+      })
+    },
+    admin : (req,res)=>{
+      return res.render('admin',{
+        products,
+        toThousand
       })
     }
 
