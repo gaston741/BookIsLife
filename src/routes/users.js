@@ -16,7 +16,7 @@ const checkUser = require ('../middlewares/checkUser')
 const uploadFileRegister = require ('../middlewares/uploadAvatarRegister')
 /* GET users listing.  /users */
 router.get('/register', register);
-router.post('/register',uploadFileRegister.single('avatar'), registerValidator, processRegister);
+router.post('/register',uploadFile.single(`avatar`), registerValidator, processRegister);
 router.get('/login', login);
 router.post('/login', loginValidator, processLogin);
 

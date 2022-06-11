@@ -1,6 +1,6 @@
+const path = require('path');
 const {check,body} = require ('express-validator');
 const users = require('../data/usersDataBase.json');
-const path =require('path')
 
 module.exports =[
 
@@ -41,43 +41,45 @@ module.exports =[
         })
         .withMessage("El email ya se encuentra registrado"),
         
-       
     check("password")
         .isLength({min: 6 ,max: 12})
         .withMessage("Debe tener un mínimo de 6  y 12 caracteres."),
     
-   check("password")
+    check("password")
         .custom((value,{req})=>{
             if(value !== req.body.password){
 
-             return false
+            return false
             }
         return true
     })
     .withMessage("Las constraseñas no coinciden"),
-/* 
+
     check('avatar').custom((value, {req}) => {
+        
         let file = req.file;
-        let extensionsAccepted = [`.jpg` , `.png` , `.gif` ]
+        let extensionsAccepted = ['.jpg' , '.png' , '.gif' ]
 
         if (!file) {
-            throw new Error (`Tienes que subir una Imagen`);
+
+            throw new Error ('Tienes que subir una Imagen')
 
         } else {
 
-            let fileExtension = path.extname(file.originalname);
+            let fileExtension = path.extname(file.originalname)
+
         if (!extensionsAccepted.includes(fileExtension)) {
-            throw new Error (`Las extensiones de archivos permitidas son ${extensionsAccepted.join(', ')}`);
+
+            throw new Error (`Las extensiones de archivos permitidas son ${extensionsAccepted.join(', ')}`)
         }
     }
 
         return true;
-    }), */
-
+    }),
 
     check("terms")
     .isString("on")
     .withMessage("Debes aceptar los términos y condiciones")
- 
+
 
 ]
