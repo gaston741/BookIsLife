@@ -77,7 +77,7 @@ module.exports = [
         return true;
     }),
 
-    check("terms")
+    check("terms") //validacion de terminos
     .isString("on")
     .withMessage("Debes aceptar los términos y condiciones")
 
