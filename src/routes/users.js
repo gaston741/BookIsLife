@@ -1,8 +1,6 @@
 const express = require('express');
-const path = require('path')
 const router = express.Router();
-const path = require('path');
-const multer = require('multer');
+
 
 //***UserController Require */
 const {register, login, processRegister,processLogin,logout, profileEdit , updateProfile} = require ('../controllers/userController');
