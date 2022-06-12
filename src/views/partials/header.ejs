@@ -11,8 +11,14 @@
             <li><a href="/users/profile"  style="color: white  ; font-weight: 900; text-transform: uppercase;"><%= userLogin.name %></a> </li>
             <li ><a style="color: white  ; font-weight: 900;" href="/users/logout">SALIR</a></li>
         <% } %>
-       <!--  //navBar - carrito -->
+        
+        <% if (locals.userLogin?.rol !== "admin") { %>
+          <!--  //navBar - carrito -->
         <li><a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+       <% } %>
+      
+     
+       
           <!--  //navBar - caso usuario sea administrador-->
         <% if (locals.userLogin?.rol === "admin") { %>
              <!--  //navBar - añadir libro - vista administrador,lista, acciones -->
