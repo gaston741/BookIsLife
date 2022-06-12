@@ -2,7 +2,7 @@ const bcryptjs = require ('bcryptjs');
 const fs = require('fs');
 const path = require('path');
 const {validationResult}=require('express-validator');
-const users = require ('../data/usersDataBase.json'); 
+const users = require ('../data/usersDataBase.json');
 
 module.exports={
 
