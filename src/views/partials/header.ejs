@@ -13,10 +13,11 @@
         <% } %>
        <!--  //navBar - carrito -->
         <li><a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
-        <!--caso usuario tenga rol administrador  -->
+          <!--  //navBar - caso usuario sea administrador-->
         <% if (locals.userLogin?.rol === "admin") { %>
-             <!--  //navBar - administrador, añadir libro -->
+             <!--  //navBar - añadir libro - vista administrador,lista, acciones -->
             <li><a href="/products/create"><i class="fa-solid fa-screwdriver-wrench"></i></a></li>
+            <li><a href="/admin"><i class="fa-solid fa-book"></i></a></li>
         <% } %>
        
       
@@ -30,18 +31,22 @@
         <br>
         <div class="header__logo2_home"></div>
     </div>
+
     <!--   BUSCADOR -->
     <div class="header_buscador">
         <form action="/search" method="GET">
+
             <input type="text" name="keywords" placeholder="Encuentra tu libro ideal" />
             <button type="submit" class="lupa"><i class="fa-solid fa-magnifying-glass"></i></button>
+
+
         </form>
        
     </div>
 
     <!--      MENU HAMBURGUESA -->
     <nav class="home_header_nav_categorias">
-        
+
         <input type="checkbox" id="check">
         <label for="check" class="bar-btn">
             <i class="fa-solid fa-bars iconoHamburguesa"></i>
@@ -61,6 +66,7 @@
             <li><a href="#">Terror</a></li>
         </ul>
     </nav>
+
     <!-- BANNERS O CARRUSEL -->
     <div class="header_banner">
         <img src="/images/banner/banner2.jpg" alt="banner">
