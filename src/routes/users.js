@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path')
 const router = express.Router();
+const path = require('path');
 const multer = require('multer');
 
 //***UserController Require */
@@ -25,7 +26,6 @@ router.get('/logout',logout);
 //***to Profile Form */
 router.get('/profile',checkUser, profileEdit);
 router.put('/update-profile',uploadFile.single('avatar'), updateProfile)
-
 
 
 

@@ -10,8 +10,6 @@ module.exports={
 
     login:(req,res)=> res.render('login'),
 
-    
-
     processRegister: (req,res)=>{
 
         const errors = validationResult(req) //examino lo que viene de la petición
@@ -42,7 +40,12 @@ module.exports={
             );
           
             //levanto session
-          
+            const {id, rol} = user
+            req.session.userLogin = {
+              id,
+             name: name.trim(),
+              rol
+          }
             //redireccionamiento
 
             return res.redirect('login') // renderizo login para que inicie session
