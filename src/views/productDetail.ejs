@@ -25,9 +25,12 @@
            <span class="precio"> $<%= toThousand(product.price) %></span>
            </div>
         <!--    AÑADIR PRODUCTO -->
-           <div class="añadir">
-               <a class="product-detail-añadir" href="/products/cart">AÑADIR <i class="fa-solid fa-cart-arrow-down"></i></a>
-           </div>
+        <% if (locals.userLogin?.rol !== "admin") { %> <!-- solo si el usuario logueado es distinto a administrador , permitir añadir al carrito de compras. -->
+            <div class="añadir">
+                <a class="product-detail-añadir" href="/products/cart">AÑADIR <i class="fa-solid fa-cart-arrow-down"></i></a>
+            </div>
+       <% } %>
+          
        </section>
 
        
