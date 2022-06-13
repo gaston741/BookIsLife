@@ -149,7 +149,7 @@ text-transform: uppercase;
 transition: all 0.3s ease 0s;
 }
 #volver{
-    color: white
+    color: black;
 }
 .languajes{
     align-items: center;
