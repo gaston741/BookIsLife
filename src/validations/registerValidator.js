@@ -53,7 +53,7 @@ module.exports = [
             }
         return true
     })
-    .withMessage("Las constraseñas no coinciden"),
+    .withMessage("Las contraseñas no coinciden"),
 
     check('avatar').custom((value, {req}) => {
         
