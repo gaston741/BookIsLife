@@ -9,10 +9,6 @@ const {register, login, processRegister,processLogin,logout, profileEdit , updat
 const registerValidator = require('../validations/registerValidator');
 const loginValidator = require('../validations/loginValidator')
 
-<<<<<<< HEAD
-
-=======
->>>>>>> b4790da177c5bb4c3414c4744ae190b3fc183ad2
 // middleware require  
 const uploadFile = require ('../middlewares/uploadUserAvatar')
 const checkUser = require ('../middlewares/checkUser')

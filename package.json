@@ -18,11 +18,9 @@
     "morgan": "~1.9.1",
     "multer": "^1.4.4",
     "nodemon": "^2.0.16"
-<<<<<<< HEAD
-=======
+
   },
   "nodemonConfig": {
     "ignore": "./src/data/*.json"
->>>>>>> b4790da177c5bb4c3414c4744ae190b3fc183ad2
   }
 }

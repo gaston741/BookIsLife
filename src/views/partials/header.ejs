@@ -15,21 +15,18 @@
         <% if (locals.userLogin?.rol !== "admin") { %>
           <!--  //navBar - carrito -->
         <li><a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
-<<<<<<< HEAD
-=======
-       <% } %>
-      
-     
-       
+        <% } %>
+    
+    
+    
           <!--  //navBar - caso usuario sea administrador-->
->>>>>>> b4790da177c5bb4c3414c4744ae190b3fc183ad2
         <% if (locals.userLogin?.rol === "admin") { %>
              <!--  //navBar - añadir libro - vista administrador,lista, acciones -->
             <li><a href="/products/create"><i class="fa-solid fa-screwdriver-wrench"></i></a></li>
             <li><a href="/admin"><i class="fa-solid fa-book"></i></a></li>
         <% } %>
-       
-      
+    
+    
         
         <li class="idioma"><a href=""><i class="fa-solid fa-globe"></i> English</a></li>
     </nav>
