@@ -1,8 +1,12 @@
+const path = require('path');
 const {check,body} = require ('express-validator');
 const users = require('../data/usersDataBase.json');
+<<<<<<< HEAD
 const path = require('path')
+=======
+>>>>>>> 5cceb9d7c4096d15066e27178c3cfad2e39972d2
 
-module.exports =[
+module.exports = [
 
     check("name")
         .isLength({min : 2})
@@ -41,43 +45,45 @@ module.exports =[
         })
         .withMessage("El email ya se encuentra registrado"),
         
-       
     check("password")
         .isLength({min: 6 ,max: 12})
         .withMessage("Debe tener un mínimo de 6  y 12 caracteres."),
     
-   check("password")
+    check("password")
         .custom((value,{req})=>{
             if(value !== req.body.password){
 
-             return false
+            return false
             }
         return true
     })
     .withMessage("Las constraseñas no coinciden"),
- 
+
     check('avatar').custom((value, {req}) => {
+        
         let file = req.file;
-        let extensionsAccepted = [`.jpg` , `.png` , `.gif` ]
+        let acceptedExtensions = ['.jpg' , '.png', '.gif' ];
 
         if (!file) {
-            throw new Error (`Tienes que subir una Imagen`);
+
+            throw new Error ('Tienes que subir una Imagen');
 
         } else {
 
             let fileExtension = path.extname(file.originalname);
-        if (!extensionsAccepted.includes(fileExtension)) {
-            throw new Error (`Las extensiones de archivos permitidas son ${extensionsAccepted.join(', ')}`);
+
+        if (!acceptedExtensions.includes(fileExtension)) {
+
+            throw new Error (`Las extensiones de archivos permitidas son ${acceptedExtensions.join(', ')}`);
         }
     }
 
         return true;
     }),
 
-
-    check("terms")
+    check("terms") //validacion de terminos
     .isString("on")
     .withMessage("Debes aceptar los términos y condiciones")
- 
+
 
 ]
