@@ -1,12 +1,14 @@
 [
    {
       "id": 1,
-      "name": "gaston",
+      "name": "Gerardo",
       "surname": "rodriguez",
       "email": "gaston@gmail.com",
       "password": "$2a$10$wpRSYU7ZTT8yJfhaSGys5.xm7wJCS3uarL1tyc4e74FKxLNrvy/x.",
       "rol": "admin",
-      "avatar": "userDefault.png"
+      "avatar": "userDefault.png",
+      "date": "",
+      "tel": ""
    },
    {
       "id": 2,
