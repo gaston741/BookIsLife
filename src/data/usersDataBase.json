@@ -23,7 +23,7 @@
       "surname": "Coria",
       "email": "adrielcoria1914@gmail.com",
       "password": "$2a$10$tnW6rLFzau8XrberHbrMOOPagubnmd8TFHl2XHX4duBJfS99z/GIm",
-      "rol": "user",
+      "rol": "admin",
       "avatar": "userDefault.png"
    },
    {
@@ -43,6 +43,14 @@
       "password": "$2a$10$.kz4xF500Eam29UajkYFwuGCQdJTMHW0Omr.mmP6OV3OZY.XReMRO",
       "rol": "user",
       "avatar": "userDefault.png"
+   },
+   {
+      "id": 6,
+      "name": "Fernan",
+      "surname": "Rodriguez",
+      "email": "fernanrodriguez3002@gmail.com",
+      "password": "$2a$10$v0nOyrOVqy2hqSLvDACDae3lmKm3js.dBvtDobvLGMdgps4/wFrni",
+      "rol": "user",
+      "avatar": "userDefault.png"
    }
-   
 ]
