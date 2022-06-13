@@ -13,11 +13,12 @@ const loginValidator = require('../validations/loginValidator')
 const uploadFile = require ('../middlewares/uploadUserAvatar')
 const checkUser = require ('../middlewares/checkUser')
 const uploadFileRegister = require('../middlewares/uploadAvatarRegister')
+const {inSession} = require('../middlewares/sessionCheck');
 
 /* GET users listing.  /users */
 router.get('/register', register);
 router.post('/register',uploadFileRegister.single('avatar'), registerValidator, processRegister);
-router.get('/login', login);
+router.get('/login',inSession, login);
 router.post('/login', loginValidator, processLogin);
 
 //***to Logout  */
