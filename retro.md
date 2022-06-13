@@ -10,7 +10,7 @@
 - Mejorar en base a nuestros Errores.
 ***
 **Hacer Más:**
-- Reunisrnos para Organizarnos.
+- Reunirnos para Organizarnos.
 
 - Preguntar y pedir ayuda a nuestros compañeros.
 
