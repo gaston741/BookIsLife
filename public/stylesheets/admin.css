@@ -1,0 +1,113 @@
+table {
+    width: 50%;
+    margin:0 auto;
+    margin-bottom: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+
+}
+th, td {
+    padding: 10px;
+    background-color: rgba(255,255,255,0.2);
+    color: rgb(21, 21, 21);
+    font-size: 10px;
+    font-family: "cinzel";
+
+    
+}
+
+.table_price_book{
+    font-weight: 600;
+}
+
+
+th {
+    text-align: left;
+    background-color: #d0e0e0;
+}
+
+    
+
+tbody tr:hover  {
+     
+    
+    background-color: rgba(255,255,255,0.3);
+        
+}
+
+td {
+    
+    position: relative;
+        
+}
+/* td:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -9999px;
+        bottom: -9999px;
+        background-color: rgba(255,255,255,0.2);
+        z-index: -1;
+    } */
+@media(min-width:768px){
+
+    table {
+        width: 90%;
+        margin:0 auto;
+        
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
+}
+
+@media(min-width:1024px) {
+    table {
+        width: 100%;
+        margin:0 auto;
+        
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
+    
+    th, td {
+        padding: 15px;
+        background-color: rgba(255,255,255,0.2);
+        color: rgb(21, 21, 21);
+        font-size: 15px;
+        font-family: "cinzel";
+        
+    }
+    
+    
+    
+    th {
+        text-align: left;
+        background-color: #d0e0e0;
+    }
+    
+        
+    
+    tbody tr:hover  {
+         
+        
+                background-color: rgba(255,255,255,0.3);
+            
+    }
+    
+    td {
+            position: relative;
+            
+        }
+   /*  td:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: -9999px;
+            bottom: -9999px;
+            background-color: rgba(255,255,255,0.2);
+            z-index: -1;
+        } */
+
+}

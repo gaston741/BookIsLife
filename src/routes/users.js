@@ -9,7 +9,6 @@ const {register, login, processRegister,processLogin,logout, profileEdit , updat
 const registerValidator = require('../validations/registerValidator');
 const loginValidator = require('../validations/loginValidator')
 
-
 // middleware require  
 const uploadFile = require ('../middlewares/uploadUserAvatar')
 const checkUser = require ('../middlewares/checkUser')
@@ -27,7 +26,6 @@ router.get('/logout',logout);
 //***to Profile Form */
 router.get('/profile',checkUser, profileEdit);
 router.put('/update-profile',uploadFile.single('avatar'), updateProfile)
-
 
 
 
