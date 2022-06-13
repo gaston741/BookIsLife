@@ -1,12 +1,14 @@
 [
    {
       "id": 1,
-      "name": "gaston",
+      "name": "Gerardo",
       "surname": "rodriguez",
       "email": "gaston@gmail.com",
       "password": "$2a$10$wpRSYU7ZTT8yJfhaSGys5.xm7wJCS3uarL1tyc4e74FKxLNrvy/x.",
       "rol": "admin",
-      "avatar": "userDefault.png"
+      "avatar": "userDefault.png",
+      "date": "",
+      "tel": ""
    },
    {
       "id": 2,
@@ -34,23 +36,5 @@
       "password": "$2a$10$MjqXRBCF8lSl1X8x6Mz8LOq6aA4YOLjpy6SYm.p.JiULsvWKW/zCa",
       "rol": "user",
       "avatar": "userDefault.png"
-   },
-   {
-      "id": 5,
-      "name": "hernan",
-      "surname": "mendoza",
-      "email": "hernan@reboredo.com",
-      "password": "$2a$10$.kz4xF500Eam29UajkYFwuGCQdJTMHW0Omr.mmP6OV3OZY.XReMRO",
-      "rol": "user",
-      "avatar": "userDefault.png"
-   },
-   {
-      "id": 6,
-      "name": "jose",
-      "surname": "Roberto",
-      "email": "jose@outlook.com",
-      "password": "$2a$10$JeD9R2zyNjUolHGvH9DiR.0fNdXpLzSWuHNEF22OOAhD0KBXYPkNm",
-      "rol": "user",
-      "avatar": "avatar1655084597513.jpg"
    }
 ]
