@@ -21,10 +21,10 @@
    },
    {
       "id": 3,
-      "name": "adriel",
-      "surname": "coria",
-      "email": "adriel@gmail.com",
-      "password": "$2a$10$fUWU541qWamc1HB1ioZnx./tlMXvBf.hgcnv/8hkgBMSi1h7e0Qhm",
+      "name": "Adriel",
+      "surname": "Coria",
+      "email": "adrielcoria1914@gmail.com",
+      "password": "$2a$10$tnW6rLFzau8XrberHbrMOOPagubnmd8TFHl2XHX4duBJfS99z/GIm",
       "rol": "user",
       "avatar": "userDefault.png"
    },
@@ -101,4 +101,5 @@
       "date": "",
       "tel": ""
    }
+   
 ]
