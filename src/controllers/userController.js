@@ -44,7 +44,7 @@ module.exports={
             const {id, rol} = user
             req.session.userLogin = {
               id,
-             name: name.trim(),
+              name: name.trim(),
               rol
           }
             //redireccionamiento
@@ -58,7 +58,7 @@ module.exports={
                 errors: errors.mapped() // mando los errores que tuvo en cada campo especifico
             })
         }
-       
+        
 
     },
     processLogin : (req,res)=>{
@@ -75,9 +75,9 @@ module.exports={
             //levanto session  
             req.session.userLogin = {
 
-               id,
-               name,
-               rol
+                id,
+                name,
+                rol
 
             }
           /* Saving the user's preference in a cookie for a certain time. */
@@ -111,16 +111,16 @@ module.exports={
     profileEdit :(req,res)=>{
         const users = JSON.parse(fs.readFileSync('./src/data/usersDataBase.json','utf-8' ));
       
-       /* Finding the user object in the users array that has the same id as the user that is logged
-       in. */
-       const user = users.find(user => user.id === req.session.userLogin.id)
+        /* Finding the user object in the users array that has the same id as the user that is logged
+        in. */
+        const user = users.find(user => user.id === req.session.userLogin.id)
 
       /* Rendering the userProfileEdit view with the user object. */
-       return res.render('userProfileEdit',{
+        return res.render('userProfileEdit',{
 
         user
 
-       })
+        })
     
     },
 
@@ -154,7 +154,7 @@ module.exports={
                   );
                 }
               }
-             
+              
               return userModified;
             }
             return user; 

@@ -5,7 +5,7 @@ const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 
 
 const readBooks = () => {
-   
+
     const products = JSON.parse(fs.readFileSync(productsFilePath,'utf-8'));
     return products
 }
@@ -21,14 +21,14 @@ module.exports={
 		let products = readBooks()
 
 	    return res.render('products',{
-		 products,
-		 toThousand
+		products,
+		toThousand
 
 	    })
 	},
 
     detail: (req,res)=>{
-       
+        
 
         const product = readBooks().find(product=> product.id === +req.params.id);
         return res.render('productDetail',{
@@ -68,32 +68,32 @@ module.exports={
 
     edit: (req,res)=>{
         let products = readBooks();
-       let product = products.find(product => product.id === +req.params.id)
-       return res.render('productEdit',{
-         product
+        let product = products.find(product => product.id === +req.params.id)
+        return res.render('productEdit',{
+            product
 
-       })
+        })
     },
 
     update: (req,res)=>{
 
         let products = readBooks();
         const {name,autor,price,description,publisher,genre,language,image,category} = req.body;
-         const booksModified = products.map(product => {
+        const booksModified = products.map(product => {
             if(product.id === +req.params.id){
-               let bookModified = {
-                   ...product,
-                   name: name.trim(),
-                   autor: autor.trim(),
-                   price : +price,
-                   description :description.trim(),
-                   publisher: publisher,
-                   genre :genre,
-                   language:language,
-                   image: req.file ? req.file.filename : "default.png", // si recibo el achivo de req.file, guardo la propiedad filename, sino devolvemos la img por defecto.
-                   category:category
-               }
-               return bookModified
+                let bookModified = {
+                    ...product,
+                    name: name.trim(),
+                    autor: autor.trim(),
+                    price : +price,
+                    description :description.trim(),
+                    publisher: publisher,
+                    genre :genre,
+                    language:language,
+                    image: req.file ? req.file.filename : "default.png", // si recibo el achivo de req.file, guardo la propiedad filename, sino devolvemos la img por defecto.
+                    category:category
+                }
+                return bookModified
             }
             return product
         })

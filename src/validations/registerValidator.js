@@ -24,12 +24,12 @@ module.exports = [
         .bail()
         .isEmail()
         .withMessage("Email no válido").bail()
-       .custom((value)=>{
+            .custom((value)=>{
             
             const user = users.find(user=>user.email === value);
             
             if(user){ // si existe un usuario  registrado con ese mail 
-           
+                
                 return false // no lo dejo registrarse
         
             }else{ // si no tengo un usuario con ese mail
