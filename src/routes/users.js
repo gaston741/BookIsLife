@@ -16,7 +16,7 @@ const uploadFileRegister = require('../middlewares/uploadAvatarRegister')
 const {inSession} = require('../middlewares/sessionCheck');
 
 /* GET users listing.  /users */
-router.get('/register', register);
+router.get('/register',inSession, register);
 router.post('/register',uploadFileRegister.single('avatar'), registerValidator, processRegister);
 router.get('/login',inSession, login);
 router.post('/login', loginValidator, processLogin);
