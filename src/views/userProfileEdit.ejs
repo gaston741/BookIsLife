@@ -25,7 +25,7 @@
         <section>
             <h1>Mi Perfil </h1>
             <hr>
-            
+        
             <!--  empieza el fomulario -->
             <form method="POST" action="/users/update-profile?_method=PUT" enctype="multipart/form-data" >
                 <article class="registro">
@@ -35,37 +35,37 @@
                         <input class="admi_form-input" type="text" id="name" name="name" value="<%= user.name %>" >
                         <span class="register__text-error"><%= locals.errors && errors.name ? errors.name.msg : null  %></span>
                     </div>
-                    <!--  seccion apellido -->
+            <!--  seccion apellido -->
                     <div class="register__form-box">
                         <label class="admi_label_edit" for="surname">Apellido: </label>
                         <input class="admi_form-input" type="text" id="surname" name="surname" value="<%= user.surname%>">
                         <span class="register__text-error"><%= locals.errors && errors.surname ? errors.surname.msg : null  %></span>
                     </div>
-                    <!--  seccion email -->
+            <!--  seccion email -->
                     <div class="register__form-box">
                         <label class="admi_label_edit" for="email">Email: </label>
                         <input class="admi_form-input" type="email" id="email" name="email" value="<%= user.email %>" disabled>
                         <span class="register__text-error"><%= locals.errors && errors.email ? errors.email.msg : null  %></span>
                     </div>
-                    <!-- seccion telefono-->
+            <!-- seccion telefono-->
                     <div class="register__form-box">
                         <label class="admi_label_edit" for="tel">Telefono</label>
                         <input class="admi_form-input"  type="tel" id="tel" name="tel" >
                     </div>
-                    
-                    <!--  seccion fecha de nacimiento -->
+                
+            <!--  seccion fecha de nacimiento -->
                     <div class="register__form-box">
                         <label class="admi_label_edit" for="date"> Fecha de nacimiento</label>
                         <input class="admi_form-input" type="date" name="date" id="date"  value="<%= user.date %>"   >
                     </div>
 
-                    <!-- seccion domicilio -->
+            <!-- seccion domicilio -->
                     <div class="register__form-box">
                         <label class="admi_label_edit" for="address">Domicilio</label>
                         <input class="admi_form-input"  type="text" id="address" name="address" value="<%= user.address %>">
                     </div>
                     
-                    <!-- seccion imagen de perfil -->
+            <!-- seccion imagen de perfil -->
                     <div class="register__form-box">
                         <label class="admi_label_edit" for="avatar">Adjuntar Avatar: </label>
                         <input class="admi_file"  type="file" id="image" name="avatar" accept="image/*">
@@ -78,8 +78,8 @@
                 <article >
                     <div class="button_register">
                             <button type="submit" class="volver volver-register">Guardar</button>
-
-                            <button class="volver volver-register"><a href="/">Cancelar</a></button>  
+                        
+                                <button class="volver volver-register"><a href="/">Cancelar</a></button>  
                     </div>
                 </article>
             </form>
