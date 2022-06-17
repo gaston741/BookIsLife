@@ -58,7 +58,7 @@ module.exports = [
     check('avatar').custom((value, {req}) => {
         
         let file = req.file;
-        let acceptedExtensions = ['.jpg' , '.png', '.gif' ];   //EXTENCIONES ACEPTADAS
+        let acceptedExtensions = ['.jpg' , '.png', '.jpeg', '.gif' ];   //EXTENCIONES ACEPTADAS
 
         /* if (!file) {     //SI NO EXISTE EL ARCHIVO, MANDA EL ERROR DE ABAJO
 
