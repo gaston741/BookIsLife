@@ -58,19 +58,19 @@ module.exports = [
     check('avatar').custom((value, {req}) => {
         
         let file = req.file;
-        let acceptedExtensions = ['.jpg' , '.png', '.gif' ];
+        let acceptedExtensions = ['.jpg' , '.png', '.jpeg', '.gif' ];   //EXTENCIONES ACEPTADAS
 
-        if (!file) {
+        /* if (!file) {     //SI NO EXISTE EL ARCHIVO, MANDA EL ERROR DE ABAJO
 
-            throw new Error ('Tienes que subir una Imagen');
+            throw new Error ('Tienes que subir una Imagen');       //Esto fue retirado momentaneamente 
 
-        } else {
+        }*/ if (file) {     //SI EXISTE EL ARCHIVO.. 
 
-            let fileExtension = path.extname(file.originalname);
+            let fileExtension = path.extname(file.originalname);   // ESTA VARIABLE TOMA LA EXTENCION DEL ARCHIVO QUE SUBE EL USUARIO AL REGISTRARSE
 
-        if (!acceptedExtensions.includes(fileExtension)) {
+        if (!acceptedExtensions.includes(fileExtension)) {    // SI ESTA EXTENCION, NO ES DE LA ACEPTADAS, SE MANDA EL ERROR DE ABAJO
 
-            throw new Error (`Las extensiones de archivos permitidas son ${acceptedExtensions.join(', ')}`);
+            throw new Error (`Las extensiones de archivos permitidas son ${acceptedExtensions.join(', ')}`); // (MANDA ERROR CUANDO LA EXTENCION DEL ARCHIVO NO ES ACEPTADA)
         }
     }
 
