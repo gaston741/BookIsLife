@@ -22,10 +22,12 @@
                     <div class="login__form-box">
                         <label for="email">E-Mail :</label>
                         <input class="login__form-input" type="email" name ="email" id="email" >
+                        <span class="register__text-error"><%= locals.errors && errors.email ? errors.email.msg : null  %></span>
                     </div>
                     <div class="login__form-box">
                         <label for="password">Contraseña : </label>
                         <input class="login__form-input" type="password" name ="password" id="password" >
+                        <span class="register__text-error"><%= locals.errors && errors.password ? errors.password.msg : null  %></span>
                     </div>
                     <div class="login__form-box-remember">
                         <input class="" type="checkbox" name="remember" id="remember">
