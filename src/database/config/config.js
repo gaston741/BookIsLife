@@ -1,3 +1,5 @@
+require('dotenv').config(); // requiero conf para manejar variables de entorno
+
 module.exports = {
   development: {
     username: "root",
