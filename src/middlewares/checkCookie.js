@@ -6,7 +6,7 @@ module.exports = (req,res,next)=>{
 
         req.session.userLogin = req.cookies.userBookIsLife; //levantamos session a partir de esa cookie
     }
-    console.log('***********',req.session.userLogin)
+    //console.log('***********',req.session.userLogin)
     next()
 
 }
