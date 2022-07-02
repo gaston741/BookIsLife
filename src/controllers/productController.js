@@ -1,14 +1,14 @@
 const fs = require('fs');
 const path = require('path');
 /* Reading the productsDataBase.json file and storing it in the products variable. */
-const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
+//const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 
-
-const readBooks = () => {
+const db = require('../database/models') // Traigo la base de datos y sus modelos
+/* const readBooks = () => {
    
     const products = JSON.parse(fs.readFileSync(productsFilePath,'utf-8'));
     return products
-}
+} */
 const saveBooks = (products) => fs.writeFileSync(productsFilePath, JSON.stringify(products,null,3));
 
 const toThousand = n => n.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -17,14 +17,28 @@ const toThousand = n => n.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g,
 module.exports={
 
     index: (req, res) => {
+       
+        db.Product.findAll({ // de la base de datos, en el modelo Producto traigo todos los libros
+            include : ['autors'] // incluyo la associacion que tengo con autores
+        })
+        .then(products=> { // cuando obtengo la informacion entonces...
 
-		let products = readBooks()
+             return res.render('products',{ // renderizo la vista productos con todos los titulos y sus respectivos autores
+                products, 
+                autors,
+                toThousand
+            }) 
+
+        })
+        .catch(error=>console.log(error)); // capturo errores y los mando por consola
+
+		/* let products = readBooks()
 
 	    return res.render('products',{
 		 products,
 		 toThousand
 
-	    })
+	    })  */
 	},
 
     detail: (req,res)=>{
