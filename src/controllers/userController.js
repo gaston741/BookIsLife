@@ -89,11 +89,15 @@ module.exports={
             return res.redirect("/");
 
         }else {
+          
+          //return res.send(errors)
 
             return res.render("login",{
 
                 errors : errors.mapped(),
-                old :req.query
+               
+              
+                
             })
         }
 
@@ -180,7 +184,23 @@ module.exports={
               });
         }
     
+      },
+      deleteUser : (req,res)=>{
+       
+        const users = JSON.parse(fs.readFileSync('./src/data/usersDataBase.json','utf-8' ));
+
+        const usersModified = users.filter(user => user.id !== req.session.userLogin.id)
+
+        fs.writeFileSync(
+          path.resolve(__dirname, "..", "data", "usersDataBase.json"),
+          JSON.stringify(usersModified, null, 3),
+          "utf-8"
+        );
+        req.session.destroy();
+        return res.redirect('/');
+
       }
+
 
 
 }

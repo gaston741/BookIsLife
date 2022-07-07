@@ -1,4 +1,4 @@
-## Retrospectiva del Sprint 5
+## Retrospectiva del Sprint 4
 ***
 **Seguir Haciendo:**
 - Asistir a clases.
@@ -45,7 +45,7 @@
 - No priorizar el curso, perder de vista el OBJETIVO por el cual estamos AQUÍ.
 
 ***
-![Image text](/wireframes/Retro_Sprint_5.png)
+![Image text](/wireframes/Retro_Sprint_4.png)
 
 
 

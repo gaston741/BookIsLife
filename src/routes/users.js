@@ -3,7 +3,7 @@ const router = express.Router();
 
 
 //***UserController Require */
-const {register, login, processRegister,processLogin,logout, profileEdit , updateProfile} = require ('../controllers/userController');
+const {register, login, processRegister,processLogin,logout, profileEdit , updateProfile, deleteUser } = require ('../controllers/userController');
 
 //********Validator require */
 const registerValidator = require('../validations/registerValidator');
@@ -16,17 +16,22 @@ const uploadFileRegister = require('../middlewares/uploadAvatarRegister')
 const {inSession} = require('../middlewares/sessionCheck');
 
 /* GET users listing.  /users */
+
+// TO REGISTER
 router.get('/register',inSession, register);
 router.post('/register',uploadFileRegister.single('avatar'), registerValidator, processRegister);
+
+// TO LOGIN
 router.get('/login',inSession, login);
 router.post('/login', loginValidator, processLogin);
 
-//***to Logout  */
+//***TO LOGOUT  */
 router.get('/logout',logout);
 
-//***to Profile Form */
+//***TO PROFILE */
 router.get('/profile',checkUser, profileEdit);
 router.put('/update-profile',uploadFile.single('avatar'), updateProfile)
+router.delete('/deleteUser/:id', deleteUser)
 
 
 
