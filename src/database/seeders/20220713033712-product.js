@@ -11,6 +11,7 @@ const products = [
     languageId: 1,
     image: "laLargaMarcha.png",
     categoryId: 1,
+    createdAt: new Date(),
   },
   {
     name: "EL CHICO QUE DIBUJABA CONSTELACIONES",
@@ -22,6 +23,7 @@ const products = [
     languageId: 1,
     image: "elChicoqueDibujaba.png",
     categoryId: 1,
+    createdAt: new Date(),
   },
   {
     name: "EL PRINCIPITO",
@@ -33,6 +35,7 @@ const products = [
     languageId: 1,
     image: "elPrincipito.png",
     categoryId: 2,
+    createdAt: new Date(),
   },
   {
     name: "EL AMOR DE MOBUKO",
@@ -44,6 +47,7 @@ const products = [
     languageId: 2,
     image: "elAmorDeMobuko.png",
     categoryId: 1,
+    createdAt: new Date(),
   },
   {
     name: "GAMBITO DE DAMA",
@@ -55,6 +59,7 @@ const products = [
     languageId: 1,
     image: "elGambitoDeLaDama.png",
     categoryId: 2,
+    createdAt: new Date(),
   },
   {
     name: "LA SOMBRA DEL VIENTO",
@@ -66,6 +71,7 @@ const products = [
     languageId: 1,
     image: "laSombraDelViento.png",
     categoryId: 1,
+    createdAt: new Date(),
   },
   {
     name: "1984",
@@ -77,6 +83,7 @@ const products = [
     languageId: 1,
     image: "1984.png",
     categoryId: 2,
+    createdAt: new Date(),
   },
   {
     name: "EL DIARIO DE ANA FRANK",
@@ -88,6 +95,7 @@ const products = [
     languageId: 1,
     image: "elDiarioDeAnaFrank.png",
     categoryId: 1,
+    createdAt: new Date(),
   },
   {
     name: "EL PSICOANALISTA",
@@ -99,6 +107,7 @@ const products = [
     languageId: 1,
     image: "elPsicoanalista.png",
     categoryId: 2,
+    createdAt: new Date(),
   },
   {
     name: "LOS CUATRO ACUERDOS",
@@ -110,6 +119,7 @@ const products = [
     languageId: 1,
     image: "losCuatroAcuerdos.png",
     categoryId: 2,
+    createdAt: new Date(),
   },
   {
     name: "EL HOMBRE EN BUSCA DEL SENTIDO",
@@ -121,6 +131,7 @@ const products = [
     languageId: 1,
     image: "elHombreEnBuscaDelSentido.png",
     categoryId: 1,
+    createdAt: new Date(),
   },
   {
     name: "EL MONJE QUE VENDIÓ SU FERRARI",
@@ -132,6 +143,7 @@ const products = [
     languageId: 1,
     image: "elMonjeQueVendioSuFerrari.png",
     categoryId: 1,
+    createdAt: new Date(),
   },
   {
     name: "CIEN AÑOS DE SOLEDAD",
@@ -143,6 +155,7 @@ const products = [
     languageId: 1,
     image: "cienAnosDeSoledad.jpg",
     categoryId: 1,
+    createdAt: new Date(),
   },
   {
     name: "SIETE VIDAS",
@@ -154,6 +167,7 @@ const products = [
     languageId: 1,
     image: "sieteVidas.png",
     categoryId: 2,
+    createdAt: new Date(),
   },
   {
     name: "BLOOM INTO YOU",
@@ -165,6 +179,7 @@ const products = [
     languageId: 1,
     image: "bloomintoYou.png",
     categoryId: 1,
+    createdAt: new Date(),
   },
   {
     name: "A SANGRE FRÍA",
@@ -176,6 +191,7 @@ const products = [
     languageId: 1,
     image: "aSangreFria.png",
     categoryId: 1,
+    createdAt: new Date(),
   },
   {
     name: "HARRY POTTER Y LA PIEDRA FILOSOFAL",
@@ -187,6 +203,7 @@ const products = [
     languageId: 1,
     image: "harryPotter.png",
     categoryId: 1,
+    createdAt: new Date(),
   },
   {
     name: "CRIMEN Y CASTIGO",
@@ -198,6 +215,7 @@ const products = [
     languageId: 1,
     image: "crimenYcastigo.png",
     categoryId: 1,
+    createdAt: new Date(),
   },
   {
     name: "MUJERCITAS",
@@ -209,6 +227,7 @@ const products = [
     languageId: 1,
     image: "mujercitas.png",
     categoryId: 2,
+    createdAt: new Date(),
   },
   {
     name: "LOS SIETE MARIDOS DE EVELYN HUGO",
@@ -220,6 +239,7 @@ const products = [
     languageId: 1,
     image: "losSieteMaridos.png",
     categoryId: 1,
+    createdAt: new Date(),
   },
   {
     name: "PADRE RICO, PADRE POBRE",
@@ -231,6 +251,7 @@ const products = [
     languageId: 1,
     image: "padreRicoPadrePobre.png",
     categoryId: 1,
+    createdAt: new Date(),
   },
   {
     name: "EL PODER DEL AHORA",
@@ -242,6 +263,7 @@ const products = [
     languageId: 1,
     image: "elPoderDelAhora.png",
     categoryId: 2,
+    createdAt: new Date(),
   },
   {
     name: "TE ESPERARÉ TODA MI VIDA",
@@ -253,6 +275,7 @@ const products = [
     languageId: 1,
     image: "teEsperareTodaMiVida.png",
     categoryId: 2,
+    createdAt: new Date(),
   },
   {
     name: "RAYUELA",
@@ -264,6 +287,7 @@ const products = [
     languageId: 1,
     image: "rayuela.png",
     categoryId: 2,
+    createdAt: new Date(),
   },
   {
     name: "CUENTOS DE EVA LUNA",
@@ -275,6 +299,7 @@ const products = [
     languageId: 1,
     image: "cuentosDeEvaLuna.png",
     categoryId: 1,
+    createdAt: new Date(),
   },
   {
     name: "LOS AÑOS PERDIDOS",
@@ -286,6 +311,7 @@ const products = [
     languageId: 1,
     image: "losAñosPerdidos.png",
     categoryId: 1,
+    createdAt: new Date(),
   },
   {
     name: "ANTOLOGÍA POÉTICA",
@@ -297,6 +323,7 @@ const products = [
     languageId: 1,
     image: "antologia.png",
     categoryId: 2,
+    createdAt: new Date(),
   },
   {
     name: "COMEDIAS DRAMÁTICAS",
@@ -308,6 +335,7 @@ const products = [
     languageId: 1,
     image: "comediasDramaticas.png",
     categoryId: 1,
+    createdAt: new Date(),
   },
   {
     name: "ODISEA",
@@ -319,6 +347,7 @@ const products = [
     languageId: 1,
     image: "laOdisea.png",
     categoryId:2,
+    createdAt: new Date(),
   },
   {
     name: "LA BAILARINA DE AUSCHWITZ",
@@ -330,6 +359,7 @@ const products = [
     languageId: 1,
     image: "laBailarinaDeAuschwitz.png",
     categoryId: 1,
+    createdAt: new Date(),
   },
 
   
