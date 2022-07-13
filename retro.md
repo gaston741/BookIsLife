@@ -1,3 +1,53 @@
+## Retrospectiva del Sprint 5
+***
+**Seguir haciendo**
+- Asistir a clases.
+
+- Pedir ayuda.
+
+- Comunicarse por WhatsApp.
+
+- Reuniones lo antes posible.
+
+**Hacer mas**
+- Sacrificios.
+
+- Participar en clases.
+
+- Pensar como equipo.
+
+- Quedarse hasta tarde por el sprint.
+
+**Dejar de hacer**
+- Dejar de lado la cursada.
+
+- Faltar a la palabra.
+
+- Posponer las cosas.
+
+- Contestar tarde.
+
+**Hacer menos**
+- Callarse en el grupo o no contestar los mensajes.
+
+- No participar en el grupo.
+
+- Faltar a las clases.
+
+- No mover las tarjetas.
+
+**Empezar a hacer**
+- Comprometerse.
+
+- Mas comunicacion y compromiso.
+
+- Decir las dudas en el momento.
+
+- Estar pendientes al trello.
+
+***
+![Image text](/wireframes/Retro_Sprint_5.png)
+
 ## Retrospectiva del Sprint 4
 ***
 **Seguir Haciendo:**

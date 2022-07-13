@@ -1,5 +1,4 @@
-require('dotenv').config();
-
+require('dotenv').config(); // requiero conf para manejar variables de en
 module.exports = {
   development: {
     username: process.env.DB_USERNAME,
@@ -7,7 +6,7 @@ module.exports = {
     database: process.env.DB_DATABASE,
     host: process.env.DB_HOST,
     dialect: "mysql",
-    port: process.env.DB_PORT,
+    port:process.env.DB_PORT
   },
   test: {
     username: "root",
