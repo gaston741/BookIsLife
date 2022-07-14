@@ -1,3 +1,4 @@
+const { Op } = require('sequelize');
 const { Product } = require('../database/models'); /* Utilizo Base de Datos para traer el Model Product */
 const fs = require('fs');
 const path = require('path');
@@ -37,12 +38,21 @@ module.exports = {
     }, 
     
     create:(req,res)=>{
-
+            const {name, autor, price, description, publisher, genre, language, image, category} = req.body;
         Product.create({
-            ...req.body,
-            image : req.file ? req.file.filename : "default.png"
+        /*     ...req.body,
+            image : req.file ? req.file.filename : "default.png" */
+            name: name.trim(),
+            autor: autor.trim(),
+            price: +price,
+            description: description.trim(),
+            publisher: publisher.trim(),
+            genre: genre,
+            language: language,
+            image: req.file ? req.file.filename : "default.png",
+            category: category
         })
-        .then(result => {
+        .then(product => {
             res.render('productCreate')
         })
         .catch(errors => console.log(errors))
@@ -77,7 +87,7 @@ module.exports = {
 
         Product.findByPk(req.params.id)
             .then(product => {
-                res.render('productEdit',{
+                return res.render('productEdit',{
                     product
                 })
             })
@@ -88,6 +98,7 @@ module.exports = {
 
         let product = Product.findByPk(req.params.id)
         let {} = req.body;
+
         Product.update({
             ...req.body,
             image : req.file ? req.file.filename : product.image
