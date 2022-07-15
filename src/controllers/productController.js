@@ -50,21 +50,21 @@ module.exports = {
             autorId,
             price : +price,
             description : description,
-            publisherId : publisherId,
-            genreId : genreId,
-            languageId : languageId,
+            publisherId,
+            genreId,
+            languageId,
             image : req.file ? req.file.filename : "default.png", // si recibo el achivo de req.file, guardo la propiedad filename, sino devolvemos la img por defecto.,
-            categoryId : categoryId,
+            categoryId
         })
         return res.send(req.body)
         .then(product => {
             if(req.files.length > 0) {
-/*                 let ...
- */            }
+                /* let */
+            }
             return res.redirect('/products')
         })
-    }, 
- 
+    },
+
     edit : (req,res) => {
 
         Product.findByPk(req.params.id)

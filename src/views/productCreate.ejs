@@ -21,37 +21,37 @@
                 <article>
                     <!-- Titulo del libro-->
                     <div class="admi__form-box">
-                        <input class="admi_form-input" type="text" placeholder="Título del libro" name="name" id="name">
+                        <input class="admi_form-input" type="text" placeholder="Título del libro" name="name" id="name" value="<%= product.name %>">
                         <span class="admi__text-error">Título Obligatorio</span>
                     </div>
 
                 <!-- Autor del libro-->
                 <div class="admi__form-box">
-                    <input class="admi_form-input" type="text" placeholder="Autor del libro" name="autorId" id="autor">
+                    <input class="admi_form-input" type="text" placeholder="Autor del libro" name="autorId" id="autorId" value="<%= product.autor %>">
                     <span class="admi__text-error">Autor Obligatorio</span>
                 </div>
 
                 <!-- Precio del libro -->
                 <div class="admi__form-box">
-                    <input class="admi_form-input" type="number" placeholder="$$ Precio del Libro" name="price" id="price">
+                    <input class="admi_form-input" type="number" placeholder="$$ Precio del Libro" name="price" id="price" value="<%= product.price %>">
                     <span class="admi__text-error"> Precio Obligatorio</span>
                 </div>
                 
                 <!-- Descripcion del libro-->
                 <div class="admi__form-box">
-                    <textarea class="admi_form-input" name="description" id="description" cols="5" rows="5" placeholder="Agregue la sinopsis"></textarea>
+                    <textarea class="admi_form-input" name="description" id="description" cols="5" rows="5" placeholder="Agregue la sinopsis"><%= product.description %></textarea>
                     <span class="admi__text-error">Sinopsis Obligatoria</span>
                 </div>
 
                 <!--  Editorial del libro -->
                 <div class="admi__form-box">
-                    <input class="admi_form-input" type="text" placeholder="Editorial" name="publisherId" id="publisher">
+                    <input class="admi_form-input" type="text" placeholder="Editorial" name="publisherId" id="publisherId" value="<%= product.publisher %>">
                     <span class="admi__text-error">Editorial Obligatorio</span>
                 </div>
                 
                 <!-- -Genero del libro-->
                 <div class="admi__form-box">
-                    <select class="admi_select dropdown-select" name="genreId" id="genre" >
+                    <select class="admi_select dropdown-select" name="genreId" id="genreId" value="<%= product.genre %>">
                             <option  hidden selected >Seleccione Genero Literario</option>
                             <option value="autoayuda">Autoayuda</option>
                             <option value="autobiografia">Autobiografía</option>
@@ -71,7 +71,7 @@
 
                 <!--  Idioma de Edicion -->
                 <div class="admi__form-box">
-                    <select class="admi_select dropdown-select" name="languageId" id="language" >
+                    <select class="admi_select dropdown-select" name="languageId" id="languageId" value="<%= product.language%>">
                             <option>Seleccione Idioma de Edición</option>
                             <option value="ingles">Ingles</option>
                             <option value="español">Español</option>
@@ -87,7 +87,7 @@
 
                     <!-- Categoria de Edicion -->
                     <div class="admi__form-box">
-                    <select class="admi_select dropdown-select" name="categoryId" id="category" >
+                    <select class="admi_select dropdown-select" name="categoryId" id="categoryId" value="<%= product.category%>">
                         <option value="" hidden selected>Seleccione Categoria de Edición</option>
                         <option value="in-sale">In-sale</option>
                         <option value="relevant">Relevante</option>
