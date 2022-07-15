@@ -15,6 +15,10 @@ module.exports = (sequelize, DataTypes) => {
         as : 'category', // como se llama la asosiacion, atributo que contiene un array con los productos asociados a esa categoria
         foreignKey :'categoryId' // a traves de categoryID
       })
+      Product.belongsTo(models.Autor,{ // el modelo pertenece a un autor
+        as : 'autor', // como se llama la asosiacion, atributo que contiene un array con los productos asociados a ese autor
+        foreignKey :'autorId' // a traves de autorID
+      })
     }
   }
   Product.init({

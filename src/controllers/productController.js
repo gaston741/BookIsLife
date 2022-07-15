@@ -3,87 +3,69 @@ const { Product } = require('../database/models'); /* Utilizo Base de Datos para
 const fs = require('fs');
 const path = require('path');
 const toThousand = n => n.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
- /* Reading the productsDataBase.json file and storing it in the products variable. */
-/* const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
- */
-
-/*  const readBooks = () => {
-    const products = JSON.parse(fs.readFileSync(productsFilePath,'utf-8'));
-    return products
-}
-const saveBooks = (products) => fs.writeFileSync(productsFilePath, JSON.stringify(products,null,3));
- */ 
 
 module.exports = {
-    index: (req, res) => {
+    index : (req, res) => {
 
-		Product.findAll()
+		Product.findAll({
+            include : ['category','autor']
+        })
             .then(products => {
-                res.render('products',{
+/*                 return res.send(products)
+ */                res.render('products',{
                     products,
             })
 	    })
         .catch(error => console.log(error))
 	},
 
-    detail: (req,res)=>{
+    detail : (req,res) => {
 
         Product.findByPk(req.params.id)
             .then(product => {
                 return res.render('productDetail',{
-                    product
+                    product,
+                    toThousand
             })
         })
             .catch(error => console.log(error))
     }, 
     
-    create:(req,res)=>{
-            const {name, autor, price, description, publisher, genre, language, image, category} = req.body;
-        Product.create({
-        /*     ...req.body,
-            image : req.file ? req.file.filename : "default.png" */
-            name: name.trim(),
-            autor: autor.trim(),
-            price: +price,
-            description: description.trim(),
-            publisher: publisher.trim(),
-            genre: genre,
-            language: language,
-            image: req.file ? req.file.filename : "default.png",
-            category: category
-        })
+    create : (req,res) => {
+        Product.findAll()
         .then(product => {
-            res.render('productCreate')
+            return res.render('productCreate', {
+                product
+            })
         })
         .catch(errors => console.log(errors))
     },
 
-    store :(req,res)=>{
+    store : (req,res) => {
 
-        let products = readBooks()
+        const { name, autorId, price, description, publisherId, genreId, languageId, image, categoryId } = req.body;
 
-        const {name,autor,price,description,publisher,genre,language, image,category}=req.body;
-        const ultimo = products[products.length - 1]
-        let newBook = {
-            id: ultimo.id + 1, //obtengo el ultimo id y le sumo uno.
-            name : name.trim(),
-            autor: autor.trim(),
-            price: +price,
-            description: description.trim(),
-            publisher: publisher.trim(),
-            genre: genre,
-            language: language,
-            image: req.file ? req.file.filename : "default.png", // si recibo el achivo de req.file, guardo la propiedad filename, sino devolvemos la img por defecto.
-            category:category
-
-        }
-
-        products.push(newBook); 
-        saveBooks(products)
-        return res.redirect('/products')
-    },
-
-    edit: (req,res)=>{
+        Product.create({
+            name : name,
+            autorId,
+            price : +price,
+            description : description,
+            publisherId : publisherId,
+            genreId : genreId,
+            languageId : languageId,
+            image : req.file ? req.file.filename : "default.png", // si recibo el achivo de req.file, guardo la propiedad filename, sino devolvemos la img por defecto.,
+            categoryId : categoryId,
+        })
+        return res.send(req.body)
+        .then(product => {
+            if(req.files.length > 0) {
+/*                 let ...
+ */            }
+            return res.redirect('/products')
+        })
+    }, 
+ 
+    edit : (req,res) => {
 
         Product.findByPk(req.params.id)
             .then(product => {
@@ -94,7 +76,7 @@ module.exports = {
             .catch(errors => console.log(errors))
     },
 
-    update: (req,res)=>{
+    update : (req,res) => {
 
         let product = Product.findByPk(req.params.id)
         let {} = req.body;
@@ -112,7 +94,7 @@ module.exports = {
         .catch(errors => console.log(errors))
     },
 
-    destroy : (req,res)=>{
+    destroy : (req,res) => {
 
         Product.destroy(
             {
@@ -124,7 +106,7 @@ module.exports = {
             .catch(errors => console.log(errors))
     },
     
-    cart: (req,res)=>{
+    cart : (req,res) => {
         
         return res.render('productCart')
     },
