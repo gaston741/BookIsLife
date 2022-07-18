@@ -42,27 +42,28 @@ module.exports = {
     },
 
     store : (req,res) => {
+        return res.send(req.body)
+    const {} = req.body;
 
-        const { name, autorId, price, description, publisherId, genreId, languageId, image, categoryId } = req.body;
-
-        Product.create({
+        Product.create(
+            {
+                ...req.body,
+                image : req.file ? req.file.filename : "default.png"
+            }/* {
             name : name,
-            autorId,
+            autorId : +autorId,
             price : +price,
             description : description,
-            publisherId,
-            genreId,
-            languageId,
+            publisherId: +publisherId,
+            genreId : +genreId,
+            languageId : +languageId,
             image : req.file ? req.file.filename : "default.png", // si recibo el achivo de req.file, guardo la propiedad filename, sino devolvemos la img por defecto.,
-            categoryId
-        })
-        return res.send(req.body)
+            categoryId : +categoryId,
+        } */ )
         .then(product => {
-            if(req.files.length > 0) {
-                /* let */
-            }
             return res.redirect('/products')
         })
+        .catch(error => console.log(error))
     },
 
     edit : (req,res) => {
@@ -98,7 +99,8 @@ module.exports = {
 
         Product.destroy(
             {
-                where : { id : req.params.id}
+                where : { id : req.params.id},
+                force : true
             })
             .then(() => {
                 return res.redirect('/products');

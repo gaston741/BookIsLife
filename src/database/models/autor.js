@@ -12,14 +12,14 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       Autor.hasMany(models.Product,{
-        as : 'products', // como se llama la asosiacion, atributo que contiene un array con los productos asociados a esa categoria
-        foreignKey :'categoryId' // a traves de categoryId
+        as : 'products', // como se llama la asosiacion, atributo que contiene un array con los productos asociados a cierto autor
+        foreignKey :'autorId' // a traves de autorId
       })
 
     }
   }
   Autor.init({
-    name: DataTypes.INTEGER
+    name: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Autor',
