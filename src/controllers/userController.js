@@ -48,7 +48,7 @@ module.exports={
             const {id, rol} = user
             req.session.userLogin = {
               id,
-             name: name.trim(),
+              name: name.trim(),
               rol
           }
             //redireccionamiento

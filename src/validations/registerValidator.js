@@ -20,22 +20,23 @@ module.exports = [
         .isAlpha()
         .withMessage("Sólo letras permitidas"),
 
-    check("email")
+    body("email")
         .notEmpty()
         .withMessage("ingresá tu email")
         .bail()
         .isEmail()
-        .withMessage("Email no válido").bail()
+        .withMessage("Email no válido")
+        .bail()
         .custom(value => {
-            return db.User.findOne({
+            return db.User.findOne({ //le estoy pidiendo que busque en el Modelo User si esxiste el Email
                 where : {
                     email : value
                 }
             }).then(user => {
                 if (user) {
-                    return Promise.reject()
+                    return Promise.reject() //Si ya existe el Usuario rechasame la promesa
                 }
-        }).catch(() => {Promise.reject('El email ya se encuentra registrado!')})
+        }).catch(() => Promise.reject('El email ya se encuentra registrado!')) // Y tirame este mensaje
             /* const user = users.find(user => user.email === value); */
 
             /* if (user) { // si existe un usuario  registrado con ese mail 
