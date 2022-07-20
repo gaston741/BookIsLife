@@ -4,106 +4,106 @@
 </head>
 <body class="administrador">
     <%- include('./partials/header') %> 
-       <!--  BOTON VOLVER -->
-       <div class="container-button-product-detail admini">
+        <!--  BOTON VOLVER -->
+        <div class="container-button-product-detail admini">
         <a class="a_button" href="/"><i class="fa-solid fa-angle-left"></i> VOLVER </a>
     </div>
         
     <main class="admi_main">
-      
+        
         <!--   Empieza el formulario -->
-              <form class="form_admi" method="POST" enctype="multipart/form-data">
-                 <!--  Titulos -->
-                 <h2 class="titulo_admi"> Formulario del Administrador</h2>
-                 <h3 class="titulo_dos_admi">Adhesion de Libros</h3>
+                <form class="form_admi" method="POST" enctype="multipart/form-data">
+                <!--  Titulos -->
+                <h2 class="titulo_admi"> Formulario del Administrador</h2>
+                <h3 class="titulo_dos_admi">Adhesion de Libros</h3>
 
                 <!--  seccion contenedora -->
-                 <article>
-                     <!-- Titulo del libro-->
-                  <div class="admi__form-box">
-                      <input class="admi_form-input" type="text" placeholder="Título del libro" name="name" id="name">
-                      <span class="admi__text-error">Título Obligatorio</span>
-                  </div>
+                <article>
+                    <!-- Titulo del libro-->
+                    <div class="admi__form-box">
+                        <input class="admi_form-input" type="text" placeholder="Título del libro" name="name" id="name" value="<%= product.name %>">
+                        <span class="admi__text-error">Título Obligatorio</span>
+                    </div>
 
-                  <!-- Autor del libro-->
-                  <div class="admi__form-box">
-                      <input class="admi_form-input" type="text" placeholder="Autor del libro" name="autor" id="autor">
-                      <span class="admi__text-error">Autor Obligatorio</span>
-                  </div>
+                <!-- Autor del libro-->
+                <div class="admi__form-box">
+                    <input class="admi_form-input" type="text" placeholder="Autor del libro" name="autor" id="autor" value="<%= product.autor %>">
+                    <span class="admi__text-error">Autor Obligatorio</span>
+                </div>
 
-                  <!-- Precio del libro -->
-                  <div class="admi__form-box">
-                      <input class="admi_form-input" type="number" placeholder="$$ Precio del Libro" name="price" id="price">
-                      <span class="admi__text-error"> Precio Obligatorio</span>
-                  </div>
-                 
-                  <!-- Descripcion del libro-->
-                  <div class="admi__form-box">
-                     <textarea class="admi_form-input" name="description" id="description" cols="5" rows="5" placeholder="Agregue la sinopsis"></textarea>
-                      <span class="admi__text-error">Sinopsis Obligatoria</span>
-                  </div>
+                <!-- Precio del libro -->
+                <div class="admi__form-box">
+                    <input class="admi_form-input" type="number" placeholder="$$ Precio del Libro" name="price" id="price" value="<%= product.price %>">
+                    <span class="admi__text-error"> Precio Obligatorio</span>
+                </div>
+                
+                <!-- Descripcion del libro-->
+                <div class="admi__form-box">
+                    <textarea class="admi_form-input" name="description" id="description" cols="5" rows="5" placeholder="Agregue la sinopsis"><%= product.description %></textarea>
+                    <span class="admi__text-error">Sinopsis Obligatoria</span>
+                </div>
 
-                 <!--  Editorial del libro -->
-                  <div class="admi__form-box">
-                    <input class="admi_form-input" type="text" placeholder="Editorial" name="publisher" id="publisher">
+                <!--  Editorial del libro -->
+                <div class="admi__form-box">
+                    <input class="admi_form-input" type="text" placeholder="Editorial" name="publisher" id="publisher" value="<%= product.publisher %>">
                     <span class="admi__text-error">Editorial Obligatorio</span>
                 </div>
-                 
-                  <!-- -Genero del libro-->
-                  <div class="admi__form-box">
-                      <select class="admi_select dropdown-select" name="genre" id="genre" >
-                          <option  hidden selected >Seleccione Genero Literario</option>
-                          <option value="autoayuda">Autoayuda</option>
-                          <option value="autobiografia">Autobiografía</option>
-                          <option value="clasicos">Clásicos</option>
-                          <option value="cienciaFiccion">Ciencia Ficción</option>
-                          <option value="comicsYmanga">Cómics y Mangas</option>
-                          <option value="narrativa">Narrativa</option>
-                          <option value="narrativaRomantica">Narrativa Romantica</option>
-                          <option value="management">Management</option>
-                          <option value="teatro">Obras de Teatro</option>
-                          <option value="poesia">Poesía</option>
-                          <option value="policiales">Policiales</option>
-                          <option value="terror">Terror</option>
-                      </select>
-                      <span class="admi__text-error">Genero Obligatorio</span>
-                  </div>
+                
+                <!-- -Genero del libro-->
+                <div class="admi__form-box">
+                    <select class="admi_select dropdown-select" name="genre" id="genre" value="<%= product.genre%>">
+                            <option  hidden selected >Seleccione Genero Literario</option>
+                            <option value="autoayuda">Autoayuda</option>
+                            <option value="autobiografia">Autobiografía</option>
+                            <option value="clasicos">Clásicos</option>
+                            <option value="cienciaFiccion">Ciencia Ficción</option>
+                            <option value="comicsYmanga">Cómics y Mangas</option>
+                            <option value="narrativa">Narrativa</option>
+                            <option value="narrativaRomantica">Narrativa Romantica</option>
+                            <option value="management">Management</option>
+                            <option value="teatro">Obras de Teatro</option>
+                            <option value="poesia">Poesía</option>
+                            <option value="policiales">Policiales</option>
+                            <option value="terror">Terror</option>
+                    </select>
+                        <span class="admi__text-error">Genero Obligatorio</span>
+                </div>
 
-                 <!--  Idioma de Edicion -->
-                  <div class="admi__form-box">
-                      <select class="admi_select dropdown-select" name="language" id="language" >
-                          <option>Seleccione Idioma de Edición</option>
-                          <option value="ingles">Ingles</option>
-                          <option value="español">Español</option>
-                      </select>
-                      <span class="admi__text-error">Idioma Obligatorio</span>
-                  </div>
+                <!--  Idioma de Edicion -->
+                <div class="admi__form-box">
+                    <select class="admi_select dropdown-select" name="language" id="language" value="<%= product.language%>">
+                            <option>Seleccione Idioma de Edición</option>
+                            <option value="ingles">Ingles</option>
+                            <option value="español">Español</option>
+                    </select>
+                        <span class="admi__text-error">Idioma Obligatorio</span>
+                </div>
                     <!-- Portada del libro-->
                     <div class="admi__form-box">
-                      <label class="admi_portada" for="Portada">Adjuntar Portada del Libro</label>
-                      <input class="admi_file"  type="file" id="image" name="image" accept="image/*">
-                  </div>
-                 </article>
+                        <label class="admi_portada" for="Portada">Adjuntar Portada del Libro</label>
+                        <input class="admi_file"  type="file" id="image" name="image" accept="image/*">
+                    </div>
+                </article>
 
-                   <!-- Categoria de Edicion -->
-                   <div class="admi__form-box">
-                    <select class="admi_select dropdown-select" name="category" id="category" >
+                    <!-- Categoria de Edicion -->
+                    <div class="admi__form-box">
+                    <select class="admi_select dropdown-select" name="category" id="category" value="<%= product.category%>">
                         <option value="" hidden selected>Seleccione Categoria de Edición</option>
                         <option value="in-sale">In-sale</option>
                         <option value="relevant">Relevante</option>
                     </select>
                     <span class="admi__text-error">Categoria Obligatoria</span>
-                </div>
-                 
+                    </div>
+                    
                 <!--  envio y reset -->
-                 <div class="botones_admi">
-                  <button type="reset" class="admi_adherir admi_delete">Borrar</button>
-                  <button type="submit" class="admi_adherir admi_submit">Guardar</button>
-                 </div>   
-              </form>
+                    <div class="botones_admi">
+                    <button type="reset" class="admi_adherir admi_delete">Borrar</button>
+                    <button type="submit" class="admi_adherir admi_submit">Guardar</button>
+                    </div>   
+            </form>
             
-      </main>
-      <%- include('./partials/footer') %> 
+        </main>
+        <%- include('./partials/footer') %> 
     
 </body>
 </html>

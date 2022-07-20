@@ -25,7 +25,7 @@
         <section>
             <h1>Registrate</h1>
             <hr>
-              <!--  empieza el fomulario -->
+                <!--  empieza el fomulario -->
             <form action="/users/register" method="POST" enctype="multipart/form-data">
                 <article class="registro">
                     <!-- seccion nombre -->
@@ -34,25 +34,25 @@
                         <input class="register__form-input" type="text" id="name" name="name" value="<%= locals.old && old.name ? old.name : null %>">
                         <span class="register__text-error"><%= locals.errors && errors.name ? errors.name.msg : null  %></span>
                     </div>
-                   <!--  seccion apellido -->
+                    <!--  seccion apellido -->
                     <div class="register__form-box">
                         <label class="register__label" for="surname">Apellido: </label>
                         <input class="register__form-input" type="text" id="surname" name="surname" value="<%= locals.old && old.surname ? old.surname : null %>">
                         <span class="register__text-error"><%= locals.errors && errors.surname ? errors.surname.msg : null  %></span>
                     </div>
-                   <!--  seccion email -->
+                    <!--  seccion email -->
                     <div class="register__form-box">
                         <label class="register__label" for="email">Email: </label>
                         <input class="register__form-input" type="email" id="email" name="email" value="<%= locals.old && old.email ? old.email : null %>">
                         <span class="register__text-error"><%= locals.errors && errors.email ? errors.email.msg : null  %></span>
                     </div>
-                   <!--  seccion contraseña -->
+                    <!--  seccion contraseña -->
                     <div class="register__form-box">
                         <label class="register__label" for="password">Contraseña: </label>
                         <input class="register__form-input" type="password" id="password" name="password">
                         <span class="register__text-error"><%= locals.errors && errors.password ? errors.password.msg : null  %></span>
                     </div>
-                   <!--  seccion confirmar contraseña -->
+                    <!--  seccion confirmar contraseña -->
                     <div class="register__form-box">
                         <label class="register__label" for="password2">Confirmar Contraseña: </label>
                         <input class="register__form-input" type="password" id="password2" name="password2">
@@ -66,9 +66,9 @@
                             <div class="text-danger">
                                 <%= errors.avatar.msg%>
                     </div>
-                       <% } %> 
+                        <% } %> 
                     </div>
-                  <!--   seccion terminos y condiciones -->
+                    <!--   seccion terminos y condiciones -->
                     <div class="register__form-box">
                         <input   class="" type="checkbox" name="terms" id="terms" value="">
                         <label for="terms">Términos y condiciones</label>
@@ -83,7 +83,7 @@
                     </div>
                     <div class="button_register">
                             <button type="submit" class="volver volver-register">Registrarme</button>
-                         
+                        
                                 <button class="volver volver-register"><a href="/">Cancelar</a></button>
                             
                     </div>

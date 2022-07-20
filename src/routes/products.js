@@ -4,7 +4,7 @@ const router = express.Router();
 const upload =require ('../middlewares/uploadProductsImage')
 
 //requerimos controlador//
-const {index,detail,cart,edit,create,store,destroy,update} =require('../controllers/productController')
+const { index, create, store, detail, edit, update, cart, destroy } =require('../controllers/productController')
 
 //**************RUTAS********** */
 /* Mostrar  todos los productos*/

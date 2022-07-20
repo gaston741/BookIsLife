@@ -12,7 +12,7 @@ module.exports =[
         .bail()
         .isEmail()
         .withMessage("Email no válido"),
-       
+        
     check("password")
         .notEmpty()
         .withMessage("Debes ingresar tu contraseña")

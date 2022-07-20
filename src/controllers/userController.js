@@ -2,9 +2,8 @@ const bcryptjs = require ('bcryptjs');
 const fs = require('fs');
 const path = require('path');
 const {validationResult}=require('express-validator');
-const db = require('../database/models');
-
-/* const users = require ('../data/usersDataBase.json'); */
+/* const users = require ('../data/usersDataBase.json');*/
+const { User} = require('../database/models') /* Utilizo Base de Datos */
 
 module.exports={
 
@@ -62,7 +61,7 @@ module.exports={
                 errors: errors.mapped() // mando los errores que tuvo en cada campo especifico
             })
         }
-       
+        
 
     },
     processLogin : (req,res)=>{
@@ -95,6 +94,21 @@ module.exports={
             })
 
             
+            //levanto session  
+            req.session.userLogin = {
+
+                id,
+                name,
+                rol
+
+            }
+          /* Saving the user's preference in a cookie for a certain time. */
+            if(req.body.remember){ // si el usuario marca recordarme
+
+                res.cookie("userBookIsLife" , req.session.userLogin, { maxAge : 60000 } ) //guardo su preferencia en una cookie por un tiempo determinado
+            }
+
+            return res.redirect("/");
 
         }else {
           //return res.send(errors)
@@ -117,16 +131,18 @@ module.exports={
     profileEdit :(req,res)=>{
       /* const users = JSON.parse(fs.readFileSync('./src/data/usersDataBase.json','utf-8' )); */
       
-       /* Finding the user object in the users array that has the same id as the user that is logged
-       in. */
-      /* const user = users.find(user => user.id === req.session.userLogin.id); */
+        /* Finding the user object in the users array that has the same id as the user that is logged
+        in. */
+        const user = users.find(user => user.id === req.session.userLogin.id)
 
       //db.User.findByPk(req.session.userLogin.id)
       
       /* Rendering the userProfileEdit view with the user object. */
-       return res.render('userProfileEdit',{
-          user
-       })
+        return res.render('userProfileEdit',{
+
+        user
+
+        })
     
     },
 
@@ -160,7 +176,7 @@ module.exports={
                   );
                 }
               }
-             
+              
               return userModified;
             }
             return user; 

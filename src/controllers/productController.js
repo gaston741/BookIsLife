@@ -1,117 +1,115 @@
+const { Op } = require('sequelize');
+const { Product } = require('../database/models'); /* Utilizo Base de Datos para traer el Model Product */
 const fs = require('fs');
 const path = require('path');
-/* Reading the productsDataBase.json file and storing it in the products variable. */
-const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-
-
-const readBooks = () => {
-   
-    const products = JSON.parse(fs.readFileSync(productsFilePath,'utf-8'));
-    return products
-}
-const saveBooks = (products) => fs.writeFileSync(productsFilePath, JSON.stringify(products,null,3));
-
 const toThousand = n => n.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
+module.exports = {
+    index : (req, res) => {
 
-module.exports={
-
-    index: (req, res) => {
-
-		let products = readBooks()
-
-	    return res.render('products',{
-		 products,
-		 toThousand
-
+		Product.findAll({
+            include : ['category','autor']
+        })
+            .then(products => {
+/*                 return res.send(products)
+ */                res.render('products',{
+                    products,
+            })
 	    })
+        .catch(error => console.log(error))
 	},
 
-    detail: (req,res)=>{
-       
+    detail : (req,res) => {
 
-        const product = readBooks().find(product=> product.id === +req.params.id);
-        return res.render('productDetail',{
-            product,
-            toThousand
+        Product.findByPk(req.params.id)
+            .then(product => {
+                return res.render('productDetail',{
+                    product,
+                    toThousand
+            })
         })
+            .catch(error => console.log(error))
     }, 
     
-    create:(req,res)=>{
-        return  res.render('productCreate')
-    },
-
-    store :(req,res)=>{
-
-        let products = readBooks()
-
-        const {name,autor,price,description,publisher,genre,language, image,category}=req.body;
-        const ultimo = products[products.length - 1]
-        let newBook = {
-            id: ultimo.id + 1, //obtengo el ultimo id y le sumo uno.
-            name : name.trim(),
-            autor: autor.trim(),
-            price: +price,
-            description: description.trim(),
-            publisher: publisher.trim(),
-            genre: genre,
-            language: language,
-            image: req.file ? req.file.filename : "default.png", // si recibo el achivo de req.file, guardo la propiedad filename, sino devolvemos la img por defecto.
-            category:category
-
-        }
-
-        products.push(newBook); 
-        saveBooks(products)
-        return res.redirect('/products')
-    },
-
-    edit: (req,res)=>{
-        let products = readBooks();
-       let product = products.find(product => product.id === +req.params.id)
-       return res.render('productEdit',{
-         product
-
-       })
-    },
-
-    update: (req,res)=>{
-
-        let products = readBooks();
-        const {name,autor,price,description,publisher,genre,language,image,category} = req.body;
-         const booksModified = products.map(product => {
-            if(product.id === +req.params.id){
-               let bookModified = {
-                   ...product,
-                   name: name.trim(),
-                   autor: autor.trim(),
-                   price : +price,
-                   description :description.trim(),
-                   publisher: publisher,
-                   genre :genre,
-                   language:language,
-                   image: req.file ? req.file.filename : "default.png", // si recibo el achivo de req.file, guardo la propiedad filename, sino devolvemos la img por defecto.
-                   category:category
-               }
-               return bookModified
-            }
-            return product
+    create : (req,res) => {
+        Product.findAll()
+        .then(product => {
+            return res.render('productCreate', {
+                product
+            })
         })
-        saveBooks(booksModified)
-        return res.redirect('/products')
+        .catch(errors => console.log(errors))
     },
 
-    destroy : (req,res)=>{
+    store : (req,res) => {
+        return res.send(req.body)
+    const {} = req.body;
 
-        let products = readBooks();
-        const booksModified = products.filter(product => product.id !== +req.params.id)
+        Product.create(
+            {
+                ...req.body,
+                image : req.file ? req.file.filename : "default.png"
+            }/* {
+            name : name,
+            autorId : +autorId,
+            price : +price,
+            description : description,
+            publisherId: +publisherId,
+            genreId : +genreId,
+            languageId : +languageId,
+            image : req.file ? req.file.filename : "default.png", // si recibo el achivo de req.file, guardo la propiedad filename, sino devolvemos la img por defecto.,
+            categoryId : +categoryId,
+        } */ )
+        .then(product => {
+            return res.redirect('/products')
+        })
+        .catch(error => console.log(error))
+    },
 
-        saveBooks(booksModified);
-        return res.redirect('/products');
+    edit : (req,res) => {
 
+        Product.findByPk(req.params.id)
+            .then(product => {
+                return res.render('productEdit',{
+                    product
+                })
+            })
+            .catch(errors => console.log(errors))
+    },
+
+    update : (req,res) => {
+
+        let product = Product.findByPk(req.params.id)
+        let {} = req.body;
+
+        Product.update({
+            ...req.body,
+            image : req.file ? req.file.filename : product.image
+        },
+        {
+            where : { id : req.params.id}
+        })
+        .then(() => {
+            return res.redirect('/products')
+        })
+        .catch(errors => console.log(errors))
+    },
+
+    destroy : (req,res) => {
+
+        Product.destroy(
+            {
+                where : { id : req.params.id},
+                force : true
+            })
+            .then(() => {
+                return res.redirect('/products');
+            })
+            .catch(errors => console.log(errors))
     },
     
-    cart: (req,res)=>{
+    cart : (req,res) => {
+        
         return res.render('productCart')
     },
 
