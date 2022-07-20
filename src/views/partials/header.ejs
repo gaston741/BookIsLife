@@ -58,18 +58,9 @@
             <i class="fa-solid fa-bars iconoHamburguesa"></i>
         </label>
         <ul class="home_nav-menu">
-            <li><a href="#">Autoayuda</a></li>
-            <li><a href="#">Autobiografía</a></li>
-            <li><a href="#">Clásicos</a></li>
-            <li><a href="#">Ciencia Ficción</a></li>
-            <li><a href="#">Cómics y Mangas</a></li>
-            <li><a href="#">Narrativa</a></li>
-            <li><a href="#">Narrativa Romantica</a></li>
-            <li><a href="#">Management</a></li>
-            <li><a href="#">Obras de Teatro</a></li>
-            <li><a href="#">Poesía</a></li>
-            <li><a href="#">Policiales</a></li>
-            <li><a href="#">Terror</a></li>
+            <% genres.forEach(genre => { %>
+                <li><a href="/products/filter?genre=<%= genre.id %>"><%= genre.name %></a></li>
+            <% }) %>
         </ul>
     </nav>
 

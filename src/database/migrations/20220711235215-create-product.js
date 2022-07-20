@@ -17,7 +17,7 @@ module.exports = {
         allowNull : false
       },
       description: {
-        type : Sequelize.STRING(500),
+        type : Sequelize.TEXT,
         allowNull : false
       },
       autorId: {
@@ -30,7 +30,7 @@ module.exports = {
           key : 'id'
         }
       },
-      publisheId: {
+      publisherId: {
         allowNull : false,
         type : Sequelize.INTEGER,
         references : {
@@ -69,6 +69,9 @@ module.exports = {
           },
           key : 'id'
         }
+      },
+      image : {
+        type : Sequelize.STRING
       },
       createdAt: {
         allowNull : true,

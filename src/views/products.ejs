@@ -10,7 +10,7 @@
     <main class="home">
             <!-- SECCION LOS MAS VENDIDOS DE LA SEMANA-->
         <h2>Todos Nuestros Libros</h2>
-        
+        <h2><%= typeof genre !== "undefined" ? genre.name : null %> </h2>
         <!--    PRODUCTO -->
         <section class="home__box_products">
             <% products.forEach(({id,name,autor,image}) => { %>
