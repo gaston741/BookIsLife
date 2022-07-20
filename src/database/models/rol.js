@@ -11,10 +11,6 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Rol.hasMany(models.User,{ // el modelo tiene muchos usuarios
-        as : 'users', // como se llama la asosiacion, atributo que contiene un array con los usuarios asociados a ese rol
-        foreignKey :'rolId' // a traves de rolId
-      })
     }
   }
   Rol.init({
