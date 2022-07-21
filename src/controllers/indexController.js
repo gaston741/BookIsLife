@@ -64,10 +64,19 @@ module.exports={
         }).catch(error => console.log(error))
     },
     admin : (req,res)=>{
-      return res.render('admin',{
-        products,
-        toThousand
+      let genres = Genre.findAll()
+      let products = Product.findAll({
+        include : ['category','autor','language','genre','publisher']
       })
+      Promise.all([genres,products])
+      .then(([genres,products]) => {
+        return res.render('admin',{
+          products,
+          genres,
+          toThousand
+        })
+      }).catch(error => console.log(error))
+     
     }
 
 

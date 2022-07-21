@@ -11,30 +11,6 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Product.belongsTo(models.Category,{
-        as : 'category',
-        foreignKey : 'categoryId'
-      });
-
-      Product.belongsTo(models.Genre,{
-        as : 'genre',
-        foreignKey : 'genreId'
-      });
-
-      Product.belongsTo(models.Autor,{
-        as : 'autor',
-        foreignKey : 'autorId'
-      });
-
-      Product.belongsTo(models.Publisher,{
-        as : 'publisher',
-        foreignKey : 'publisherId'
-      });
-
-      Product.belongsTo(models.Language,{
-        as : 'language',
-        foreignKey : 'languageId'
-      });
     }
   }
   Product.init({
@@ -42,11 +18,10 @@ module.exports = (sequelize, DataTypes) => {
     price: DataTypes.INTEGER,
     description: DataTypes.STRING(500),
     autorId: DataTypes.INTEGER,
-    publisherId: DataTypes.INTEGER,
+    publisheId: DataTypes.INTEGER,
     genreId: DataTypes.INTEGER,
     languageId: DataTypes.INTEGER,
-    categoryId: DataTypes.INTEGER,
-    image : DataTypes.STRING
+    categoryId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Product',
