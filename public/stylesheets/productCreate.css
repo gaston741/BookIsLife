@@ -55,13 +55,15 @@
 .admi__form-box{
     display: flex;
     flex-direction: column;
-    justify-content: center;
 
 }   
 
 .admi_portada{
-    margin: 0px 0px 10px 5px;
-    color:rgb(105, 103, 103);
+    background: rgb(105, 103, 103);;
+    color: white;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
 }
 .admi_file{
   
@@ -99,6 +101,21 @@
     border-radius: 0px 5px 5px 0px;
     font-family: "cinzel";
     
+}
+
+.admi_form-texarea{
+    width: 100%;
+    height: 200px;
+    margin:10px 0px 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+    font-family: "cinzel";
+    resize: none;
+    
+}
+.form-img-preview{
+    width: 100%;
 }
 
 /* contenedor botones */
@@ -146,8 +163,7 @@ button.admi_delete:hover {
 }
 /* Select*/
 .dropdown-select {
-    
-        width: 39vh;
+    width: 100%;
         padding: 5px 10px 5px 5px;
         background: #f2f2f2;
         background-color: #fff;
@@ -171,15 +187,25 @@ button.admi_delete:hover {
   @media(min-width:768px){
 
     .form_admi{
-        width: 70%;
+        width: 90%;
+    }
+
+    .form_admi article{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .admi__form-box {
+        width: 48%;
     }
 
   }
 /*    Desktop   */
   @media(min-width:1024px){
-      .form_admi{
-          width: 50%;
-      }
-
+      
+    .form_admi{
+        width: 50%;
+    }
 
   }
