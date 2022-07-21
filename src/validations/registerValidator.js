@@ -72,14 +72,13 @@ module.exports = [
 
         }*/ if (file) {     //SI EXISTE EL ARCHIVO.. 
 
-            let fileExtension = path.extname(file.originalname);   // ESTA VARIABLE TOMA LA EXTENCION DEL ARCHIVO QUE SUBE EL USUARIO AL REGISTRARSE
+            let fileExtension = path.extname(file.originalname);    // ESTA VARIABLE TOMA LA EXTENCION DEL ARCHIVO QUE SUBE EL USUARIO AL REGISTRARSE
 
-            if (!acceptedExtensions.includes(fileExtension)) {    // SI ESTA EXTENCION, NO ES DE LA ACEPTADAS, SE MANDA EL ERROR DE ABAJO
+            if (!acceptedExtensions.includes(fileExtension)) {      // SI ESTA EXTENCION, NO ES DE LA ACEPTADAS, SE MANDA EL ERROR DE ABAJO
 
                 throw new Error(`Las extensiones de archivos permitidas son ${acceptedExtensions.join(', ')}`); // (MANDA ERROR CUANDO LA EXTENCION DEL ARCHIVO NO ES ACEPTADA)
             }
         }
-
         return true;
     }),
 
