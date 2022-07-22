@@ -59,7 +59,7 @@
                         <!-- -Genero del libro-->
                         <div class="admi__form-box">
                             <select class="admi_select dropdown-select" name="genreId" id="genre">
-                                <option value="" hidden selected>Seleccione Genero Literario</option>
+                                <option value="" hidden selected>Seleccione un Genero Literario</option>
                                 <% genres.forEach(genre => { %>
                                     <option value="<%= genre.id %>"><%= genre.name %></option>
                                 <% }) %>
@@ -70,7 +70,7 @@
                         <!--  Idioma de Edicion -->
                         <div class="admi__form-box">
                             <select class="admi_select dropdown-select" name="languageId" id="language">
-                                <option hidden selected value="">Seleccione Idioma de Edición</option>
+                                <option hidden selected value="">Seleccione un Idioma</option>
                                 <% languages.forEach(language => { %>
                                     <option value="<%= language.id %>"><%= language.name %></option>
                                 <% }) %>
@@ -81,7 +81,7 @@
                         <!-- Categoria de Edicion -->
                         <div class="admi__form-box">
                             <select class="admi_select dropdown-select" name="categoryId" id="category">
-                                <option value="" value="" hidden selected>Seleccione Categoria de Edición</option>
+                                <option value="" value="" hidden selected>Seleccione una Categoria</option>
                                 <% categories.forEach(category => { %>
                                     <option value="<%= category.id %>"><%= category.name %></option>
                                 <% }) %>
