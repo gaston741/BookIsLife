@@ -5,12 +5,12 @@
 
 <body class="home">
     <%- include('./partials/header') %> 
-  
+    
     <!--  CUERPO  -->
     <main class="home">
             <!-- SECCION LOS MAS VENDIDOS DE LA SEMANA-->
         <h2>Todos Nuestros Libros</h2>
-       
+        <h2><%= typeof genre !== "undefined" ? genre.name : null %> </h2>
         <!--    PRODUCTO -->
         <section class="home__box_products">
             <% products.forEach(({id,name,autor,image}) => { %>
@@ -21,15 +21,15 @@
                             <div class="home__product-container-img">
                                 <img class="home__product_image" src="/images/portadas/<%= image %>" alt="libro">
                             </div>
-                         </a>   
+                        </a>   
                     </div>
                     <div class="home_main_container_span">
                         
                         <span class="titulo"><%= name %></span>
-                        <span class="autor"><%= products.autors.name  %></span>
+                        <span class="autor"><%= autor.name %></span>
                     </div>
                 </article>
-         
+                
                 <% }) %>
         </section>
 
@@ -48,7 +48,7 @@
                 <a href="/"><i class="fa-solid fa-circle-chevron-up"></i></a>
             </div>
     </main>
-   
+    
     <%- include('./partials/footer') %> 
 </body>
 

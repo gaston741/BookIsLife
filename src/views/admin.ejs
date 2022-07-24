@@ -15,39 +15,39 @@
         <section class="home__box_products">            
                 <table class="table">
                     <thead>
-                      <tr>
+                    <tr>
                         <th scope="col">#</th>
                         <th scope="col">Titulo</th>
                         <th scope="col">Autor</th>
                         <th scope="col">Precio</th>
                         <th scope="col">Acciones</th>
-                      </tr>
+                    </tr>
                     </thead>
                     <tbody>
                         <% products.forEach(({id,name,autor,price},index) => { %>
                             <tr>
                                 <th scope="row"><%= index + 1 %> </th>
                                 <td><%= name.toUpperCase() %> </td>
-                                <td><%= autor.toUpperCase() %></td>
+                                <td><%= autor.name.toUpperCase() %></td>
                                 <td class="table_price_book">$<%= toThousand(price) %></td>
                                 <td>
                                     <!-- Detalle del producto -->
                                     <a href="/products/detail/<%= id %>" class="btn btn-sm btn-primary"><i class="fas fa-eye"></i></a>
-                               <!--    Editar producto -->
+                            <!--    Editar producto -->
                                 <a href="/products/edit/<%= id %>" class="btn btn-sm btn-success m-1"><i class="fas fa-edit"></i></a>
-                               <!--  Eliminar producto -->
+                            <!--  Eliminar producto -->
                                 <form action="/products/delete/<%= id %>?_method=DELETE" method="POST">
-                                  <button type="submit" class="btn btn-sm btn-danger m-1"><i class="fas fa-trash-alt"></i></button>
-                              </form>
+                                    <button type="submit" class="btn btn-sm btn-danger m-1"><i class="fas fa-trash-alt"></i></button>
+                                </form>
                                 </td>
                             </tr>
                         <% }) %>
                     </tbody>
-                  </table>
-             </div>
+                </table>
+            </div>
         
         </section>
-   <!--  scroll up -->
+    <!--  scroll up -->
             <div class="home__main__up">
                 <a href="/"><i class="fa-solid fa-circle-chevron-up"></i></a>
             </div>

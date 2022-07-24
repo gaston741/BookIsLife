@@ -3,7 +3,7 @@ const router = express.Router();
 
 
 //***UserController Require */
-const {register, login, processRegister,processLogin,logout, profileEdit , updateProfile, deleteUser } = require ('../controllers/userController');
+const { register ,processRegister ,login ,processLogin ,logout ,profileEdit ,updateProfile ,deleteUser } = require ('../controllers/userController');
 
 //********Validator require */
 const registerValidator = require('../validations/registerValidator');

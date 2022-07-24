@@ -1,97 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('./partials/head', { title : 'Editando: ' + product.name}) %>
-  
-<body class="administrador">
-    <%- include('./partials/header')%> 
-    <!--  BOTON VOLVER -->
-    <div class="container-button-product-detail admini">
-        <a class="a_button" href="/"><i class="fa-solid fa-angle-left"></i> VOLVER </a>
-    </div>
-        <main class="admi_main">
-   <!--   Empieza el formulario -->
-            <form class="form_admi" action="/products/update/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data" >
-                <!--   titulos -->
-                    <h2 class="titulo_dos_admi">Edición del Libro: <%= product.name %> </h2>
+<%- include('./partials/head',{title:"Creacion de Producto"}) %>
+    </head>
+
+    <body class="administrador">
+        <%- include('./partials/header') %>
+            <!--  BOTON VOLVER -->
+            <div class="container-button-product-detail admini">
+                <a class="a_button" href="/"><i class="fa-solid fa-angle-left"></i> VOLVER </a>
+            </div>
+
+            <main class="admi_main">
+
+                <!--   Empieza el formulario -->
+                <form action="/products/update/<%= product.id %>?_method=PUT" class="form_admi" method="POST" enctype="multipart/form-data">
+                    <!--  Titulos -->
+                    <h2 class="titulo_admi"> Formulario del Administrador</h2>
+                    <h3 class="titulo_dos_admi">Edición de Libros</h3>
+
                     <!--  seccion contenedora -->
                     <article>
-
-                     <!-- Titulo del libro-->
-                        <div  class="admi__form-box">
-                            <label class="admi_label_edit"  for="name">Editar Titulo</label>
-                            <input class="admi_form-input" type="text" name="name" id="name" value="<%= product.name %>">
-                        </div>
-
-                    <!-- Autor del libro-->
-                        <div class="admi_form-box">
-                            <label class="admi_label_edit"  for="autor">Editar Autor</label>
-                            <input class="admi_form-input" type="text" name ="autor" id="autor" value="<%= product.autor %>">
-                        </div>
-
-                    <!-- Precio del libro -->
-                        <div  class="admi__form-box">
-                            <label class="admi_label_edit"  for="price">Editar Precio</label>
-                            <input type="number" class="admi_form-input" name="price" id="price" value="<%= product.price %>">
-                        </div>
-
-                     <!-- Descripcion del libro-->
-                        <div  class="admi__form-box">
-                            <label class="admi_label_edit"  for="description">Editar Sinopsis</label>
-                            <textarea class="admi_form-input" name="description" id="description" cols="5" rows="5" ><%= product.description %> </textarea>
-                        </div>
-
-                    <!-- Categoria del libro-->
-                        <div  class="admi__form-box">
-                            <label class="admi_label_edit"  for="genre">Editar Genero</label>
-                            <select  class="admi_select dropdown-select"  name="genre" id="genre">
-                                <option value="Autoayuda" <%= product.genre === "Autoayuda" && 'selected' %>>Autoayuda</option>
-                                <option value="Autobiografia" <%= product.genre === "Autobiografia" && 'selected' %>>Autobiografía</option>
-                                <option value="Clasicos" <%= product.genre === "Clasicos" && 'selected' %>>Clásicos</option>
-                                <option value="Ciencia Ficcion" <%= product.genre === "Ciencia Ficcion" && 'selected' %>>Ciencia Ficción</option>
-                                <option value="Comics Y Manga" <%= product.genre === "Comincs y Manga" && 'selected' %>>Cómics y Mangas</option>
-                                <option value="Narrativa" <%= product.genre === "Narrativa" && 'selected' %>>Narrativa</option>
-                                <option value="Narrativa Romantica" <%= product.genre === "Narrativa Romantica" && 'selected' %>>Narrativa Romantica</option>
-                                <option value="Management" <%= product.genre === "Management" && 'selected' %>>Management</option>
-                                <option value="Teatro" <%= product.genre === "Teatro" && 'selected' %>>Obras de Teatro</option>
-                                <option value="Poesia" <%= product.genre === "Poesia" && 'selected' %>>Poesía</option>
-                                <option value="Policiales" <%= product.genre === "Policiales" && 'selected' %>>Policiales</option>
-                                <option value="Terror" <%= product.genre === "Terror" && 'selected' %>>Terror</option>
-                            </select>
-                        </div>
-
-                    <!--  Idioma de Edicion -->
+                        <!-- Titulo del libro-->
                         <div class="admi__form-box">
-                            <label class="admi_label_edit"  for="language">Editar Idioma de Edición</label>
-                            <select class="admi_select dropdown-select" name="language" id="language" >
-                                <option value="" hidden selected>Seleccione Idioma de Edición</option>
-                                <option value="ingles" <%= product.language === "ingles" && 'selected' %>>Ingles</option>
-                                <option value="español" <%= product.language === "español" && 'selected' %>>Español</option>
-                            </select>
+                            <input class="admi_form-input" type="text" placeholder="Título del libro" name="name"
+                                id="name" value="<%= product.name %>">
+                            <span class="admi__text-error"></span>
                         </div>
 
-                     <!-- Portada del libro-->
+                        <!-- Precio del libro -->
                         <div class="admi__form-box">
-                            <label class="admi_label_edit" for="image">Editar Portada del Libro</label>
-                            <input class="admi_file"  type="file" id="image" name="image" accept="image/*"/>
+                            <input class="admi_form-input" type="number" placeholder="$$ Precio del Libro" name="price"
+                                id="price" value="<%= product.price %>">
+                            <span class="admi__text-error"></span>
                         </div>
-                    <!--  categoria de Edicion -->
+
+                        <!-- Autor del libro-->
                         <div class="admi__form-box">
-                            <label class="admi_label_edit"  for="category">Editar Categoria de Edición</label>
-                            <select class="admi_select dropdown-select" name="category" id="category" >
-                                <option value="in-sale" <%= product.category === "in-sale" && 'selected' %> >In-sale</option>
-                                <option value="relevant" <%= product.category === "relevant" && 'selected' %>>Relevante</option>
+                            <select class="admi_select dropdown-select" name="autorId" id="autorId">
+                                <% autors.forEach(autor => { %>
+                                    <option value="<%= autor.id %>" <%= autor.id === product.autorId && 'selected' %>><%= autor.name %></option>
+                                <% }) %>
                             </select>
-                         </div>
+                            <span class="admi__text-error"></span>
+                        </div>
+
+                        <!--  Editorial del libro -->
+                        <div class="admi__form-box">
+                            <select class="admi_select dropdown-select" name="publisherId" id="publisherId">
+                                <% publishers.forEach(publisher => { %>
+                                    <option value="<%= publisher.id %>" <%= publisher.id === product.publisherId && 'selected' %> ><%= publisher.name %></option>
+                                <% }) %>
+                            </select>
+                            <span class="admi__text-error"></span>
+                        </div>
+
+                        <!-- -Genero del libro-->
+                        <div class="admi__form-box">
+                            <select class="admi_select dropdown-select" name="genreId" id="genre">
+                                <% genres.forEach(genre => { %>
+                                    <option value="<%= genre.id %>" <%= genre.id === product.genreId && 'selected' %>><%= genre.name %></option>
+                                <% }) %>
+                            </select>
+                            <span class="admi__text-error"></span>
+                        </div>
+
+                        <!--  Idioma de Edicion -->
+                        <div class="admi__form-box">
+                            <select class="admi_select dropdown-select" name="languageId" id="language">
+                                <option hidden selected value="">Seleccione Idioma de Edición</option>
+                                <% languages.forEach(language => { %>
+                                    <option value="<%= language.id %>" <%= language.id === product.languageId && 'selected' %>><%= language.name %></option>
+                                <% }) %>
+                            </select>
+                            <span class="admi__text-error"></span>
+                        </div>
+
+                        <!-- Categoria de Edicion -->
+                        <div class="admi__form-box">
+                            <select class="admi_select dropdown-select" name="categoryId" id="category">
+                              
+                                <% categories.forEach(category => { %>
+                                    <option value="<%= category.id %>" <%= category.id === product.categoryId && 'selected' %>><%= category.name %></option>
+                                <% }) %>
+                            </select>
+                            <span class="admi__text-error"></span>
+                        </div>
+                        <!-- Portada del libro-->
+                        <div class="admi__form-box">
+                            <label class="admi_portada" for="portada">Adjuntar Portada del Libro</label>
+                            <input hidden class="admi_file" type="file" id="portada" name="image" accept="image/*">
+                        </div>
+                         <!-- Descripcion del libro-->
+                    <div class="admi__form-box">
+                        <textarea class="admi_form-texarea" name="description" id="description" 
+                            placeholder="Agregue la sinopsis"><%= product.description %></textarea>
+                        <span class="admi__text-error"></span>
+                    </div>
+
+                    <div class="admi__form-box">
+                        <img class="form-img-preview" id="img-preview" src="/images/portadas/<%= product.image %>" alt="">
+                    </div>
 
                     </article>
+
+                  
                     <!--  envio y reset -->
-                    <div class="botones_admi" >
-                        <button type="reset" class="admi_adherir admi_delete">Limpiar</button>
+                    <div class="botones_admi">
+                        <button onclick="window.location.href='/products'" class="admi_adherir admi_delete">Cancelar</button>
                         <button type="submit" class="admi_adherir admi_submit">Guardar</button>
                     </div>
-                   
-            </form>
-        </main>
-    <%- include('./partials/footer')%> 
-</body>
+                </form>
+
+            </main>
+            <%- include('./partials/footer') %>
+
+            <script>
+                document.getElementById('portada').addEventListener('change', (e) => {
+                    let reader = new FileReader();
+                    reader.readAsDataURL(e.target.files[0])
+                    reader.onload = () => {
+                        document.getElementById('img-preview').src = reader.result
+                    }
+                });
+            </script>
+
+    </body>
+
 </html>
