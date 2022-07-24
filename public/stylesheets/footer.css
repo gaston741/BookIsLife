@@ -28,7 +28,7 @@
 .home__footer li, a {
 
     text-decoration: none;
-    color: black;
+    color: white;
     text-transform: uppercase;
     text-align: center;
 
@@ -53,10 +53,10 @@ padding-top: 15px;
 
 
 .home__footer li img:hover,
-span.footer__link:hover {
+span.footer__link, span.footer__no_link {
 
     color: #10fffb;
-    box-shadow: 0 0 5px #10fffb;
+   /*  box-shadow: 0 0 5px #10fffb; */
     text-shadow: 0 0 5px #ffee10;
 }
 
@@ -110,6 +110,9 @@ span.footer__link:hover {
     .footer__no_link, .footer__link{
 
         font-size: 15px;
+        color:white;
+        font-family: 'Cinzel';
+        font-weight: 800;
     }
    
     

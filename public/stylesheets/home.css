@@ -18,7 +18,7 @@
 
 main.home {
 
-    background-color:#FFE7E7 ;
+    background-color:var(--colorMainHome) ;
     background-size: auto;
 }
 
@@ -76,7 +76,7 @@ main.home h2 {
 
 span.autor,
 span.titulo {
-    background-color: #ffffff;
+    background-color: #F1F1F1;
     display: block;
     font-family: "Orelega one";
     font-size: 1.4vh;
@@ -142,7 +142,7 @@ div.home__main__up i {
 @media(min-width:768px) {
     main.home {
 
-        background-color: #FFE7E7;
+        background-color: var(--colorMainHome);
        
     }
     main.home {
@@ -160,7 +160,7 @@ div.home__main__up i {
         
     
     span.titulo,span.autor {
-        background-color: #ffffff;
+        background-color: #F1F1F1;
         font-family: "orelega one";
         font-size: 1.4vh;
         padding-left: 5px;
@@ -198,7 +198,7 @@ div.home__main__up i {
 @media(min-width:1024px) {
     main.home {
 
-        background-color: #FFE7E7;
+        background-color:var(--colorMainHome);
     
     }
     main.home {
