@@ -38,6 +38,12 @@
     font-size: 28px;
     color: rgb(242, 225, 197);
 }
+.header_nav li a i:hover{
+
+    color: #10fffb;
+    /* box-shadow: 0 0 5px #10fffb; */
+    text-shadow: 0 0 5px #ffee10;
+}
 
 
 .header_nav li.idioma a {

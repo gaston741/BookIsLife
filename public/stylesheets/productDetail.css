@@ -199,7 +199,13 @@ span.precio {
     bottom: 20px;
     right: 5px;
     font-size: 4rem;
+    
 }
+.home__main__up a i:hover{
+    color: #10fffb;
+}
+
+   
 
 /* TABLET */
 
