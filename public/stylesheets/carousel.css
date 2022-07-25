@@ -1,7 +1,12 @@
 /* --- --- CAROUSEL --- --- */
-.carousel{
-	display: none;
+@media (min-width:0px){
+	
+    .carousel{
+        display: none;
+       
+    }
 }
+
 
 @media(min-width: 1024px) {
 	
@@ -12,21 +17,26 @@
 	.carousel__contenedor {
 		position: relative;
 	}
-	.carousel__anterior,
-	.carousel__siguiente {
+	button.carousel__anterior,
+	button.carousel__siguiente {
+
 		position: absolute;
 		display: block;
-		width: 30px;
+		width: 80px;
 		height: 30px;
 		border: none;
-		top: calc(50% - 35px);
+		top: calc(71% - 81px);
 		cursor: pointer;
 		line-height: 30px;
 		text-align: center;
 		background: none;
-		color: #fff;
-		opacity: 20%;
-	}
+		color: black;
+		opacity: 10;
+		z-index: 1;
+		font-size: 25px;
+        margin: 0 25px;
+    }
+	
 	.carousel__anterior:hover,
 	.carousel__siguiente:hover {
 		opacity: 100%;
