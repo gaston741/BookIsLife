@@ -33,7 +33,7 @@
 		color: black;
 		opacity: 10;
 		z-index: 1;
-		font-size: 25px;
+		font-size: 40px;
         margin: 0 25px;
     }
 	
@@ -43,11 +43,11 @@
 	}
 	
 	.carousel__anterior {
-		left: -30px;
+		left: -20px;
 	}
 	
 	.carousel__siguiente {
-		right: -30px;
+		right: -20px;
 	}
 	
 	.carousel__lista {

@@ -19,7 +19,7 @@
 
 main.home {
 
-    background-color:var(--colorMainHome) ;
+    background:var(--colorMainHome) ;
     background-size: auto;
 }
 
@@ -145,7 +145,7 @@ div.home__main__up i {
 @media(min-width:768px) {
     main.home {
 
-        background-color: var(--colorMainHome);
+        background: var(--colorMainHome);
        
     }
     main.home {
@@ -163,7 +163,7 @@ div.home__main__up i {
         
     
     span.titulo,span.autor {
-        background-color: #F1F1F1;
+        background-color: #ffffff;
         font-family: "orelega one";
         font-size: 1.4vh;
         padding-left: 5px;
@@ -201,7 +201,7 @@ div.home__main__up i {
 @media(min-width:1024px) {
     main.home {
 
-        background-color:var(--colorMainHome);
+        background:var(--colorMainHome);
     
     }
     main.home {
