@@ -56,13 +56,7 @@
             <!--  seccion fecha de nacimiento -->
                     <div class="register__form-box">
                         <label class="admi_label_edit" for="date"> Fecha de nacimiento</label>
-                        <input class="admi_form-input" type="date" name="date" id="date"  value="<%= user.date %>"   >
-                    </div>
-
-            <!-- seccion domicilio -->
-                    <div class="register__form-box">
-                        <label class="admi_label_edit" for="address">Domicilio</label>
-                        <input class="admi_form-input"  type="text" id="address" name="address" value="<%= user.address %>">
+                        <input class="admi_form-input" type="date" name="date" id="date"  value="<%= date %>">
                     </div>
                     
             <!-- seccion imagen de perfil -->
@@ -78,15 +72,13 @@
                 <article >
                     <div class="button_register">
                             <button type="submit" class="volver volver-register">Guardar</button>
-                        
-                            <button class="volver volver-register"><a href="/">Cancelar</a></button> 
-
+                            <button class="volver volver-register"><a href="/">Cancelar</a></button>
                             
                     </div>
                 </article>
             </form>
             <form action="/users/deleteUser/<%= user.id %>?_method=DELETE" method="POST">
-                <button  type="submit" class="admi_adherir admi_delete">Eliminar <i class="fa-solid fa-trash-can trash-delete"></i></button>
+                <button  type="submit" class="admi_adherir admi_delete"><i class="fa-solid fa-trash-can trash-delete"></i></button>
                </div> 
          </form> 
         </section>

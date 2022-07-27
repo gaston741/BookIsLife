@@ -7,7 +7,8 @@ const { register ,processRegister ,login ,processLogin ,logout ,profileEdit ,upd
 
 //********Validator require */
 const registerValidator = require('../validations/registerValidator');
-const loginValidator = require('../validations/loginValidator')
+const loginValidator = require('../validations/loginValidator');
+const profileValidator = require('../validations/profileValidator');
 
 // middleware require  
 const uploadFile = require ('../middlewares/uploadUserAvatar')
@@ -30,7 +31,7 @@ router.get('/logout',logout);
 
 //***TO PROFILE */
 router.get('/profile',checkUser, profileEdit);
-router.put('/update-profile',uploadFile.single('avatar'), updateProfile)
+router.put('/update-profile',uploadFile.single('avatar'),profileValidator, updateProfile)
 router.delete('/deleteUser/:id', deleteUser)
 
 

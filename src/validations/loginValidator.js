@@ -20,28 +20,16 @@ module.exports =[
         .custom((value, {req}) => {
             return db.User.findOne({
                 where : {
-                    email : req.check.email
+                    email : req.body.email
                 }
             }).then(user => {
                 if(!user || !bcryptjs.compareSync(value, user.password)) {
                     return Promise.reject()
                 }
-        }).catch(() => {Promise.reject('Datos invalidos!')})
+        }).catch((error) => {
+            console.log(error)
+            return Promise.reject('Datos invalidos!')
+        })
     })
-
-        /* .custom((value,{req})=>{
-        /* Comparing the email and password with the ones in the database. */
-        /* const user = users.find(user=>user.email === req.body.email);
-        if(!user){
-            return false
-        }else{
-            
-            if(!bcryptjs.compareSync(value, user.password)){ // si son diferentes las contraseñas que se estan comparando : false.
-                return false
-            }
-        } */
-        /* Returning true if the email and password are correct. */
-            /* return true
-        }).withMessage("Credenciales inválidas") */
 
 ]
