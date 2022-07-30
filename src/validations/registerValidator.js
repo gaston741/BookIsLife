@@ -1,8 +1,6 @@
 const db = require('../database/models')
 const path = require('path');
 const { check, body } = require('express-validator');
-const { promiseImpl } = require('ejs');
-/* const users = require('../data/usersDataBase.json'); */
 
 module.exports = [
 
@@ -37,15 +35,8 @@ module.exports = [
                     return Promise.reject() //Si ya existe el Usuario rechasame la promesa
                 }
         }).catch(() => Promise.reject('El email ya se encuentra registrado!')) // Y tirame este mensaje
-            /* const user = users.find(user => user.email === value); */
 
-            /* if (user) { // si existe un usuario  registrado con ese mail 
-                return false // no lo dejo registrarse
-            } else { // si no tengo un usuario con ese mail
-                return true // lo dejo registrarse
-            } */
         }),
-        /* .withMessage("El email ya se encuentra registrado"), */
 
     check("password")
         .isLength({ min: 6, max: 12 })
