@@ -5,6 +5,8 @@
 
     <body class="administrador">
         <%- include('./partials/header') %>
+        <script src="/javascript/productEdit.js" defer></script>
+
             <!--  BOTON VOLVER -->
             <div class="container-button-product-detail admini">
                 <a class="a_button" href="/"><i class="fa-solid fa-angle-left"></i> VOLVER </a>
@@ -13,7 +15,7 @@
             <main class="admi_main">
 
                 <!--   Empieza el formulario -->
-                <form action="/products/update/<%= product.id %>?_method=PUT" class="form_admi" method="POST" enctype="multipart/form-data">
+                <form action="/products/update/<%= product.id %>?_method=PUT" class="form_admi" method="POST" enctype="multipart/form-data" id="form-ProductEdit">
                     <!--  Titulos -->
                     <h2 class="titulo_admi"> Formulario del Administrador</h2>
                     <h3 class="titulo_dos_admi">Edición de Libros</h3>
@@ -24,14 +26,14 @@
                         <div class="admi__form-box">
                             <input class="admi_form-input" type="text" placeholder="Título del libro" name="name"
                                 id="name" value="<%= product.name %>">
-                            <span class="admi__text-error"></span>
+                            <span class="admi__text-error" id="errorName"></span>
                         </div>
 
                         <!-- Precio del libro -->
                         <div class="admi__form-box">
                             <input class="admi_form-input" type="number" placeholder="$$ Precio del Libro" name="price"
                                 id="price" value="<%= product.price %>">
-                            <span class="admi__text-error"></span>
+                            <span class="admi__text-error" id="errorPrice"></span>
                         </div>
 
                         <!-- Autor del libro-->
@@ -41,7 +43,7 @@
                                     <option value="<%= autor.id %>" <%= autor.id === product.autorId && 'selected' %>><%= autor.name %></option>
                                 <% }) %>
                             </select>
-                            <span class="admi__text-error"></span>
+                            <span class="admi__text-error" id="errorAutorId"></span>
                         </div>
 
                         <!--  Editorial del libro -->
@@ -51,39 +53,39 @@
                                     <option value="<%= publisher.id %>" <%= publisher.id === product.publisherId && 'selected' %> ><%= publisher.name %></option>
                                 <% }) %>
                             </select>
-                            <span class="admi__text-error"></span>
+                            <span class="admi__text-error" id="errorPublisherId"></span>
                         </div>
 
                         <!-- -Genero del libro-->
                         <div class="admi__form-box">
-                            <select class="admi_select dropdown-select" name="genreId" id="genre">
+                            <select class="admi_select dropdown-select" name="genreId" id="genreId">
                                 <% genres.forEach(genre => { %>
                                     <option value="<%= genre.id %>" <%= genre.id === product.genreId && 'selected' %>><%= genre.name %></option>
                                 <% }) %>
                             </select>
-                            <span class="admi__text-error"></span>
+                            <span class="admi__text-error" id="errorGenreId"></span>
                         </div>
 
                         <!--  Idioma de Edicion -->
                         <div class="admi__form-box">
-                            <select class="admi_select dropdown-select" name="languageId" id="language">
+                            <select class="admi_select dropdown-select" name="languageId" id="languageId">
                                 <option hidden selected value="">Seleccione Idioma de Edición</option>
                                 <% languages.forEach(language => { %>
                                     <option value="<%= language.id %>" <%= language.id === product.languageId && 'selected' %>><%= language.name %></option>
                                 <% }) %>
                             </select>
-                            <span class="admi__text-error"></span>
+                            <span class="admi__text-error" id="errorLanguageId"></span>
                         </div>
 
                         <!-- Categoria de Edicion -->
                         <div class="admi__form-box">
-                            <select class="admi_select dropdown-select" name="categoryId" id="category">
+                            <select class="admi_select dropdown-select" name="categoryId" id="categoryId">
                               
                                 <% categories.forEach(category => { %>
                                     <option value="<%= category.id %>" <%= category.id === product.categoryId && 'selected' %>><%= category.name %></option>
                                 <% }) %>
                             </select>
-                            <span class="admi__text-error"></span>
+                            <span class="admi__text-error" id="errorCategoryId"></span>
                         </div>
                         <!-- Portada del libro-->
                         <div class="admi__form-box">
@@ -94,7 +96,7 @@
                     <div class="admi__form-box">
                         <textarea class="admi_form-texarea" name="description" id="description" 
                             placeholder="Agregue la sinopsis"><%= product.description %></textarea>
-                        <span class="admi__text-error"></span>
+                        <span class="admi__text-error" id="errorDescription"></span>
                     </div>
 
                     <div class="admi__form-box">

@@ -1,3 +1,4 @@
+const path = require('path');
 const {check} = require ('express-validator');
 const db = require('../database/models');
 

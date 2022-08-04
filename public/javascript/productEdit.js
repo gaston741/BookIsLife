@@ -5,7 +5,7 @@ const qsa = (element) => document.querySelectorAll(element);
 const $ = (element) => document.getElementById(element);
 
 window.addEventListener('load' , () => {
-    let formProductCreate = qs('form-productCreate'),
+    let formProductEdit = qs('form-ProductEdit'),
         name = qs('#name'),
         price = qs('#price'),
         autorId = qs('#autorId'),
@@ -161,10 +161,10 @@ window.addEventListener('load' , () => {
                 break;
         }
     })
-    formProductCreate.addEventListener('submit', (e) =>{
+    formProductEdit.addEventListener('submit', (e) =>{
         let errores = true;
         e.preventDefault()
-        let elementosForm = formProductCreate.elements;
+        let elementosForm = formProductEdit.elements;
         
         for (let i = 0; i < elementosForm.length-1; i++) {
             if(elementosForm[i].value === "" || elementosForm[i].classList.contains('is-invalid')/*  && elementosForm[i] !==   */ //<< para negar informacion no importante 
@@ -180,7 +180,7 @@ window.addEventListener('load' , () => {
             console.log("Todo Perfecto !!");
             errorForm.innerHTML = '';
             alert("Carga realizada correctamente");
-            formProductCreate.submit();
+            formProductEdit.submit();
         }
     })
 })
