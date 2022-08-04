@@ -5,6 +5,7 @@ const path = require('path');
 const toThousand = n => n.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 module.exports = {
+    
     index : (req, res) => {
     let genres = Genre.findAll();
 		let products = Product.findAll({
@@ -12,13 +13,12 @@ module.exports = {
         })
         Promise.all([genres,products])
             .then(([genres,products]) => {
-/*                 return res.send(products)
- */                res.render('products',{
+               res.render('products',{
                     products,
                     genres
             })
 	    })
-        .catch(error => console.log(error))
+        .catch(errors => console.log(errors))
 	},
 
     detail : (req,res) => {
@@ -32,7 +32,7 @@ module.exports = {
                     toThousand
             })
         })
-            .catch(error => console.log(error))
+            .catch(errors => console.log(errors))
     }, 
 
     filter : (req,res) => {
@@ -85,7 +85,7 @@ module.exports = {
         .then(() => {
             return res.redirect('/products')
         })
-        .catch(error => console.log(error))
+        .catch(errors => console.log(errors))
     },
 
     edit : (req,res) => {
