@@ -31,20 +31,20 @@
                     <!-- seccion nombre -->
                     <div class="register__form-box">
                         <label class="register__label" for="name">Nombre: </label>
-                        <input class="register__form-input" type="text" id="name" name="name" value="<%= locals.old && old.name ? old.name : null %>">
-                        <span class="register__text-error"><%= locals.errors && errors.name ? errors.name.msg : null  %></span>
+                        <input class="register__form-input form-control" type="text" id="name" name="name" value="<%= locals.old && old.name ? old.name : null %>">
+                        <span class="register__text-error" id="nombreError"><%= locals.errors && errors.name ? errors.name.msg : null  %></span>
                     </div>
                     <!--  seccion apellido -->
                     <div class="register__form-box">
                         <label class="register__label" for="surname">Apellido: </label>
-                        <input class="register__form-input" type="text" id="surname" name="surname" value="<%= locals.old && old.surname ? old.surname : null %>">
-                        <span class="register__text-error"><%= locals.errors && errors.surname ? errors.surname.msg : null  %></span>
+                        <input class="register__form-input form-control" type="text" id="surname" name="surname" value="<%= locals.old && old.surname ? old.surname : null %>">
+                        <span class="register__text-error" id="apellidoError"><%= locals.errors && errors.surname ? errors.surname.msg : null  %></span>
                     </div>
                     <!--  seccion email -->
                     <div class="register__form-box">
                         <label class="register__label" for="email">Email: </label>
-                        <input class="register__form-input" type="email" id="email" name="email" value="<%= locals.old && old.email ? old.email : null %>">
-                        <span class="register__text-error"><%= locals.errors && errors.email ? errors.email.msg : null  %></span>
+                        <input class="register__form-input form-control" type="email" id="email" name="email" value="<%= locals.old && old.email ? old.email : null %>">
+                        <span class="register__text-error" id="emailError"><%= locals.errors && errors.email ? errors.email.msg : null  %></span>
                     </div>
                     <!--  seccion contraseña -->
                     <div class="register__form-box">
@@ -95,6 +95,6 @@
             </form>
         </section>
     </main>
-
+    <script src="/js/register.js"></script>
 </body>
 </html>
