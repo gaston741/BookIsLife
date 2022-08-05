@@ -4,7 +4,7 @@ h1{
 }
 
 .main-product-cart{
-    background-color: var(--colorMainHome);
+    background: var(--colorMainHome);
 }
 .product-cart__product{
     display: flex;

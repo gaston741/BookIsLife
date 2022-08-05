@@ -3,15 +3,15 @@ body{
     margin: 0;
     box-sizing: border-box;
 }
-body.product-detail{
-    background-color: #FFE7E7;
-}
+/* body.product-detail{
+    background:var(--colorMainHome);
+} */ 
 
 /*                       MAIN            */
 
 main.product-detail__main{
 
-    background-color: var(--colorMainHome);
+    background: var(--colorMainHome);
     padding-bottom: 40px;
     font-family: "Cinzel";
 }
@@ -33,7 +33,7 @@ div.container-button-product-detail{
     letter-spacing: 2.5px;
     font-weight: 700;
     color: #000;
-    background-color: #fff;
+    background-color: #ffff;
     border: none;
     border-radius: 5px;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
@@ -47,9 +47,9 @@ div.container-button-product-detail{
 }
 .a_button:hover{
         background-color:#EFFEFA ;
-        box-shadow: 0px 15px 20px #54BAB9;
+        box-shadow: 0px 15px 20px #6c6d6d;
         color: rgb(7, 7, 7);
-        transform: translateY(-7px);
+        transform: translateY(-3px);
 }
 .a_button:active {
        transform: translateY(-1px);
@@ -125,7 +125,7 @@ span.precio {
     font-size: 20px;
     color: #FFF;
     text-decoration: none;
-    background-color: #2ecc71;
+    background-color: #04AA6D;
     border: none;
     border-bottom: 5px solid #27ae60;
     text-shadow: 0px -2px #27ae60;
@@ -199,20 +199,23 @@ span.precio {
     bottom: 20px;
     right: 5px;
     font-size: 4rem;
+    
 }
+.home__main__up a i:hover{
+    color: #10fffb;
+}
+
+   
 
 /* TABLET */
 
 @media(min-width:768px) {
     
-    body.product-detail{
-        background-color: var(--colorMainHome);
-
-    }
     .product-detail__main{
 
-        margin: 0em 5em;
+        padding: 0em 5em;
     }
+    
    .container-product-detail-portada{
    display: flex;
    justify-content: center;
@@ -264,7 +267,7 @@ span.precio {
 
     .product-detail__main{
 
-        margin: 0em 7em;
+       padding: 0em 7em;
     }
     
     .container-product-detail-portada {

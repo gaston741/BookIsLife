@@ -6,6 +6,9 @@
 <body class="home">
     <%- include('./partials/header') %> 
     
+    <!--  CARRUSEL-->
+    
+ <%- include('./partials/carousel') %>      
     <!--  CUERPO  -->
     <main class="home">
             <!-- SECCION LOS MAS VENDIDOS DE LA SEMANA-->
@@ -69,11 +72,13 @@
             </section>
     
             <div class="home__main__up">
-                <a href="/"><i class="fa-solid fa-circle-chevron-up"></i></a>
+                <a href="#"><i class="fa-solid fa-circle-chevron-up"></i></a>
             </div>
     </main>
     
     <%- include('./partials/footer') %> 
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+    <script src="/js/carousel.js"></script>
 </body>
 
 </html>

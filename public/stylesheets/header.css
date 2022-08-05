@@ -2,7 +2,7 @@
 
 .home__header {
 
-    background-color:#16213E;
+    background-color:#000000;
     text-decoration: none;
     list-style: none;
     
@@ -37,6 +37,12 @@
 
     font-size: 28px;
     color: rgb(242, 225, 197);
+}
+.header_nav li a i:hover{
+
+    color: #10fffb;
+    /* box-shadow: 0 0 5px #10fffb; */
+    text-shadow: 0 0 5px #ffee10;
 }
 
 
@@ -112,6 +118,7 @@ header.home__header div.header_buscador {
     align-items: center;
     background-color: #ffffff;
     position: relative;
+    z-index: 1;
     
 }
 
@@ -170,7 +177,7 @@ header.home__header div.header_buscador {
 .home_nav-menu li:hover{
   
     transition: .3s;
-    background-color: rgb(100, 231, 231);
+    background-color: #F1F1F1;
 
 }
 

@@ -143,7 +143,14 @@ module.exports = {
     
     cart : (req,res) => {
         
-        return res.render('productCart')
+        Genre.findAll()
+        .then( genres =>{
+            return res.render('productCart',{
+                genres
+            })
+
+        })
+        
     },
 
 }

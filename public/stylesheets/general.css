@@ -1,8 +1,0 @@
- /* ------------ DISEÑO DE VALIDACIONES ---------------------*/
-.is-invalid{
-    border: 1px solid rgb(196, 33, 33);
-}
-
-.is-valid{
-    border: 1px solid rgb(30, 255, 30);
-}
