@@ -7,7 +7,7 @@ const toThousand = n => n.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g,
 module.exports = {
     
     index : (req, res) => {
-    let genres = Genre.findAll();
+        let genres = Genre.findAll();
 		let products = Product.findAll({
             include : ['category','autor']
         })

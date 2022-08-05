@@ -9,16 +9,21 @@ const toThousand = n => n.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g,
 module.exports={
     index: (req, res) =>{
       
-      let productsInSale = Product.findAll({
+      let productsInSale = Product.findAll(/* {
+        include : ['autor'] <<<<<<<<<<<<<<<<<<<<< comentado para revisión  me llama a todos los productos y no los que requiero
+      }, */{
         where : {
           categoryId : 1 ,
         }
-    })
-    let productsRelevant = Product.findAll({
+      })
+
+      let productsRelevant = Product.findAll(/* {
+        include : ['autor'] <<<<<<<<<<<<<<<<<<<<< comentado para revisión  me llama a todos los productos y no los que requiero
+      }, */{
         where : {
           categoryId : 2 ,
         }
-    })
+      })
 
     let genres = Genre.findAll()
     Promise.all([ productsInSale , productsRelevant, genres ])

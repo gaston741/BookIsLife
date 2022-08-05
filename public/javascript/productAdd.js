@@ -37,7 +37,7 @@ window.addEventListener('load' , () => {
                 errores = true
             default:
                 name.classList.remove('is-invalid');
-                name.classList.add('is.valid');
+                name.classList.add('is-valid');
                 errorName.innerHTML = "";
                 errores = false
                 break;
@@ -52,7 +52,7 @@ window.addEventListener('load' , () => {
                 break;
             default:
                 price.classList.remove('is-invalid');
-                price.classList.add('is.valid');
+                price.classList.add('is-valid');
                 errorPrice.innerHTML = "";
                 errores = false
                 break;
@@ -68,7 +68,7 @@ window.addEventListener('load' , () => {
                 break;
             default:
                 autorId.classList.remove('is-invalid');
-                autorId.classList.add('is.valid');
+                autorId.classList.add('is-valid');
                 errorAutorId.innerHTML = "";
                 errores = false
                 break;
@@ -87,7 +87,7 @@ window.addEventListener('load' , () => {
                 errores = true
             default:
                 publisherId.classList.remove('is-invalid');
-                publisherId.classList.add('is.valid');
+                publisherId.classList.add('is-valid');
                 errorPublisherId.innerHTML = "";
                 errores = false
                 break;
@@ -102,7 +102,7 @@ window.addEventListener('load' , () => {
                 break;
             default:
                 genreId.classList.remove('is-invalid');
-                genreId.classList.add('is.valid');
+                genreId.classList.add('is-valid');
                 errorGenreId.innerHTML = "";
                 errores = false
                 break;
@@ -121,7 +121,7 @@ window.addEventListener('load' , () => {
                 errores = true
             default:
                 languageId.classList.remove('is-invalid');
-                languageId.classList.add('is.valid');
+                languageId.classList.add('is-valid');
                 errorLanguageId.innerHTML = "";
                 errores = false
                 break;
@@ -136,7 +136,7 @@ window.addEventListener('load' , () => {
                 break;
             default:
                 categoryId.classList.remove('is-invalid');
-                categoryId.classList.add('is.valid');
+                categoryId.classList.add('is-valid');
                 errorCategoryId.innerHTML = "";
                 errores = false
                 break;
@@ -155,7 +155,7 @@ window.addEventListener('load' , () => {
                 errores = true
             default:
                 description.classList.remove('is-invalid');
-                description.classList.add('is.valid');
+                description.classList.add('is-valid');
                 errorDescription.innerHTML = "";
                 errores = false
                 break;
