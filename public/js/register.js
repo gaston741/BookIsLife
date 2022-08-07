@@ -2,7 +2,8 @@ console.log('register.js seccess');
 
 const $ = (element) => document.getElementById(element)
 
-const regExletter = /^[A-Z]+$/i;
+const regExLetter = /^[A-Z]+$/i;
+const regExEmail =  /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/;
 
 $('name').addEventListener('blur', function() {
     
@@ -35,7 +36,7 @@ $('surname').addEventListener('blur', function() {
             $('apellidoError').innerHTML = "Tienes que ingresar tu Apellido"
             this.classList.add('is-invalid')
             break;
-        case !regExletter.test(this.value.trim()) :
+        case !regExLetter.test(this.value.trim()) :
                 $('apellidoError').innerHTML = "Tiene que poner solo letras"
                 this.classList.add('is-invalid')
                 break
@@ -59,8 +60,8 @@ $('email').addEventListener('blur', function() {
             $('emailError').innerHTML = "Tienes que ingresar tu Email"
             this.classList.add('is-invalid')
             break;
-        case !regExletter.test(this.value.trim()) :
-                $('emailError').innerHTML = "Tiene que poner solo letras"
+        case !regExEmail.test(this.value.trim()) :
+                $('emailError').innerHTML = "El email tiene un formato inválido"
                 this.classList.add('is-invalid')
                 break
         case this.value.trim().length < 2 || this.value.trim().length > 255 : 
