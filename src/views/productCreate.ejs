@@ -5,6 +5,7 @@
 
     <body class="administrador">
         <%- include('./partials/header') %>
+        <script src="/javascript/productAdd.js" defer></script>
             <!--  BOTON VOLVER -->
             <div class="container-button-product-detail admini">
                 <a class="a_button" href="/"><i class="fa-solid fa-angle-left"></i> VOLVER </a>
@@ -13,7 +14,7 @@
             <main class="admi_main">
 
                 <!--   Empieza el formulario -->
-                <form class="form_admi" method="POST" enctype="multipart/form-data">
+                <form class="form_admi" method="POST" enctype="multipart/form-data" id="form-productCreate">
                     <!--  Titulos -->
                     <h2 class="titulo_admi"> Formulario del Administrador</h2>
                     <h3 class="titulo_dos_admi">Adhesion de Libros</h3>
@@ -24,14 +25,14 @@
                         <div class="admi__form-box">
                             <input class="admi_form-input" type="text" placeholder="Título del libro" name="name"
                                 id="name">
-                            <span class="admi__text-error"></span>
+                            <span class="admi__text-error" id="errorName"><%= locals.errors && errors.name ? errors.name.msg : null  %></span>
                         </div>
 
                         <!-- Precio del libro -->
                         <div class="admi__form-box">
                             <input class="admi_form-input" type="number" placeholder="$$ Precio del Libro" name="price"
                                 id="price">
-                            <span class="admi__text-error"></span>
+                            <span class="admi__text-error" id="errorPrice"><%= locals.errors && errors.price ? errors.price.msg : null  %></span>
                         </div>
 
                         <!-- Autor del libro-->
@@ -42,7 +43,7 @@
                                     <option value="<%= autor.id %>"><%= autor.name %></option>
                                 <% }) %>
                             </select>
-                            <span class="admi__text-error"></span>
+                            <span class="admi__text-error" id="errorAutorId"><%= locals.errors && errors.autorId ? errors.autorId.msg : null  %></span>
                         </div>
 
                         <!--  Editorial del libro -->
@@ -53,40 +54,40 @@
                                     <option value="<%= publisher.id %>"><%= publisher.name %></option>
                                 <% }) %>
                             </select>
-                            <span class="admi__text-error"></span>
+                            <span class="admi__text-error" id="errorPublisherId"><%= locals.errors && errors.publisherId ? errors.publisherId.msg : null  %></span>
                         </div>
 
                         <!-- -Genero del libro-->
                         <div class="admi__form-box">
-                            <select class="admi_select dropdown-select" name="genreId" id="genre">
-                                <option value="" hidden selected>Seleccione Genero Literario</option>
+                            <select class="admi_select dropdown-select" name="genreId" id="genreId">
+                                <option value="" hidden selected>Seleccione un Genero Literario</option>
                                 <% genres.forEach(genre => { %>
                                     <option value="<%= genre.id %>"><%= genre.name %></option>
                                 <% }) %>
                             </select>
-                            <span class="admi__text-error"></span>
+                            <span class="admi__text-error" id="errorGenreId"><%= locals.errors && errors.genreId ? errors.genreId.msg : null  %></span>
                         </div>
 
                         <!--  Idioma de Edicion -->
                         <div class="admi__form-box">
-                            <select class="admi_select dropdown-select" name="languageId" id="language">
-                                <option hidden selected value="">Seleccione Idioma de Edición</option>
+                            <select class="admi_select dropdown-select" name="languageId" id="languageId">
+                                <option hidden selected value="">Seleccione un Idioma</option>
                                 <% languages.forEach(language => { %>
                                     <option value="<%= language.id %>"><%= language.name %></option>
                                 <% }) %>
                             </select>
-                            <span class="admi__text-error"></span>
+                            <span class="admi__text-error" id="errorLanguageId"><%= locals.errors && errors.languageId ? errors.languageId.msg : null  %></span>
                         </div>
 
                         <!-- Categoria de Edicion -->
                         <div class="admi__form-box">
-                            <select class="admi_select dropdown-select" name="categoryId" id="category">
-                                <option value="" value="" hidden selected>Seleccione Categoria de Edición</option>
+                            <select class="admi_select dropdown-select" name="categoryId" id="categoryId">
+                                <option value="" value="" hidden selected>Seleccione una Categoria</option>
                                 <% categories.forEach(category => { %>
                                     <option value="<%= category.id %>"><%= category.name %></option>
                                 <% }) %>
                             </select>
-                            <span class="admi__text-error"></span>
+                            <span class="admi__text-error" id="errorCategoryId"><%= locals.errors && errors.categoryId ? errors.categoryId.msg : null  %></span>
                         </div>
                         <!-- Portada del libro-->
                         <div class="admi__form-box">
@@ -97,7 +98,7 @@
                     <div class="admi__form-box">
                         <textarea class="admi_form-texarea" name="description" id="description" 
                             placeholder="Agregue la sinopsis"></textarea>
-                        <span class="admi__text-error"></span>
+                        <span class="admi__text-error" id="errorDescription"></span>
                     </div>
 
                     <div class="admi__form-box">
