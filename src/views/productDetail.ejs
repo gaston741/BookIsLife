@@ -10,70 +10,96 @@
     
    <%- include('./partials/carousel') %> 
 
-    <main class="product-detail__main">
-        <!--  BOTON VOLVER -->
-        <div class="container-button-product-detail">
+   <main class="product-detail__main">
+    <!-- GO BACK BUTTON -->
+    <div class="container-button-product-detail">
         <a class="a_button" href="/"><i class="fa-solid fa-angle-left"></i> VOLVER </a>
+    </div>
+
+    <section class="product-detail" id="product-detail">
+      <!-- TITLE  -->
+      <h1 class="heading"><span>Home || <%=product.name %></span></h1>
+
+      <div class="swiper product-slider">
+        <div class="swiper-wrapper">
+          <!-- STARS SECTION -->
+          
+            <!--  IMAGE SECTION -->
+            <div class="image">
+              <div class="swiper-slide box">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              <a href=""><img src="/images/portadas/<%= product.image %>" alt="" /></a>
+              <img src="/images/otrasImagenes/stand.png" class="product-stand" alt="">
+            </div>
+            
+            <div class="content">
+              <h3><%= product.name %></h3>
+              <!-- PRICE SECTION -->
+              <div class="price"> $<%= toThousand(product.price) %> <span>$20.99</span></div>
+              <button href="#" class="btn shop">comprar<span><i class="fa-solid fa-cart-shopping"></i></span></i></button>
+            </div>
+          </div>
         </div>
-    
-        <!--       SECCION PRODUCTO -->
-        <section class="container-product-detail-portada">
-        <!-- IMAGEN PRODUCTO -->
-            <div class="product-detail-product ">
-                <img class="product-detail-portada shadow_detail " src="/images/portadas/<%= product.image %>" alt="">
-            </div>
-        <!-- PRECIO ANTERIOR -->
-            <div class="cart_precios">
-            <span class="precio_anterior"> $5.699</span>
-        <!--  PRECIO PRODUCTO -->
-            <span class="precio"> $<%= toThousand(product.price) %></span>
-            </div>
-        <!--    AÑADIR PRODUCTO AL CARRITO DE  COMPRAS -->
-        <!-- solo si el usuario logueado es distinto a administrador , permitir añadir al carrito de compras. -->
-        <% if (locals.userLogin?.rol !== "admin") { %>
-            <div class="añadir">
-                <a class="product-detail-añadir" href="/products/cart">AÑADIR <i class="fa-solid fa-cart-arrow-down"></i></a>
-            </div>
-        <% } %>
-            
-        </section>
+      </div>
+      <!--  DETAIL'S TABLE-->
+      <table class="tabla-detalles">
+        <tbody class="table-group-divider">
+          <tr>
+            <th scope="row">Titulo</th>
+            <td><%= product.name %></td>
+          </tr>
+          <tr>
+            <th scope="row">Autor</th>
+            <td><%= product.autor %></td>
+          </tr>
 
-        
-        <!--  BOTON editar PRODUCTO-->
-        <% if (locals.userLogin?.rol === "admin") { %> <!-- solo si el usuario logueado es administrador , permitir editar o eliminar producto. -->
-            
-            <div class="botones_admi">
-                <button class="admi_adherir admi_submit"><a  href="/products/edit/<%= product.id %>" >Editar<i class="fa-solid fa-pen-to-square"></i></a></button>
-                
-                <!--  BOTON borrar PRODUCTO-->
-        <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
-                <button  type="submit" class="admi_adherir admi_delete">Eliminar <i class="fa-solid fa-trash-can trash-delete"></i></button>
-                </div> 
-        </form>
-        <% } %>
-        
-        
+          <tr>
+            <th scope="row">Genero</th>
+            <td><%= product.genre %></td>
+          </tr>
 
-    
+          <tr>
+            <th scope="row">Editorial</th>
+            <td><%= product.publisher %></td>
+          </tr>
+          <tr>
+            <th scope="row">Language</th>
+            <td><%= product.language%></td>
+          </tr>
+        </tbody>
+      </table>
 
-        <!--  DESCRIPCION PRODUCTO -->
-        <section class="container-product-detail-descripcion">
-            <article class="product-detail-description">
-                <h1><%= product.name %></h1>
-                <h3>SINOPSIS</h3>
-                <p><%= product.description %></p>
-                    <!--  <a class="leer_mas" href="#parrafo-ver-mas"> ...leer más</a>
-                <p id="parrafo-ver-mas" class="parrafo-ver-mas"> La edición publicada en 2012 para conmemorar el décimo aniversario de la primera edición original de
-                    El psicoanalista, incluye un epílogo que John Katzenbach ha escrito especialmente para los lectores
-                    en lengua española.</p> -->
-            </article>
-        </section>
+      <!--  SINOPSIS SECTION -->
+      <div class="descripcion-detail">
+        <h3>sinopsis</h3>
+        <article class="descripcion">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Praesentium reprehenderit quidem, autem aut, quis aliquid pariatur
+            modi aspernatur nesciunt quas hic eligendi omnis voluptas numquam,
+            doloremque sunt magni eaque suscipit. <br />Lorem, ipsum dolor sit
+            amet consectetur adipisicing elit. Veniam quasi enim fugit vel rem
+            debitis minima unde placeat a? Eos atque tempore quod facere
+            pariatur beatae repellendus in excepturi praesentium? <br />Lorem
+            ipsum dolor sit amet consectetur, adipisicing elit. Excepturi,
+            iusto ipsa quia magni eaque, totam saepe animi mollitia reiciendis
+            facilis ad in! Sed eligendi libero placeat dolorem, ipsa nostrum
+            dolore?
+          </p>
+        </article>
+      </div>
+    </section>
         <!-- BOTON SCROLL UP -->
         <div class="home__main__up">
             <a href="#"><i class="fa-solid fa-circle-chevron-up"></i></a>
         </div>
-
-    </main>
+  </main>
     <%- include('./partials/footer') %> 
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
     <script src="/js/carousel.js"></script>
