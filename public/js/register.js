@@ -4,20 +4,22 @@ const $ = (element) => document.getElementById(element)
 
 const regExLetter = /^[A-Z]+$/i;
 const regExEmail =  /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/;
+const regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
+
 
 $('name').addEventListener('blur', function() {
     
     switch (true) {
         case !this.value.trim():
-            $('nombreError').innerHTML = "Tienes que ingresar tu nombre"
+            $('nombreError').innerHTML = "Tienes que ingresar tu Nombre"
             this.classList.add('is-invalid')
             break;
-        case !regExletter.test(this.value.trim()) :
+        case !regExLetter.test(this.value.trim()) :
                 $('nombreError').innerHTML = "Tiene que poner solo letras"
                 this.classList.add('is-invalid')
                 break
         case this.value.trim().length < 2 || this.value.trim().length > 255 : 
-            $('nombreError').innerHTML = "Tu nombre debe tener como minimo 2 caracteres"
+            $('nombreError').innerHTML = "Tu Nombre debe tener como minimo 2 caracteres"
             this.classList.add('is-invalid')
             break
         default:
@@ -76,3 +78,65 @@ $('email').addEventListener('blur', function() {
             break;
     }
 })
+
+$('password').addEventListener('blur', function() {
+    
+    switch (true) {
+        case !this.value.trim():
+            $('passwordError').innerHTML = "Tienes que ingresar tu Contraseña"
+            this.classList.add('is-invalid')
+            break;
+        case !regExPass.test(this.value.trim()) :
+                $('passwordError').innerHTML = "La Contraseña tiene que tener entre 6 y 12 caracteres, un Número, una Mayuscula y un signo cualquiera"
+                this.classList.add('is-invalid')
+                break
+        default:
+            this.classList.remove('is-invalid')
+            this.classList.add('is-valid')
+            $('passwordError').innerHTML = null;
+
+            break;
+    }
+})
+
+$('password2').addEventListener('blur', function() {
+    
+    switch (true) {
+        case !this.value.trim():
+            $('password2Error').innerHTML = "Tienes que confirmar tu Contraseña"
+            this.classList.add('is-invalid')
+            break;
+        case this.value.trim() !== $('password').value.trim():
+                $('password2Error').innerHTML = "Las Contraseñas no coinciden"
+                this.classList.add('is-invalid')
+                break
+        default:
+            this.classList.remove('is-invalid')
+            this.classList.add('is-valid')
+            $('password2Error').innerHTML = null;
+
+            break;
+    }
+})
+
+$('terms').addEventListener('click', function () {
+    this.classList.remove('is-invalid');
+    this.classList.toggle('is-valid');
+})
+
+$('form-register').addEventListener('submit', function(e) {
+    e.preventDefault();
+    let elements = this.elements;
+
+    for (let i = 0; i < elements.length - 1; i++) {
+        console.log(elements[i]);
+        if (elements[i].value) {
+            elements[i].classList.add('is-invalid')
+        }      
+    }
+})
+
+
+
+
+
