@@ -42,7 +42,7 @@
               <h3><%= product.name %></h3>
               <!-- PRICE SECTION -->
               <div class="price"> $<%= toThousand(product.price) %> <span>$20.99</span></div>
-              <button href="#" class="btn shop">comprar<span><i class="fa-solid fa-cart-shopping"></i></span></i></button>
+              <a href="/products/cart" class="btn shop">comprar<span><i class="fa-solid fa-cart-shopping"></i></span></i></a>
             </div>
           </div>
         </div>
@@ -50,27 +50,27 @@
       <!--  DETAIL'S TABLE-->
       <table class="tabla-detalles">
         <tbody class="table-group-divider">
-          <tr>
-            <th scope="row">Titulo</th>
-            <td><%= product.name %></td>
+          <tr class="caja-tabla-detalle">
+            <th class="tabla-detalle-nombre" scope="row">Titulo</th>
+            <td class="tabla-detalle-informacion"><%= product.name %></td>
           </tr>
-          <tr>
-            <th scope="row">Autor</th>
-            <td><%= product.autor %></td>
-          </tr>
-
-          <tr>
-            <th scope="row">Genero</th>
-            <td><%= product.genre %></td>
+          <tr class="caja-tabla-detalle">
+            <th class="tabla-detalle-nombre " scope="row">Autor</th>
+            <td class="tabla-detalle-informacion"><%= product.autor.name %></td>
           </tr>
 
-          <tr>
-            <th scope="row">Editorial</th>
-            <td><%= product.publisher %></td>
+          <tr class="caja-tabla-detalle">
+            <th class="tabla-detalle-nombre" scope="row">Genero</th>
+            <td class="tabla-detalle-informacion"><%= product.genre.name %></td>
           </tr>
-          <tr>
-            <th scope="row">Language</th>
-            <td><%= product.language%></td>
+
+          <tr class="caja-tabla-detalle">
+            <th class="tabla-detalle-nombre" scope="row">Editorial</th>
+            <td class="tabla-detalle-informacion"><%= product.publisher.name %></td>
+          </tr>
+          <tr class="caja-tabla-detalle">
+            <th class="tabla-detalle-nombre" scope="row">Language</th>
+            <td class="tabla-detalle-informacion"><%= product.language.name %></td>
           </tr>
         </tbody>
       </table>
@@ -80,17 +80,7 @@
         <h3>sinopsis</h3>
         <article class="descripcion">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Praesentium reprehenderit quidem, autem aut, quis aliquid pariatur
-            modi aspernatur nesciunt quas hic eligendi omnis voluptas numquam,
-            doloremque sunt magni eaque suscipit. <br />Lorem, ipsum dolor sit
-            amet consectetur adipisicing elit. Veniam quasi enim fugit vel rem
-            debitis minima unde placeat a? Eos atque tempore quod facere
-            pariatur beatae repellendus in excepturi praesentium? <br />Lorem
-            ipsum dolor sit amet consectetur, adipisicing elit. Excepturi,
-            iusto ipsa quia magni eaque, totam saepe animi mollitia reiciendis
-            facilis ad in! Sed eligendi libero placeat dolorem, ipsa nostrum
-            dolore?
+          <%= product.description %>  
           </p>
         </article>
       </div>

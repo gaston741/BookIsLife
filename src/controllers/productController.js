@@ -23,7 +23,9 @@ module.exports = {
 
     detail : (req,res) => {
         let genres = Genre.findAll()
-        let product = Product.findByPk(req.params.id)
+        let product = Product.findByPk(req.params.id,{
+            include:['autor','publisher','language', 'genre']
+        })
         Promise.all([genres, product])
             .then(([genres,product]) => {
                 return res.render('productDetail',{
