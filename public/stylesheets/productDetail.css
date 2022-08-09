@@ -59,22 +59,26 @@ div.container-button-product-detail{
        transform: translateY(-1px);
 }
 
-.btn{
+.btn.shop{
+    height: 4rem;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     margin-top: 1rem;
-    padding: .7em 1rem;
-    border-radius: .5rem;
+    padding: 0.5em 0.5rem;
+    border-radius: 0.5rem;
     color: white;
     background: var(--green);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     cursor: pointer;
     font-weight: 500;
     border: none;
+    width: 9rem;
 }
 
-.btn:hover{
+
+.btn:hover,
+.btn.shop:hover{
     background: var(--dark-color);
 }
 
