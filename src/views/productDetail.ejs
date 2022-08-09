@@ -50,27 +50,27 @@
       <!--  DETAIL'S TABLE-->
       <table class="tabla-detalles">
         <tbody class="table-group-divider">
-          <tr>
-            <th scope="row">Titulo</th>
-            <td><%= product.name %></td>
+          <tr class="caja-tabla-detalle">
+            <th class="tabla-detalle-nombre" scope="row">Titulo</th>
+            <td class="tabla-detalle-informacion"><%= product.name %></td>
           </tr>
-          <tr>
-            <th scope="row">Autor</th>
-            <td><%= product.autor.name %></td>
-          </tr>
-
-          <tr>
-            <th scope="row">Genero</th>
-            <td><%= product.genre.name %></td>
+          <tr class="caja-tabla-detalle">
+            <th class="tabla-detalle-nombre " scope="row">Autor</th>
+            <td class="tabla-detalle-informacion"><%= product.autor.name %></td>
           </tr>
 
-          <tr>
-            <th scope="row">Editorial</th>
-            <td><%= product.publisher.name %></td>
+          <tr class="caja-tabla-detalle">
+            <th class="tabla-detalle-nombre" scope="row">Genero</th>
+            <td class="tabla-detalle-informacion"><%= product.genre.name %></td>
           </tr>
-          <tr>
-            <th scope="row">Language</th>
-            <td><%= product.language.name %></td>
+
+          <tr class="caja-tabla-detalle">
+            <th class="tabla-detalle-nombre" scope="row">Editorial</th>
+            <td class="tabla-detalle-informacion"><%= product.publisher.name %></td>
+          </tr>
+          <tr class="caja-tabla-detalle">
+            <th class="tabla-detalle-nombre" scope="row">Language</th>
+            <td class="tabla-detalle-informacion"><%= product.language.name %></td>
           </tr>
         </tbody>
       </table>
