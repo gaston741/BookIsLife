@@ -2,7 +2,7 @@
 
 .home__header {
 
-    background-color:#000000;
+    background-color:var(--colorHeaderHome);
     text-decoration: none;
     list-style: none;
     

@@ -83,7 +83,6 @@ span.footer__link, span.footer__no_link {
         justify-content: space-evenly;
         text-decoration: none;
         list-style: none;
-        height: 20vh;
         padding-top: 15px;
         padding-bottom: 30px;
     }
