@@ -1,8 +1,8 @@
 :root{
 
-    --colorHeaderHome:#000000;
-    --colorMainHome:linear-gradient(220.55deg, #FFF6EB 0%, #DFD1C5 100%);
-    --colorFooterHome:#000000;
+    --colorHeaderHome:#303030;
+    --colorMainHome:#ffffff;
+    --colorFooterHome:#303030;
     --colorListasFooter:#F7ECDE;
  
    /*  variables usadas en detalle producto */

@@ -1,71 +1,38 @@
 /*HEADER*/
 
 .home__header {
-
-    background-color:#000000;
+    background-color:var(--colorHeaderHome);
     text-decoration: none;
-    list-style: none;
-    
+    list-style: none;   
 }
-
-
 /*Header nav*/
-
-
 .header_nav {
-
     display: flex;
     flex-direction: row;
     justify-content: end;
     padding: 0.5vh 2vh;
-
-
-
 }
-
 .header_nav li {
-    /*listas del nav header*/
-
     margin: 15px 5px 0px 15px;
-
     list-style: none;
 }
-
-
 .header_nav li a i {
-    /*iconos del nav header*/
-
     font-size: 28px;
     color: rgb(242, 225, 197);
 }
 .header_nav li a i:hover{
-
     color: #10fffb;
-    /* box-shadow: 0 0 5px #10fffb; */
     text-shadow: 0 0 5px #ffee10;
 }
-
-
 .header_nav li.idioma a {
-    /*boton ingles*/
-
-
     border: solid 1px white;
     border-radius: 3px;
     font-size: 10px;
     color: #FBF8F1;
 }
-
-
 .header_nav li.idioma a i {
-    /* mundo de idioma*/
-
-
     font-size: 10px;
-
 }
-
-
 /*Logos*/
 .header__logo_home {
     background-image: url(/images/logos/logo-proyect.png);
@@ -77,7 +44,6 @@
     height: 14vh;
     width: 14vh;
     margin:0px 5px 10px 15px;
-
 }
 .header__logo2_home {
     background-image: url(/images/logos/logo-proyect2.png);
@@ -88,116 +54,83 @@
     width: 18vh;
     align-self: flex-end;
     margin-bottom: 15px;
-    
 }
-
-
 /*      HEADER BUSCADOR */
-
-
 header.home__header div.header_buscador {
     margin-top: 0px;
     width: 100%;
-    height: 40px;
+    height: 55px;
     background-color: white;
     display: flex;
     flex-direction: row;
     justify-content: center;
-
 }
-
 /*   MENU DESPLEGABLE */
-
-
 .home_header_nav_categorias{
-
-    height: 50px;
-    width: 100%;
+    height: 55px;
+    width: 30%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #ffffff;
     position: relative;
-    z-index: 1;
-    
+    z-index: 1; 
 }
-
-
-
 .bar-btn{
-
     font-size: 25px;
     color: rgb(3, 3, 3);
     margin-left: 35px;
     cursor: pointer;
     padding-left: 3vh;
-
-
 }
-
 .home_nav-menu{
-
     position: absolute;
     width: 80%;
     height: 0vh;
     top: 6vh;
     text-align: left;
     transition: all .5s;
-   
-
 }
-
 .home_nav-menu li {
     display: none;
     line-height: 30px;
     padding:5px 0px 5px 20px;
     transition: all .5s;
-    width: 60%;
+    width:15rem;
     border-bottom: solid 1px grey;
     background-color: #EFFEFA;
-    
-
-
 }
 .home_nav-menu li:last-child {
-  
     border-bottom: none;
-
 }
-
 .home_nav-menu li a{
     color: black;
     font-size: 12px;
     font-weight: 700;
     font-family: "Cinzel";
-
 }
-
-
 .home_nav-menu li:hover{
-  
     transition: .3s;
     background-color: #F1F1F1;
-
 }
-
 #check {
     display :none
 }
-
 #check:checked ~ .home_nav-menu li {
     display: block;
 }
-
-
-
-
+/* CONTAINER DE MENU HABURGESA Y BUSCADOR */
+.caja-input-buscador{
+    display: inline-table;
+}
+.header_buscador_y_menuhamburguesa{
+    display: flex;
+    flex-direction: row-reverse;   
+}
 /*  BUSCADOR INPUT */
-
-
 header.home__header div.header_buscador input {
-    width: 25vh;
-    height: 25px;
+    width: fit-content;
+    height: 26px;
     font-family: "cinzel";
     border-radius: 5px;
     border: solid 1px #cfcecc;
@@ -205,15 +138,8 @@ header.home__header div.header_buscador input {
     padding: 5px;
     align-self: center;
     font-size: 15px;
-    margin-left: 20px;
-    margin-top: 14px;
-    
-
 }
-
-
 header.home__header div.header_buscador button.lupa {
-
     height: 25px;
     border-radius: 5px;
     border: solid 1px #cfcecc;
@@ -222,105 +148,51 @@ header.home__header div.header_buscador button.lupa {
     align-self: center;
     color: rgb(97, 91, 91);
     margin-top: 14px;
-   
-
 }
-
-
-/*Header Banner*/
-
-
-.home__header div.header_banner {
-
-  /*   display: flex; */
-  display: none;
-
-}
-
-.home__header div.header_banner-desktop {
-
-    display: none;
-
-}
-
-.home__header div.header_banner img,
-div.header_banner-desktop img {
-
-    width: 100%;
-    height: 250px;
-
-} 
-
 /* TABLET */
 @media (min-width:768px){
-    .header_nav {
-       
+    .header_nav {       
         padding: 0vh 5vh;
     }
-
     .header_nav li a i {
-        /*iconos del nav header*/
-
         font-size: 27px;
         color: rgb(242, 225, 197);
     }
-
-
     .header_nav li.idioma a {
-        /*boton ingles*/
         font-size: 15px;
-
     }
-
     .header_nav li.idioma a i {
-        /* mundo de idioma*/
-
-
         font-size: 15px;
-
     }
     /*   logos   */
     .header__logo_home {
-        
         height: 15vh;
         width: 15vh;
         margin:0px 5px 10px 45px;
-    
     }
-    
-    .header__logo2_home {
-       
+    .header__logo2_home {  
         height: 4vh;
         width: 25vh;
         margin-bottom: 10px;
-        
     }
     /*   Buscador   */
-
     header.home__header div.header_buscador {
-
-        width: 100%;
-        height: 55px;
-        justify-content: center;
-
+        justify-content: flex-start;
+        padding-left: 5rem;
     }
     /*      INPUT   */
     header.home__header div.header_buscador input {
         width: 46vh;
         height: 27px;
         font-size: 16px;
-        margin-left: 40px;
         margin-top: 12px;
     }
-
     header.home__header div.header_buscador button.lupa {
         width: 5vh;
         height: 27px;
         font-size: 16px;
         margin-top:12px;
     }
-    
-
     /* menu deplegable */
     .home_nav-menu {
         width: 50%;
@@ -328,145 +200,67 @@ div.header_banner-desktop img {
     }
     /* icono hamburguesa */
     .iconoHamburguesa{
-
-        font-size: 40px;
+        font-size: 30px;
     }
     .bar-btn{
-
         font-size: 30px;
         padding-left: 7vh;
     }
-    
     /*Banner*/
-
     .home__header div.header_banner {
-
         display: none;
-
     }
-
     .home__header div.header_banner-desktop {
-
         display: flex;
-
     }
-
     .home__header div.header_banner img {
-
         width: 100%;
         height: 350px;
-
     }
-
 }
-
 /* DESKTOP*/
-
 @media(min-width:1024px) {
-
-
-    /*      HEADER    */
-
     .header_nav {
-
-    
         padding: 0vh 10vh;
     }
-
     .header_nav li a i {
         font-size: 35px;
-
     }
-
-
     /*      LOGOS     */
-
     .header__logo_home {
-        
         height: 15Vh;
         width:15vh;
         margin-left: 10vh;
-    
     }
-    
-    .header__logo2_home {
-       
+    .header__logo2_home {  
         height: 4vh;
         width: 25vh;
         margin-bottom: 15px;
-        
     }
-
       /*      INPUT   */
       header.home__header div.header_buscador input {
-      
         font-size: 16px;
-       
     }
-
-   /*  BUSCADOR */
-    header.home__header div.header_buscador {
-        margin-top: 0px;
-        width: 100%;
-        height: 40px;
-        justify-content: center;
-    }
-
  /* MENU DESPLEGABLE */
-
     .home_header_nav_categorias{
-
-        height: 50px;
-        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
         background-color: #ffffff;
         position: relative;
         padding-left: 11vh;
-        
-        
     }
-
     .home_nav-menu li {
-        
-        width: 50%;
+        width:20rem;
     }
     .home_nav-menu li a {
-        
         font-size: 12px;
-        
     }
     .home_nav-menu {
         top: 5.8vh;
     }
-
     /* icono hamburguesa */
-    .bar-btn{
-
-        
+    .bar-btn{   
         padding-left: 0vh;
-    }
-    
-
-    /* BANNER*/
-
-    .home__header div.header_banner {
-
-        display: none;
-
-    }
-
-    .home__header div.header_banner-desktop {
-
-        display: none;
-
-    }
-
-
-    div.header_banner-desktop img {
-
-        height: 25vh;
-
     }
 }
