@@ -1,0 +1,6 @@
+.is-valid {
+    border: 1px solid rgb(0, 250, 0);
+}
+.is-invalid {
+    border: 1px solid rgb(255, 0, 0);
+}
