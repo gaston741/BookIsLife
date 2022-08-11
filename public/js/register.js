@@ -59,8 +59,8 @@ $('email').addEventListener('blur', function() {
     
     switch (true) {
         case !this.value.trim():
-            $('emailError').innerHTML = "Tienes que ingresar tu Email"
             this.classList.add('is-invalid')
+            $('emailError').innerHTML = "Tienes que ingresar tu Email"
             break;
         case !regExEmail.test(this.value.trim()) :
                 $('emailError').innerHTML = "El email tiene un formato inválido"
