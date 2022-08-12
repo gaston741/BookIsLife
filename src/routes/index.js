@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-const {index, search,admin}=require('../controllers/indexController')
+const {index, search,admin,questions}=require('../controllers/indexController')
  //**Middleware require */
 const checkAdmin = require('../middlewares/checkAdmin');
-
+router.get('/questions',questions)
 /* GET home page. */
 router.get('/', index);
 

@@ -82,7 +82,25 @@ module.exports={
         })
       }).catch(error => console.log(error))
      
-    }
+    },   
+    questions:(req,res)=>{ 
 
+    let genres = Genre.findAll()
+    let products = Product.findAll({
+      include : ['category','autor','language','genre','publisher']
+    })
+    Promise.all([genres,products])
+    .then(([genres,products]) => {
+      return res.render('questions',{
+        products,
+        genres,
+        toThousand
+      })
+    }).catch(error => console.log(error))
+   
+
+
+
+  }
 
 }
