@@ -9,16 +9,21 @@ const toThousand = n => n.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g,
 module.exports={
     index: (req, res) =>{
       
-      let productsInSale = Product.findAll({
+      let productsInSale = Product.findAll(
+        {
         where : {
-          categoryId : 1 ,
-        }
-    })
-    let productsRelevant = Product.findAll({
+          categoryId : 1
+        },
+        include : ['autor']
+      })
+
+      let productsRelevant = Product.findAll(
+        {
         where : {
-          categoryId : 2 ,
-        }
-    })
+          categoryId : 2
+        },
+        include : ['autor']
+      })
 
     let genres = Genre.findAll()
     Promise.all([ productsInSale , productsRelevant, genres ])
@@ -77,7 +82,25 @@ module.exports={
         })
       }).catch(error => console.log(error))
      
-    }
+    },   
+    questions:(req,res)=>{ 
 
+    let genres = Genre.findAll()
+    let products = Product.findAll({
+      include : ['category','autor','language','genre','publisher']
+    })
+    Promise.all([genres,products])
+    .then(([genres,products]) => {
+      return res.render('questions',{
+        products,
+        genres,
+        toThousand
+      })
+    }).catch(error => console.log(error))
+   
+
+
+
+  }
 
 }

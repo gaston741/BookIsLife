@@ -43,6 +43,7 @@ app.use('/users', usersRouter);
 app.use('/products', productsRouter);
 app.use('/edit', productsRouter);
 app.use('/create', productsRouter);
+app.use('/questions',indexRouter);
 
 
 // catch 404 and forward to error handler

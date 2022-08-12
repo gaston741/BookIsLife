@@ -1,3 +1,19 @@
+.is-valid {
+    border: 1px solid rgb(0, 250, 0);
+}
+.is-invalid {
+    border: 1px solid rgb(255, 0, 0);
+}
+
 html{
     scroll-behavior: smooth;
+}
+
+.home__box_products .no-found{
+    color: tomato;
+    text-shadow: 0 0 black;
+    
+}
+.no-found-image{
+    width: -webkit-fill-available;
 }

@@ -5,25 +5,27 @@ const path = require('path');
 const toThousand = n => n.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 module.exports = {
+    
     index : (req, res) => {
-    let genres = Genre.findAll();
+        let genres = Genre.findAll();
 		let products = Product.findAll({
             include : ['category','autor']
         })
         Promise.all([genres,products])
             .then(([genres,products]) => {
-/*                 return res.send(products)
- */                res.render('products',{
+               res.render('products',{
                     products,
                     genres
             })
 	    })
-        .catch(error => console.log(error))
+        .catch(errors => console.log(errors))
 	},
 
     detail : (req,res) => {
         let genres = Genre.findAll()
-        let product = Product.findByPk(req.params.id)
+        let product = Product.findByPk(req.params.id,{
+            include:['autor','publisher','language', 'genre']
+        })
         Promise.all([genres, product])
             .then(([genres,product]) => {
                 return res.render('productDetail',{
@@ -32,7 +34,7 @@ module.exports = {
                     toThousand
             })
         })
-            .catch(error => console.log(error))
+            .catch(errors => console.log(errors))
     }, 
 
     filter : (req,res) => {
@@ -85,7 +87,7 @@ module.exports = {
         .then(() => {
             return res.redirect('/products')
         })
-        .catch(error => console.log(error))
+        .catch(errors => console.log(errors))
     },
 
     edit : (req,res) => {

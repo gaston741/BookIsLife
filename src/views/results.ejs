@@ -41,8 +41,11 @@
 
             
             <% }else{ %>
+                <div class="no-results-back">
+                    <img class="no-found-image" src="/images/otrasImagenes/nofoundImage.png" alt="">
+                </div>
 
-                <h2 style="color: TOMATO;">LO SIENTO, NO HAY RESULTADOS PARA SU BUSQUEDA</h2>
+                <h2 class="no-found">LO SIENTO, NO HAY RESULTADOS PARA SU BUSQUEDA</h2>
 
                 <% } %>
 
@@ -58,7 +61,7 @@
     
     <%- include('./partials/footer') %> 
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
-    <script src="/js/carousel.js"></script>
+    <script src="/javascript/carousel.js"></script>
 </body>
 
 </html>

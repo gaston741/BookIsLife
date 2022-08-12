@@ -97,7 +97,7 @@
     height: 40px;
     margin:10px 0px 5px;
     padding: 10px;
-    border: none;
+    /* border: none; */
     border-radius: 0px 5px 5px 0px;
     font-family: "cinzel";
     
@@ -108,7 +108,7 @@
     height: 200px;
     margin:10px 0px 5px;
     padding: 10px;
-    border: none;
+    /* border: none; */
     border-radius: 0px 5px 5px 0px;
     font-family: "cinzel";
     resize: none;
@@ -167,7 +167,7 @@ button.admi_delete:hover {
         padding: 5px 10px 5px 5px;
         background: #f2f2f2;
         background-color: #fff;
-        border:none;
+        /* border:none; */
         border-radius: 5px;
         height: 40px;
         font-family: "Cinzel";
