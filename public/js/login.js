@@ -53,11 +53,11 @@ $('form-login').addEventListener('submit', (e) => {
              $('errorPassword'.innerHTML = "Todo es Obligatorio")
         }
     }
-    /* for (let i = 0; i < elements.length - 2; i++) {
+    for (let i = 0; i < elements.length - 2; i++) {
         if (!elements[i].contains) {
              error = true
         }
-    } */sesrd
+    }
 
     !error && e.target.submit()
 })
