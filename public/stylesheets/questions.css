@@ -15,6 +15,7 @@ main.questions{
     font-weight: 700;
     text-align: center;
     margin: 60px 0;
+    text-shadow: 3px 3px 2px rgb(130 138 138 / 70%);
 }
 /* categories */
 .questions-categories{
@@ -39,7 +40,7 @@ main.questions{
     color:#000;
 }
 .questions-categories .category:hover path { /* accedo al path del svg */
-    fill:var(--primario) 
+    fill:var(--dark-color) 
 }
 .questions-categories .category svg{
     width: 64px;
@@ -50,11 +51,11 @@ main.questions{
    transition: .3s ease all;
 }
 .questions-categories .category.activa{
-    border:2px solid var(--primario);
+    border:2px solid var(--dark-color);
     color:#000;
 }
 .questions-categories .category.activa path{
-    fill: var(--primario);
+    fill: var(--dark-color);
 }
 
 /* contenedos de preguntas */
@@ -80,10 +81,11 @@ main.questions{
   box-shadow: var(--sombra);
 }
 .question-box.activa{
-    border: 2px solid var(--primario);
+    border: 2px solid var(--dark-color);
 }
 .question-box .question{
     font-weight: 700;
+    text-transform: none;
     font-size: 20px;
     line-height: 20px;
     display: flex;
@@ -95,6 +97,7 @@ main.questions{
 }
 .question-box .answer{
     color:var(--respuesta);
+    text-transform: none;
     line-height: 30px;
     max-height: 0; 
     opacity: 0;
