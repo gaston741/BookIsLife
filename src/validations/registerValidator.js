@@ -40,15 +40,17 @@ module.exports = [
 
     check("password")
         .isLength({ min: 6, max: 12 })
-        .withMessage("Debe tener un mínimo de 6  y 12 caracteres."),
+        .withMessage("Tiene que tener entre 6 y 12 caracteres."),
 
-    check("password")
+    check("password2")
+        .notEmpty()
+        .withMessage("Tenes que Confirmar tu Contraseña")
         .custom((value, { req }) => {
-            if (value !== req.body.password) {
-
+            if (value !== req.body.password2) {
                 return false
+            }else {
+                return true
             }
-            return true
         })
         .withMessage("Las constraseñas no coinciden"),
 
@@ -75,7 +77,7 @@ module.exports = [
 
     check("terms") //validacion de terminos
         .isString("on")
-        .withMessage("Debes aceptar los términos y condiciones")
+        .withMessage("(Debes aceptar los términos y condiciones)")
 
 
 ]

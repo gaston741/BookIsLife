@@ -51,6 +51,7 @@ module.exports = {
   },
   processLogin: (req, res) => {
     let errors = validationResult(req);
+    
     if (errors.isEmpty()) {
       //traigo el dato del usuario que existe
       /* const {id,name,rol} =users.find(user=>user.email === req.body.email); */
