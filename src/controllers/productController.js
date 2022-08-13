@@ -82,7 +82,7 @@ module.exports = {
         Product.create(
             {    
                 ...req.body,
-                image : req.file ? req.file.filename : "default.png"
+                image : req.file ? req.file.filename : "default.jpg"
             })
         .then(() => {
             return res.redirect('/products')
