@@ -14,7 +14,7 @@
    align-items:flex-start;
    padding: 10px 100px;  
    border-bottom: solid 2px var(--colorMainHome);
-  
+
 }
 
 
@@ -52,7 +52,6 @@ padding-top: 15px;
 }
 
 
-.home__footer li img:hover,
 span.footer__link, span.footer__no_link {
 
     color: #10fffb;
