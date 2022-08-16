@@ -15,16 +15,12 @@
 
 
 /*MAIN*/
-
-
-main.home {
-
-    background:var(--colorMainHome) ;
-    background-size: auto;
+body.home{
+    background: #F1F1F1;
 }
 
 main.home h2 {
-    padding-top: 15px;
+    padding-top: 2.5rem;
     padding-bottom: 15px;
     font-size: 16px;
     text-align: center;
@@ -39,6 +35,7 @@ main.home h2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 2rem;
    
 
 }
@@ -72,12 +69,14 @@ main.home h2 {
 /*Descripciones*/
 .home_main_container_span{
     width: 25vh;
+    background: rgb(11, 58, 67);
+    border-radius: 5px;
 }
 
 
 span.autor,
 span.titulo {
-    background-color: #F1F1F1;
+   color:#fff;
     display: block;
     font-family: "Orelega one";
     font-size: 1.4vh;
@@ -86,6 +85,8 @@ span.titulo {
     margin-top: 10px;
     text-align: center;
     height: 25px;
+    letter-spacing: .1rem;
+
 
 }
 
@@ -143,11 +144,11 @@ div.home__main__up i {
 /*           TABLET         RESPONSIVE          */
 
 @media(min-width:768px) {
-    main.home {
+ /*    main.home {
 
         background: var(--colorMainHome);
        
-    }
+    } */
     main.home {
     
         padding: 0vh 5vh;
@@ -159,11 +160,13 @@ div.home__main__up i {
         text-align: center;
         justify-content: center;
         width: 25vh;
+        height: 6rem;
+        margin-top: 1rem;
     }
+    
         
     
     span.titulo,span.autor {
-        background-color: #F1F1F1;
         font-family: "orelega one";
         font-size: 1.4vh;
         padding-left: 5px;
@@ -172,7 +175,7 @@ div.home__main__up i {
     }
     
     main.home h2 {
-        padding-top: 20px;
+        padding-top: 2.5rem;
         padding-bottom: 20px;
         font-size: 25px;
        
@@ -199,11 +202,11 @@ div.home__main__up i {
 /*                 DESKTOP    RESPONSIVE          */
 
 @media(min-width:1024px) {
-    main.home {
+ /*    main.home {
 
         background:var(--colorMainHome);
     
-    }
+    } */
     main.home {
      
         padding: 0vh 15vh;
