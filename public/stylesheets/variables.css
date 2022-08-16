@@ -2,7 +2,7 @@
 
     --colorHeaderHome:#303030;
     --colorMainHome:#ffffff;
-    --colorFooterHome:#303030;
+    --colorFooterHome:#2e2e2e;
     --colorListasFooter:#F7ECDE;
  
    /*  variables usadas en detalle producto */
@@ -20,4 +20,7 @@
     --gris-claro:#b8b8b8;
     --sombra:0 0 13px 0 rgba(185,185,185,.25);
     --respuesta :#808080;
+
+    --dark:#000;
+    --transition:.3s ease all;
 }   

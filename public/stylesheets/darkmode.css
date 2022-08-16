@@ -1,0 +1,81 @@
+.switch{
+    background-color: #000;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+}
+.switch::after{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: #f1f1f1;
+    top:0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    transition: var(--transition);
+    box-shadow: 0px 0px 2px 2px(0,0,0,.2);
+}
+.switch.active{
+    background: orange ;
+    color: black;
+}
+.switch.active::after{
+    right: 0;
+    left: unset; /* quitamos el valor anterior */
+}
+.switch .option-dark {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: #FFF;
+}
+/* Header */
+body.dark .home_nav-menu li{
+    background: #000;
+}
+body.dark .home_nav-menu li a{
+   color: #fff;
+}
+
+/* Home */
+body.dark{
+    background: var(--dark);
+    transition: var(--transition);
+}
+
+body.dark main.home h2{
+    color:#f1f1f1
+}
+
+/* producto detalle */
+body.dark .heading span{
+    color:#fff;
+}
+body.dark .descripcion-detail .descripcion p{
+    color:#fff ;
+}
+body.dark .product-detail .product-slider .content h3{
+    color: #FFF;
+}
+
+/* preguntas frecuentes */
+body.dark .questions-title{
+    color:#fff
+}
+body.dark .questions-categories .category.activa{
+    color:#fff
+}
+body.dark .carousel__indicadores .glider-dot{
+    background: #fff;
+}
+body.dark .question-box.activa{
+    box-shadow: 0 -2px 10px rgb(245, 242, 242);
+}

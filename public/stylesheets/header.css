@@ -1,7 +1,8 @@
 /*HEADER*/
 
 .home__header {
-    background-color:var(--colorHeaderHome);
+    background-image: url('/images/fondos/fondo-b.jpg');
+    background-size: cover;
     text-decoration: none;
     list-style: none;   
 }
@@ -11,6 +12,7 @@
     flex-direction: row;
     justify-content: end;
     padding: 0.5vh 2vh;
+    align-items: end;
 }
 .header_nav li {
     margin: 15px 5px 0px 15px;
@@ -21,7 +23,7 @@
     color: rgb(242, 225, 197);
 }
 .header_nav li a i:hover{
-    color: #10fffb;
+    color: #000000;
     text-shadow: 0 0 5px #ffee10;
 }
 .header_nav li.idioma a {
@@ -98,7 +100,7 @@ header.home__header div.header_buscador {
     transition: all .5s;
     width:15rem;
     border-bottom: solid 1px grey;
-    background-color: #EFFEFA;
+    background-color: #fff;
 }
 .home_nav-menu li:last-child {
     border-bottom: none;
@@ -140,7 +142,7 @@ header.home__header div.header_buscador input {
     font-size: 15px;
 }
 header.home__header div.header_buscador button.lupa {
-    height: 25px;
+  /*   height: 25px; */
     border-radius: 5px;
     border: solid 1px #cfcecc;
     background-color: #FBF8F1;
@@ -178,7 +180,7 @@ header.home__header div.header_buscador button.lupa {
     /*   Buscador   */
     header.home__header div.header_buscador {
         justify-content: flex-start;
-        padding-left: 5rem;
+        
     }
     /*      INPUT   */
     header.home__header div.header_buscador input {
@@ -236,6 +238,11 @@ header.home__header div.header_buscador button.lupa {
         height: 4vh;
         width: 25vh;
         margin-bottom: 15px;
+    }
+     /*   Buscador   */
+     header.home__header div.header_buscador {
+      
+        padding-left: 5rem;
     }
       /*      INPUT   */
       header.home__header div.header_buscador input {
