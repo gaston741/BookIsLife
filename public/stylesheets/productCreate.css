@@ -27,8 +27,8 @@
     border-radius: 5px;
     box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
     padding:20px;
-  /*   background-image: linear-gradient(-225deg, #E3FDF5 50%, #FFE6FA 50%);
-     */
+    margin-bottom: 2.5rem;
+ 
 }
 
 
@@ -64,6 +64,7 @@
     padding: 10px;
     margin-top: 5px;
     border-radius: 5px;
+    font-size: 12px;
 }
 .admi_file{
   
@@ -105,7 +106,7 @@
 
 .admi_form-texarea{
     width: 100%;
-    height: 200px;
+    height: 10rem;
     margin:10px 0px 5px;
     padding: 10px;
     /* border: none; */
@@ -115,8 +116,13 @@
     
 }
 .form-img-preview{
-    width: 100%;
+    width: 70%;
+    height: 25rem;
+    padding-top: 0.5rem;
+    border-radius: 1rem;
+    margin: 0 auto;
 }
+
 
 /* contenedor botones */
 .botones_admi{
@@ -126,7 +132,7 @@
     margin-top: 4em;
 }
 button.admi_delete{
-    background-color:#f44336 ;
+    background-color:#dd2719 ;
 }
 
 /* buttons  */
@@ -136,7 +142,7 @@ button.admi_delete{
     align-items: center;
     color: #000000;
     font-weight: bolder;
-    background-color: #04AA6D;
+    background-color: var(--green);
     font-family: 'Cinzel';
     width:14vh;
     height: 40px;
@@ -154,12 +160,12 @@ button.admi_delete{
 button.admi_submit:hover {
     transform: translatey(3px);
     box-shadow: none;
-    background-color: #a8edea;
+    background-color:var(--dark-color);
 }
 button.admi_delete:hover {
     transform: translatey(3px);
     box-shadow: none;
-    background-color: rgb(240, 6, 6);
+    background-color: rgb(206, 5, 5);
 }
 /* Select*/
 .dropdown-select {
@@ -193,11 +199,15 @@ button.admi_delete:hover {
     .form_admi article{
         display: flex;
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 17px;
     }
 
     .admi__form-box {
         width: 48%;
+    }
+    .admi_form-texarea{
+        
+        height: 24rem;
     }
 
   }
@@ -208,4 +218,10 @@ button.admi_delete:hover {
         width: 50%;
     }
 
+  }
+
+  @media(min-width:1024px){
+    .form_admi{
+        width: 50%;
+    }
   }

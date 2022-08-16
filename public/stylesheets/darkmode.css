@@ -35,14 +35,14 @@
     line-height: 30px;
     display: block;
     background: none;
-    color: #FFF;
+    color: var(--light);
 }
 /* Header */
 body.dark .home_nav-menu li{
     background: #000;
 }
 body.dark .home_nav-menu li a{
-   color: #fff;
+   color: var(--light);
 }
 
 /* Home */
@@ -55,27 +55,34 @@ body.dark main.home h2{
     color:#f1f1f1
 }
 
-/* producto detalle */
+/* producto detail */
 body.dark .heading span{
-    color:#fff;
+    color:var(--light);
 }
 body.dark .descripcion-detail .descripcion p{
-    color:#fff ;
+    color:var(--light) ;
 }
 body.dark .product-detail .product-slider .content h3{
-    color: #FFF;
+    color: var(--light);
 }
 
-/* preguntas frecuentes */
+/* frecuentrly questions */
 body.dark .questions-title{
-    color:#fff
+    color:var(--light)
 }
 body.dark .questions-categories .category.activa{
-    color:#fff
+    color:var(--light)
 }
 body.dark .carousel__indicadores .glider-dot{
-    background: #fff;
+    background: var(--light);
 }
 body.dark .question-box.activa{
     box-shadow: 0 -2px 10px rgb(245, 242, 242);
+}
+/*product create*/
+body.dark .titulo_admi{
+    color:var(--light);
+}
+body.dark .titulo_dos_admi{
+    color: var(--light);
 }
