@@ -15,5 +15,11 @@ html{
     
 }
 .no-found-image{
-    width: -webkit-fill-available;
+    width: 90%;
+}
+
+.no-results-back{
+
+    display: flex;
+    justify-content: center;
 }
