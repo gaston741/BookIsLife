@@ -8,7 +8,7 @@ const genres = [
     updatedAt: new Date(),
   },
   {
-    name: "Autobiagrafia",
+    name: "Autobiografia",
     createdAt: new Date(),
     updatedAt: new Date(),
   },

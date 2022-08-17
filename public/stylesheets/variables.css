@@ -20,7 +20,8 @@
     --gris-claro:#b8b8b8;
     --sombra:0 0 13px 0 rgba(185,185,185,.25);
     --respuesta :#808080;
-
+ /* variables para dark mode */
     --dark:#000;
     --transition:.3s ease all;
+    --light:#fff;
 }   
