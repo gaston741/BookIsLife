@@ -86,3 +86,15 @@ body.dark .titulo_admi{
 body.dark .titulo_dos_admi{
     color: var(--light);
 }
+/* vista administrador*/
+body.dark .table-content{
+    color: var(--light);
+    
+}
+body.dark .table_price_book{
+    color: var(--light);
+    background-color: rgba(255,255,255,0.2);
+}
+body.dark .table-link{
+    color: var(--light);
+ }
