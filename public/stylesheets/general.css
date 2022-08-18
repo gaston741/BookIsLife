@@ -10,7 +10,7 @@ html{
 }
 
 .home__box_products .no-found{
-    color: tomato;
+    color: tomato!important;
     text-shadow: 0 0 black;
     
 }
