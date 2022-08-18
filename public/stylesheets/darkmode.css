@@ -65,7 +65,12 @@ body.dark .descripcion-detail .descripcion p{
 body.dark .product-detail .product-slider .content h3{
     color: var(--light);
 }
-
+body.dark .tabla-detalles .tabla-detalle-nombre {
+    color: var(--light);
+}
+body.dark .tabla-detalle-informacion{
+    color: var(--light);
+}
 /* frecuentrly questions */
 body.dark .questions-title{
     color:var(--light)
@@ -78,6 +83,9 @@ body.dark .carousel__indicadores .glider-dot{
 }
 body.dark .question-box.activa{
     box-shadow: 0 -2px 10px rgb(245, 242, 242);
+}
+body.dark .product-stand{
+    z-index: 1000;
 }
 /*product create*/
 body.dark .titulo_admi{
