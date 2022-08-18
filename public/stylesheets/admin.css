@@ -1,113 +1,98 @@
-table {
+.table-admin {
     width: 50%;
     margin:0 auto;
-    margin-bottom: 15px;
+    margin-bottom: 2.5rem;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0,0,0,0.4);
-
 }
-th, td {
+.table-column, .table-content {
     padding: 10px;
     background-color: rgba(255,255,255,0.2);
     color: rgb(21, 21, 21);
     font-size: 10px;
-    font-family: "cinzel";
-
-    
+    font-family: "cinzel";  
 }
-
 .table_price_book{
     font-weight: 600;
+    text-align: center;
 }
-
-
-th {
+.table-content.actions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+} 
+.table-link{
+    color: #000;
+    cursor: pointer;
+} 
+.table-link:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.table-column {
     text-align: left;
     background-color: #d0e0e0;
 }
-
-    
-
-tbody tr:hover  {
-     
-    
-    background-color: rgba(255,255,255,0.3);
-        
+.table-admin-tbody .table-admin-tr:hover  {
+    background-color: rgba(255,255,255,0.3); 
 }
-
-td {
-    
-    position: relative;
-        
+.table-content{
+    position: relative;     
 }
-/* td:before {
-        content: "";
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: -9999px;
-        bottom: -9999px;
-        background-color: rgba(255,255,255,0.2);
-        z-index: -1;
-    } */
+/* Tablet */
 @media(min-width:768px){
 
-    table {
+    .table-admin {
         width: 90%;
         margin:0 auto;
-        
         overflow: hidden;
         box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
+    .table-content.actions{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    } 
+    .table-link{
+       font-size: 1rem;
     }
 }
-
+/* Desktop */
 @media(min-width:1024px) {
-    table {
+    .table-admin {
         width: 100%;
         margin:0 auto;
-        
         overflow: hidden;
         box-shadow: 0 0 20px rgba(0,0,0,0.4);
     }
-    
-    th, td {
+   .table-column, .table-content {
         padding: 15px;
         background-color: rgba(255,255,255,0.2);
         color: rgb(21, 21, 21);
         font-size: 15px;
-        font-family: "cinzel";
-        
+        font-family: "cinzel"; 
     }
-    
-    
-    
-    th {
+   .table-column {
         text-align: left;
         background-color: #d0e0e0;
     }
-    
-        
-    
-    tbody tr:hover  {
-         
-        
-                background-color: rgba(255,255,255,0.3);
-            
+    .table-admin-tbody .table-admin-tr:hover  {  
+        background-color: rgba(255,255,255,0.3);      
     }
-    
-    td {
-            position: relative;
-            
-        }
-   /*  td:before {
-            content: "";
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: -9999px;
-            bottom: -9999px;
-            background-color: rgba(255,255,255,0.2);
-            z-index: -1;
-        } */
+    .table-content {
+        position: relative;    
+    }
+    .table-content.actions{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        height: 6rem;
+    } 
+    .table-link{
+        font-size: 1.3rem;
+     }
+     .table-link-button{
+        font-size: 1.3rem
+     }
 
 }
