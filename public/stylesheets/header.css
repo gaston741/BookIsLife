@@ -185,13 +185,13 @@ header.home__header div.header_buscador button.lupa {
     /*      INPUT   */
     header.home__header div.header_buscador input {
         width: 46vh;
-        height: 27px;
+        height: 28px;
         font-size: 16px;
         margin-top: 12px;
     }
     header.home__header div.header_buscador button.lupa {
         width: 5vh;
-        height: 27px;
+        height: 28px;
         font-size: 16px;
         margin-top:12px;
     }
