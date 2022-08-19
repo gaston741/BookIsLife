@@ -53,3 +53,17 @@ $('surname').addEventListener('blur', function() {
             break;
     }
 })
+
+/* $('avatar').addEventListener('blur', function() {
+    
+    switch (true) {
+        case !this.value.trim():
+            $('avatarError').innerHTML = "Tienes que ingresar tu imagen"
+            this.classList.add('is-invalid')
+            break;
+        case !this.test(this.value.trim()) :
+            $('avatarError').innerHTML = "Archivo no soportado"
+            this.classList.add('is-invalid')
+            break;
+    }
+}) */

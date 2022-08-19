@@ -21,12 +21,12 @@
                 <article>
                     <div class="login__form-box">
                         <label for="email">E-Mail :</label>
-                        <input class="login__form-input form-control" type="email" name ="email" id="email" value="">
+                        <input class="login__form-input form-control <%= locals.errors && errors.email ? errors.email.msg : null %>" type="email" name ="email" id="email" value="" >
                         <span class="register__text-error" id="errorEmail"><%= locals.errors && errors.email ? errors.email.msg : null  %></span>
                     </div>
                     <div class="login__form-box">
                         <label for="password">Contraseña : </label>
-                        <input class="login__form-input form-control" type="password" name ="password" id="password" value="">
+                        <input class="login__form-input form-control <%= locals.errors && errors.password ? errors.password.msg : null %>" type="password" name ="password" id="password" value="" >
                         <span class="register__text-error" id="errorPassword"><%= locals.errors && errors.password ? errors.password.msg : null  %></span>
                     </div>
                     <div class="login__form-box-remember">

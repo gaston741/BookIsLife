@@ -63,6 +63,8 @@
                     <div class="register__form-box">
                         <label class="admi_label_edit" for="avatar">Adjuntar Avatar: </label>
                         <input class="admi_file"  type="file" id="image" name="avatar" accept="image/*">
+                        <span class="register__text-error" id="errorAvatar"><%= locals.errors && errors.avatar ? errors.avatar.msg : null  %></span>
+
                     </div>
                     <div>
                         <img  src="/images/users/<%= user.avatar %>" alt="" id="imgPreview">

@@ -28,7 +28,7 @@ $('password').addEventListener('blur', function() {
     
     switch (true) {
         case !this.value.trim():
-            this.classList.remove('is-invalid') //Estos son valores de Boostrap
+            this.classList.add('is-invalid') //Estos son valores de Boostrap
             $('errorPassword').innerHTML = "Tienes que ingresar tu Contraseña"
             break;
         default:
