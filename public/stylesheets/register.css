@@ -4,12 +4,11 @@
 .register_body {
     background-image: url("/images/fondos/Fondo-Desktop.png");
     background-size: cover;
-    color: #ed2f51;
     display: block;
     font-family: "Cinzel";
     padding: 10px 20px;
     width: 100%;
-    color: #ed2f51; 
+    color: grey; 
 }
 .terminos{
     display: flex;
@@ -103,7 +102,7 @@
     font-weight: 600;
 }
 .register__form-input{
-    border-color: #ed2f51;
+    border-color: grey;
     border-radius: 15px;
     border-style: solid;
     margin: 10px 0 0;
@@ -180,7 +179,7 @@
     
 }
 .register_accede {
-    color: #ed2f51;
+    color: black;
     font-weight: 500;
     font-size: 21px;
 }
