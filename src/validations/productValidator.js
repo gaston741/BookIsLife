@@ -50,7 +50,7 @@ module.exports = [
         .notEmpty()
         .withMessage("Debes indicar la categoria del libro"),
     
-    check("image").custom((value, { req }) => {
+    check("portada").custom((value, { req }) => {
 
             let file = req.file;
             let acceptedExtensions = [ '.jpg' , '.jpeg' , '.png' , '.gif' ];   //EXTENCIONES ACEPTADAS
@@ -65,7 +65,7 @@ module.exports = [
     
                 if (!acceptedExtensions.includes(fileExtension)) {      // SI ESTA EXTENCION, NO ES DE LA ACEPTADAS, SE MANDA EL ERROR DE ABAJO
     
-                    throw new Error(`Las extensiones de archivos permitidas son ${acceptedExtensions.join(', ')}`); // (MANDA ERROR CUANDO LA EXTENCION DEL ARCHIVO NO ES ACEPTADA)
+                    throw new Error(`Las extensiones de archivos permitidas son ${acceptedExtensions.join(' | ')}`); // (MANDA ERROR CUANDO LA EXTENCION DEL ARCHIVO NO ES ACEPTADA)
                 }
             }
             return true;
