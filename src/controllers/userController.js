@@ -49,7 +49,7 @@ module.exports = {
       });
     }
   },
-  processLogin: (req, res) => {
+  processLogin: (req, res) => { //ver tema usuario admi
     let errors = validationResult(req);
     
     if (errors.isEmpty()) {
