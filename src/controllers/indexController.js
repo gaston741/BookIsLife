@@ -56,7 +56,8 @@ module.exports={
                 }
               }
             ]
-          }
+          }, 
+          include : ['autor']
         })
         let genres = Genre.findAll()
         Promise.all([result,genres])

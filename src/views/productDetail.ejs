@@ -42,7 +42,7 @@
               <h3><%= product.name %></h3>
               <!-- PRICE SECTION -->
               <div class="price"> $<%= toThousand(product.price) %> <span>$20.99</span></div>
-              <a href="/products/cart" class="btn shop">comprar<span><i class="fa-solid fa-cart-shopping"></i></span></a>
+              <a href="/products/cart" class="btn shop">comprar</a>
             </div>
           </div>
         </div>
@@ -51,7 +51,7 @@
       <table class="tabla-detalles">
         <tbody class="table-group-divider">
           <tr class="caja-tabla-detalle">
-            <th class="tabla-detalle-nombre" scope="row">Titulo</th>
+            <th class="tabla-detalle-nombre" scope="row">Título</th>
             <td class="tabla-detalle-informacion"><%= product.name %></td>
           </tr>
           <tr class="caja-tabla-detalle">
@@ -60,7 +60,7 @@
           </tr>
 
           <tr class="caja-tabla-detalle">
-            <th class="tabla-detalle-nombre" scope="row">Genero</th>
+            <th class="tabla-detalle-nombre" scope="row">Género</th>
             <td class="tabla-detalle-informacion"><%= product.genre.name %></td>
           </tr>
 
@@ -69,7 +69,7 @@
             <td class="tabla-detalle-informacion"><%= product.publisher.name %></td>
           </tr>
           <tr class="caja-tabla-detalle">
-            <th class="tabla-detalle-nombre" scope="row">Language</th>
+            <th class="tabla-detalle-nombre" scope="row">Idioma</th>
             <td class="tabla-detalle-informacion"><%= product.language.name %></td>
           </tr>
         </tbody>

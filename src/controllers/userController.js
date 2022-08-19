@@ -163,11 +163,22 @@ module.exports = {
         }).catch(error => console.log(error))
 
     } else {
-      console.log(errors);
-      return res.render("userProfileEdit", {
-        usuario: req.body,
-        errors: errors.mapped(),
-      });
+      errors = errors.mapped()
+      if (req.fileValidationError) {
+        errors = {
+          ...errors,
+          avatar : {
+            msg : req.fileValidationError
+          } 
+        }
+      }
+      console.log(errors, "++++++++++++++++++++++++");
+      const birthday = moment(req.body.date).format('YYYY-MM-DD');
+        return res.render("userProfileEdit", {
+          user: req.body,
+          date : birthday,
+          errors
+        });
     }
   },
   deleteUser: (req, res) => {
