@@ -31,31 +31,31 @@
                     <!-- seccion nombre -->
                     <div class="register__form-box">
                         <label class="register__label" for="name">Nombre: </label>
-                        <input class="register__form-input form-control <%= locals.errors && errors.name ? 'is-invalid' : 'is-valid' %> " type="text" id="name" name="name" value="<%= locals.old && old.name ? old.name : null %>">
+                        <input class="register__form-input form-control <%= locals.errors && errors.name ? errors.name.msg : null %> " type="text" id="name" name="name" value="<%= locals.old && old.name ? old.name : null %>">
                         <span class="register__text-error" id="nombreError"><%= locals.errors && errors.name ? errors.name.msg : null  %></span>
                     </div>
                     <!--  seccion apellido -->
                     <div class="register__form-box">
                         <label class="register__label" for="surname">Apellido: </label>
-                        <input class="register__form-input form-control <%= locals.errors && errors.surname ? 'is-invalid' : 'is-valid' %> " type="text" id="surname" name="surname" value="<%= locals.old && old.surname ? old.surname : null %>">
+                        <input class="register__form-input form-control <%= locals.errors && errors.surname ? errors.surname.msg : null %> " type="text" id="surname" name="surname" value="<%= locals.old && old.surname ? old.surname : null %>">
                         <span class="register__text-error" id="apellidoError"><%= locals.errors && errors.surname ? errors.surname.msg : null  %></span>
                     </div>
                     <!--  seccion email -->
                     <div class="register__form-box">
                         <label class="register__label" for="email">Email: </label>
-                        <input class="register__form-input form-control <%= locals.errors && errors.email ? 'is-invalid' : 'is-valid' %> " type="email" id="email" name="email" value="<%= locals.old && old.email ? old.email : null %>">
+                        <input class="register__form-input form-control <%= locals.errors && errors.email ? errors.email.msg : null %> " type="email" id="email" name="email" value="<%= locals.old && old.email ? old.email : null %>">
                         <span class="register__text-error" id="emailError"><%= locals.errors && errors.email ? errors.email.msg : null  %></span>
                     </div>
                     <!--  seccion contraseña -->
                     <div class="register__form-box">
                         <label class="register__label" for="password">Contraseña: </label>
-                        <input class="register__form-input form-control <%= locals.errors && errors.password ? 'is-invalid' : 'is-valid' %> " type="password" id="password" name="password">
+                        <input class="register__form-input form-control <%= locals.errors && errors.password ? errors.password.msg : null %> " type="password" id="password" name="password">
                         <span class="register__text-error" id="passwordError"><%= locals.errors && errors.password ? errors.password.msg : null  %></span>
                     </div>
                     <!--  seccion confirmar contraseña -->
                     <div class="register__form-box">
                         <label class="register__label" for="password2">Confirmar Contraseña: </label>
-                        <input class="register__form-input form-control <%= locals.errors && errors.password2 ? 'is-invalid' : 'is-valid' %> " type="password" id="password2" name="password2">
+                        <input class="register__form-input form-control <%= locals.errors && errors.password2 ? errors.name.msg : null %> " type="password" id="password2" name="password2">
                         <span class="register__text-error" id="password2Error"><%= locals.errors && errors.password2 ? errors.password2.msg : null  %></span>
                     </div>
                     <!-- seccion imagen de perfil -->

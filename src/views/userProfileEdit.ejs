@@ -32,14 +32,14 @@
                     <!-- seccion nombre -->
                     <div class="register__form-box">
                         <label class="admi_label_edit" for="name">Nombre: </label>
-                        <input class="admi_form-input" type="text" id="name" name="name" value="<%= user.name %>" >
-                        <span class="register__text-error"><%= locals.errors && errors.name ? errors.name.msg : null  %></span>
+                        <input class="admi_form-input form-control" type="text" id="name" name="name" value="<%= user.name %>" >
+                        <span class="register__text-error" id="nombreError"><%= locals.errors && errors.name ? errors.name.msg : null  %></span>
                     </div>
             <!--  seccion apellido -->
                     <div class="register__form-box">
                         <label class="admi_label_edit" for="surname">Apellido: </label>
-                        <input class="admi_form-input" type="text" id="surname" name="surname" value="<%= user.surname%>">
-                        <span class="register__text-error"><%= locals.errors && errors.surname ? errors.surname.msg : null  %></span>
+                        <input class="admi_form-input form-control" type="text" id="surname" name="surname" value="<%= user.surname%>">
+                        <span class="register__text-error" id="apellidoError"><%= locals.errors && errors.surname ? errors.surname.msg : null  %></span>
                     </div>
             <!--  seccion email -->
                     <div class="register__form-box">
@@ -63,6 +63,8 @@
                     <div class="register__form-box">
                         <label class="admi_label_edit" for="avatar">Adjuntar Avatar: </label>
                         <input class="admi_file"  type="file" id="image" name="avatar" accept="image/*">
+                        <span class="register__text-error" id="errorAvatar"><%= locals.errors && errors.avatar ? errors.avatar.msg : null  %></span>
+
                     </div>
                     <div>
                         <img  src="/images/users/<%= user.avatar %>" alt="" id="imgPreview">
@@ -82,7 +84,8 @@
                </div> 
          </form> 
         </section>
-    </main>
 
+    </main>
+    <script src="/javascript/profile.js"></script> 
 </body>
 </html>
