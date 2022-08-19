@@ -36,19 +36,19 @@ $('surname').addEventListener('blur', function() {
     switch (true) {
         case !this.value.trim():
             $('apellidoError').innerHTML = "Tienes que ingresar tu Apellido"
-            //this.classList.add('is-invalid')
+            this.classList.add('is-invalid')
             break;
         case !regExLetter.test(this.value.trim()) :
                 $('apellidoError').innerHTML = "Tiene que poner solo letras"
-                //this.classList.add('is-invalid')
+                this.classList.add('is-invalid')
                 break
         case this.value.trim().length < 2 || this.value.trim().length > 255 : 
             $('apellidoError').innerHTML = "Tu Apellido debe tener como minimo 2 caracteres"
-            //this.classList.add('is-invalid')
+            this.classList.add('is-invalid')
             break
         default:
-            //this.classList.remove('is-invalid')
-            //this.classList.add('is-valid')
+            this.classList.remove('is-invalid')
+            this.classList.add('is-valid')
             $('apellidoError').innerHTML = null;
 
             break;
