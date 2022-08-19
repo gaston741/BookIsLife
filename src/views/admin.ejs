@@ -13,31 +13,31 @@
 
 <!--    Tabla -->
         <section class="home__box_products">            
-                <table class="table">
+                <table class="table-admin">
                     <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Titulo</th>
-                        <th scope="col">Autor</th>
-                        <th scope="col">Precio</th>
-                        <th scope="col">Acciones</th>
+                    <tr class="table-admin-tr">
+                        <th class="table-column" scope="col">#</th>
+                        <th class="table-column" scope="col">Titulo</th>
+                        <th class="table-column" scope="col">Autor</th>
+                        <th class="table-column" scope="col">Precio</th>
+                        <th class="table-column" scope="col">Acciones</th>
                     </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="table-admin-tbody">
                         <% products.forEach(({id,name,autor,price},index) => { %>
-                            <tr>
-                                <th scope="row"><%= index + 1 %> </th>
-                                <td><%= name.toUpperCase() %> </td>
-                                <td><%= autor.name.toUpperCase() %></td>
+                            <tr class="table-admin-tr">
+                                <th class="table-column" scope="row"><%= index + 1 %> </th>
+                                <td class="table-content"><%= name.toUpperCase() %> </td>
+                                <td class="table-content"><%= autor.name.toUpperCase() %></td>
                                 <td class="table_price_book">$<%= toThousand(price) %></td>
-                                <td>
+                                <td class="table-content actions">
                                     <!-- Detalle del producto -->
-                                    <a href="/products/detail/<%= id %>" class="btn btn-sm btn-primary"><i class="fas fa-eye"></i></a>
+                                    <a class="table-link" href="/products/detail/<%= id %>" class="btn btn-sm btn-primary"><i class="fas fa-eye"></i></a>
                             <!--    Editar producto -->
-                                <a href="/products/edit/<%= id %>" class="btn btn-sm btn-success m-1"><i class="fas fa-edit"></i></a>
+                                <a class="table-link" href="/products/edit/<%= id %>" class="btn btn-sm btn-success m-1"><i class="fas fa-edit"></i></a>
                             <!--  Eliminar producto -->
                                 <form action="/products/delete/<%= id %>?_method=DELETE" method="POST">
-                                    <button type="submit" class="btn btn-sm btn-danger m-1"><i class="fas fa-trash-alt"></i></button>
+                                    <button   type="submit" class="table-link-button"><i class="fas fa-trash-alt"></i></button>
                                 </form>
                                 </td>
                             </tr>
@@ -54,6 +54,7 @@
     </main>
 
     <%- include('./partials/footer') %> 
+    <script src="/javascript/darkmode.js"></script>
 </body>
 
 </html>
