@@ -61,12 +61,12 @@ module.exports = {
         where: {
           email,
         },
-      }).then(({ id, name, rol }) => {
+      }).then(({ id, name, rolId }) => {
         //levanto session
         req.session.userLogin = {
           id: +id,
           name,
-          rol: +rol,
+          rolId: +rolId,
         };
 
         /* Saving the user's preference in a cookie for a certain time. */
