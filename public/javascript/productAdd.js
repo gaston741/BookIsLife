@@ -14,6 +14,7 @@ window.addEventListener('load' , () => {
         languageId = qs('#languageId'),
         categoryId = qs('#categoryId'),
         description = qs('#description'),
+        portada = qs('#portada'),
         errorName = qs('#errorName'),
         errorPrice = qs('#errorPrice'),
         errorAutorId = qs('#errorAutorId'),
@@ -21,7 +22,8 @@ window.addEventListener('load' , () => {
         errorGenreId = qs('#errorGenreId'),
         errorLanguageId = qs('#errorLanguageId'),
         errorCategoryId = qs('#errorCategoryId'),
-        errorDescription = qs('#errorDescription')
+        errorDescription = qs('#errorDescription'),
+        errorPortada = qs('#errorPortada'),
         regExExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
 
     name.addEventListener('blur' , () => {
@@ -159,6 +161,17 @@ window.addEventListener('load' , () => {
                 errorDescription.innerHTML = "";
                 errores = false
                 break;
+        }
+    })
+    portada.addEventListener('blur' , () => {
+        if (!allowExtensions.exec(portada.value)) {
+            portada.value = "";
+            portada.classList.add('is-invalid')
+            errorPortada.innerHTML = 'Archivo no soportado'
+        }else{
+            portada.classList.remove('is-invalid');
+            portada.classList.add('is-valid');
+            errorPortada.innerHTML = "";
         }
     })
     formProductCreate.addEventListener('submit', (e) =>{
