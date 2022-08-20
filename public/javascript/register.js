@@ -5,7 +5,7 @@ const $ = (element) => document.getElementById(element)
 const regExLetter = /^[A-Z]+$/i;
 const regExEmail =  /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/;
 const regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
-
+const  regExExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
 
 $('name').addEventListener('blur', function() {
     
@@ -117,6 +117,19 @@ $('password2').addEventListener('blur', function() {
 
             break;
     }
+})
+
+$('image').addEventListener('change', function(){
+    if(!regExExtensions.exec(image.value)){
+        image.value = '';
+        image.classList.add('is-invalid')
+        $('errorImage').innerHTML = 'Los archivos soportados son jpg, jpeg, png, gif) '
+    }else{
+        image.classList.remove('is-invalid')
+        image.classList.add('is-valid')
+        $('errorImage').innerHTML = ''
+    }
+
 })
 
 $('form-register').addEventListener('submit', function(e) {
