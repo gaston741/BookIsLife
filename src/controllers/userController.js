@@ -158,7 +158,7 @@ module.exports = {
             name,
             rol: +user.rol,
           }
-          return res.redirect("/users/profile");
+          return res.redirect("/");
 
         }).catch(error => console.log(error))
 
