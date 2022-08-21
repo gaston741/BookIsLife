@@ -54,6 +54,9 @@ body.dark{
 body.dark main.home h2{
     color:#f1f1f1
 }
+body.dark .home__product_image{
+    box-shadow: rgb(244 245 245 / 92%) 0px 2px 16px 0px;
+}
 
 /* producto detail */
 body.dark .heading span{
@@ -70,6 +73,10 @@ body.dark .tabla-detalles .tabla-detalle-nombre {
 }
 body.dark .tabla-detalle-informacion{
     color: var(--light);
+}
+body.dark .product-detail .product-slider .image a img{
+    box-shadow: rgb(244 245 245 / 92%) 0px 2px 16px 0px;
+
 }
 /* frecuentrly questions */
 body.dark .questions-title{
