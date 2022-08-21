@@ -71,6 +71,11 @@ window.addEventListener('load' , () => {
                 errorAutorId.innerHTML = 'Debes indicar el nombre del Autor';
                 errors = true
                 break;
+            case publisherId.value.length <= 2:
+                publisherId.classList.add('is-invalid');
+                errorAutorId.innerHTML = 'Deberá tener al menos 2 caracteres';
+                errors = true
+                break;
             default:
                 autorId.classList.remove('is-invalid');
                 autorId.classList.add('is-valid');
@@ -90,7 +95,7 @@ window.addEventListener('load' , () => {
                 publisherId.classList.add('is-invalid');
                 errorPublisherId.innerHTML = 'Deberá tener al menos 2 caracteres';
                 errors = true
-                //break;
+                break;
             default:
                 publisherId.classList.remove('is-invalid');
                 publisherId.classList.add('is-valid');
@@ -187,8 +192,8 @@ window.addEventListener('load' , () => {
         e.preventDefault()
         let elementosForm = productCreate.elements;
         
-        for (let i = 0; i < elementosForm.length -1; i++) {
-            if(elementosForm[i].value === '' || 
+        for (let i = 0; i < elementosForm.length-1; i++) {
+            if(elementosForm[i].value === "" || 
                 elementosForm[i].classList.contains('is-invalid')/*  && elementosForm[i] !==   */ //<< para negar informacion no importante 
             ){
                 elementosForm[i].classList.add('is-invalid');
@@ -204,7 +209,7 @@ window.addEventListener('load' , () => {
             console.log("Todo Perfecto !!");
             errorForm.innerHTML = '';
             alert("Carga realizada correctamente");
-            //productCreate.submit();
+            productCreate.submit();
         }
     })
 })

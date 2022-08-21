@@ -79,16 +79,25 @@ module.exports = {
     },
 
     store : (req,res) => {
-        
-        Product.create(
-            {    
-                ...req.body,
-                image : req.file ? req.file.filename : "default.jpg"
+        let errors = validationResult();
+
+        if (errors.isEmpty) {
+            Product.create(
+                {    
+                    ...req.body,
+                    image : req.file ? req.file.filename : "default.jpg"
+                })
+            .then(() => {
+                return res.redirect('/products')
             })
-        .then(() => {
-            return res.redirect('/products')
-        })
-        .catch(errors => console.log(errors))
+            .catch(errors => console.log(errors))
+        } else {
+            res.render('productCreate', {
+                old : req.body,
+                errors : errors.mapped()
+            })
+            .catch(errors => console.log(errors))
+        }
     },
 
     edit : (req,res) => {
@@ -115,8 +124,10 @@ module.exports = {
     },
 
     update : async(req,res) => {
-
-        let product = await Product.findByPk(req.params.id)
+        let errors = validationResult();
+        if (errors.isEmpty()) {
+            // Capturamos lo que viene por Body
+            let product = await Product.findByPk(req.params.id)
 
         Product.update({
             ...req.body,
@@ -131,6 +142,17 @@ module.exports = {
 
         })
         .catch(errors => console.log(errors))
+        } else {
+            Product.findByPk(req.params.id)
+            .then(product => {
+                res.render('productEdit', {
+                    product,
+                    old : req.body,
+                    errors : errors.mapped()
+                })
+            })
+            .catch(errors => console.log(errors))
+        }
     },
 
     destroy : (req,res) => {

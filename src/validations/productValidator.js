@@ -1,6 +1,6 @@
 const path = require('path');
-const { check , body } = require ('express-validator');
-const db = require('../database/models');
+const { check } = require ('express-validator');
+// const db = require('../database/models');
 
 module.exports = [
 

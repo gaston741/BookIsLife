@@ -16,8 +16,7 @@ module.exports = {
       //guardo los datos
       let { name, surname, email, password } = req.body; //desestructuracion del json
       /* Checking if the user array is empty or not. If it is not empty, it will return the last
-            
-            id of the user array. If it is empty, it will return 0. */
+          id of the user array. If it is empty, it will return 0. */
       /* let lastId = users.length !== 0 ? users[users.length - 1].id : 0 ; */ // si el ultimo id es distinto de 0, extraigo el ultimo id, sino q me devuelva 0
 
       db.User.create({
@@ -107,7 +106,9 @@ module.exports = {
   },
 
   updateProfile: (req, res) => {
+
     let errors = validationResult(req);
+    
     if (errors.isEmpty()) {
       const { name, surname, email, date, tel } = req.body;
 
