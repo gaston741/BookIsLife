@@ -1,6 +1,5 @@
 console.log('login.js success!');
-
-const $ = (element) => document.getElementById(element)
+const $ = (element) =>document.getElementById(element) 
 
 const regExEmail =  /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/;
 
@@ -40,29 +39,30 @@ $('password').addEventListener('blur', function() {
 })
 
 
-$('form-login').addEventListener('submit', (e) => {
-    e.preventDefault()
+window.addEventListener('load' , () => {
 
-    let elements = e.target.elements
-    let error = false
-
-    for (let i = 0; i < elements.length - 2; i++) {
-        if (!elements[i].value.trim()) {
-             elements[i].classList.add('is-invalid')
-             error = true
-             $('errorPassword'.innerHTML = "Todo es Obligatorio")
+    $('form-login').addEventListener('submit', function(e) {
+    
+        e.preventDefault();
+        let elements = this.elements;
+        console.log(elements);
+    
+        for (let i = 0; i < elements.length - 2; i++) {
+            console.log(elements[i]);
+            if (elements[i].value === "" || elements[i].classList.contains('is-invalid') ) {
+                elements[i].classList.add('is-invalid');
+                errorForm.innerHTML = " Ops! Revisa los campos señalados";   
+                     
+            } else{
+                
+                $('form-login').submit();
+            } 
+    
         }
-    }
-    for (let i = 0; i < elements.length - 2; i++) {
-        if (!elements[i].contains) {
-             error = true
-        }
-    }
-
-    !error && e.target.submit()
-})
+            
+            
+    
+        })
 
 
-
-
-
+    })

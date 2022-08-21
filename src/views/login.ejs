@@ -17,11 +17,11 @@
         <section>
             <h1>Ingresá</h1>
                 <hr>
-            <form action="" method="POST">
+            <form id="form-login" action="" method="POST">
                 <article>
                     <div class="login__form-box">
                         <label for="email">E-Mail :</label>
-                        <input class="login__form-input form-control <%= locals.errors && errors.email ? errors.email.msg : null %>" type="email" name ="email" id="email" value="" >
+                        <input class="login__form-input form-control <%= locals.errors && errors.email ? errors.email.msg : null %>" type="email" name ="email" id="email" value="<%= locals.old && old.email ? old.email : null %>" >
                         <span class="register__text-error" id="errorEmail"><%= locals.errors && errors.email ? errors.email.msg : null  %></span>
                     </div>
                     <div class="login__form-box">
@@ -42,6 +42,7 @@
                     <div class="button__login">
                         <button type="submit" class="btn-ghost btn-login"> Ingresar </button>
                     </div>
+                    <p class="admi__text-error registerError" id="errorForm"></p> 
                     <div class="new-here">
                         <a href="/users/register">Nuevo Aquí? <b>Regístrate!</b></a>
                     </div>
