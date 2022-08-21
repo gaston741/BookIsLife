@@ -12,7 +12,7 @@ router.get('/', index);
 router.get('/search',search)
 
 //**Administrador */
-.get('/admin',admin)
+.get('/admin', checkAdmin, admin)
 
 
 module.exports = router;

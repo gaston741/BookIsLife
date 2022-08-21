@@ -5,7 +5,8 @@
 
     <body class="administrador">
         <%- include('./partials/header') %>
-        <script src="/javascript/productAdd.js" defer></script>
+        <script src="/javascript/productAdd.js "></script>  <!-- Utilizamos Validaciones Front-End -->
+        <script src="/javascript/imagePreview.js"></script> <!-- Validacion Front para Formato de Imagen Valido-->
             <!--  BOTON VOLVER -->
             <div class="container-button-product-detail admini">
                 <a class="a_button" href="/"><i class="fa-solid fa-angle-left"></i> VOLVER </a>
@@ -14,7 +15,7 @@
             <main class="admi_main">
 
                 <!--   Empieza el formulario -->
-                <form class="form_admi" method="POST" enctype="multipart/form-data" id="form-productCreate">
+                <form class="form_admi" method="POST" enctype="multipart/form-data" id="productCreate">
                     <!--  Titulos -->
                     <h2 class="titulo_admi"> Formulario del Administrador</h2>
                     <h3 class="titulo_dos_admi">Adhesion de Libros</h3>
@@ -25,14 +26,14 @@
                         <div class="admi__form-box">
                             <input class="admi_form-input" type="text" placeholder="Título del libro" name="name"
                                 id="name">
-                            <span class="admi__text-error" id="errorName"><%= locals.errors && errors.name ? errors.name.msg : null  %></span>
+                            <span class="admi__text-error" id="errorName"><%= (locals.errors && errors.name) ? errors.name.msg : null  %></span>
                         </div>
 
                         <!-- Precio del libro -->
                         <div class="admi__form-box">
                             <input class="admi_form-input" type="number" placeholder="$$ Precio del Libro" name="price"
                                 id="price">
-                            <span class="admi__text-error" id="errorPrice"><%= locals.errors && errors.price ? errors.price.msg : null  %></span>
+                            <span class="admi__text-error" id="errorPrice"><%= (locals.errors && errors.price) ? errors.price.msg : null  %></span>
                         </div>
 
                         <!-- Autor del libro-->
@@ -43,7 +44,7 @@
                                     <option value="<%= autor.id %>"><%= autor.name %></option>
                                 <% }) %>
                             </select>
-                            <span class="admi__text-error" id="errorAutorId"><%= locals.errors && errors.autorId ? errors.autorId.msg : null  %></span>
+                            <span class="admi__text-error" id="errorAutorId"><%= (locals.errors && errors.autorId) ? errors.autorId.msg : null  %></span>
                         </div>
 
                         <!--  Editorial del libro -->
@@ -54,7 +55,7 @@
                                     <option value="<%= publisher.id %>"><%= publisher.name %></option>
                                 <% }) %>
                             </select>
-                            <span class="admi__text-error" id="errorPublisherId"><%= locals.errors && errors.publisherId ? errors.publisherId.msg : null  %></span>
+                            <span class="admi__text-error" id="errorPublisherId"><%= (locals.errors && errors.publisherId) ? errors.publisherId.msg : null  %></span>
                         </div>
 
                         <!-- -Genero del libro-->
@@ -65,7 +66,7 @@
                                     <option value="<%= genre.id %>"><%= genre.name %></option>
                                 <% }) %>
                             </select>
-                            <span class="admi__text-error" id="errorGenreId"><%= locals.errors && errors.genreId ? errors.genreId.msg : null  %></span>
+                            <span class="admi__text-error" id="errorGenreId"><%= (locals.errors && errors.genreId) ? errors.genreId.msg : null  %></span>
                         </div>
 
                         <!--  Idioma de Edicion -->
@@ -76,7 +77,7 @@
                                     <option value="<%= language.id %>"><%= language.name %></option>
                                 <% }) %>
                             </select>
-                            <span class="admi__text-error" id="errorLanguageId"><%= locals.errors && errors.languageId ? errors.languageId.msg : null  %></span>
+                            <span class="admi__text-error" id="errorLanguageId"><%= (locals.errors && errors.languageId) ? errors.languageId.msg : null  %></span>
                         </div>
 
                         <!-- Categoria de Edicion -->
@@ -87,25 +88,25 @@
                                     <option value="<%= category.id %>"><%= category.name %></option>
                                 <% }) %>
                             </select>
-                            <span class="admi__text-error" id="errorCategoryId"><%= locals.errors && errors.categoryId ? errors.categoryId.msg : null  %></span>
+                            <span class="admi__text-error" id="errorCategoryId"><%= (locals.errors && errors.categoryId) ? errors.categoryId.msg : null  %></span>
                         </div>
                         <!-- Portada del libro-->
                         <div class="admi__form-box">
                             <label class="admi_portada" for="portada">Adjuntar Portada del Libro</label>
                             <input hidden class="admi_file" type="file" id="portada" name="image" accept="image/*">
-                            <span class="admi__text-error" id="errorPortada"><%= locals.errors && errors.portada ? errors.portada.msg : null  %></span>
+                            <span class="admi__text-error" id="errorPortada"><%= (locals.errors && errors.portada) ? errors.portada.msg : null  %></span>
                         </div>
                          <!-- Descripcion del libro-->
                     <div class="admi__form-box">
                         <textarea class="admi_form-texarea" name="description" id="description" 
                             placeholder="Agregue la sinopsis"></textarea>
-                        <span class="admi__text-error" id="errorDescription"><%= locals.errors && errors.description ? errors.description.msg : null  %></span>
+                        <span class="admi__text-error" id="errorDescription"><%= (locals.errors && errors.description) ? errors.description.msg : null  %></span>
                     </div>
 
                     <div class="admi__form-box">
                         <img class="form-img-preview" id="img-preview" src="/images/portadas/default.jpg" alt="">
                     </div>
-
+                        <span class="admi__text-error" id="errorForm"></span>
                     </article>
 
                   
@@ -119,7 +120,7 @@
             </main>
             <%- include('./partials/footer') %>
 
-            <script>
+            <script>    /* este Script nos permite visualizar la imagen que se adjunte para la portada */
                 document.getElementById('portada').addEventListener('change', (e) => {
                     let reader = new FileReader();
                     reader.readAsDataURL(e.target.files[0])

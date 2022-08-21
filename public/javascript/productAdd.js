@@ -1,11 +1,11 @@
-console.log('scripts success!!');
+console.log('<--- Welcome :D  starting product creation form !! ---> ');
 
 const qs = (element) => document.querySelector(element);
 const qsa = (element) => document.querySelectorAll(element);
 const $ = (element) => document.getElementById(element);
 
 window.addEventListener('load' , () => {
-    let formProductCreate = qs('form-productCreate'),
+    let productCreate = qs('#productCreate'),
         name = qs('#name'),
         price = qs('#price'),
         autorId = qs('#autorId'),
@@ -24,24 +24,27 @@ window.addEventListener('load' , () => {
         errorCategoryId = qs('#errorCategoryId'),
         errorDescription = qs('#errorDescription'),
         errorPortada = qs('#errorPortada'),
-        regExExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
+        errorForm = qs('#errorForm'),
+        allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i,
+        errors;
 
     name.addEventListener('blur' , () => {
         switch (true) {
             case name.value.length === 0:
                 name.classList.add('is-invalid');
                 errorName.innerHTML = 'Debes ingresar un título';
-                errores = true
+                errors = true
                 break;
             case name.value.length <= 5:
                 name.classList.add('is-invalid');
                 errorName.innerHTML = 'Deberá tener al menos 5 caracteres';
-                errores = true
+                errors = true
+                break;
             default:
                 name.classList.remove('is-invalid');
                 name.classList.add('is-valid');
                 errorName.innerHTML = "";
-                errores = false
+                errors = false
                 break;
         }
     })
@@ -50,13 +53,13 @@ window.addEventListener('load' , () => {
             case price.value.length === 0:
                 price.classList.add('is-invalid');
                 errorPrice.innerHTML = 'Debes indicar el precio del libro';
-                errores = true
+                errors = true
                 break;
             default:
                 price.classList.remove('is-invalid');
                 price.classList.add('is-valid');
                 errorPrice.innerHTML = "";
-                errores = false
+                errors = false
                 break;
         }
     })
@@ -66,13 +69,13 @@ window.addEventListener('load' , () => {
                 //alert('hasdoasndmopa')
                 autorId.classList.add('is-invalid')
                 errorAutorId.innerHTML = 'Debes indicar el nombre del Autor';
-                errores = true
+                errors = true
                 break;
             default:
                 autorId.classList.remove('is-invalid');
                 autorId.classList.add('is-valid');
                 errorAutorId.innerHTML = "";
-                errores = false
+                errors = false
                 break;
         }
     })
@@ -81,17 +84,18 @@ window.addEventListener('load' , () => {
             case publisherId.value.length == "":
                 publisherId.classList.add('is-invalid');
                 errorPublisherId.innerHTML = 'Debes indicar la Editorial';
-                errores = true
+                errors = true
                 break;
             case publisherId.value.length <= 2:
                 publisherId.classList.add('is-invalid');
                 errorPublisherId.innerHTML = 'Deberá tener al menos 2 caracteres';
-                errores = true
+                errors = true
+                //break;
             default:
                 publisherId.classList.remove('is-invalid');
                 publisherId.classList.add('is-valid');
                 errorPublisherId.innerHTML = "";
-                errores = false
+                errors = false
                 break;
         }
     })
@@ -100,13 +104,13 @@ window.addEventListener('load' , () => {
             case genreId.value.length == "":
                 genreId.classList.add('is-invalid');
                 errorGenreId.innerHTML = 'Debes indicar el Género';
-                errores = true
+                errors = true
                 break;
             default:
                 genreId.classList.remove('is-invalid');
                 genreId.classList.add('is-valid');
                 errorGenreId.innerHTML = "";
-                errores = false
+                errors = false
                 break;
         }
     })
@@ -115,17 +119,18 @@ window.addEventListener('load' , () => {
             case languageId.value.length == "":
                 languageId.classList.add('is-invalid');
                 errorLanguageId.innerHTML = 'Debes ingresar un título';
-                errores = true
+                errors = true
                 break;
             case languageId.value.length <= 5:
                 languageId.classList.add('is-invalid');
                 errorLanguageId.innerHTML = 'Deberá tener al menos 5 caracteres';
-                errores = true
+                errors = true
+                //break;
             default:
                 languageId.classList.remove('is-invalid');
                 languageId.classList.add('is-valid');
                 errorLanguageId.innerHTML = "";
-                errores = false
+                errors = false
                 break;
         }
     })
@@ -134,13 +139,13 @@ window.addEventListener('load' , () => {
             case categoryId.value.length == "":
                 categoryId.classList.add('is-invalid');
                 errorCategoryId.innerHTML = 'Debes indicar la Categoría del producto';
-                errores = true
+                errors = true
                 break;
             default:
                 categoryId.classList.remove('is-invalid');
                 categoryId.classList.add('is-valid');
                 errorCategoryId.innerHTML = "";
-                errores = false
+                errors = false
                 break;
         }
     })
@@ -149,51 +154,57 @@ window.addEventListener('load' , () => {
             case description.value.length === 0:
                 description.classList.add('is-invalid');
                 errorDescription.innerHTML = 'Debe ingresar una sinopsis';
-                errores = true
+                errors = true
                 break;
             case description.value.length <= 20:
                 description.classList.add('is-invalid');
                 errorDescription.innerHTML = 'Deberá tener al menos 20 caracteres';
-                errores = true
+                errors = true
+                break;
             default:
                 description.classList.remove('is-invalid');
                 description.classList.add('is-valid');
                 errorDescription.innerHTML = "";
-                errores = false
+                errors = false
                 break;
         }
     })
-    portada.addEventListener('blur' , () => {
-        if (!allowExtensions.exec(portada.value)) {
+    portada.addEventListener('change' , () => {
+        if (!allowedExtensions.exec(portada.value)) {
             portada.value = "";
             portada.classList.add('is-invalid')
             errorPortada.innerHTML = 'Archivo no soportado'
+            errors = true
         }else{
             portada.classList.remove('is-invalid');
             portada.classList.add('is-valid');
             errorPortada.innerHTML = "";
+            errors = false
         }
     })
-    formProductCreate.addEventListener('submit', (e) =>{
-        let errores = true;
+    productCreate.addEventListener('submit', (e) =>{
+        let errors = true;
         e.preventDefault()
-        let elementosForm = formProductCreate.elements;
+        let elementosForm = productCreate.elements;
         
-        for (let i = 0; i < elementosForm.length-1; i++) {
-            if(elementosForm[i].value === "" || elementosForm[i].classList.contains('is-invalid')/*  && elementosForm[i] !==   */ //<< para negar informacion no importante 
+        for (let i = 0; i < elementosForm.length -1; i++) {
+            if(elementosForm[i].value === '' || 
+                elementosForm[i].classList.contains('is-invalid')/*  && elementosForm[i] !==   */ //<< para negar informacion no importante 
             ){
                 elementosForm[i].classList.add('is-invalid');
                 errorForm.innerHTML = "Revisa los campos señalados";
-                errores = true;
-            }else{
-                errores = false;
+                console.log("ok, let's check the marked fields !! :) ");
+                errors = true;
+            }
+            else{
+                errors = false;
             }
         }
-        if(errores == false){
+        if(errors == false){
             console.log("Todo Perfecto !!");
             errorForm.innerHTML = '';
             alert("Carga realizada correctamente");
-            formProductCreate.submit();
+            //productCreate.submit();
         }
     })
 })

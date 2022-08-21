@@ -1,5 +1,6 @@
 const { Op } = require('sequelize');
 const { Product, Genre, Publisher, Autor,Category,Language } = require('../database/models'); /* Utilizo Base de Datos para traer el Model Product */
+const {validationResult} = require('express-validator')
 const fs = require('fs');
 const path = require('path');
 const toThousand = n => n.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -126,6 +127,8 @@ module.exports = {
         })
         .then(() => {
             return res.redirect('/products')
+            //return res.redirect(`/products#${product.id}`)  <----------me muestra el producto editado en la lista de productos
+
         })
         .catch(errors => console.log(errors))
     },
