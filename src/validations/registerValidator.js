@@ -5,15 +5,15 @@ const { check, body } = require('express-validator');
 module.exports = [
 
     check("name")
-        .isLength({ min: 2 })
-        .withMessage("Minimo 2 caracteres")
+        .isLength({ min: 6, max: 12 })
+        .withMessage("Tiene que tener entre 6 y 12 caracteres.")
         .bail()
         .isAlpha()
         .withMessage("Sólo letras permitidas"),
 
     check("surname")
-        .isLength({ min: 2 })
-        .withMessage("Mínimo 2 caracteres")
+        .isLength({ min: 6, max: 12 })
+        .withMessage("Tiene que tener entre 6 y 12 caracteres.")
         .bail()
         .isAlpha()
         .withMessage("Sólo letras permitidas"),

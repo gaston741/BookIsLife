@@ -40,7 +40,7 @@ $('password').addEventListener('blur', function() {
 })
 
 
-$('form-login').addEventListener('submit', (e) => {
+/* $('form-login').addEventListener('submit', (e) => {
     e.preventDefault()
 
     let elements = e.target.elements
@@ -60,7 +60,7 @@ $('form-login').addEventListener('submit', (e) => {
     }
 
     !error && e.target.submit()
-})
+}) */
 
 
 
