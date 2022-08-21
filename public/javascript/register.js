@@ -132,19 +132,31 @@ $('image').addEventListener('change', function(){
 
 })
 
+
+window.addEventListener('load' , () => {
+
 $('form-register').addEventListener('submit', function(e) {
+    
     e.preventDefault();
     let elements = this.elements;
+    console.log(elements);
 
-    for (let i = 0; i < elements.length - 1; i++) {
+    for (let i = 0; i < elements.length - 2; i++) {
         console.log(elements[i]);
-        if (elements[i].value) {
-            elements[i].classList.add('is-invalid')
-        }      
+        if (elements[i].value === "" || elements[i].classList.contains('is-invalid') ) {
+            elements[i].classList.add('is-invalid');
+            errorForm.innerHTML = " Ops! Revisa los campos señalados";   
+                 
+        } else{
+            
+            $('form-register').submit();
+        } 
+
     }
+        
+        
+
+    })
+
 })
-
-
-
-
 
