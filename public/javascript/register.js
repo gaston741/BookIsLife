@@ -123,7 +123,7 @@ $('image').addEventListener('change', function(){
     if(!regExExtensions.exec(image.value)){
         image.value = '';
         image.classList.add('is-invalid')
-        $('errorImage').innerHTML = 'Los archivos soportados son jpg, jpeg, png, gif) '
+        $('errorImage').innerHTML = 'Los archivos soportados son jpg, jpeg, png, gif '
     }else{
         image.classList.remove('is-invalid')
         image.classList.add('is-valid')
