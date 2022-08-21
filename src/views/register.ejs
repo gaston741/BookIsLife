@@ -26,7 +26,7 @@
             <h1>Registrate</h1>
             <hr>
                 <!--  empieza el fomulario -->
-            <form class="form-register" action="/users/register" method="POST" enctype="multipart/form-data">
+            <form class="form-register" action="/users/register" method="POST" enctype="multipart/form-data" id="form-register">
                 <article class="registro">
                     <!-- seccion nombre -->
                     <div class="register__form-box">
@@ -84,10 +84,10 @@
                     </div>
                     <div class="button_register">
                             <button type="submit" class="volver volver-register">Registrarme</button>
-                        
-                                <button class="volver volver-register"><a class="register-cancelar" href="/">Cancelar</a></button>
-                            
+                            <button class="volver volver-register"><a class="register-cancelar" href="/">Cancelar</a></button>
+                         
                     </div>
+                    <p class="admi__text-error registerError" id="errorForm"></p> 
                 </article>
 
                 <div class="register_box_accede">

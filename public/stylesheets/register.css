@@ -252,7 +252,11 @@
     width: 100%;
     height: 30rem;
 }
-
+.registerError{
+    text-align: center;
+    font-weight: 800;
+    font-size: 2.5rem;
+}
 
 /* Vistas */
 
