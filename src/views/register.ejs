@@ -62,7 +62,7 @@
                     <div class="register__form-box">
                         <label class="admi_portada" for="avatar">Adjunte imagen de Perfil</label>
                         <input class="admi_file"  type="file" id="image" name="avatar" accept="image/*">
-                        <span class="register__text-error" id="errorImage"><%= locals.errors && errors.image ? errors.image.msg : null  %></span>
+                        <span class="register__text-error  error-image" id="errorImage"><%= locals.errors && errors.image ? errors.image.msg : null  %></span>
                         <% if (locals.errors && errors.avatar) { %>
                             <div class="text-danger">
                                 <%= errors.avatar.msg%>
@@ -72,7 +72,7 @@
                     <!--   seccion terminos y condiciones -->
                     <div class="register__form-box">
                         <input   class="form-control <%= locals.errors && errors.terms ? 'is-invalid' : 'is-valid' %> " type="checkbox" name="terms" id="terms" value="">
-                        <label for="terms">Términos y condiciones</label>
+                        <label class="register-terminos-condiciones" for="terms">Términos y condiciones</label>
                         <span class="register__text-error"><%= locals.errors && errors.terms? errors.terms.msg : null  %></span>
                     </div>
                 </article>
@@ -85,7 +85,7 @@
                     <div class="button_register">
                             <button type="submit" class="volver volver-register">Registrarme</button>
                         
-                                <button class="volver volver-register"><a href="/">Cancelar</a></button>
+                                <button class="volver volver-register"><a class="register-cancelar" href="/">Cancelar</a></button>
                             
                     </div>
                 </article>

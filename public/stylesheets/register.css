@@ -197,6 +197,8 @@
     text-align: right;
     font-family: "Cinzel";
     font-weight: 600;
+    cursor: pointer;
+    font-size: 1rem;
 
 }
 /* Rounded Borders */
@@ -231,7 +233,21 @@
     color: white;
 }
 
+.register-cancelar{
+    color:#ED2F51;
 
+}
+.register-cancelar:hover{
+    color:#fff;
+
+}
+.error-image{
+    display:block;
+    margin-top: 1rem;
+}
+.register-terminos-condiciones{
+    font-weight: 600;
+}
 
 /* Vistas */
 
