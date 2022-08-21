@@ -5,20 +5,21 @@ const upload =require ('../middlewares/uploadProductsImage')
 
 //requerimos controlador//
 const { index, create, store, detail, edit, update, cart, destroy, filter } =require('../controllers/productController')
+const checkAdmin = require('../middlewares/checkAdmin')
 
 //**************RUTAS********** */
 /* Mostrar  todos los productos*/
 router.get('/',index);
 
 /* Crear un producto  */
-router.get('/create', create);
+router.get('/create',checkAdmin, create);
 router.post('/create',upload.single('image'), store);
 
 /* Mostrar un producto especifico*/
 router.get('/detail/:id', detail);
 
 /* Editar un producto */
-router.get('/edit/:id', edit);
+router.get('/edit/:id', checkAdmin , edit);
 router.put('/update/:id',upload.single('image'), update);
 
 /* Carrito de compras */
