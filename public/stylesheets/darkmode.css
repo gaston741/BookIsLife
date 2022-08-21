@@ -6,6 +6,7 @@
     cursor: pointer;
     display: flex;
     outline: none;
+    margin-left: .5rem;
 }
 .switch::after{
     content: "";
