@@ -5,7 +5,7 @@ const qsa = (element) => document.querySelectorAll(element);
 const $ = (element) => document.getElementById(element);
 
 window.addEventListener('load' , () => {
-    let formProductEdit = qs('form-ProductEdit'),
+    let formProductEdit = $('form-ProductEdit'),
         name = qs('#name'),
         price = qs('#price'),
         autorId = qs('#autorId'),
@@ -163,11 +163,11 @@ window.addEventListener('load' , () => {
                 break;
         }
     })
-    portada.addEventListener('blur' , () => {
-        if (!allowExtensions.exec(portada.value)) {
+    portada.addEventListener('change' , () => {
+        if (!regExExtensions.exec(portada.value)) {
             portada.value = "";
             portada.classList.add('is-invalid')
-            errorPortada.innerHTML = 'Archivo no soportado'
+            errorPortada.innerHTML = 'Archivo no soportado, las extensiones aceptadas son: .jpg|.jpeg|.png|.gif '
         }else{
             portada.classList.remove('is-invalid');
             portada.classList.add('is-valid');
