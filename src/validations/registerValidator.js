@@ -5,15 +5,15 @@ const { check, body } = require('express-validator');
 module.exports = [
 
     check("name")
-        .isLength({ min: 2 })
-        .withMessage("Minimo 2 caracteres")
+        .isLength({ min: 4, max: 12 })
+        .withMessage("Tiene que tener entre 4 y 12 caracteres.")
         .bail()
         .isAlpha()
         .withMessage("Sólo letras permitidas"),
 
     check("surname")
-        .isLength({ min: 2 })
-        .withMessage("Mínimo 2 caracteres")
+        .isLength({ min: 4, max: 12 })
+        .withMessage("Tiene que tener entre 4 y 12 caracteres.")
         .bail()
         .isAlpha()
         .withMessage("Sólo letras permitidas"),
@@ -54,16 +54,16 @@ module.exports = [
         })
         .withMessage("Las constraseñas no coinciden"),
 
-    check('avatar').custom((value, { req }) => {
+    /* check('avatar').custom((value, { req }) => {
 
         let file = req.file;
-        let acceptedExtensions = ['.jpg', '.png', '.jpeg', '.gif'];   //EXTENCIONES ACEPTADAS
+        let acceptedExtensions = ['.jpg', '.png', '.jpeg', '.gif']; */   //EXTENCIONES ACEPTADAS
 
         /* if (!file) {     //SI NO EXISTE EL ARCHIVO, MANDA EL ERROR DE ABAJO
 
             throw new Error ('Tienes que subir una Imagen');       //Esto fue retirado momentaneamente 
 
-        }*/ if (file) {     //SI EXISTE EL ARCHIVO.. 
+        }*/ /* if (file) {     //SI EXISTE EL ARCHIVO.. 
 
             let fileExtension = path.extname(file.originalname);    // ESTA VARIABLE TOMA LA EXTENCION DEL ARCHIVO QUE SUBE EL USUARIO AL REGISTRARSE
 
@@ -73,7 +73,7 @@ module.exports = [
             }
         }
         return true;
-    }),
+    }), */
 
     check("terms") //validacion de terminos
         .isString("on")
