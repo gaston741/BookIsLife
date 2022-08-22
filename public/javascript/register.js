@@ -119,7 +119,22 @@ $('password2').addEventListener('blur', function() {
     }
 })
 
-$('form-register').addEventListener('submit', function(e) {
+/* $('image').addEventListener('change' , () => {
+    if (!allowedExtensions.exec(image.value)) {
+        avatar.value = "";
+        avatar.classList.add('is-invalid')
+        errorAvatar.innerHTML = 'Archivo no soportado'
+        errors = true
+    }else{
+        avatar.classList.remove('is-invalid');
+        avatar.classList.add('is-valid');
+        errorAvatar.innerHTML = "";
+        errors = false
+    }
+}) */
+
+
+/* $('form-register').addEventListener('submit', function(e) {
     e.preventDefault();
     let elements = this.elements;
 
@@ -129,7 +144,7 @@ $('form-register').addEventListener('submit', function(e) {
             elements[i].classList.add('is-invalid')
         }      
     }
-})
+}) */
 
 
 

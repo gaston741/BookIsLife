@@ -42,6 +42,17 @@ module.exports = {
         })
         .catch((error) => console.log(error));
     } else {
+      
+      /* errors = errors.mapped()
+      if (req.fileValidationError) {
+        errors = {
+          ...errors,
+          avatar : {
+            msg : req.fileValidationError
+          } 
+        }
+      } */
+      
       return res.render("register", {
         //renderizo register para que coloque los datos correctamente
         old: req.body, //devuelvo los campos no erroneos
