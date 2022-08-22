@@ -18,7 +18,7 @@ $('name').addEventListener('blur', function() {
                 $('nombreError').innerHTML = "Tiene que poner solo letras"
                 this.classList.add('is-invalid')
                 break
-        case this.value.trim().length < 2 || this.value.trim().length > 255 : 
+        case this.value.trim().length < 4 || this.value.trim().length > 255 : 
             $('nombreError').innerHTML = "Tu Nombre debe tener como minimo 2 caracteres"
             this.classList.add('is-invalid')
             break
@@ -26,7 +26,6 @@ $('name').addEventListener('blur', function() {
             this.classList.remove('is-invalid')
             this.classList.add('is-valid')
             $('nombreError').innerHTML = null;
-
             break;
     }
 })
@@ -42,7 +41,7 @@ $('surname').addEventListener('blur', function() {
                 $('apellidoError').innerHTML = "Tiene que poner solo letras"
                 this.classList.add('is-invalid')
                 break
-        case this.value.trim().length < 2 || this.value.trim().length > 255 : 
+        case this.value.trim().length < 4 || this.value.trim().length > 255 : 
             $('apellidoError').innerHTML = "Tu Apellido debe tener como minimo 2 caracteres"
             this.classList.add('is-invalid')
             break
