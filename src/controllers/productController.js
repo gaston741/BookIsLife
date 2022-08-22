@@ -79,9 +79,9 @@ module.exports = {
     },
 
     store : (req,res) => {
-        let errors = validationResult();
+        let errors = validationResult(req);
 
-        if (errors.isEmpty) {
+        if (errors.isEmpty()) {
             Product.create(
                 {    
                     ...req.body,
@@ -92,11 +92,25 @@ module.exports = {
             })
             .catch(errors => console.log(errors))
         } else {
-            res.render('productCreate', {
+            let genres = Genre.findAll();
+        let publishers = Publisher.findAll();
+        let categories = Category.findAll();
+        let languages = Language.findAll();
+        let autors = Autor.findAll();
+
+        Promise.all([genres,publishers, languages, categories, autors])
+        .then(([genres,publishers, languages, categories, autors]) => {
+            return res.render('productCreate',{
+                genres,
+                publishers,
+                autors,
+                languages,
+                categories,
                 old : req.body,
                 errors : errors.mapped()
             })
-            .catch(errors => console.log(errors))
+        })
+        .catch(errors => console.log(errors))
         }
     },
 
@@ -124,7 +138,7 @@ module.exports = {
     },
 
     update : async(req,res) => {
-        let errors = validationResult();
+        let errors = validationResult(req);
         if (errors.isEmpty()) {
             // Capturamos lo que viene por Body
             let product = await Product.findByPk(req.params.id)

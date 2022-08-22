@@ -187,7 +187,7 @@ window.addEventListener('load' , () => {
         e.preventDefault()
         let elementosForm = productEdit.elements;
         
-        for (let i = 0; i < elementosForm.length-1; i++) {
+        for (let i = 0; i < elementosForm.length-2; i++) {
             if(elementosForm[i].value === "" ||
                 elementosForm[i].classList.contains('is-invalid')/*  && elementosForm[i] !==   */ //<< para negar informacion no importante 
             ){
@@ -203,7 +203,7 @@ window.addEventListener('load' , () => {
         if(errors == false){
             console.log("Todo Perfecto !!");
             errorForm.innerHTML = '';
-            alert("Carga realizada correctamente");
+            alert("Datos modificados con Exito !!");
             productEdit.submit();
         }
     })

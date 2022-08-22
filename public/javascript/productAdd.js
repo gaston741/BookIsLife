@@ -48,6 +48,7 @@ window.addEventListener('load' , () => {
                 break;
         }
     })
+
     price.addEventListener('blur' , () => {
         switch (true) {
             case price.value.length === 0:
@@ -63,6 +64,7 @@ window.addEventListener('load' , () => {
                 break;
         }
     })
+
     autorId.addEventListener('blur' , () => {
         switch (true) {
             case autorId.value.length == "":
@@ -75,7 +77,7 @@ window.addEventListener('load' , () => {
                 publisherId.classList.add('is-invalid');
                 errorAutorId.innerHTML = 'Deberá tener al menos 2 caracteres';
                 errors = true
-                break;
+                //break;
             default:
                 autorId.classList.remove('is-invalid');
                 autorId.classList.add('is-valid');
@@ -84,6 +86,7 @@ window.addEventListener('load' , () => {
                 break;
         }
     })
+
     publisherId.addEventListener('blur' , () => {
         switch (true) {
             case publisherId.value.length == "":
@@ -91,11 +94,11 @@ window.addEventListener('load' , () => {
                 errorPublisherId.innerHTML = 'Debes indicar la Editorial';
                 errors = true
                 break;
-            case publisherId.value.length <= 2:
+            case publisherId.value.length <= 3:
                 publisherId.classList.add('is-invalid');
                 errorPublisherId.innerHTML = 'Deberá tener al menos 2 caracteres';
                 errors = true
-                break;
+                //break;
             default:
                 publisherId.classList.remove('is-invalid');
                 publisherId.classList.add('is-valid');
@@ -104,11 +107,12 @@ window.addEventListener('load' , () => {
                 break;
         }
     })
+
     genreId.addEventListener('blur' , () => {
         switch (true) {
             case genreId.value.length == "":
                 genreId.classList.add('is-invalid');
-                errorGenreId.innerHTML = 'Debes indicar el Género';
+                errorGenreId.innerHTML = 'Debes Seleccionar un Género';
                 errors = true
                 break;
             default:
@@ -119,18 +123,14 @@ window.addEventListener('load' , () => {
                 break;
         }
     })
+
     languageId.addEventListener('blur' , () => {
         switch (true) {
             case languageId.value.length == "":
                 languageId.classList.add('is-invalid');
-                errorLanguageId.innerHTML = 'Debes ingresar un título';
+                errorLanguageId.innerHTML = 'Debes Seleccionar un Idioma';
                 errors = true
                 break;
-            case languageId.value.length <= 5:
-                languageId.classList.add('is-invalid');
-                errorLanguageId.innerHTML = 'Deberá tener al menos 5 caracteres';
-                errors = true
-                //break;
             default:
                 languageId.classList.remove('is-invalid');
                 languageId.classList.add('is-valid');
@@ -139,6 +139,7 @@ window.addEventListener('load' , () => {
                 break;
         }
     })
+
     categoryId.addEventListener('blur' , () => {
         switch (true) {
             case categoryId.value.length == "":
@@ -154,6 +155,7 @@ window.addEventListener('load' , () => {
                 break;
         }
     })
+
     description.addEventListener('blur' , () => {
         switch (true) {
             case description.value.length === 0:
@@ -174,6 +176,7 @@ window.addEventListener('load' , () => {
                 break;
         }
     })
+
     portada.addEventListener('change' , () => {
         if (!allowedExtensions.exec(portada.value)) {
             portada.value = "";
@@ -187,12 +190,13 @@ window.addEventListener('load' , () => {
             errors = false
         }
     })
+
     productCreate.addEventListener('submit', (e) =>{
         let errors = true;
         e.preventDefault()
         let elementosForm = productCreate.elements;
         
-        for (let i = 0; i < elementosForm.length-1; i++) {
+        for (let i = 0; i < elementosForm.length-2; i++) {
             if(elementosForm[i].value === "" || 
                 elementosForm[i].classList.contains('is-invalid')/*  && elementosForm[i] !==   */ //<< para negar informacion no importante 
             ){

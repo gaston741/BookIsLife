@@ -17,17 +17,17 @@ module.exports = [
 
     check("autorId")
         .notEmpty()
-        .withMessage("Debes indicar el nombre del autor")
-        .bail()
-        .isLength({min : 5 , max : 50})
-        .withMessage(" Debe tener entre 5 y 50 caracteres"),
+        .withMessage("Debes indicar el nombre del autor"),
+        /*.bail()
+         .isLength({min : 5 , max : 50})
+        .withMessage(" Debe tener entre 5 y 50 caracteres"), */
 
     check("publisherId")
         .notEmpty()
-        .withMessage("Debes indicar la editorial")
-        .bail()
-        .isLength({min : 2 })
-        .withMessage(" Debe tener al menos 2 caracteres"),
+        .withMessage("Debes indicar la editorial"),
+        /*.bail()
+         .isLength({min : 2 })
+        .withMessage(" Debe tener al menos 2 caracteres"), */
 
     check("genreId")
         .notEmpty()
