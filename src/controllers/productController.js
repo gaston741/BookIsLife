@@ -1,5 +1,6 @@
 const { Op } = require('sequelize');
 const { Product, Genre, Publisher, Autor,Category,Language } = require('../database/models'); /* Utilizo Base de Datos para traer el Model Product */
+const {validationResult} = require('express-validator')
 const fs = require('fs');
 const path = require('path');
 const toThousand = n => n.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -78,16 +79,39 @@ module.exports = {
     },
 
     store : (req,res) => {
-        
-        Product.create(
-            {    
-                ...req.body,
-                image : req.file ? req.file.filename : "default.jpg"
+        let errors = validationResult(req);
+
+        if (errors.isEmpty()) {
+            Product.create(
+                {    
+                    ...req.body,
+                    image : req.file ? req.file.filename : "default.jpg"
+                })
+            .then(() => {
+                return res.redirect('/products')
             })
-        .then(() => {
-            return res.redirect('/products')
+            .catch(errors => console.log(errors))
+        } else {
+            let genres = Genre.findAll();
+        let publishers = Publisher.findAll();
+        let categories = Category.findAll();
+        let languages = Language.findAll();
+        let autors = Autor.findAll();
+
+        Promise.all([genres,publishers, languages, categories, autors])
+        .then(([genres,publishers, languages, categories, autors]) => {
+            return res.render('productCreate',{
+                genres,
+                publishers,
+                autors,
+                languages,
+                categories,
+                old : req.body,
+                errors : errors.mapped()
+            })
         })
         .catch(errors => console.log(errors))
+        }
     },
 
     edit : (req,res) => {
@@ -114,8 +138,10 @@ module.exports = {
     },
 
     update : async(req,res) => {
-
-        let product = await Product.findByPk(req.params.id)
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
+            // Capturamos lo que viene por Body
+            let product = await Product.findByPk(req.params.id)
 
         Product.update({
             ...req.body,
@@ -126,8 +152,21 @@ module.exports = {
         })
         .then(() => {
             return res.redirect('/products')
+            //return res.redirect(`/products#${product.id}`)  <----------me muestra el producto editado en la lista de productos
+
         })
         .catch(errors => console.log(errors))
+        } else {
+            Product.findByPk(req.params.id)
+            .then(product => {
+                res.render('productEdit', {
+                    product,
+                    old : req.body,
+                    errors : errors.mapped()
+                })
+            })
+            .catch(errors => console.log(errors))
+        }
     },
 
     destroy : (req,res) => {

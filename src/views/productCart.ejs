@@ -27,68 +27,28 @@
 
             <!--  SECCION PRODUCTOS -->
             <section class="cart__container ">
-                <img src="/images/portadas/padreRicoPadrePobre.png" class="cart_product_img  shadow_cart" alt="" />
-                <div class="cart__description">
-                    <span class="titulo">PADRE RICO PADRE POBRE</span>
+            <!--  Imagen del Producto -->
+            <div class="image">
+                <div class="swiper-slide box">
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </div>
+                <a href=""><img src="/images/portadas/<%= product.image %>" alt="" /></a>
+                <img src="/images/otrasImagenes/stand.png" class="product-stand" alt="">
+              </div>
+            </div>
+            <!-- Descripcion de Producto-->
+              <div class="cart__description">
+                    <h1 class="heading"><span>Home || <%=product.name %></span></h1>
                     <span class="autor">Robert T. Kiyosaki</span>
                 </div>
-
+            <!-- Precio del Produto -->
                 <div class="container__cart_product-select">
-                    <span class="cart_product-price">AR$ 1.000</span>
-                    <div class="cart_product-select">
-                        <select name="select" class="cart__select" name="" id="">
-                            <option value="value1">1</option>
-                            <option value="value2">2</option>
-                            <option value="value3">3</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="cart_button_delete">
-                    <button class="noselect">
-                        <span class="text">Eliminar</span>
-                        <span class="icon">
-                            <i class="fa-solid fa-trash-can trash-delete"></i>
-                        </span>
-                    </button>
-                </div>
-            </section>
-            <!--  SECCION PRODUCTOS -->
-            <section class="cart__container">
-                <img src="/images/portadas/elPsicoanalista.png" class="cart_product_img shadow_cart" alt="" />
-                <div class="cart__description">
-                    <span class="titulo">EL PSICOANALISTA</span>
-                    <span class="autor">John Katzenbach</span>
-                </div>
-
-                <div class="container__cart_product-select">
-                    <span class="cart_product-price">AR$ 1.000</span>
-                    <div class="cart_product-select">
-                        <select name="select" class="cart__select" name="" id="">
-                            <option value="value1">1</option>
-                            <option value="value2">2</option>
-                            <option value="value3">3</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="cart_button_delete">
-                    <button class="noselect">
-                        <span class="text">Eliminar</span>
-                        <span class="icon">
-                            <i class="fa-solid fa-trash-can trash-delete"></i>
-                        </span>
-                    </button>
-                </div>
-            </section>
-            <!--  SECCION PRODUCTOS -->
-            <section class="cart__container">
-                <img src="/images/portadas/losAñosPerdidos.png" class="cart_product_img shadow_cart" alt="" />
-                <div class="cart__description">
-                    <span class="titulo">LOS AÑOS PERDIDOS</span>
-                    <span class="autor">Mary Higgins Clark</span>
-                </div>
-
-                <div class="container__cart_product-select">
-                    <span class="cart_product-price">AR$ 1.000</span>
+              <div class="price"> $<%= toThousand(product.price) %> <span>$20.99</span></div>
                     <div class="cart_product-select">
                         <select name="select" class="cart__select" name="" id="">
                             <option value="value1">1</option>
