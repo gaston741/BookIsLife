@@ -42,7 +42,7 @@ window.addEventListener('load' , () => {
                 break;
             default:
                 name.classList.remove('is-invalid');
-                name.classList.add('is.valid');
+                name.classList.add('is-valid');
                 errorName.innerHTML = "";
                 errors = false
                 break;
@@ -57,7 +57,7 @@ window.addEventListener('load' , () => {
                 break;
             default:
                 price.classList.remove('is-invalid');
-                price.classList.add('is.valid');
+                price.classList.add('is-valid');
                 errorPrice.innerHTML = "";
                 errors = false
                 break;
@@ -73,7 +73,7 @@ window.addEventListener('load' , () => {
                 break;
             default:
                 autorId.classList.remove('is-invalid');
-                autorId.classList.add('is.valid');
+                autorId.classList.add('is-valid');
                 errorAutorId.innerHTML = "";
                 errors = false
                 break;
@@ -93,7 +93,7 @@ window.addEventListener('load' , () => {
                 //break;
             default:
                 publisherId.classList.remove('is-invalid');
-                publisherId.classList.add('is.valid');
+                publisherId.classList.add('is-valid');
                 errorPublisherId.innerHTML = "";
                 errors = false
                 break;
@@ -108,7 +108,7 @@ window.addEventListener('load' , () => {
                 break;
             default:
                 genreId.classList.remove('is-invalid');
-                genreId.classList.add('is.valid');
+                genreId.classList.add('is-valid');
                 errorGenreId.innerHTML = "";
                 errors = false
                 break;
@@ -128,7 +128,7 @@ window.addEventListener('load' , () => {
                 //break;
             default:
                 languageId.classList.remove('is-invalid');
-                languageId.classList.add('is.valid');
+                languageId.classList.add('is-valid');
                 errorLanguageId.innerHTML = "";
                 errors = false
                 break;
@@ -143,7 +143,7 @@ window.addEventListener('load' , () => {
                 break;
             default:
                 categoryId.classList.remove('is-invalid');
-                categoryId.classList.add('is.valid');
+                categoryId.classList.add('is-valid');
                 errorCategoryId.innerHTML = "";
                 errors = false
                 break;
@@ -203,7 +203,7 @@ window.addEventListener('load' , () => {
         if(errors == false){
             console.log("Todo Perfecto !!");
             errorForm.innerHTML = '';
-            alert("Datos modificados con Exito !!");
+            /* alert("Datos modificados con Exito !!"); */
             productEdit.submit();
         }
     })

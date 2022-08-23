@@ -25,16 +25,14 @@
                     <article>
                         <!-- Titulo del libro-->
                         <div class="admi__form-box">
-                            <input class="admi_form-input" type="text" placeholder="Título del libro" name="name"
-                                id="name" value="<%= product.name %>">
-                            <span class="admi__text-error" id="errorName"><%= (locals.errors && errors.name) ? errors.name.msg : null  %></span>
+                            <input class="admi_form-input" type="text" placeholder="Título del libro" name="name" id="name" value="<%= (locals.old && old.name) ? old.name : product.name %>">
+                            <span class="admi__text-error" id="errorName"><%= (locals.errors && errors.name) ? errors.name.msg : ""  %></span>
                         </div>
 
                         <!-- Precio del libro -->
                         <div class="admi__form-box">
-                            <input class="admi_form-input" type="number" placeholder="$$ Precio del Libro" name="price"
-                                id="price" value="<%= product.price %>">
-                            <span class="admi__text-error" id="errorPrice"><%= (locals.errors && errors.price) ? errors.price.msg : null  %></span>
+                            <input class="admi_form-input" type="number" placeholder="$$ Precio del Libro" name="price" id="price" value="<%= (locals.old && old.price) ? old.price : product.price %>">
+                            <span class="admi__text-error" id="errorPrice"><%= (locals.errors && errors.price) ? errors.price.msg : ""  %></span>
                         </div>
 
                         <!-- Autor del libro-->

@@ -59,18 +59,18 @@ module.exports = {
     },
     
     create : (req,res) => {
-        let genres = Genre.findAll();
-        let publishers = Publisher.findAll();
-        let categories = Category.findAll();
-        let languages = Language.findAll();
         let autors = Autor.findAll();
+        let publishers = Publisher.findAll();
+        let genres = Genre.findAll();
+        let languages = Language.findAll();
+        let categories = Category.findAll();
 
-        Promise.all([genres,publishers, languages, categories, autors])
-        .then(([genres,publishers, languages, categories, autors]) => {
+        Promise.all([ autors , publishers, genres , languages , categories ])
+        .then(([ autors , publishers, genres , languages , categories ]) => {
             return res.render('productCreate',{
-                genres,
-                publishers,
                 autors,
+                publishers,
+                genres,
                 languages,
                 categories
             })
@@ -92,18 +92,18 @@ module.exports = {
             })
             .catch(errors => console.log(errors))
         } else {
+            let autors = Autor.findAll();
+            let publishers = Publisher.findAll();
             let genres = Genre.findAll();
-        let publishers = Publisher.findAll();
-        let categories = Category.findAll();
-        let languages = Language.findAll();
-        let autors = Autor.findAll();
+            let languages = Language.findAll();
+            let categories = Category.findAll();
 
-        Promise.all([genres,publishers, languages, categories, autors])
-        .then(([genres,publishers, languages, categories, autors]) => {
+        Promise.all([ autors , publishers, genres , languages , categories ])
+        .then(([ autors , publishers, genres , languages , categories ]) => {
             return res.render('productCreate',{
-                genres,
-                publishers,
                 autors,
+                publishers,
+                genres,
                 languages,
                 categories,
                 old : req.body,
@@ -117,18 +117,18 @@ module.exports = {
     edit : (req,res) => {
 
         let product = Product.findByPk(req.params.id)
-        let genres = Genre.findAll();
-        let publishers = Publisher.findAll();
-        let categories = Category.findAll();
-        let languages = Language.findAll();
         let autors = Autor.findAll();
+        let publishers = Publisher.findAll();
+        let genres = Genre.findAll();
+        let languages = Language.findAll();
+        let categories = Category.findAll();
 
-        Promise.all([product, genres,publishers, languages, categories, autors])
-        .then(([product, genres,publishers, languages, categories, autors]) => {
+        Promise.all([ product , autors , publishers, genres , languages , categories ])
+        .then(([ product , autors , publishers, genres , languages , categories ]) => {
             return res.render('productEdit',{
-                genres,
-                publishers,
                 autors,
+                publishers,
+                genres,
                 languages,
                 categories,
                 product
@@ -157,16 +157,28 @@ module.exports = {
         })
         .catch(errors => console.log(errors))
         } else {
-            Product.findByPk(req.params.id)
-            .then(product => {
-                res.render('productEdit', {
-                    product,
-                    old : req.body,
-                    errors : errors.mapped()
-                })
+            let product = Product.findByPk(req.params.id)
+            let autors = Autor.findAll();
+            let publishers = Publisher.findAll();
+            let genres = Genre.findAll();
+            let languages = Language.findAll();
+            let categories = Category.findAll();
+
+        Promise.all([ product , autors , publishers, genres , languages , categories ])
+        .then(([ product , autors , publishers, genres , languages , categories ]) => {
+            return res.render('productEdit',{
+                product,
+                autors,
+                publishers,
+                genres,
+                languages,
+                categories,
+                old : req.body,
+                errors : errors.mapped()
             })
-            .catch(errors => console.log(errors))
-        }
+        })
+      .catch(errors => console.log(errors))
+}
     },
 
     destroy : (req,res) => {
