@@ -219,6 +219,9 @@ header.home__header div.header_buscador button.lupa {
         width: 100%;
         height: 350px;
     }
+    .caja-input-buscador {
+        display: flex;
+    }
 }
 /* DESKTOP*/
 @media(min-width:1024px) {
