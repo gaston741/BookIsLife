@@ -24,16 +24,14 @@
                     <article>
                         <!-- Titulo del libro-->
                         <div class="admi__form-box">
-                            <input class="admi_form-input" type="text" placeholder="Título del libro" name="name"
-                                id="name">
-                            <span class="admi__text-error" id="errorName"><%= (locals.errors && errors.name) ? errors.name.msg : null  %></span>
+                            <input class="admi_form-input" type="text" placeholder="Título del libro" name="name" id="name" value="<%= (locals.old  && old.name) ? old.name : "" %>">
+                            <span class="admi__text-error" id="errorName"><%= (locals.errors && errors.name) ? errors.name.msg : ""  %></span>
                         </div>
 
                         <!-- Precio del libro -->
                         <div class="admi__form-box">
-                            <input class="admi_form-input" type="number" placeholder="$$ Precio del Libro" name="price"
-                                id="price">
-                            <span class="admi__text-error" id="errorPrice"><%= (locals.errors && errors.price) ? errors.price.msg : null  %></span>
+                            <input class="admi_form-input" type="number" placeholder="$$ Precio del Libro" name="price" id="price" value="<%= (locals.old  && old.price) ? old.price : "" %>">
+                            <span class="admi__text-error" id="errorPrice"><%= (locals.errors && errors.price) ? errors.price.msg : ""  %></span>
                         </div>
 
                         <!-- Autor del libro Sin Seleector -->
@@ -51,7 +49,7 @@
                                     <option value="<%= autor.id %>"><%= autor.name %></option>
                                 <% }) %>
                             </select>
-                            <span class="admi__text-error" id="errorAutorId"><%= (locals.errors && errors.autorId) ? errors.autorId.msg : null  %></span>
+                            <span class="admi__text-error" id="errorAutorId"><%= (locals.errors && errors.autorId) ? errors.autorId.msg : ""  %></span>
                         </div>
 
                         <!-- Editorial del libro Sin Seleector 
@@ -120,7 +118,7 @@
                     <div class="admi__form-box">
                         <img class="form-img-preview" id="img-preview" src="/images/portadas/default.jpg" alt="">
                     </div>
-                        <span class="admi__text-error" id="errorForm"><%= (locals.errors && errors.description) ? errors.description.msg : null  %></span>
+                        <span class="admi__text-error" id="errorForm"></span>
                     </article>
 
                   

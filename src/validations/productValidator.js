@@ -53,11 +53,11 @@ module.exports = [
             let file = req.file;
             let allowedExtensions = [ '.jpg' , '.jpeg' , '.png' , '.gif' ];   //EXTENCIONES ACEPTADAS
 
-             if (!file) {     //SI NO EXISTE EL ARCHIVO, MANDA EL ERROR DE ABAJO
+            /*  if (!file) {     //SI NO EXISTE EL ARCHIVO, MANDA EL ERROR DE ABAJO
                 
                 throw new Error ('Tienes que subir una Imagen');
                 
-            } if (file) {     //SI EXISTE EL ARCHIVO.. 
+             }*/ if (file) {     //SI EXISTE EL ARCHIVO.. 
                 
                 let fileExtension = path.extname(file.originalname);    // ESTA VARIABLE TOMA LA EXTENCION DEL ARCHIVO QUE SUBE EL USUARIO AL REGISTRARSE
                 

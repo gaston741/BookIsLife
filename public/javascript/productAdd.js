@@ -212,7 +212,7 @@ window.addEventListener('load' , () => {
         if(errors == false){
             console.log("Todo Perfecto !!");
             errorForm.innerHTML = '';
-            alert("Carga realizada correctamente");
+            /* alert("Carga realizada correctamente"); */
             productCreate.submit();
         }
     })
