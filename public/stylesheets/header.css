@@ -182,6 +182,9 @@ header.home__header div.header_buscador button.lupa {
         justify-content: flex-start;
         
     }
+    .caja-input-buscador{
+        display: flex;
+    }
     /*      INPUT   */
     header.home__header div.header_buscador input {
         width: 46vh;
